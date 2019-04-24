@@ -1,30 +1,33 @@
 <%- include('./partials/header')%>
 <h1>This is the New.ejs for cards</h1>
-<div id="card-body">
-
-    <div id="name">Your name here</div>
-    <div id="hp-box"><font size="2px">HP</font> 700</div>
-
-    <div id="img-box-border">
-        <div id="img-box">
-            <img src="../images/squirl.png">
-        </div>
-    </div>
-
-    
-
-    <div id="attack-box">
-        <div id="attack">Attack String</div>
-        <div id="damage">500</div>
-    </div>
-
-    <div id="weak-resist-box">
-        <div id="weakness">Weakness</div>
-        <div id="divider"></div>
-        <div id="resistance">Resistance</div>
-    </div>
-
-</div>
+<form action="/cards" method="POST">
+    Name:           <input type="text" name="name" />
+    Image Url:      <input type="text" name="url" />  <small>add a note when hovering to advise on best dimensions</small>
+    HP:             <input type="text" name="hp" />
+    Element Type:   <select name="type">
+                        <option value="fighting">Fighting</option>
+                        <option value="flying">Flying</option>
+                        <option value="poison">Poison</option>
+                        <option value="ground">Ground</option>
+                        <option value="rock">Rock</option>
+                        <option value="bug">Bug</option>
+                        <option value="ghost">Ghost</option>
+                        <option value="steel">Steel</option>
+                        <option value="fire" selected>Fire</option>
+                        <option value="water">Water</option>
+                        <option value="grass">Grass</option>
+                        <option value="electric">Electric</option>
+                        <option value="psychic">Psychic</option>
+                        <option value="ice">Ice</option>
+                        <option value="dragon">Dragon</option>
+                        <option value="fairy">Fairy</option>
+                        <option value="dark">Dark</option>
+                    </select>
+    Attack:         <input type="text" name="attack" />
+    Damage:         <input type="text" name="damage" />
+    Weakness:       <input type="text" name="weakness" />
+    Resistance:     <input type="text" name="resistance" />
+</form>
 
 
 

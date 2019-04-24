@@ -1,17 +1,11 @@
-<!DOCTYPE html>
-<html lang="en">
-    <head>
-        <title></title>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link href="css/style.css" rel="stylesheet">
-    </head>
-    <body>
-    <h1>This is the user index</h1>
-    <a href="/users/show">View Cards</a><br>
-    <a href="">View Users</a><br>
-    <a href="">Create Cards</a><br>
-    <a href="">Edit Cards</a><br>
-    
-    </body>
-</html>
+<%- include('./partials/header')%>
+<h1>THIS IS THE USER INDEX PAGE</h1>
+    <ul>
+        <% for (let i = 0; i < user.length; i++) {%>
+            <li>
+                <a href="/users/<%=user[i]._id%>"><%= user[i].name%></a>
+            </li>
+        <% } %>
+    </ul>
+
+<%- include('./partials/footer')%>
