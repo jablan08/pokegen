@@ -11,6 +11,7 @@ const userController = require("./controllers/usersCtrl");
 const cardsController = require("./controllers/cardsCtrl");
 const authController = require("./controllers/authCtrl");
 
+app.use(express.static('public'));
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(methodOverride("_method"));
@@ -20,6 +21,12 @@ app.use(session({
     resave: false,
     saveUninitialized: false
 }))
+
+
+app.get('/', (req, res) => {
+    res.render('cards/new.ejs')
+})
+
 
 app.use("/users", userController);
 app.use("/cards", cardsController);
