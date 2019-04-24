@@ -1,13 +1,26 @@
 <!DOCTYPE html>
-<html lang="en">
-    <head>
-        <title></title>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link href="css/style.css" rel="stylesheet">
-    </head>
-    <body>
-    <h1>Hit</h1>
-    
-    </body>
+<html>
+<head>
+  <title></title>
+</head>
+<body>
+
+  <h1>Login</h1>
+  <form action="/auth/login" method="POST">
+    <input type="text" name="username" placeholder="username">
+    <input type="password" name="password" placeholder="password">
+    <button type="submit">Login</button>
+  </form>
+
+
+  <small><%= message %></small>
+
+  <h1>Register</h1>
+  <form action="/auth/register" method="POST">
+    <input type="text" name="username" placeholder="username">
+    <input type="password" name="password" placeholder="password">
+    <button type="submit">Register</button>
+  </form>
+<a href="/auth/logout">Logout</a>
+</body>
 </html>
