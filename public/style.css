@@ -2,6 +2,14 @@ html {
     background-color: lightgray
 }
 
+footer {
+    margin: 20px auto;
+}
+
+.footerBn {
+    margin: 5px;
+}
+
 #card-body {
     background-image: linear-gradient(to bottom right, blue,lightblue,blue);
     height: 400px;
