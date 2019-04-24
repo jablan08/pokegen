@@ -22,7 +22,9 @@ router.get("/", async (req,res)=> {
 router.get("/new", async (req,res)=>{
     try {
         if (foundUser) {
-            if (found)
+            if (req.session.logged) {
+                Card.create
+            }
         }
 
 
