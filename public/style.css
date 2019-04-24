@@ -14,7 +14,7 @@ footer {
 .container {
     position: relative;
     height: 200px;
-    width: 530px;
+    width: 540px;
 }
 .right {
     position: relative;
@@ -23,6 +23,16 @@ footer {
 .left {
     position: relative;
     float: left;
+    font-size: 17px;
+    text-align: left;
+}
+input{
+    border-radius: 3px;
+    margin-bottom: 1px;
+}
+
+select {
+    width: 131px;
 }
 /*---------------------- INPUT FORM ----------------------*/
 /*********************** CREATE CARD ***********************/

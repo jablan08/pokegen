@@ -5,42 +5,38 @@
 <div class="container">
 
     <div class="left">
-    Name:<br />  
-    Image Url:<br />  
-    HP: <br />  
-    Element Type:<br />  
-    Attack:<br />  
-    Damage:<br />  
-    Weakness:<br />  
-    Resistance:<br />  
+        Name:<br />  
+        Image Url:<br />  
+        HP: <br />  
+        Element Type:<br />  
+        Attack:<br />  
+        Damage:<br />  
+        Weakness:<br />  
+        Resistance:<br />  
     </div>
 
     <div class="right">
-    <form action="/cards" method="POST">
-    <input type="text" name="name" /><br/>
-    <input type="text" name="url" />  <small>add a note when hovering to advise on best dimensions</small><br/>
-    <input type="text" name="hp" /><br/>
-    <select name="type"><br/>
-            <option value="normal">Normal</option>
-            <option value="fighting">Fighting</option>
-            <option value="ground">Ground</option>
-            <option value="steel">Steel</option>
-            <option value="fire">Fire</option>
-            <option value="water" select>Water</option>
-            <option value="grass">Grass</option>
-            <option value="electric">Electric</option>
-            <option value="psychic">Psychic</option>
-    </select><br/>
-    <input type="text" name="attack" /><br/>
-    <input type="text" name="damage" /><br/>
-    <input type="text" name="weakness" /><br/>
-    <input type="text" name="resistance" /><br/>
-</form>
+        <form action="/cards" method="POST">
+            <input type="text" name="name" placeholder="add name"/><br/>
+            <input type="text" name="url" placeholder="add image url"/>  <small>add a note when hovering to advise on best dimensions</small><br/>
+            <input type="text" name="hp" placeholder="add HP"/><br/>
+            <select name="type"><br/>
+                    <option value="normal">Normal</option>
+                    <option value="fighting">Fighting</option>
+                    <option value="ground">Ground</option>
+                    <option value="steel">Steel</option>
+                    <option value="fire">Fire</option>
+                    <option value="water" select>Water</option>
+                    <option value="grass">Grass</option>
+                    <option value="electric">Electric</option>
+                    <option value="psychic">Psychic</option>
+            </select><br/>
+            <input type="text" name="attack"  placeholder="add attack"/><br/>
+            <input type="text" name="damage"  placeholder="add damage"/><br/>
+            <input type="text" name="weakness"  placeholder="add weakness"/><br/>
+            <input type="text" name="resistance"  placeholder="add resistance"/><br/>
+        </form>
     </div>
-
-
-
-
 </div>
 
 
