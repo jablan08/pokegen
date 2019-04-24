@@ -10,6 +10,7 @@ require("./db/db")
 const userController = require("./controllers/usersCtrl");
 const cardsController = require("./controllers/cardsCtrl");
 const authController = require("./controllers/authCtrl");
+const homeController = require("./controllers/homeCtrl")
 
 
 app.use(express.static('public'));
@@ -32,6 +33,7 @@ app.get('/', (req, res) => {
 app.use("/users", userController);
 app.use("/cards", cardsController);
 app.use("/auth", authController);
+app.use("/home", homeController);
 
 
 
