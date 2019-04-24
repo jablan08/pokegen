@@ -7,7 +7,9 @@ const User = require("../models/users");
 router.get("/", async (req,res)=> {
     try {
         const allCards = await Card.find({});
-        res.render("cards/index.ejs");
+        res.render("cards/index.ejs", {
+            cards: allCards
+        });
     } catch(err) {
         res.send(err)
     }
