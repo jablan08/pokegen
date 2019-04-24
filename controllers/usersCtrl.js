@@ -35,9 +35,12 @@ router.get('/:id', async (req, res) => {
 
 
 // EDIT
-router.get('/:id/edit', (req, res) => {
+router.get('/:id/edit', async (req, res) => {
     try {
-        const foundAuthor = User.findById(req.params.id)
+        const foundUser = await User.findById(req.params.id)
+        res.render('users/edit.ejs',{
+            user: foundUser
+        })
         
     } catch (error) {
         
