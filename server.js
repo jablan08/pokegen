@@ -20,7 +20,7 @@ app.use(session({
     secret: "gotta catch them all",
     resave: false,
     saveUninitialized: false
-}))
+}))  
 
 
 app.get('/', (req, res) => {

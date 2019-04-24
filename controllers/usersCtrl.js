@@ -21,8 +21,8 @@ router.get('/', async (req, res) => {
 router.get('/:id', async (req, res) => {
     try {
         const foundUser = User.findById(req.params.id)
-        .populate('cards')
-        .exec((err, foundUser))
+        // .populate('cards')
+        // .exec((err, foundUser))
         res.render('users/show.ejs',{
             user: foundUser
         })    
@@ -35,10 +35,16 @@ router.get('/:id', async (req, res) => {
 
 
 // EDIT
+router.get('/:id/edit', (req, res) => {
+    try {
+        const foundAuthor = User.findById(req.params.id)
+        
+    } catch (error) {
+        
+    }
+})
 
 
-
-// DELETE
 
 
 module.exports = router;
