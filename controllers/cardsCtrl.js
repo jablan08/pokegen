@@ -3,6 +3,9 @@ const router  = express.Router();
 const Card = require("../models/cards");
 const User = require("../models/users");
 
+
+
+
 // INDEX
 router.get("/", async (req,res)=> {
     try {
@@ -30,6 +33,7 @@ router.get("/", async (req,res)=> {
 
 
 // DELETE
+
 
 
 module.exports = router;
