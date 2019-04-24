@@ -2,6 +2,7 @@ const express = require('express');
 const router  = express.Router();
 const User = require("../models/users");
 const Card = require("../models/cards");
+ 
 
 // INDEX
 router.get('/', async (req, res) => {
@@ -35,14 +36,10 @@ router.get('/:id', async (req, res) => {
 // EDIT
 router.get('/:id/edit', async (req, res) => {
     try {
-        if(req.session.logged){
         const foundUser = await User.findById(req.params.id)
         res.render('users/edit.ejs',{
             user: foundUser
         })
-        }  else{
-            res.redirect('auth/login')
-        }
     } catch (error) {   
     }
 })
