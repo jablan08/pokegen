@@ -10,6 +10,23 @@ footer {
     margin: 5px;
 }
 /*---------------------- FOOTER ----------------------*/
+/*********************** HOME PAGE ***********************/
+.home-container {
+    position: relative;
+
+}
+.home-users {
+    position: relative;
+    float: right;
+
+}
+.home-cards {
+    position: relative;
+    float: left;
+
+}
+
+/*---------------------- HOME PAGE ----------------------*/
 /*********************** INPUT FORM ***********************/
 .container {
     position: relative;
@@ -28,7 +45,7 @@ footer {
 }
 input{
     border-radius: 3px;
-    margin-bottom: 1px;
+    margin-top: 1px;
 }
 
 select {

@@ -1,11 +1,5 @@
 <%- include('../partials/header')%>
-<h1>THIS IS THE USER INDEX PAGE</h1>
-    <ul>
-        <% for (let i = 0; i < users.length; i++) {%>
-            <li>
-                <a href="/users/<%=users[i]._id%>"><%= users[i].username%></a>
-            </li>
-        <% } %>
-    </ul>
+
+<%-include('../partials/userlist')%>
 
 <%- include('../partials/footer')%>

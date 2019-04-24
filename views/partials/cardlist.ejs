@@ -1,0 +1,7 @@
+        <ul>
+            <% for (let i = 0; i < cards.length; i++) {%>
+                <li>
+                    <a href="/cards/<%=cards[i]._id%>"><%= users[i].username%></a>
+                </li>
+            <% } %>
+        </ul>

@@ -1,5 +1,15 @@
 <%- include('../partials/header')%>
 <h1>HOME</h1>
 <h2>Welcome to PokeGen where you can Generate your own Pokemon Cards!!</h2>
+<div id="home-container">
 
+    <div id="home-users">
+        <%-include('../partials/userlist')%>
+    </div>
+
+    <div id="home-cards">
+        <%-include('../partials/cardlist')%>
+    </div>
+    
+</div>
 <%- include('../partials/footer')%>
