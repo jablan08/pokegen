@@ -21,8 +21,8 @@ router.get('/', async (req, res) => {
 router.get('/:id', async (req, res) => {
     try {
         const foundUser = User.findById(req.params.id)
-        .populate('cards')
-        .exec((err, foundUser))
+        // .populate('cards')
+        // .exec((err, foundUser))
         res.render('users/show.ejs',{
             user: foundUser
         })    

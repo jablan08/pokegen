@@ -19,7 +19,17 @@ router.get("/", async (req,res)=> {
 })
 
 // NEW
+router.get("/new", async (req,res)=>{
+    try {
+        if (foundUser) {
+            if (found)
+        }
 
+
+    } catch(err){
+
+    }
+})
 
 
 
