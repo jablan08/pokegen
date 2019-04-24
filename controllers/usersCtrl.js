@@ -8,7 +8,7 @@ router.get('/', async (req, res) => {
     try {
         const foundUsers = await User.find();
         res.render('users/index.ejs', {
-            Users: foundUsers
+            users: foundUsers
         })
     } catch (err) {
         res.send(err)
