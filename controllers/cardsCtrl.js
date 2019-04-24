@@ -19,8 +19,25 @@ router.get("/", async (req,res)=> {
 })
 
 // NEW
-
-
+router.get("/new", async (req,res)=>{
+    try {
+       
+        if (req.session.logged) {
+            console.log(req.session)
+            if (req.session.logged) {
+                res.render("cards/new.ejs")
+            } else {
+                console.log(foundUser, "failed1")
+                res.redirect("/auth/login");
+            }
+        } else {
+            console.log(foundUser, "failed2")
+            res.redirect("/auth/login");
+        }
+    } catch(err){
+        res.send(err)
+    }
+})
 
 
 // SHOW
