@@ -3,8 +3,15 @@ const router  = express.Router();
 const Card = require("../models/cards");
 const User = require("../models/users");
 
-
-
+const logUser = (req, res, next) => {
+    console.log("using middleware")
+    if(req.session.logged) {
+        
+        next()
+    } else {
+        res.redirect("/auth/login");
+    }
+}
 
 // INDEX
 router.get("/", async (req,res)=> {
@@ -19,26 +26,19 @@ router.get("/", async (req,res)=> {
 })
 
 // NEW
-router.get("/new", async (req,res)=>{
+router.get("/new", logUser, async (req,res)=>{
     try {
-       
-        if (req.session.logged) {
-            console.log(req.session)
-            if (req.session.logged) {
-                res.render("cards/new.ejs")
-            } else {
-                console.log(foundUser, "failed1")
-                res.redirect("/auth/login");
-            }
-        } else {
-            console.log(foundUser, "failed2")
-            res.redirect("/auth/login");
-        }
+
+        res.render("cards/new.ejs")
+
     } catch(err){
         res.send(err)
     }
 })
 
+router.post("/", logUser, async (req,res)=>{
+
+})
 
 // SHOW
 
