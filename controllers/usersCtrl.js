@@ -51,10 +51,10 @@ router.get('/:id/edit', logUser, async (req, res) => {
     }
 })
 
-router.put('/:id', logUser, async (req, res) => {
+router.put('/:id', logUser,(req, res) => {
     try {
         User.findByIdAndUpdate(req.params.id, req.body, {new: true, })
-        res.redirect('/users' + req.params.id)
+        res.redirect('/users/' + req.params.id)
     } catch (err) {    
     }
 })

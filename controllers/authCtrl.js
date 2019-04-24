@@ -34,7 +34,7 @@ router.post("/login", async (req,res)=>{
                 req.session.userDbId = foundUser._id;
                 req.session.message = "success!"
                 console.log(req.session, "login success!");
-                res.redirect('/auth/login');
+                res.redirect('/users');
             } else {
                 req.session.message = "Username or password is incorrect";
                 
