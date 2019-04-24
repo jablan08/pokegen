@@ -28,16 +28,29 @@ router.get("/", async (req,res)=> {
 // NEW
 router.get("/new", logUser, async (req,res)=>{
     try {
-
         res.render("cards/new.ejs")
-
     } catch(err){
         res.send(err)
     }
 })
 
 router.post("/", logUser, async (req,res)=>{
+    try {
+        Card.create(req.body, (err,createdCard)=>{
+            console.log(createdCard)
+            User.findById(req.session.userDbId, (err,foundUser)=>{
+                if (err) {
+                    console.log(err)
+                } else {
+                    console.log(foundUser)
 
+                }
+                
+            })
+        })
+    } catch(err) {
+        res.send(err)
+    }
 })
 
 // SHOW
