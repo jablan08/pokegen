@@ -2,38 +2,44 @@
 
 <h1>THIS IS AN EDIT PAGE FOR CARDS</h1>
 <h2>THIS STILL NEEDS CURRENT VALUES ADDED<H2>
-<form action="/cards" method="POST">
-    Name:           <input type="text" name="name" value="<%=card.name%>" /><br/>
-    Image Url:      <input type="text" name="url" value="<%=card.url%>" />  <small>add a note when hovering to advise on best dimensions</small><br/>
-    HP:             <input type="text" name="hp" value="<%=card.hp%>" /><br/>
-    Element Type:   <select name="type"><br/>
-                        <option value="<%=card.type%>" select><%=card.type%></option>
-                        <option value="fighting">Fighting</option>
-                        <option value="flying">Flying</option>
-                        <option value="poison">Poison</option>
-                        <option value="ground">Ground</option>
-                        <option value="rock">Rock</option>
-                        <option value="bug">Bug</option>
-                        <option value="ghost">Ghost</option>
-                        <option value="steel">Steel</option>
-                        <option value="fire">Fire</option>
-                        <option value="water">Water</option>
-                        <option value="grass">Grass</option>
-                        <option value="electric">Electric</option>
-                        <option value="psychic">Psychic</option>
-                        <option value="ice">Ice</option>
-                        <option value="dragon">Dragon</option>
-                        <option value="fairy">Fairy</option>
-                        <option value="dark">Dark</option>
-                    </select><br/>
-    Attack:         <input type="text" name="attack" value="<%=card.attack%>"/><br/>
-    Damage:         <input type="text" name="damage" value="<%=card.damage%>"/><br/>
-    Weakness:       <input type="text" name="weakness" value="<%=card.weakness%>"/><br/>
-    Resistance:     <input type="text" name="resistance" value="<%=card.resistance%>"/><br/>
 
+<div class="container">
 
+    <div class="left">
+        Name:<br />  
+        Image Url:<br />  
+        HP: <br />  
+        Element Type:<br />  
+        Attack:<br />  
+        Damage:<br />  
+        Weakness:<br />  
+        Resistance:<br />  
+    </div>
 
-</form>
+    <div class="right">
+        <form action="/cards" method="POST">
+            <input type="text" name="name" value="<%=card.name%>" /><br/>
+            <input type="text" name="url" value="<%=card.url%>" />  <small>add a note when hovering to advise on best dimensions</small><br/>
+            <input type="text" name="hp" value="<%=card.resistance%>" /><br/>
+            <select name="type"><br/>
+                <option value="<%=card.type%>"><%=card.name%></option>
+                <option value="normal">Normal</option>
+                <option value="fighting">Fighting</option>
+                <option value="ground">Ground</option>
+                <option value="steel">Steel</option>
+                <option value="fire">Fire</option>
+                <option value="water" select>Water</option>
+                <option value="grass">Grass</option>
+                <option value="electric">Electric</option>
+                <option value="psychic">Psychic</option>
+            </select><br/>
+            <input type="text" name="attack" value="<%=card.attack%>" /><br/>
+            <input type="text" name="damage" value="<%=card.damage%>" /><br/>
+            <input type="text" name="weakness" value="<%=card.weakness%>" /><br/>
+            <input type="text" name="resistance" value="<%=card.resistance%>"/><br/>
+        </form>
+    </div>
+</div>
 
 
 <%- include('../partials/footer')%>
