@@ -1,7 +1,7 @@
 html {
     background-color: lightgray
 }
-
+/*********************** FOOTER ***********************/
 footer {
     margin: 20px auto;
 }
@@ -9,7 +9,23 @@ footer {
 .footerBn {
     margin: 5px;
 }
-
+/*---------------------- FOOTER ----------------------*/
+/*********************** INPUT FORM ***********************/
+.container {
+    position: relative;
+    height: 200px;
+    width: 530px;
+}
+.right {
+    position: relative;
+    float: right;
+}
+.left {
+    position: relative;
+    float: left;
+}
+/*---------------------- INPUT FORM ----------------------*/
+/*********************** CREATE CARD ***********************/
 #card-body {
     background-image: linear-gradient(to bottom right, blue,lightblue,blue);
     height: 400px;
@@ -108,12 +124,4 @@ img {
     margin: 5px 5px 0 0;
     text-align: center;
 }
-
-
-/* <div id="card-body">
-    <div id="name"></div><div id="hp"></div>
-
-<div id="img-box"></div>
-
-<div id="attack"></div><div id="damage"></div>
-</div> */
+/*---------------------- CREATE CARD ----------------------*/
