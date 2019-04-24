@@ -20,7 +20,7 @@ router.get('/', async (req, res) => {
 // SHOW
 router.get('/:id', async (req, res) => {
     try {
-        const foundUser = User.findById(req.params.id)
+        const foundUser = await User.findById(req.params.id)
         // .populate('cards')
         // .exec((err, foundUser))
         res.render('users/show.ejs',{
@@ -35,10 +35,19 @@ router.get('/:id', async (req, res) => {
 
 
 // EDIT
+router.get('/:id/edit', async (req, res) => {
+    try {
+        const foundUser = await User.findById(req.params.id)
+        res.render('users/edit.ejs',{
+            user: foundUser
+        })
+        
+    } catch (error) {
+        
+    }
+})
 
 
-
-// DELETE
 
 
 module.exports = router;
