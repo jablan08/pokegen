@@ -5,4 +5,33 @@ const User = require("../models/users");
 
 
 
+
+// INDEX
+router.get("/", async (req,res)=> {
+    try {
+        const allCards = await Card.find({});
+        res.render("cards/index.ejs");
+    } catch(err) {
+        res.send(err)
+    }
+})
+
+
+// NEW
+
+
+
+
+// SHOW
+
+
+
+// EDIT
+
+
+
+// DELETE
+
+
+
 module.exports = router;
