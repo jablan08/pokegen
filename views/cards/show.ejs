@@ -3,5 +3,9 @@
 
 <%- include('../partials/card')%>
 
-
+<section>
+    <form method="POST" action="/cards/<%=cards._id%>?_method=DELETE">
+        <button>DELETE CARD</button>
+    </form>
+</section>
 <%- include('../partials/footer')%>
