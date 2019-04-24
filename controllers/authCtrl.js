@@ -11,14 +11,19 @@ router.get("/login", (req,res)=>{
 })
 
 router.post("/register", async (req,res)=>{
-    const password = req.body.password;
-    const passwordHash = bcrypt.hashSync(password,bcrypt.genSaltSync(10));
+    // const password = req.body.password;
+    // const passwordHash = bcrypt.hashSync(password,bcrypt.genSaltSync(10));
 
-    const userDbEntry = {};
-    userDbEntry.username = req.body.username;
-    userDbEntry.password = passwordHash;
+    // const userDbEntry = {};
+    // userDbEntry.username = req.body.username;
+    // userDbEntry.password = req.body.password
+    console.log("register route")
+    // console.log(req.body)
     try {
-        const createdUser = await User.create(userDbEntry);
+        console.log("hit")
+
+        const createdUser = await User.create(req.body);
+        console.log(createdUser)
         req.session.logged = true;
         req.session.userDbId = createdUser._id;
         console.log(req.session)
@@ -32,8 +37,9 @@ router.post("/register", async (req,res)=>{
 router.post("/login", async (req,res)=>{
     try {
         const foundUser = await User.findOne({"username": req.body.username});
+        console.log(foundUser)
         if (foundUser) {
-            if (bcrypt.compareSync(req.body.password, foundUser.password)=== true) {
+            if (foundUser.validPassword(req.body.password)) {
                 req.session.logged = true;
                 req.session.userDbId = foundUser._id;
                 req.session.message = "success!"
