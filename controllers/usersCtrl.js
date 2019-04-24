@@ -32,21 +32,32 @@ router.get('/:id', async (req, res) => {
 })
 
 
-
-
 // EDIT
 router.get('/:id/edit', async (req, res) => {
     try {
+        if(req.session.logged){
         const foundUser = await User.findById(req.params.id)
         res.render('users/edit.ejs',{
             user: foundUser
         })
-        
-    } catch (error) {
-        
+        }  else{
+            res.redirect('auth/login')
+        }
+    } catch (error) {   
     }
 })
 
+router.put('/:id', async (req, res) => {
+    try {
+        if(req.session.logged){
+            User.findByIdAndUpdate(req.params.id, req.body, {new: true, })
+            res.redirect('/users' + req.params.id)
+        }else {
+            res.redirect('auth/login')
+        }
+    } catch (err) {    
+    }
+})
 
 
 
