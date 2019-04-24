@@ -11,6 +11,7 @@ const userController = require("./controllers/usersCtrl");
 const cardsController = require("./controllers/cardsCtrl");
 const authController = require("./controllers/authCtrl");
 
+
 app.use(express.static('public'));
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
