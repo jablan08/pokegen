@@ -1,9 +1,4 @@
-<!DOCTYPE html>
-<html>
-<head>
-  <title></title>
-</head>
-<body>
+<%- include('./partials/header')%>
 
   <h1>Login</h1>
   <form action="/auth/login" method="POST">
@@ -22,5 +17,6 @@
     <button type="submit">Register</button>
   </form>
 <a href="/auth/logout">Logout</a>
-</body>
-</html>
+
+
+<%- include('./partials/footer')%>

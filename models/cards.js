@@ -8,6 +8,7 @@ const cardSchema = mongoose.Schema({
     attack: String,
     damage: Number,
     weakness: String, // limited to types
+    resistance: String,
 })
 
 const Card = mongoose.model('Card', cardSchema);
