@@ -2,28 +2,28 @@
 
     <div id="card-body">
 
-        <div id="name"><%=card[i].name%>></div>
-        <div id="hp-box"><font size="2px">HP</font> <%=card[i].hp%></div>
+        <div id="name"><%=cards[i].name%>></div>
+        <div id="hp-box"><font size="2px">HP</font> <%=cards[i].hp%></div>
 
         <div id="img-box-border">
             <div id="img-box">
-                <img src="<%=card[i].url%>">
+                <img src="<%=cards[i].url%>">
             </div>
         </div>
 
         
 
         <div id="attack-box">
-            <div id="attack"><%=card[i].attack%></div>
-            <div id="damage"><%=card[i].damagae%></div>
+            <div id="attack"><%=cards[i].attack%></div>
+            <div id="damage"><%=cards[i].damagae%></div>
         </div>
 
         <div id="weak-resist-box">
             <div id="weakness">Weakness</div><br/>
-            <small><%=card[i].weakness%></small>
+            <small><%=cards[i].weakness%></small>
             <div id="divider"></div>
             <div id="resistance">Resistance</div>
-            <small><%=card[i].resistance%></small>
+            <small><%=cards[i].resistance%></small>
         </div>
 
     </div>

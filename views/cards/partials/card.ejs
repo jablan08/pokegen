@@ -1,25 +1,26 @@
 <div id="card-body">
 
-    <div id="name">Your name here</div>
-    <div id="hp-box"><font size="2px">HP</font> 700</div>
+        <div id="name"><%=card.name%>></div>
+        <div id="hp-box"><font size="2px">HP</font> <%=card.hp%></div>
 
-    <div id="img-box-border">
-        <div id="img-box">
-            <img src="../images/squirl.png">
+        <div id="img-box-border">
+            <div id="img-box">
+                <img src="<%=card.url%>">
+            </div>
         </div>
-    </div>
 
-    
+        
 
-    <div id="attack-box">
-        <div id="attack">Attack String</div>
-        <div id="damage">500</div>
-    </div>
+        <div id="attack-box">
+            <div id="attack"><%=card.attack%></div>
+            <div id="damage"><%=card.damagae%></div>
+        </div>
 
-    <div id="weak-resist-box">
-        <div id="weakness">Weakness</div>
-        <div id="divider"></div>
-        <div id="resistance">Resistance</div>
-    </div>
-
+        <div id="weak-resist-box">
+            <div id="weakness">Weakness</div><br/>
+            <small><%=card.weakness%></small>
+            <div id="divider"></div>
+            <div id="resistance">Resistance</div>
+            <small><%=card.resistance%></small>
+        </div>
 </div>
