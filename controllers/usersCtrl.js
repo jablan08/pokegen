@@ -3,6 +3,14 @@ const router  = express.Router();
 const User = require("../models/users");
 const Card = require("../models/cards");
 
+const logUser = (req, res, next) => {
+    if(req.session.logged) {
+        next()
+    } else {
+        res.redirect("/auth/login");
+    }
+}
+
 // INDEX
 router.get('/', async (req, res) => {
     console.log(req.session, "this user is")
@@ -33,28 +41,20 @@ router.get('/:id', async (req, res) => {
 
 
 // EDIT
-router.get('/:id/edit', async (req, res) => {
+router.get('/:id/edit', logUser, async (req, res) => {
     try {
-        if(req.session.logged){
         const foundUser = await User.findById(req.params.id)
         res.render('users/edit.ejs',{
             user: foundUser
         })
-        }  else{
-            res.redirect('auth/login')
-        }
     } catch (error) {   
     }
 })
 
-router.put('/:id', async (req, res) => {
+router.put('/:id', logUser, async (req, res) => {
     try {
-        if(req.session.logged){
-            User.findByIdAndUpdate(req.params.id, req.body, {new: true, })
-            res.redirect('/users' + req.params.id)
-        }else {
-            res.redirect('auth/login')
-        }
+        User.findByIdAndUpdate(req.params.id, req.body, {new: true, })
+        res.redirect('/users' + req.params.id)
     } catch (err) {    
     }
 })
