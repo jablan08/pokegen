@@ -1,6 +1,7 @@
 <%- include('../partials/header')%>
 <h1> THIS IS A SHOW PAGE FOR A CARD</h1>
-<h2>Owned By: <%=user.username%></h2>
+<h2>Owned By: <a href="/users/<%=user._id%>"><%=user.username%></a>
+</h2>
 <%- include('../partials/card')%>
 
 <section>
