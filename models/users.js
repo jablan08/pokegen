@@ -9,7 +9,6 @@ const userSchema = new mongoose.Schema({
         ref: 'Card'
     }],
     admin: Boolean
-
 })
 
 userSchema.methods.hashPassword = function(password){

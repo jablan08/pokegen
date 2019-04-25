@@ -36,11 +36,13 @@ router.get('/:id', async (req, res) => {
 
         console.log(findAdmin, "found admin")
         console.log(foundUser)
+        console.log(req.session.logged, "<==== logged in")
         res.render('users/show.ejs',{
             user: foundUser,
             currentUser: req.session.userDbId,
             verifyUser: foundUser._id.toString(),
-            admin: findAdmin
+            admin: findAdmin,
+            logged: req.session.logged
         })    
     } catch (err) {
         res.send(err)
