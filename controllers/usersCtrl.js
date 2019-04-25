@@ -31,8 +31,8 @@ router.get('/', async (req, res) => {
 router.get('/:id', async (req, res) => {
     try {
         const foundUser = await User.findById(req.params.id)
-        // .populate('cards')
-        // .exec((err, foundUser))
+        .populate('cards')
+        .exec((foundUser))
         res.render('users/show.ejs',{
             user: foundUser
         })    
