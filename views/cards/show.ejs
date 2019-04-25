@@ -6,7 +6,7 @@
 
 <%if (currentUser === verifyUser) {%>
     <section>
-        <form method="POST" action="/cards/<%=card._id%>?_method=DELETE">
+        <form action="/cards/<%=card._id%>?_method=DELETE" method="POST" >
             <button>DELETE CARD</button>
         </form>
     </section>

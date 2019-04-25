@@ -119,7 +119,23 @@ router.put("/:id", logUser, async (req,res)=>{
 })
 
 // DELETE
-router.delete("/:id",  )
+router.delete("/:id", logUser, async (req,res)=>{
+    try {
+        const deleteCard = Card.findByIdAndDelete(req.params.id);
+        const findUser = User.findOne({"cards": req.params.id});
+
+        const [deletedCard, foundUser] = await Promise.all([deleteCard,findUser]);
+        foundUser.cards.remove(req.params.id);
+        await foundUser.save();
+
+        console.log(deletedCard);
+        res.redirect("/cards")
+
+
+    } catch(err) {
+        res.send(err)
+    }
+})
 
 
 module.exports = router;
