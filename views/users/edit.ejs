@@ -2,8 +2,9 @@
 <h1>THIS IS AN EDIT PAGE FOR USERS</h1>
 
 <form action="/users/<%=user._id%>?_method=PUT" method="POST">
-<input type="text" name="username" value="<%=user.username%>">
-<input type="submit" value="update name">
+<input type="text" name="username" value="<%=user.username%>"><br>
+<input type="password" name="password" value="<%=user.password%>"><br>
+<button type="submit">update</button> <br>
     
 </form>
 
