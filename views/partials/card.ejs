@@ -1,7 +1,47 @@
-<div id="card-body">
+<div id="card-body" 
+    <%if (card.type === "normal") {%>
+        style="background: black"  
+        <%} else if (card.type === "fighting") {%>
+        style="background: pink"  
 
+
+        <%} else if (card.type === "ground") {%>
+        style="background: brown"  
+
+        <%} else if (card.type === "steel") {%>
+        style="background: grey"  
+
+        <%} else if (card.type === "fire") {%>
+        style="background: red"  
+
+        <%} else if (card.type === "water") {%>
+        style="background: linear-gradient(to bottom right, blue,lightblue,blue)"  
+
+        <%} else if (card.type === "grass") {%>
+        style="background: green"  
+
+        <%}else if (card.type === "electric") {%>
+        style="background: yellow"  
+
+        <%}else if (card.type === "psychic") {%>
+        style="background: purple"  
+
+        <%}%> 
+        >
+        <div id="name">
+            <%=card.name%>
+        </div>
+        <span class="type">
+        <%if (card.type === "normal") {%>
+
+        <%}%>
+        <%=card.type%>
+        </span>
+        <div id="hp-box"><font size="2px">HP</font> <%=card.hp%>
+        </div>
         <div id="name"><%=card.name%></div>
         <div id="hp-box"><font size="2px">HP </font><%=card.hp%></div>
+
 
         <div id="img-box-border">
             <div id="img-box">

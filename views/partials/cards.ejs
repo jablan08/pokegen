@@ -1,9 +1,43 @@
-<% for (let i = 0; i < user.cards.length; i++) {%>
+<% for (let i = 0; i < cards.length; i++) {%>
+    
+    <div id="card-body"
+        <%if (cards[i].type === "normal") {%>
+        style="background: black"  
+        <%} else if (cards[i].type === "fighting") {%>
+        style="background: pink"  
 
-    <div id="card-body">
+        <%} else if (cards[i].type === "ground") {%>
+        style="background: brown"  
 
-        <div id="name"><%=cards[i].name%>></div>
-        <div id="hp-box"><font size="2px">HP</font> <%=cards[i].hp%></div>
+        <%} else if (cards[i].type === "steel") {%>
+        style="background: grey"  
+
+        <%} else if (cards[i].type === "fire") {%>
+        style="background: red"  
+
+        <%} else if (cards[i].type === "water") {%>
+        style="background: linear-gradient(to bottom right, blue,lightblue,blue)"  
+
+        <%} else if (cards[i].type === "grass") {%>
+        style="background: green"  
+
+        <%}else if (cards[i].type === "electric") {%>
+        style="background: yellow"  
+
+        <%}else if (cards[i].type === "psychic") {%>
+        style="background: purple"  
+
+        <%}%> >
+
+        <div id="name">
+        <a href="/cards/<%=cards[i]._id%>">    <%=cards[i].name%></a>
+        </div>
+        <span class="type">
+            Type:
+        </span>
+        <div id="hp-box">
+            <font size="2px">HP</font> <%=cards[i].hp%>
+        </div>
 
         <div id="img-box-border">
             <div id="img-box">
@@ -27,5 +61,4 @@
         </div>
 
     </div>
-
 <% } %>

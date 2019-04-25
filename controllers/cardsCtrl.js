@@ -18,7 +18,8 @@ router.get("/", async (req,res)=> {
     try {
         const allCards = await Card.find({});
         res.render("cards/index.ejs", {
-            cards: allCards
+            cards: allCards,
+            message: req.session.message
         });
     } catch(err) {
         res.send(err) 
@@ -62,11 +63,45 @@ router.post("/", logUser, async (req,res)=>{
 })
 
 // SHOW
-
+router.get('/:id', async (req, res)=>{
+    // req.params.id is the articles id
+    try {
+        console.log("hit")
+        const foundUser = await User.findOne({'cards': req.params.id}).populate({path: 'cards', match: {_id: req.params.id}})
+  
+        console.log(foundUser, "<---- foundUser in card's show route");
+        res.render('cards/show.ejs', {
+          user: foundUser,
+          card: foundUser.cards[0]
+          
+        })
+  
+    } catch(err){
+      res.send(err);
+    }
+  
+  });
 
 
 // EDIT
-
+router.get("/:id/edit", async (req,res)=>{
+    try {
+        const foundUser = await User.findOne({'cards': req.params.id}).populate({path: 'cards', match: {_id: req.params.id}})
+        // console.log(foundUser._id, "<---- foundUser in card's show route");
+        // console.log(req.session.userDbId, "<---userDbId")
+        if (req.session.userDbId === foundUser._id.toString()) {
+            console.log("success!")
+            res.render("cards/edit.ejs");
+        } else {
+            console.log(req.session)
+            req.session.message = "You cannot edit this Pokemon";
+            res.redirect("/cards");
+           
+        }
+    } catch(err){
+        res.send(err);
+    }
+})
 
 
 // DELETE

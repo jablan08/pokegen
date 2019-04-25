@@ -1,11 +1,13 @@
 <%- include('../partials/header')%>
 <h1> THIS IS A SHOW PAGE FOR A CARD</h1>
-
+<h2>Owned By: <a href="/users/<%=user._id%>"><%=user.username%></a>
+</h2>
 <%- include('../partials/card')%>
 
 <section>
-    <form method="POST" action="/cards/<%=cards._id%>?_method=DELETE">
+    <form method="POST" action="/cards/<%=card._id%>?_method=DELETE">
         <button>DELETE CARD</button>
     </form>
 </section>
+
 <%- include('../partials/footer')%>
