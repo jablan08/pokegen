@@ -4,7 +4,7 @@
 </h2>
 <%- include('../partials/card')%>
 
-<%if (currentUser === verifyUser) {%>
+<%if (currentUser === verifyUser || admin.admin === true) {%>
     <section>
         <form action="/cards/<%=card._id%>?_method=DELETE" method="POST" >
             <button>DELETE CARD</button>

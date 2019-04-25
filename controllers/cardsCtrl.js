@@ -13,6 +13,7 @@ const logUser = (req, res, next) => {
     }
 }
 
+
 // INDEX
 router.get("/", async (req,res)=> {
     try {
@@ -68,14 +69,16 @@ router.get('/:id', async (req, res)=>{
     try {
         console.log("hit")
         const foundUser = await User.findOne({'cards': req.params.id}).populate({path: 'cards', match: {_id: req.params.id}})
-  
+        const findAdmin = await User.findById(req.session.userDbId);
+        
+        console.log(findAdmin, "found admin")
         console.log(foundUser, "<---- foundUser in card's show route");
         res.render('cards/show.ejs', {
           user: foundUser,
           card: foundUser.cards[0],
           currentUser: req.session.userDbId,
-          verifyUser: foundUser._id.toString()
-          
+          verifyUser: foundUser._id.toString(),
+          admin: findAdmin
         })
   
     } catch(err){
@@ -83,7 +86,8 @@ router.get('/:id', async (req, res)=>{
     }
   
   });
-  
+ 
+
 
 // EDIT
 router.get("/:id/edit", async (req,res)=>{
