@@ -98,7 +98,6 @@ router.get("/:id/edit", async (req,res)=>{
             });
         } else {
             console.log(req.session)
-            req.session.message = "You cannot edit this Pokemon";
             res.redirect("/cards");  
         }
     } catch(err){
@@ -106,6 +105,21 @@ router.get("/:id/edit", async (req,res)=>{
     }
 })
 
+router.put("/:id", logUser, (req,res)=>{
+    try {
+        Card.findByIdAndUpdate(req.params.id, req.body, {new:true}, (err, updatedPokemon) =>{
+            if (err){
+                console.log(err)
+            } else {
+                console.log(updatedPokemon)
+            res.redirect("/cards/" + req.params.id);
+            }
+        });
+        
+    } catch(err) {
+        res.send(err)
+    }
+})
 
 // DELETE
 
