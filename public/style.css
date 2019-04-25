@@ -2,34 +2,44 @@ html {
     background-color: lightgray;
 }
 body {
-    padding: 10px;
+    padding: 0;
+    margin: 0;
 }
 a {
     text-decoration: none;
 }
-.ahover:hover {
-    transform: scale(1.2);
-    z-index: 500;
+a:hover {
+    font-size: 34px;
 }
 h1, h2, h3 {
-    font-family: 'ZCOOL KuaiLe', cursive;
+    padding: 0 20px;
+    font-family: 'ZCOOL KuaiLe', courier;
 }
 /*********************** FOOTER ***********************/
 footer {
     position: absolute;
     bottom: 0;
     margin: 20px auto;
+    width: 100%;
+    padding: 0;
+    margin: 0;
 }
 
-.footerBn {
-    margin: 5px;
-}
+
 /*---------------------- FOOTER ----------------------*/
 /*********************** NAV BAR ***********************/
 nav {
     position: relative;
     float: right;
     margin: 0 50px 0 0;
+}
+button {
+    font-family: 'ZCOOL KuaiLe', courier;
+}
+.navBtn {
+    margin: 5px;
+    font-size: 20px;
+    border-radius: 10px;
 }
 /*---------------------- NAV BAR ----------------------*/
 /*********************** HOME PAGE ***********************/
@@ -38,21 +48,36 @@ nav {
 
 }
 #home-users {
-    width: 39%;
+    /* width: 39%; when this is used the a link goes away */
     position: relative;
     float: right;
+    text-align: left;
 
 }
-#home-cards {
-    width: 60%;
+#home-main {
+    width: auto;
+    max-width: 60%;
+    height: 220px;
+    padding: 50px;
     position: absolute;
     float: left;
-
-}
-#sub-home-cards{
-    margin: 0 auto;
 }
 /*---------------------- HOME PAGE ----------------------*/
+/*********************** SCROLL MENU ***********************/
+#menu {
+    position: relative;
+    background-color: lightgrey;
+    width: auto;
+    height: 220px;
+    padding: 50px 0;
+    white-space: nowrap;
+    overflow-x: scroll;
+  }
+
+#inner-menu {
+    width: 5000000000px;
+}
+/*---------------------- SCROLL MENU ----------------------*/
 /*********************** INPUT FORM ***********************/
 .container {
     position: relative;
@@ -69,7 +94,7 @@ nav {
     font-size: 17px;
     text-align: left;
 }
-input{
+input {
     border-radius: 3px;
     margin-top: 1px;
 }
