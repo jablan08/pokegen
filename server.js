@@ -1,15 +1,16 @@
-const express = require("express");
-const app = express();
-const session = require("express-session");
-const logger = require("morgan");
-const PORT = process.env.PORT || 8070
+const express        = require("express");
+const app            = express();
+const session        = require("express-session");
+const logger         = require("morgan");
+const PORT           = process.env.PORT || 8070
 const methodOverride = require("method-override");
 require("dotenv").config()
 require("./db/db")
 
-const userController = require("./controllers/usersCtrl");
-const cardsController = require("./controllers/cardsCtrl");
-const authController = require("./controllers/authCtrl");
+const userController    = require("./controllers/usersCtrl");
+const cardsController   = require("./controllers/cardsCtrl");
+const authController    = require("./controllers/authCtrl");
+const homeController    = require("./controllers/homeCtrl");
 
 
 app.use(express.static('public'));
@@ -24,14 +25,15 @@ app.use(session({
 }))  
 
 
-app.get('/', (req, res) => {
-    res.render('cards/new.ejs')
-})
+// app.get('/', (req, res) => {
+//     res.render('cards/new.ejs')
+// })
 
 
 app.use("/users", userController);
 app.use("/cards", cardsController);
 app.use("/auth", authController);
+app.use("/home", homeController);
 
 
 
