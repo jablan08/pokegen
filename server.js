@@ -25,9 +25,9 @@ app.use(session({
 }))  
 
 
-// app.get('/', (req, res) => {
-//     res.render('cards/new.ejs')
-// })
+app.get('/', (req, res) => {
+    res.render('minisample.ejs')
+})
 
 
 app.use("/users", userController);
