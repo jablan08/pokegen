@@ -2,9 +2,6 @@ html {
     background-color: lightgray
 }
 
-div {
-    border: 1px dotted black;
-}
 /*********************** FOOTER ***********************/
 footer {
     position: absolute;
@@ -16,6 +13,13 @@ footer {
     margin: 5px;
 }
 /*---------------------- FOOTER ----------------------*/
+/*********************** NAV BAR ***********************/
+nav {
+    position: relative;
+    float: right;
+    margin: 0 50px 0 0;
+}
+/*---------------------- NAV BAR ----------------------*/
 /*********************** HOME PAGE ***********************/
 #home-container {
     position: relative;
@@ -33,7 +37,9 @@ footer {
     float: left;
 
 }
-
+#sub-home-cards{
+    margin: 0 auto;
+}
 /*---------------------- HOME PAGE ----------------------*/
 /*********************** INPUT FORM ***********************/
 .container {
@@ -62,6 +68,9 @@ select {
 /*---------------------- INPUT FORM ----------------------*/
 /*********************** CREATE CARD ***********************/
 #card-body {
+    position: relative;
+    float: left;
+    margin: 5px;
     background-image: linear-gradient(to bottom right, blue,lightblue,blue);
     height: 400px;
     width: 280px;
@@ -144,6 +153,7 @@ img {
 }
 
 #weakness{
+    position: relative;
     width: 90px;
     float: left;
     margin: 5px 0 0 5px;
@@ -151,9 +161,13 @@ img {
 
 }
 #divider {
+    position: relative;
     width: 100px;
+    margin: 5 auto 0
+
 }
 #resistance{
+    position: relative;
     width: 90px;
     float: right;
     margin: 5px 5px 0 0;
