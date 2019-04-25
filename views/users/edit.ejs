@@ -1,4 +1,7 @@
 <%- include('../partials/header')%>
+
+<%- include('../partials/head')%>
+
 <div id="users-container" class="grid-container">
 
     <div class="grid-header">
@@ -7,14 +10,16 @@
     </div>
 
     <div id="users-main" class="grid-menu">
-        <form action="/users/<%=user._id%>?_method=PUT" method="POST">
-            <input type="text" name="username" value="<%=user.username%>"><br>
-            <input type="password" name="password" value="<%=user.password%>"><br>
-            <button type="submit">update</button> <br>  
-        </form>
+      <form action="/users/<%=user._id%>?_method=PUT" method="POST">
+        <input type="text" name="username" value="<%=user.username%>"><br>
+        <input type="password" name="password" placeholder=""><br>
+        <button type="submit">update</button> <br>
+
+      </form>
     </div>
 
     <div id="feature-card" class="grid-main">
+
 <h1>THIS IS AN EDIT PAGE FOR USERS</h1>
     </div>
 
@@ -32,5 +37,7 @@
 
 
 
+
 <%- include('../partials/footer')%>
+
 

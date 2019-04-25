@@ -62,7 +62,11 @@ router.get('/:id/edit', logUser, async (req, res) => {
 })
 
 router.put('/:id', logUser,(req, res) => {
-    req.body.password = bcrypt.hashSync(req.body.password, bcrypt.genSaltSync(10))
+    if(!req.body.password){
+        delete req.body.password
+    } else {
+       req.body.password = bcrypt.hashSync(req.body.password, bcrypt.genSaltSync(10)) 
+    }
     try {
         User.findByIdAndUpdate(req.params.id, req.body, {new: true}, (err, updatedUser)=>{
             if(err){
@@ -94,7 +98,6 @@ router.delete('/:id',logUser, (req, res) => {
             )
         }
     })
-
 
 })
 
