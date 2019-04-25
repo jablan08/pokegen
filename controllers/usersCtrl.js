@@ -34,7 +34,9 @@ router.get('/:id', async (req, res) => {
         .populate('cards')
         console.log(foundUser)
         res.render('users/show.ejs',{
-            user: foundUser
+            user: foundUser,
+            currentUser: req.session.userDbId,
+            verifyUser: foundUser._id.toString()
         })    
     } catch (err) {
         res.send(err)
