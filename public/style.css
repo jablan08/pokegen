@@ -227,12 +227,12 @@ img {
     float: left;
     margin: 6px;
     /* background-image: url('/public/images/grass-bg.png'); */
-    background-image: linear-gradient(to bottom right, blue,lightblue,blue);
+    /* background-image: linear-gradient(to bottom right, blue,lightblue,blue); */
     height: 200px;
     width: 140px;
     border: 4px solid gold;
     border-radius: 5px;
-    background-color: rgb(59, 59, 243);
+    /* background-color: rgb(59, 59, 243); */
     box-shadow: 0 2px 5px 2px black;
     
 }
