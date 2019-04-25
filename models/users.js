@@ -29,6 +29,7 @@ console.log(this.isModified("password"), "password is modified")
     next()
 })
 
+
 const User =  mongoose.model('User', userSchema)
 
 
