@@ -7,7 +7,8 @@ const userSchema = new mongoose.Schema({
     cards: [{
         type: mongoose.Schema.Types.ObjectId,
         ref: 'Card'
-    }]
+    }],
+    admin: Boolean
 
 })
 
