@@ -4,9 +4,6 @@
         <%} else if (card.type === "fighting") {%>
         style="background-image: url('/images/fight-bg.png')" 
 
-        <%} else if (card.type === "ground") {%>
-        style="background-image: url('/images/ground-bg.png')"  
-
         <%} else if (card.type === "steel") {%>
         style="background-image: url('/images/metal-bg.png')" 
 
@@ -30,13 +27,35 @@
         <div id="name">
             <%=card.name%>
         </div>
-        <span class="type">
-        <%if (card.type === "normal") {%>
+       
+        
+         <span class="type">
+            <%if (card.type === "normal") {%>
+                <img class="types" src="/images/normal.png">
+                <%} else if (card.type === "fighting") {%>
+                <img class="types" src="/images/combat.png">
 
-        <%}%>
-        <%=card.type%>
+                <%} else if (card.type === "steel") {%>
+                <img class="types" src="/images/metal.png">
+
+                <%} else if (card.type === "fire") {%>
+                <img class="types" src="/images/fire.png"> 
+
+                <%} else if (card.type === "water") {%>
+                <img class="types" src="/images/water.png"> 
+
+                <%} else if (card.type === "grass") {%>
+                <img class="types" src="/images/grass-type.png"> 
+
+                <%}else if (card.type === "electric") {%>
+                <img class="types" src="/images/elektric.png"> 
+
+                <%}else if (card.type === "psychic") {%>
+                <img class="types" src="/images/psy.png">
+            <%}%> 
         </span>
-        <div id="hp-box"><font size="2px">HP</font> <%=card.hp%>
+        <div id="hp-box">
+            <font size="2px">HP</font> <%=card.hp%>
         </div>
         <div id="img-box-border">
             <div id="img-box">

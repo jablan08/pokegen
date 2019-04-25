@@ -184,7 +184,10 @@ img {
     height: 100%;
     box-shadow: inset  0px 0px 10px 0px black;
 }
-
+.types {
+    width: 30px;
+    height: 30px;
+}
 #img-box-border{
     background-image: linear-gradient(to bottom right, rgb(253, 190, 44), rgb(255, 255, 255), gold, rgb(153, 118, 35));
     height: 160px;
