@@ -69,6 +69,25 @@ router.put('/:id', logUser,(req, res) => {
     }
 })
 
+// DELETE
+router.delete('/:id',logUser, (req, res) => {
+    User.findByIdAndRemove(req.params.id, (err, deletedUser) =>{
+        if(err){
+            res.send(err)
+        } else {
+            console.log(deletedUser, "<------ deleted user");
+            Card.deleteMany({
+                _id: {
+                    $in: deletedUser.cards
+                }
+            },(err, data) =>{
+                console.log(data)
+                res.redirect('/users')
+            }
+            )
+        }
+    })
 
+})
 
 module.exports = router;
