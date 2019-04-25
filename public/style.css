@@ -8,8 +8,9 @@ body {
 a {
     text-decoration: none;
 }
-h1, h2, h3 {
+h3 {
     padding: 0 20px;
+    font-size: 24px;
     font-family: 'ZCOOL KuaiLe', courier;
 }
 
@@ -74,6 +75,30 @@ button {
 }
 
 /*---------------------- HOME PAGE ----------------------*/
+/*********************** CARDS INDEX PAGE ***********************/
+.grid-cards-header { grid-area: header; }
+.grid-cards-menu { grid-area: menu; padding-left: 10px;}
+.grid-cards-main { grid-area: main; }
+.grid-cards-right { grid-area: right; }
+.grid-cards-footer { grid-area: footer; }
+
+#new-container {
+    position: relative;
+    z-index: 5;
+}
+
+.grid-cards-container {
+  display: grid;
+  grid-template-areas:
+    'header header header header header header'
+    'menu main main main main main'
+    'footer footer footer footer footer footer';
+  grid-gap: 10px;
+}
+/* .url:hover {
+
+} */
+/*---------------------- CARDS INDEX PAGE ----------------------*/
 /*********************** NEW PAGE ***********************/
 .grid-n-header { grid-area: header; }
 .grid-n-menu { grid-area: menu; padding-left: 10px;}
