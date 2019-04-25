@@ -1,14 +1,16 @@
 <%- include('../partials/header')%>
-<%- include('../partials/head')%>
 
-<h1>THIS IS A SHOW PAGE FOR USERS<h1>
+<div id="users-container" class="grid-container">
 
 
-<h1> <%=user.username %>'s PokeGen Cards<h1>
+    <div class="grid-header">
+        <%- include('../partials/head')%>
+        <h1>THIS IS A SHOW PAGE FOR USERS<h1>
+        <h1> <%=user.username %>'s PokeGen Cards<h1>
+    </div>
 
-<%- include("../partials/showcard")%>
-
-<%if (logged) {%>
+    <div id="users-main" class="grid-menu">
+        <%if (logged) {%>
     <%if(currentUser === verifyUser || admin.admin ===true){%>
         <section>    
         <a href="/cards/new"><button>GENERATE CARD</button></a>
@@ -22,10 +24,38 @@
         </section>
     <%}%>
 <%}%>
+    </div>
+
+    <div id="feature-card" class="grid-main">
+<%- include("../partials/showcard")%>
 
 
+    </div>
 
+    <div id="users-users" class="grid-right">
+        <p>THIS IS A WELCOME PARAGRAPH</p>
+    </div>
 
+    <div class="grid-footer">
+    </div>
+
+</div>
 
 
 <%- include('../partials/footer')%>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,9 +1,16 @@
 <%- include('../partials/header')%>
+<div id="cards-container" class="grid-container">
+
+    <div class="grid-header">
+        <%- include('../partials/head')%>
 <h1> THIS IS A SHOW PAGE FOR A CARD</h1>
+
 <h2>Owned By: <a href="/users/<%=user._id%>"><%=user.username%></a>
 </h2>
-<%- include('../partials/card')%>
+    </div>
 
+    <div id="cards-main" class="grid-menu">
+        
 <%if (logged) {%>
     <%if(currentUser === verifyUser || admin.admin ===true){%>
     <section>
@@ -18,6 +25,32 @@
     </section>
     <%}%>
 <%}%>
+    </div>
+
+    <div id="feature-card" class="grid-main">
+        <p>THIS IS A WELCOME PARAGRAPH</p>
+    </div>
+
+    <div id="cards-users" class="grid-right">
+<%- include('../partials/card')%>
+    </div>
+
+    <div class="grid-footer">
+    </div>
+
+</div>
 
 
-<%- include('../partials/footer')%>
+
+
+
+<%- include('../partials/scroll')%>
+
+
+
+
+
+
+
+
+

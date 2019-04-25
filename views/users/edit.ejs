@@ -1,12 +1,43 @@
 <%- include('../partials/header')%>
-<%- include('../partials/head')%>
-<h1>THIS IS AN EDIT PAGE FOR USERS</h1>
 
-<form action="/users/<%=user._id%>?_method=PUT" method="POST">
-<input type="text" name="username" value="<%=user.username%>"><br>
-<input type="password" name="password" placeholder=""><br>
-<button type="submit">update</button> <br>
-    
-</form>
+<%- include('../partials/head')%>
+
+<div id="users-container" class="grid-container">
+
+    <div class="grid-header">
+        <%- include('../partials/head')%>
+        <h1>THIS IS AN EDIT PAGE FOR USERS</h1>
+    </div>
+
+    <div id="users-main" class="grid-menu">
+      <form action="/users/<%=user._id%>?_method=PUT" method="POST">
+        <input type="text" name="username" value="<%=user.username%>"><br>
+        <input type="password" name="password" placeholder=""><br>
+        <button type="submit">update</button> <br>
+
+      </form>
+    </div>
+
+    <div id="feature-card" class="grid-main">
+
+<h1>THIS IS AN EDIT PAGE FOR USERS</h1>
+    </div>
+
+    <div id="users-users" class="grid-right">
+<h1>THIS IS AN EDIT PAGE FOR USERS</h1>
+    </div>
+
+    <div class="grid-footer">
+    </div>
+
+</div>
+
+
+
+
+
+
 
 <%- include('../partials/footer')%>
+
+

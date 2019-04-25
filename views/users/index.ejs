@@ -1,6 +1,29 @@
 <%- include('../partials/header')%>
-<%- include('../partials/head')%>
 
-<%- include('../partials/userlist')%>
+<div id="users-container" class="grid-container">
+
+    <div class="grid-header">
+        <%- include('../partials/head')%>
+        <h1>User Index</h1>
+    </div>
+
+    <div id="users-main" class="grid-menu">
+        <p>THIS IS A WELCOME PARAGRAPH</p>
+    </div>
+
+    <div id="feature-card" class="grid-main">
+        <%- include('../partials/userlist')%>
+    </div>
+
+    <div id="users-users" class="grid-right">
+        <p>THIS IS A WELCOME PARAGRAPH</p>
+    </div>
+
+    <div class="grid-footer">
+    </div>
+
+</div>
+
+
 
 <%- include('../partials/footer')%>
