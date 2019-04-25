@@ -6,7 +6,7 @@ const userSchema = new mongoose.Schema({
     password: {type: String, required: true},
     cards: [{
         type: mongoose.Schema.Types.ObjectId,
-        ref: 'Cards'
+        ref: 'Card'
     }]
 
 })
@@ -22,7 +22,6 @@ userSchema.methods.validPassword = function(password){
 
 
 userSchema.pre("save", function(next){
-console.log(this.isModified("password"), "password is modified")
     if(this.isModified("password")){
         this.password = this.hashPassword(this.password)
     }

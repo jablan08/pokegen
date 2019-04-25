@@ -62,7 +62,23 @@ router.post("/", logUser, async (req,res)=>{
 })
 
 // SHOW
-
+router.get('/:id', async (req, res)=>{
+    // req.params.id is the articles id
+    try {
+        console.log("hit")
+        const foundUser = await User.findOne({'cards': req.params.id}).populate({path: 'cards', match: {_id: req.params.id}})
+  
+        console.log(foundUser, "<---- foundUser in card's show route");
+        res.render('cards/show.ejs', {
+          user: foundUser,
+          card: foundUser.cards[0]
+        })
+  
+    } catch(err){
+      res.send(err);
+    }
+  
+  });
 
 
 // EDIT
