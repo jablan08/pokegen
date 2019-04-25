@@ -72,7 +72,9 @@ router.get('/:id', async (req, res)=>{
         console.log(foundUser, "<---- foundUser in card's show route");
         res.render('cards/show.ejs', {
           user: foundUser,
-          card: foundUser.cards[0]
+          card: foundUser.cards[0],
+          currentUser: req.session.userDbId,
+          verifyUser: foundUser._id.toString()
           
         })
   
@@ -86,7 +88,8 @@ router.get('/:id', async (req, res)=>{
 // EDIT
 router.get("/:id/edit", async (req,res)=>{
     try {
-        const foundUser = await User.findOne({'cards': req.params.id}).populate({path: 'cards', match: {_id: req.params.id}});
+        const foundUser = await User.findOne({'cards': req.params.id})
+        .populate({path: 'cards', match: {_id: req.params.id}});
         
         // console.log(foundUser._id, "<---- foundUser in card's show route");
         // console.log(req.session.userDbId, "<---userDbId")
@@ -105,16 +108,10 @@ router.get("/:id/edit", async (req,res)=>{
     }
 })
 
-router.put("/:id", logUser, (req,res)=>{
+router.put("/:id", logUser, async (req,res)=>{
     try {
-        Card.findByIdAndUpdate(req.params.id, req.body, {new:true}, (err, updatedPokemon) =>{
-            if (err){
-                console.log(err)
-            } else {
-                console.log(updatedPokemon)
-            res.redirect("/cards/" + req.params.id);
-            }
-        });
+        await Card.findByIdAndUpdate(req.params.id, req.body, {new:true});
+        res.redirect("/cards/" + req.params.id);
         
     } catch(err) {
         res.send(err)
@@ -122,7 +119,7 @@ router.put("/:id", logUser, (req,res)=>{
 })
 
 // DELETE
-
+router.delete("/:id",  )
 
 
 module.exports = router;

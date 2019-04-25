@@ -4,10 +4,18 @@
 </h2>
 <%- include('../partials/card')%>
 
-<section>
-    <form method="POST" action="/cards/<%=card._id%>?_method=DELETE">
-        <button>DELETE CARD</button>
-    </form>
-</section>
+<%if (currentUser === verifyUser) {%>
+    <section>
+        <form method="POST" action="/cards/<%=card._id%>?_method=DELETE">
+            <button>DELETE CARD</button>
+        </form>
+    </section>
+    <section>
+        <button>
+        <a href="/cards/<%=card._id%>/edit">EDIT</a>
+        </button>
+    </section>
+<%}%>
+
 
 <%- include('../partials/footer')%>
