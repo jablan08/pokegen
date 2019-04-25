@@ -56,8 +56,11 @@ router.get('/logout', (req, res) => {
       if(err){
         res.send(err);
       } else {
+     
         console.log("loggedout")  
         res.redirect('/auth/login');
+        
+
       }
     })
 })
