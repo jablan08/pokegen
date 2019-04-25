@@ -17,9 +17,7 @@ userSchema.methods.hashPassword = function(password){
 
 userSchema.methods.validPassword = function(password){
     return bcrypt.compareSync(password, this.password)
-} 
-
-
+}
 
 userSchema.pre("save", function(next){
     if(this.isModified("password")){
