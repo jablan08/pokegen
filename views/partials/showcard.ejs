@@ -1,5 +1,5 @@
-<% for (let i = 0; i < user.cards.length; i++) {%>
     
+<% for (let i = 0; i < user.cards.length; i++) {%>
     <div id="card-body"
         <%if (user.cards[i].type === "normal") {%>
         style="background-image: url('/images/bg-normal.png')"  
@@ -30,34 +30,34 @@
         <%}%> >
 
         <div id="name">
-        <a href="/cards/<%=cards[i]._id%>">    <%=cards[i].name%></a>
+        <a href="/cards/<%=user.cards[i]._id%>">    <%=user.cards[i].name%></a>
         </div>
         <span class="type">
             Type:
         </span>
         <div id="hp-box">
-            <font size="2px">HP</font> <%=cards[i].hp%>
+            <font size="2px">HP</font> <%=user.cards[i].hp%>
         </div>
 
         <div id="img-box-border">
             <div id="img-box">
-                <img src="<%=cards[i].url%>">
+                <img src="<%=user.cards[i].url%>">
             </div>
         </div>
 
         
 
         <div id="attack-box">
-            <div id="attack"><%=cards[i].attack%></div>
-            <div id="damage"><%=cards[i].damagae%></div>
+            <div id="attack"><%=user.cards[i].attack%></div>
+            <div id="damage"><%=user.cards[i].damagae%></div>
         </div>
 
         <div id="weak-resist-box">
             <div id="weakness">Weakness</div><br/>
-            <small><%=cards[i].weakness%></small>
+            <small><%=user.cards[i].weakness%></small>
             <div id="divider"></div>
             <div id="resistance">Resistance</div>
-            <small><%=cards[i].resistance%></small>
+            <small><%=user.cards[i].resistance%></small>
         </div>
 
     </div>

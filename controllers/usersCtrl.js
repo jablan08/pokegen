@@ -31,10 +31,12 @@ router.get('/', async (req, res) => {
 router.get('/:id', async (req, res) => {
     try {
         const foundUser = await User.findById(req.params.id)
-        // .populate('cards')
-        // .exec((err, foundUser))
+        .populate('cards')
+        console.log(foundUser)
         res.render('users/show.ejs',{
-            user: foundUser
+            user: foundUser,
+            currentUser: req.session.userDbId,
+            verifyUser: foundUser._id.toString()
         })    
     } catch (err) {
         res.send(err)
