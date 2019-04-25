@@ -7,12 +7,15 @@
 
 <%- include("../partials/showcard")%>
 
+<%if (currentUser === verifyUser) {%>
 
-<main>
+<section>    
 <a href="/cards/new"><button>GENERATE CARD</button></a>
 <a href="/users/<%=user._id%>/edit"><button>EDIT USER</button></a>
-    
-</main>
+</section> 
+
+
+<%}%>
 
 
 
