@@ -12,11 +12,24 @@ h1, h2, h3 {
     padding: 0 20px;
     font-family: 'ZCOOL KuaiLe', courier;
 }
+
+h4 {
+    position: sticky;
+    bottom: 0;
+    font-size: 8px;
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+    z-index: 500000;
+}
+/* #scroll-bottom {
+    position: fixed;
+    bottom: 0;
+} */
 /*********************** FOOTER ***********************/
 footer {
-    position: absolute;
+    /* position: absolute; */
     bottom: 0;
-    margin: 20px auto;
+    margin: 20px auto 0 auto;
     width: 100%;
     padding: 0;
     margin: 0;
@@ -40,44 +53,37 @@ button {
 }
 /*---------------------- NAVIGATION ----------------------*/
 /*********************** HOME PAGE ***********************/
+.grid-header { grid-area: header; }
+.grid-menu { grid-area: menu; padding-left: 10px;}
+.grid-main { grid-area: main; }
+.grid-right { grid-area: right; }
+.grid-footer { grid-area: footer; }
+
 #home-container {
     position: relative;
-
-}
-#home-users {
-    max-width: 500px;
-    position: static;
-    float: right;
-    text-align: left;
     z-index: 5;
 }
-.home-hover:hover {
-    font-size: 34px;
-}
-#home-main {
-    width: auto;
-    height: 220px;
-    padding: 50px;
-    position: relative;
-    float: left;
-    
+
+.grid-container {
+  display: grid;
+  grid-template-areas:
+    'header header header header header header'
+    'menu menu main main right right'
+    'footer footer footer footer footer footer';
+  grid-gap: 10px;
 }
 
-#feature-card {
-    position: relative;
-    float: right;
-}
 /*---------------------- HOME PAGE ----------------------*/
 /*********************** SCROLL MENU ***********************/
 #menu {
     position: relative;
     background-color: lightgrey;
     width: auto;
-    height: 220px;
-    padding: 50px 0;
+    height: 230px;
+    padding: 55px 0;
     white-space: nowrap;
     overflow-x: scroll;
-  }
+}
 
 #inner-menu {
     width: 5000000000px;
@@ -87,7 +93,7 @@ button {
 .container {
     position: relative;
     height: 200px;
-    width: 540px;
+    width: 580px;
 }
 .right {
     position: relative;
@@ -152,7 +158,6 @@ img {
     position: absolute;
     width: 100%;
     height: 100%;
-    z-index: 5;
     box-shadow: inset  0px 0px 10px 0px black;
 }
 

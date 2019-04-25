@@ -14,7 +14,11 @@
 <a href="/users/<%=user._id%>/edit"><button>EDIT USER</button></a>
 </section> 
 
-
+<section>
+        <form action="/users/<%=user._id%>?_method=DELETE" method="POST">
+          <button type="submit">Delete</button>
+        </form>
+      </section>
 <%}%>
 
 
