@@ -78,7 +78,8 @@ router.get('/:id', async (req, res)=>{
           card: foundUser.cards[0],
           currentUser: req.session.userDbId,
           verifyUser: foundUser._id.toString(),
-          admin: findAdmin
+          admin: findAdmin,
+          logged: req.session.logged 
         })
   
     } catch(err){

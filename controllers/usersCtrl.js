@@ -36,11 +36,13 @@ router.get('/:id', async (req, res) => {
 
         console.log(findAdmin, "found admin")
         console.log(foundUser)
+        console.log(req.session.logged, "<==== logged in")
         res.render('users/show.ejs',{
             user: foundUser,
             currentUser: req.session.userDbId,
             verifyUser: foundUser._id.toString(),
-            admin: findAdmin
+            admin: findAdmin,
+            logged: req.session.logged
         })    
     } catch (err) {
         res.send(err)
@@ -60,7 +62,11 @@ router.get('/:id/edit', logUser, async (req, res) => {
 })
 
 router.put('/:id', logUser,(req, res) => {
-    req.body.password = bcrypt.hashSync(req.body.password, bcrypt.genSaltSync(10))
+    if(!req.body.password){
+        delete req.body.password
+    } else {
+       req.body.password = bcrypt.hashSync(req.body.password, bcrypt.genSaltSync(10)) 
+    }
     try {
         User.findByIdAndUpdate(req.params.id, req.body, {new: true}, (err, updatedUser)=>{
             if(err){
@@ -92,7 +98,6 @@ router.delete('/:id',logUser, (req, res) => {
             )
         }
     })
-
 
 })
 
