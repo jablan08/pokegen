@@ -1,30 +1,30 @@
-<% for (let i = 0; i < cards.length; i++) {%>
+<% for (let i = 0; i < user.cards.length; i++) {%>
     
     <div id="card-body"
-        <%if (cards[i].type === "normal") {%>
+        <%if (user.cards[i].type === "normal") {%>
         style="background-image: url('/images/bg-normal.png')"  
-        <%} else if (cards[i].type === "fighting") {%>
+        <%} else if (user.cards[i].type === "fighting") {%>
         style="background-image: url('/images/fight-bg.png')" 
 
-        <%} else if (cards[i].type === "ground") {%>
+        <%} else if (user.cards[i].type === "ground") {%>
         style="background-image: url('/images/ground-bg.png')"  
 
-        <%} else if (cards[i].type === "steel") {%>
+        <%} else if (user.cards[i].type === "steel") {%>
         style="background-image: url('/images/metal-bg.png')" 
 
-        <%} else if (cards[i].type === "fire") {%>
+        <%} else if (user.cards[i].type === "fire") {%>
         style="background-image: url('/images/bg-red.png')"  
 
-        <%} else if (cards[i].type === "water") {%>
+        <%} else if (user.cards[i].type === "water") {%>
         style="background-image: url('/images/blue-bg.png')" 
 
-        <%} else if (cards[i].type === "grass") {%>
+        <%} else if (user.cards[i].type === "grass") {%>
         style="background-image: url('/images/grass-bg.png')"   
 
-        <%}else if (cards[i].type === "electric") {%>
+        <%}else if (user.cards[i].type === "electric") {%>
          style="background-image: url('/images/lightening-bg.png')"   
 
-        <%}else if (cards[i].type === "psychic") {%>
+        <%}else if (user.cards[i].type === "psychic") {%>
         style="background-image: url('/images/purple-bg.png')" 
 
         <%}%> >
