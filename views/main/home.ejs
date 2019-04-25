@@ -1,27 +1,29 @@
-<%- include('../partials/header')%>
-<h1>HOME</h1>
-<h2>Welcome to PokeGen where you can Generate your own Pokemon Cards!!</h2>
-<div id="home-container">
+<div id="home-container" class="grid-container">
 
-    <div id="home-users">
+    <div class="grid-header">
+    <%- include('../partials/header')%>
+        <h1>HOME</h1>
+        <h2>Welcome to PokeGen where you can Generate your own Pokemon Cards!!</h2>
+    </div>
+    <div id="home-main" class="grid-menu">
+        <p> This can be where we welcome people and tell them about our product.<br>
+            Lorem ipsum dolor sit amet, consectetuer adipiscing elit...<br>
+
+            Maybe make this into a table with colums and rows to avoid BS
+        </p>
+    </div>
+    <div id="feature-card" class="grid-main">
+        <%-include('../partials/samplecard')%>
+    </div>
+    <div id="home-users" class="grid-right">
         <h2>Check out other users cards:</h2>
         <%-include('../partials/userlist')%>
     </div>
 
-    <div id="home-main">
-        <p>This can be where we welcome people and tell them about our product.<br>
-        Lorem ipsum dolor sit amet, consectetuer adipiscing elit...<br>
-
-        Maybe make this into a table with colums and rows to avoid BS
-            <div id="feature-card">
-                <%-include('../partials/samplecard')%>
-            </div>
-        </p>
+    <div class="grid-footer">
+        <%-include('../partials/scroll')%>
     </div>
+
 </div>
-
-
-
-
 
 <%- include('../partials/footer')%>
