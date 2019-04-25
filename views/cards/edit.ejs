@@ -1,8 +1,17 @@
-<%- include('../partials/header')%>
+<%-include('../partials/header')%>
+<div id="cards-container" class="grid-container">
 
-<h1>THIS IS AN EDIT PAGE FOR CARDS</h1>
-<h2>THIS STILL NEEDS CURRENT VALUES ADDED<H2>
+    <div class="grid-header">
+        <%-include('../partials/head')%>
+        <h1>THIS IS AN EDIT PAGE FOR CARDS</h1>
+        <h2>THIS STILL NEEDS CURRENT VALUES ADDED<H2>
+    </div>
 
+    <div id="cards-main" class="grid-menu">
+        <p>THIS IS A WELCOME PARAGRAPH</p>
+    </div>
+
+    <div id="feature-card" class="grid-main">
 <div class="container">
 
     <div class="left">
@@ -19,7 +28,7 @@
     <div class="right">
         <form action="/cards/<%=card._id%>?_method=PUT" method="POST">
             <input type="text" name="name" value="<%=card.name%>" /><br/>
-            <input type="text" name="url" value="<%=card.url%>" />  <small>add a note when hovering to advise on best dimensions</small><br/>
+            <input type="text" name="url" value="<%=card.url%>" /><br/>
             <input type="text" name="hp" value="<%=card.hp%>" /><br/>
             <select name="type"><br/>
                 <option value="<%=card.type%>"><%=card.type%></option>
@@ -41,5 +50,34 @@
         </form>
     </div>
 </div>
+    </div>
+
+    <div id="cards-users" class="grid-right">
+        <%-include('../partials/samplecard')%>
+    </div>
+
+    <div class="grid-footer">
+    </div>
+
+</div>
+
+<%-include('../partials/footer')%>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 

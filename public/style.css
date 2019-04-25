@@ -74,6 +74,30 @@ button {
 }
 
 /*---------------------- HOME PAGE ----------------------*/
+/*********************** NEW PAGE ***********************/
+.grid-n-header { grid-area: header; }
+.grid-n-menu { grid-area: menu; padding-left: 10px;}
+.grid-n-main { grid-area: main; }
+.grid-n-right { grid-area: right; }
+.grid-n-footer { grid-area: footer; }
+
+#new-container {
+    position: relative;
+    z-index: 5;
+}
+
+.grid-n-container {
+  display: grid;
+  grid-template-areas:
+    'header header header header header header'
+    'menu menu main main right right'
+    'footer footer footer footer footer footer';
+  grid-gap: 10px;
+}
+/* .url:hover {
+
+} */
+/*---------------------- NEW PAGE ----------------------*/
 /*********************** SCROLL MENU ***********************/
 #menu {
     position: relative;
