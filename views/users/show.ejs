@@ -7,18 +7,19 @@
 
 <%- include("../partials/showcard")%>
 
-<%if (currentUser === verifyUser || admin.admin === true) {%>
+<%if (logged) {%>
+    <%if(currentUser === verifyUser || admin.admin ===true){%>
+        <section>    
+        <a href="/cards/new"><button>GENERATE CARD</button></a>
+        <a href="/users/<%=user._id%>/edit"><button>EDIT USER</button></a>
+        </section> 
 
-<section>    
-<a href="/cards/new"><button>GENERATE CARD</button></a>
-<a href="/users/<%=user._id%>/edit"><button>EDIT USER</button></a>
-</section> 
-
-<section>
+        <section>
         <form action="/users/<%=user._id%>?_method=DELETE" method="POST">
           <button type="submit">Delete</button>
         </form>
-      </section>
+        </section>
+    <%}%>
 <%}%>
 
 
