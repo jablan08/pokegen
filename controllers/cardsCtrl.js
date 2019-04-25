@@ -21,7 +21,7 @@ router.get("/", async (req,res)=> {
             cards: allCards
         });
     } catch(err) {
-        res.send(err)
+        res.send(err) 
     }
 })
 
@@ -43,8 +43,16 @@ router.post("/", logUser, async (req,res)=>{
                     console.log(err)
                 } else {
                     console.log(foundUser)
-
                 }
+                foundUser.cards.push(createdCard);
+                foundUser.save((err,savedUser)=>{
+                    if (err) {
+                        console.log(err)
+                    } else {
+                        console.log(savedUser)
+                        res.redirect("/cards")
+                    }
+                })
                 
             })
         })
