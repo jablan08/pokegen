@@ -4,7 +4,6 @@ const Card = require("../models/cards");
 const User = require("../models/users");
 
 const logUser = (req, res, next) => {
-    console.log("using middleware")
     if(req.session.logged) {
         
         next()
@@ -61,7 +60,7 @@ router.post("/", logUser, async (req,res)=>{
     } catch(err) {
         res.send(err)
     }
-})
+})       
 
 // SHOW
 router.get('/:id', async (req, res)=>{
