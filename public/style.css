@@ -1,32 +1,83 @@
 html {
-    background-color: lightgray
+    background-color: lightgray;
+}
+body {
+    padding: 0;
+    margin: 0;
+}
+a {
+    text-decoration: none;
+}
+h1, h2, h3 {
+    padding: 0 20px;
+    font-family: 'ZCOOL KuaiLe', courier;
 }
 /*********************** FOOTER ***********************/
 footer {
+    position: absolute;
+    bottom: 0;
     margin: 20px auto;
+    width: 100%;
+    padding: 0;
+    margin: 0;
 }
 
-.footerBn {
-    margin: 5px;
-}
+
 /*---------------------- FOOTER ----------------------*/
-/*********************** HOME PAGE ***********************/
-.home-container {
-    position: relative;
-
-}
-.home-users {
+/*********************** NAVIGATION ***********************/
+nav {
     position: relative;
     float: right;
+    margin: 0 50px 0 0;
+}
+button {
+    font-family: 'ZCOOL KuaiLe', courier;
+}
+.navBtn {
+    margin: 5px;
+    font-size: 20px;
+    border-radius: 10px;
+}
+/*---------------------- NAVIGATION ----------------------*/
+/*********************** HOME PAGE ***********************/
+#home-container {
+    position: relative;
 
 }
-.home-cards {
+#home-users {
+    max-width: 500px;
+    position: static;
+    float: right;
+    text-align: left;
+    z-index: 5;
+}
+.home-hover:hover {
+    font-size: 34px;
+}
+#home-main {
+    width: auto;
+    height: 220px;
+    padding: 50px;
     position: relative;
     float: left;
-
+    
 }
-
 /*---------------------- HOME PAGE ----------------------*/
+/*********************** SCROLL MENU ***********************/
+#menu {
+    position: relative;
+    background-color: lightgrey;
+    width: auto;
+    height: 220px;
+    padding: 50px 0;
+    white-space: nowrap;
+    overflow-x: scroll;
+  }
+
+#inner-menu {
+    width: 5000000000px;
+}
+/*---------------------- SCROLL MENU ----------------------*/
 /*********************** INPUT FORM ***********************/
 .container {
     position: relative;
@@ -43,7 +94,7 @@ footer {
     font-size: 17px;
     text-align: left;
 }
-input{
+input {
     border-radius: 3px;
     margin-top: 1px;
 }
@@ -52,8 +103,17 @@ select {
     width: 131px;
 }
 /*---------------------- INPUT FORM ----------------------*/
+/*********************** ZOOM HOVER ***********************/
+.zoom:hover {
+    transform: scale(1.5);
+    z-index: 500;
+}
+/*---------------------- ZOOM HOVER ----------------------*/
 /*********************** CREATE CARD ***********************/
 #card-body {
+    position: relative;
+    float: left;
+    margin: 5px;
     background-image: linear-gradient(to bottom right, blue,lightblue,blue);
     height: 400px;
     width: 280px;
@@ -75,7 +135,7 @@ select {
 #hp-box {
     float: right;
     margin: 2px 5px 0 0;
-    font-size: 25px;
+    font-size: 12px;
     text-align: right;
 }
 img {
@@ -87,9 +147,7 @@ img {
 }
 
 #img-box-border{
-    /* background-color: yellow; */
     background-image: linear-gradient(to bottom right, rgb(253, 190, 44), rgb(255, 255, 255), gold, rgb(153, 118, 35));
-    /* background-image: linear-gradient(top left, yellow gold yellow); */
     height: 160px;
     width: 240px;
     margin: 36px 20px;
@@ -102,7 +160,6 @@ img {
     height: 154px;
     width: 234px;
     max-width: 234px;
-    /* border: 3px solid gold; */
     margin: 3px;
 
     background-color: green;
@@ -136,19 +193,124 @@ img {
 }
 
 #weakness{
-    width: 90px;
+    position: relative;
+    top: 0;
+    width: 120px;
     float: left;
-    margin: 5px 0 0 5px;
+    margin: 2px 0 0 5px;
     text-align: center;
 
 }
-#divider {
-    width: 100px;
-}
-#resistance{
-    width: 90px;
+
+#resistance {
+    position: relative;
+    top: 0;
+    width: 120px;
     float: right;
-    margin: 5px 5px 0 0;
+    margin: 2px 5px 0 0;
     text-align: center;
 }
 /*---------------------- CREATE CARD ----------------------*/
+/*********************** MINI CARD ***********************/
+#m-card-body {
+    position: relative;
+    float: left;
+    margin: 6px;
+    background-image: linear-gradient(to bottom right, blue,lightblue,blue);
+    height: 200px;
+    width: 140px;
+    border: 4px solid gold;
+    border-radius: 5px;
+    background-color: blue;
+    box-shadow: 0 2px 5px 2px black;
+    
+}
+
+#m-name {
+    width: 100px;
+    position: relative;
+    font-size: 12px;
+    float: left;
+    margin: 1px 0 0 2px;
+}
+
+#m-hp-box {
+    float: right;
+    margin: 1px 2px 0 0;
+    font-size: 12px;
+    text-align: right;
+}
+#m-img {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    /* z-index: 5; */
+    box-shadow: inset  0px 0px 5px 0px black;
+}
+
+#m-img-box-border{
+    background-image: linear-gradient(to bottom right, rgb(253, 190, 44), rgb(255, 255, 255), gold, rgb(153, 118, 35));
+    height: 80px;
+    width: 120px;
+    margin: 18px 10px;
+    box-shadow: 1px 3px 5px black;
+}
+
+#m-img-box {
+    position: absolute;
+    height: 78px;
+    width: 118px;
+    max-width: 234px;
+    margin: 1px;
+
+    background-color: green;
+}
+
+#m-attack-box{
+    width: 135px;
+    margin: 15px 2px 0 2px;
+    border-top: 1px solid black;
+}
+
+#m-attack {
+    margin: 2px 0 0 2px;
+    width: 100px;
+    float: left;
+    font-size: 12px;
+}
+
+#m-damage {
+    margin: 2px 2px 0 0;
+    float: right;
+    width: 15px;
+    text-align: right;
+    font-size: 12px;
+
+}
+#m-weak-resist-box {
+    position: relative;
+    width: 135px;
+    margin: 50px 2px 0 2px;
+    border-top: 1px solid black;
+    font-size: 6px;
+}
+
+#m-weakness{
+    position: relative;
+    top: 0;
+    width: 30px;
+    float: left;
+    margin: 1px 0 0 4px;
+    text-align: center;
+
+}
+
+#m-resistance {
+    position: relative;
+    top: 0;
+    width: 30px;
+    float: right;
+    margin: 1px 4px 0 0;
+    text-align: center;
+}
+/*---------------------- MINI CARD ----------------------*/
