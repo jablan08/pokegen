@@ -8,9 +8,6 @@ body {
 a {
     text-decoration: none;
 }
-a:hover {
-    font-size: 34px;
-}
 h1, h2, h3 {
     padding: 0 20px;
     font-family: 'ZCOOL KuaiLe', courier;
@@ -27,7 +24,7 @@ footer {
 
 
 /*---------------------- FOOTER ----------------------*/
-/*********************** NAV BAR ***********************/
+/*********************** NAVIGATION ***********************/
 nav {
     position: relative;
     float: right;
@@ -41,26 +38,29 @@ button {
     font-size: 20px;
     border-radius: 10px;
 }
-/*---------------------- NAV BAR ----------------------*/
+/*---------------------- NAVIGATION ----------------------*/
 /*********************** HOME PAGE ***********************/
 #home-container {
     position: relative;
 
 }
 #home-users {
-    /* width: 39%; when this is used the a link goes away */
-    position: relative;
+    max-width: 500px;
+    position: static;
     float: right;
     text-align: left;
-
+    z-index: 5;
+}
+.home-hover:hover {
+    font-size: 34px;
 }
 #home-main {
     width: auto;
-    max-width: 60%;
     height: 220px;
     padding: 50px;
-    position: absolute;
+    position: relative;
     float: left;
+    
 }
 /*---------------------- HOME PAGE ----------------------*/
 /*********************** SCROLL MENU ***********************/
