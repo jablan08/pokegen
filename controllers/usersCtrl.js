@@ -2,6 +2,7 @@ const express = require('express');
 const router  = express.Router();
 const User = require("../models/users");
 const Card = require("../models/cards");
+const bcrypt = require("bcryptjs");
  
 
 const logUser = (req, res, next) => {
@@ -53,6 +54,7 @@ router.get('/:id/edit', logUser, async (req, res) => {
 })
 
 router.put('/:id', logUser,(req, res) => {
+    req.body.password = bcrypt.hashSync(req.body.password, bcrypt.genSaltSync(10))
     try {
         User.findByIdAndUpdate(req.params.id, req.body, {new: true}, (err, updatedUser)=>{
             if(err){
