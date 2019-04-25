@@ -31,12 +31,16 @@ router.get('/', async (req, res) => {
 router.get('/:id', async (req, res) => {
     try {
         const foundUser = await User.findById(req.params.id)
-        .populate('cards')
+        .populate('cards');
+        const findAdmin = await User.findById(req.session.userDbId);
+
+        console.log(findAdmin, "found admin")
         console.log(foundUser)
         res.render('users/show.ejs',{
             user: foundUser,
             currentUser: req.session.userDbId,
-            verifyUser: foundUser._id.toString()
+            verifyUser: foundUser._id.toString(),
+            admin: findAdmin
         })    
     } catch (err) {
         res.send(err)
@@ -70,6 +74,7 @@ router.put('/:id', logUser,(req, res) => {
 })
 
 // DELETE
+
 router.delete('/:id',logUser, (req, res) => {
     User.findByIdAndRemove(req.params.id, (err, deletedUser) =>{
         if(err){
@@ -87,6 +92,7 @@ router.delete('/:id',logUser, (req, res) => {
             )
         }
     })
+
 
 })
 

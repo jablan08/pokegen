@@ -7,7 +7,7 @@
 
 <%- include("../partials/showcard")%>
 
-<%if (currentUser === verifyUser) {%>
+<%if (currentUser === verifyUser || admin.admin === true) {%>
 
 <section>    
 <a href="/cards/new"><button>GENERATE CARD</button></a>
