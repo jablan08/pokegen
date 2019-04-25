@@ -86,17 +86,20 @@ router.get('/:id', async (req, res)=>{
 // EDIT
 router.get("/:id/edit", async (req,res)=>{
     try {
-        const foundUser = await User.findOne({'cards': req.params.id}).populate({path: 'cards', match: {_id: req.params.id}})
+        const foundUser = await User.findOne({'cards': req.params.id}).populate({path: 'cards', match: {_id: req.params.id}});
+        
         // console.log(foundUser._id, "<---- foundUser in card's show route");
         // console.log(req.session.userDbId, "<---userDbId")
         if (req.session.userDbId === foundUser._id.toString()) {
             console.log("success!")
-            res.render("cards/edit.ejs");
+            res.render("cards/edit.ejs", {
+                card: foundUser.cards[0],
+                user: foundUser
+            });
         } else {
             console.log(req.session)
             req.session.message = "You cannot edit this Pokemon";
-            res.redirect("/cards");
-           
+            res.redirect("/cards");  
         }
     } catch(err){
         res.send(err);
