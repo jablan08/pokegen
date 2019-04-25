@@ -83,7 +83,7 @@ router.get('/:id', async (req, res)=>{
     }
   
   });
-
+  
 
 // EDIT
 router.get("/:id/edit", async (req,res)=>{
@@ -117,7 +117,7 @@ router.put("/:id", logUser, async (req,res)=>{
         res.send(err)
     }
 })
-
+  
 // DELETE
 router.delete("/:id", logUser, async (req,res)=>{
     try {
