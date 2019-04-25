@@ -14,13 +14,20 @@ h1, h2, h3 {
 }
 
 h4 {
+    position: sticky;
+    bottom: 0;
     font-size: 8px;
     font-family: Arial, Helvetica, sans-serif;
     text-align: center;
+    z-index: 500000;
 }
+/* #scroll-bottom {
+    position: fixed;
+    bottom: 0;
+} */
 /*********************** FOOTER ***********************/
 footer {
-    position: absolute;
+    /* position: absolute; */
     bottom: 0;
     margin: 20px auto 0 auto;
     width: 100%;
@@ -47,10 +54,15 @@ button {
 /*---------------------- NAVIGATION ----------------------*/
 /*********************** HOME PAGE ***********************/
 .grid-header { grid-area: header; }
-.grid-menu { grid-area: menu; }
+.grid-menu { grid-area: menu; padding-left: 10px;}
 .grid-main { grid-area: main; }
 .grid-right { grid-area: right; }
 .grid-footer { grid-area: footer; }
+
+#home-container {
+    position: relative;
+    z-index: 5;
+}
 
 .grid-container {
   display: grid;
@@ -59,27 +71,19 @@ button {
     'menu menu main main right right'
     'footer footer footer footer footer footer';
   grid-gap: 10px;
-  background-color: #2196F3;
-  /* padding: 10px; */
 }
 
-.grid-container > div {
-  background-color: rgba(255, 255, 255, 0.8);
-  /* text-align: center; */
-  /* padding: 20px 0; */
-  /* font-size: 30px; */
-}
 /*---------------------- HOME PAGE ----------------------*/
 /*********************** SCROLL MENU ***********************/
 #menu {
     position: relative;
     background-color: lightgrey;
     width: auto;
-    height: 220px;
-    padding: 50px 0;
+    height: 230px;
+    padding: 55px 0;
     white-space: nowrap;
     overflow-x: scroll;
-  }
+}
 
 #inner-menu {
     width: 5000000000px;
