@@ -1,8 +1,14 @@
 html {
     background-color: lightgray
 }
+
+div {
+    border: 1px dotted black;
+}
 /*********************** FOOTER ***********************/
 footer {
+    position: absolute;
+    bottom: 0;
     margin: 20px auto;
 }
 
@@ -11,17 +17,19 @@ footer {
 }
 /*---------------------- FOOTER ----------------------*/
 /*********************** HOME PAGE ***********************/
-.home-container {
+#home-container {
     position: relative;
 
 }
-.home-users {
+#home-users {
+    width: 39%;
     position: relative;
     float: right;
 
 }
-.home-cards {
-    position: relative;
+#home-cards {
+    width: 60%;
+    position: absolute;
     float: left;
 
 }
