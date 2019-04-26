@@ -11,6 +11,10 @@ a {
     text-decoration: none;
 }
 
+a:hover, a:active, a:focus, a:visited { 
+    text-decoration: none; color:black
+}
+
 h3 {
     padding: 0 20px;
     font-size: 24px;
@@ -190,7 +194,6 @@ select {
     z-index: 15;
     box-shadow: 0 5px 10px 5px black;
 }
-
 #name {
     width: 180px;
     position: relative;

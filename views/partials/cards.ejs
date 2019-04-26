@@ -1,89 +1,90 @@
 <% for (let i = 0; i < cards.length; i++) {%>
-    
-    <div id="card-body"
-        <%if (cards[i].type === "normal") {%>
-        style="background-image: url('/images/bg-normal.png')"  
-        <%} else if (cards[i].type === "fighting") {%>
-        style="background-image: url('/images/fight-bg.png')" 
-
-        <%} else if (cards[i].type === "steel") {%>
-        style="background-image: url('/images/metal-bg.png')" 
-
-        <%} else if (cards[i].type === "fire") {%>
-        style="background-image: url('/images/bg-red.png')"  
-
-        <%} else if (cards[i].type === "water") {%>
-        style="background-image: url('/images/blue-bg.png')" 
-
-        <%} else if (cards[i].type === "grass") {%>
-        style="background-image: url('/images/grass-bg.png')"   
-
-        <%}else if (cards[i].type === "electric") {%>
-         style="background-image: url('/images/lightening-bg.png')"   
-
-        <%}else if (cards[i].type === "psychic") {%>
-        style="background-image: url('/images/purple-bg.png')" 
-
-        <%}%> >
-
-        <div id="name">
-        <a href="/cards/<%=cards[i]._id%>">    <%=cards[i].name%></a>
-        </div>
-        <span class="type">
+    <a href="/cards/<%=cards[i]._id%>"> 
+        <div id="card-body"
             <%if (cards[i].type === "normal") {%>
-                <img class="types" src="/images/normal.png">
-                <%} else if (cards[i].type === "fighting") {%>
-                <img class="types" src="/images/combat.png">
+            style="background-image: url('/images/bg-normal.png')"  
+            <%} else if (cards[i].type === "fighting") {%>
+            style="background-image: url('/images/fight-bg.png')" 
 
-                <%} else if (cards[i].type === "steel") {%>
-                <img class="types" src="/images/metal.png">
+            <%} else if (cards[i].type === "steel") {%>
+            style="background-image: url('/images/metal-bg.png')" 
 
-                <%} else if (cards[i].type === "fire") {%>
-                <img class="types" src="/images/fire.png"> 
+            <%} else if (cards[i].type === "fire") {%>
+            style="background-image: url('/images/bg-red.png')"  
 
-                <%} else if (cards[i].type === "water") {%>
-                <img class="types" src="/images/water.png"> 
+            <%} else if (cards[i].type === "water") {%>
+            style="background-image: url('/images/blue-bg.png')" 
 
-                <%} else if (cards[i].type === "grass") {%>
-                <img class="types" src="/images/grass-type.png"> 
+            <%} else if (cards[i].type === "grass") {%>
+            style="background-image: url('/images/grass-bg.png')"   
 
-                <%}else if (cards[i].type === "electric") {%>
-                <img class="types" src="/images/elektric.png"> 
+            <%}else if (cards[i].type === "electric") {%>
+            style="background-image: url('/images/lightening-bg.png')"   
 
-                <%}else if (cards[i].type === "psychic") {%>
-                <img class="types" src="/images/psy.png">
-            <%}%> 
-        </span>
-        <div id="hp-box">
-            <font size="2px">HP</font><%=cards[i].hp%>
-        </div>
+            <%}else if (cards[i].type === "psychic") {%>
+            style="background-image: url('/images/purple-bg.png')" 
 
-        <div id="img-box-border">
-            <div id="img-box">
-                <img src="<%=cards[i].url%>">
+            <%}%> >
+
+            <div id="name">
+            <a href="/cards/<%=cards[i]._id%>">    <%=cards[i].name%></a>
             </div>
-        </div>
+            <span class="type">
+                <%if (cards[i].type === "normal") {%>
+                    <img class="types" src="/images/normal.png">
+                    <%} else if (cards[i].type === "fighting") {%>
+                    <img class="types" src="/images/combat.png">
 
+                    <%} else if (cards[i].type === "steel") {%>
+                    <img class="types" src="/images/metal.png">
 
-        <div class="attack-box">
-            <div class="attack"><%=cards[i].attack%></div>
-            <div class="damage"><%=cards[i].damage%></div>
-        </div>
+                    <%} else if (cards[i].type === "fire") {%>
+                    <img class="types" src="/images/fire.png"> 
 
-        <div class="attack-box">
-            <div class="attack"><%=cards[i].attack2%></div>
-            <div class="damage"><%=cards[i].damage2%></div>
-        </div>
+                    <%} else if (cards[i].type === "water") {%>
+                    <img class="types" src="/images/water.png"> 
 
-        <div id="weak-resist-box">
-            <div id="weakness">weakness<br>
-                <small><%=cards[i].weakness%></small>
+                    <%} else if (cards[i].type === "grass") {%>
+                    <img class="types" src="/images/grass-type.png"> 
+
+                    <%}else if (cards[i].type === "electric") {%>
+                    <img class="types" src="/images/elektric.png"> 
+
+                    <%}else if (cards[i].type === "psychic") {%>
+                    <img class="types" src="/images/psy.png">
+                <%}%> 
+            </span>
+            <div id="hp-box">
+                <font size="2px">HP</font><%=cards[i].hp%>
             </div>
 
-            <div id="resistance">resistance<br>
-                <small><%=cards[i].resistance%></small>
+            <div id="img-box-border">
+                <div id="img-box">
+                    <img src="<%=cards[i].url%>">
+                </div>
             </div>
-        </div>
 
-    </div>
+
+            <div class="attack-box">
+                <div class="attack"><%=cards[i].attack%></div>
+                <div class="damage"><%=cards[i].damage%></div>
+            </div>
+
+            <div class="attack-box">
+                <div class="attack"><%=cards[i].attack2%></div>
+                <div class="damage"><%=cards[i].damage2%></div>
+            </div>
+
+            <div id="weak-resist-box">
+                <div id="weakness">weakness<br>
+                    <small><%=cards[i].weakness%></small>
+                </div>
+
+                <div id="resistance">resistance<br>
+                    <small><%=cards[i].resistance%></small>
+                </div>
+            </div>
+
+        </div>
+    </a>
 <% } %>

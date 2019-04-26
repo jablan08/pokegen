@@ -12,7 +12,7 @@ const logUser = (req, res, next) => {
     }
 }
 
-
+  
 // INDEX
 router.get("/", async (req,res)=> {
     try {
