@@ -30,27 +30,27 @@
         <a href="/cards/<%=cards[i]._id%>">    <%=cards[i].name%></a>
         </div>
         <span class="type">
-            <%if (card.type === "normal") {%>
+            <%if (cards[i].type === "normal") {%>
                 <img class="types" src="/images/normal.png">
-                <%} else if (card.type === "fighting") {%>
+                <%} else if (cards[i].type === "fighting") {%>
                 <img class="types" src="/images/combat.png">
 
-                <%} else if (card.type === "steel") {%>
+                <%} else if (cards[i].type === "steel") {%>
                 <img class="types" src="/images/metal.png">
 
-                <%} else if (card.type === "fire") {%>
+                <%} else if (cards[i].type === "fire") {%>
                 <img class="types" src="/images/fire.png"> 
 
-                <%} else if (card.type === "water") {%>
+                <%} else if (cards[i].type === "water") {%>
                 <img class="types" src="/images/water.png"> 
 
-                <%} else if (card.type === "grass") {%>
+                <%} else if (cards[i].type === "grass") {%>
                 <img class="types" src="/images/grass-type.png"> 
 
-                <%}else if (card.type === "electric") {%>
+                <%}else if (cards[i].type === "electric") {%>
                 <img class="types" src="/images/elektric.png"> 
 
-                <%}else if (card.type === "psychic") {%>
+                <%}else if (cards[i].type === "psychic") {%>
                 <img class="types" src="/images/psy.png">
             <%}%> 
         </span>
