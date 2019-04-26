@@ -287,11 +287,9 @@ img {
 .description {
     margin: auto 4px 0 4px;
     position: relative;
-    max-width: 400px;
-    /* white-space: w; */
+    width: 270;
     max-height: 40px; 
     font-size: 12px;
-
 }
 
 #weak-resist-box {
@@ -381,7 +379,7 @@ img {
 
 .m-attack-box{
     width: 135px;
-    margin: 15px 2px 0 2px;
+    margin: 0px 2px 0 2px;
     border-top: 1px solid black;
     font-size: 8px;
 }
@@ -399,44 +397,49 @@ img {
     width: 15px;
     text-align: right;
 }
-
+/* 
 .m-description {
+    margin: 12px 2px 0 2px;
+    position: relative;
+    max-width: 132px;
+    height: 14px; 
+    font-size: 6px;
+} */
+/* .m-description2 {
     margin: auto 2px 0 2px;
     position: relative;
-    max-width: 200px;
-    /* white-space: w; */
-    max-height: 20px; 
+    max-width: 132px;
+    width: 132px;
+    height: 14px; 
     font-size: 6px;
-
-}
-/* 
-#weak-resist-box {
-    position: relative;
-    width: 270px;
-    margin: 20px 5px 0 5px;
-    border-top: 1px solid black;
-    font-size: 12px;
-}
-
-#weakness{
-    position: relative;
-    top: 0;
-    width: 110px;
-    float: left;
-    margin: 2px 0 0 5px;
-    text-align: center;
-}
-
-#resistance {
-    position: relative;
-    top: 0;
-    width: 110px;
-    float: right;
-    margin: 2px 5px 0 0;
-    text-align: center;
 } */
+#m-weak-resist-box {
+    position: relative;
+    width: 132px;
+    margin: 10px 4px 0 4px;
+    border-top: 1px solid black;
+    font-size: 6px;
+}
 
+#m-weakness{
+    position: relative;
+    top: 0;
+    width: 55px;
+    float: left;
+    margin: 1px 0 0 4px;
+    text-align: center;
+}
 
+#m-resistance {
+    position: relative;
+    top: 0;
+    width: 55px;
+    float: right;
+    margin: 1px 4px 0 0;
+    text-align: center;
+}
+
+/* 
 #m-weak-resist-box {
     position: relative;
     width: 135px;
@@ -462,5 +465,5 @@ img {
     float: right;
     margin: 1px 4px 0 0;
     text-align: center;
-}
+} */
 /*---------------------- MINI CARD ----------------------*/
