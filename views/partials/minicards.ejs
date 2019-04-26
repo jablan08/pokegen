@@ -1,6 +1,6 @@
 <% for (let i = 0; i < cards.length; i++) {%>
     
-    <div id="card-body"
+    <div id="m-card-body" class="zoom"
         <%if (cards[i].type === "normal") {%>
         style="background-image: url('/images/bg-normal.png')"  
         <%} else if (cards[i].type === "fighting") {%>
@@ -26,56 +26,56 @@
 
         <%}%> >
 
-        <div id="name">
+        <div id="m-name">
         <a href="/cards/<%=cards[i]._id%>">    <%=cards[i].name%></a>
         </div>
         <span class="type">
             <%if (cards[i].type === "normal") {%>
-                <img class="types" src="/images/normal.png">
+                <img class="m-types" src="/images/normal.png">
                 <%} else if (cards[i].type === "fighting") {%>
-                <img class="types" src="/images/combat.png">
+                <img class="m-types" src="/images/combat.png">
 
                 <%} else if (cards[i].type === "steel") {%>
-                <img class="types" src="/images/metal.png">
+                <img class="m-types" src="/images/metal.png">
 
                 <%} else if (cards[i].type === "fire") {%>
-                <img class="types" src="/images/fire.png"> 
+                <img class="m-types" src="/images/fire.png"> 
 
                 <%} else if (cards[i].type === "water") {%>
-                <img class="types" src="/images/water.png"> 
+                <img class="m-types" src="/images/water.png"> 
 
                 <%} else if (cards[i].type === "grass") {%>
-                <img class="types" src="/images/grass-type.png"> 
+                <img class="m-types" src="/images/grass-type.png"> 
 
                 <%}else if (cards[i].type === "electric") {%>
-                <img class="types" src="/images/elektric.png"> 
+                <img class="m-types" src="/images/elektric.png"> 
 
                 <%}else if (cards[i].type === "psychic") {%>
-                <img class="types" src="/images/psy.png">
+                <img class="m-types" src="/images/psy.png">
             <%}%> 
         </span>
-        <div id="hp-box">
+        <div id="m-hp-box">
             <font size="2px">HP</font> <%=cards[i].hp%>
         </div>
 
-        <div id="img-box-border">
-            <div id="img-box">
+        <div id="m-img-box-border">
+            <div id="m-img-box">
                 <img src="<%=cards[i].url%>">
             </div>
         </div>
 
+        
 
-        <div id="attack-box">
-            <div id="attack"><%=cards[i].attack%></div>
-            <div id="damage"><%=cards[i].damage%></div>
+        <div id="m-attack-box">
+            <div id="m-attack"><%=cards[i].attack%></div>
+            <div id="m-damage"><%=cards[i].damage%></div>
         </div>
 
-
-        <div id="weak-resist-box">
-            <div id="weakness">weakness</div><br/>
+        <div id="m-weak-resist-box">
+            <div id="m-weakness">Weakness</div><br/>
             <small><%=cards[i].weakness%></small>
-
-            <div id="resistance">resistance</div><br/>
+            <div id="m-divider"></div>
+            <div id="m-resistance">Resistance</div>
             <small><%=cards[i].resistance%></small>
         </div>
 
