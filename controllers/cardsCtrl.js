@@ -19,7 +19,7 @@ router.get("/", async (req,res)=> {
         const allCards = await Card.find({});
         res.render("cards/index.ejs", {
             cards: allCards,
-            message: req.session.message
+            message: req.session.message,
         });
     } catch(err) {
         res.send(err) 
