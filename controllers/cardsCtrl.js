@@ -29,7 +29,7 @@ router.get("/", async (req,res)=> {
 // NEW
 router.get("/new", logUser, async (req,res)=>{
     try {
-        res.render("cards/new.ejs")
+        await res.render("cards/new.ejs")
     } catch(err){
         res.send(err)
     }
@@ -120,17 +120,23 @@ router.put("/:id", logUser, async (req,res)=>{
         .populate({path: "cards", match: {_id: req.params.id}});
         const updatedCard = await Card.findByIdAndUpdate(req.params.id, req.body, {new:true})
     
-        
         if (updatedCard.favorite === false) {
             foundUser.favorites.remove(req.params.id)
             foundUser.save();
-        } else {
-            foundUser.favorites.push(updatedCard.id);
+            res.redirect(`/cards/${req.params.id}/edit`);
+        } else if (updatedCard.favorite === true && updatedCard.id === foundUser.favorites[0]) {
+
+            console.log("I hit here==============")
+            res.redirect(`/cards/${req.params.id}/edit`);
+        } else  {
+            foundUser.favorites.unshift(updatedCard);
             foundUser.save();
+            res.redirect(`/cards/${req.params.id}/edit`);
         }
+        console.log(updatedCard.id, "<====== card id")
+        console.log(foundUser.favorites[0], "<======== favorite")
         console.log(foundUser, "<======zzzzz user")
-        console.log(updatedCard.favorite, "<=====") 
-        res.redirect(`/cards/${req.params.id}/edit`);
+        console.log(updatedCard, "<=====") 
         
         
     } catch(err) {
@@ -145,7 +151,11 @@ router.delete("/:id", logUser, async (req,res)=>{
         const findUser = User.findOne({"cards": req.params.id});
 
         const [deletedCard, foundUser] = await Promise.all([deleteCard,findUser]);
+        if (foundUser.cards.favorite === true) {
+            foundUser.favorites.remove(req.params.id);
+        }
         foundUser.cards.remove(req.params.id);
+        
         await foundUser.save();
 
         console.log(deletedCard);
