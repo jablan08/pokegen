@@ -20,10 +20,7 @@ router.get("/", async (req,res)=> {
         res.render("cards/index.ejs", {
             cards: allCards,
             message: req.session.message,
-<<<<<<< HEAD
-=======
             logged: req.session.logged
->>>>>>> master
         });
     } catch(err) {
         res.send(err) 
