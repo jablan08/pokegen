@@ -1,6 +1,6 @@
 <%- include('../partials/header')%>
 
-<div id="users-container" class="grid-container">
+<div id="users-container" class="grid-user-container">
 
 
     <div class="grid-header">
@@ -11,30 +11,26 @@
 
     <div id="users-main" class="grid-menu">
         <%if (logged) {%>
-    <%if(currentUser === verifyUser || admin.admin ===true){%>
-        <section>    
-        <a href="/cards/new"><button>GENERATE CARD</button></a>
-        <a href="/users/<%=user._id%>/edit"><button>EDIT USER</button></a>
-        </section> 
+            <%if(currentUser === verifyUser || admin.admin ===true){%>
+                <section>    
+                <a href="/cards/new"><button>GENERATE CARD</button></a>
+                <a href="/users/<%=user._id%>/edit"><button>EDIT USER</button></a>
+                </section> 
 
-        <section>
-        <form action="/users/<%=user._id%>?_method=DELETE" method="POST">
-          <button type="submit">Delete</button>
-        </form>
-        </section>
-    <%}%>
-<%}%>
+                <section>
+                <form action="/users/<%=user._id%>?_method=DELETE" method="POST">
+                <button type="submit">Delete</button>
+                </form>
+                </section>
+            <%}%>
+        <%}%>
     </div>
 
     <div id="feature-card" class="grid-main">
-<%- include("../partials/showcard")%>
-
-
+        <%- include("../partials/showcard")%>
     </div>
 
-    <div id="users-users" class="grid-right">
-        <p>THIS IS A WELCOME PARAGRAPH</p>
-    </div>
+
 
     <div class="grid-footer">
     </div>
