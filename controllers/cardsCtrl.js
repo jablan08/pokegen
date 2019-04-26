@@ -36,15 +36,12 @@ router.get("/new", logUser, async (req,res)=>{
 })
 
 router.post("/", logUser, async (req,res)=>{
+    
     try {
-        Card.create(req.body, (err,createdCard)=>{
+        await Card.create(req.body, (err,createdCard)=>{
             console.log(createdCard)
             User.findById(req.session.userDbId, (err,foundUser)=>{
-                if (err) {
-                    console.log(err)
-                } else {
-                    console.log(foundUser)
-                }
+                // push to user.favorites
                 foundUser.cards.push(createdCard);
                 foundUser.save((err,savedUser)=>{
                     if (err) {
@@ -114,7 +111,13 @@ router.get("/:id/edit", async (req,res)=>{
 
 router.put("/:id", logUser, async (req,res)=>{
     try {
+        if (req.body.favorite === "on") {
+            req.body.favorite = true;
+        } else {
+            req.body.favorite = false;
+        }
         await Card.findByIdAndUpdate(req.params.id, req.body, {new:true});
+        console.log(req.body.favorite)
         res.redirect("/cards/" + req.params.id);
         
     } catch(err) {
