@@ -114,6 +114,11 @@ router.get("/:id/edit", async (req,res)=>{
 
 router.put("/:id", logUser, async (req,res)=>{
     try {
+        if (req.body.favorite === "on"){
+            req.body.favorite = true
+        } else{
+            req.body.favrotie = false 
+        }
         await Card.findByIdAndUpdate(req.params.id, req.body, {new:true});
         res.redirect("/cards/" + req.params.id);
         
