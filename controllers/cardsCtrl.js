@@ -116,29 +116,8 @@ router.put("/:id", logUser, async (req,res)=>{
         } else {
             req.body.favorite = false;
         }
-        const foundUser = await User.findOne({"cards": req.params.id})
-        .populate({path: "cards", match: {_id: req.params.id}});
         const updatedCard = await Card.findByIdAndUpdate(req.params.id, req.body, {new:true})
-    
-        if (updatedCard.favorite === false) {
-            foundUser.favorites.remove(req.params.id)
-            foundUser.save();
-            res.redirect(`/cards/${req.params.id}/edit`);
-        } else if (updatedCard.favorite === true && updatedCard.id === foundUser.favorites[0]) {
-
-            console.log("I hit here==============")
-            res.redirect(`/cards/${req.params.id}/edit`);
-        } else  {
-            foundUser.favorites.unshift(updatedCard);
-            foundUser.save();
-            res.redirect(`/cards/${req.params.id}/edit`);
-        }
-        console.log(updatedCard.id, "<====== card id")
-        console.log(foundUser.favorites[0], "<======== favorite")
-        console.log(foundUser, "<======zzzzz user")
-        console.log(updatedCard, "<=====") 
-        
-        
+        res.redirect("/cards");
     } catch(err) {
         res.send(err)
     }
