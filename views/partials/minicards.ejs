@@ -65,25 +65,25 @@
                 </div>
             </div>
 
-            <div class="m-attack-box">
-                <div class="m-attack"><%=cards[i].attack%></div>
-                <div class="m-damage"><%=cards[i].damage%></div>
+       <div class="m-attack-box">
+            <div class="m-attack"><%=cards[i].attack2%></div>
+            <div class="m-damage"><%=cards[i].damage2%></div>
+        </div>
+            <div>
+                <div class="m-description"><%=cards[i].description2%></div>
             </div>
 
-            <div class="m-attack-box">
-                <div class="m-attack"><%=cards[i].attack2%></div>
-                <div class="m-damage"><%=cards[i].damage2%></div>
+        <div id="m-weak-resist-box">
+            <div id="m-weakness">Weakness<br/>
+                <small><%=cards[i].weakness%></small>
             </div>
 
-            <div id="m-weak-resist-box">
-                <div id="m-weakness">Weakness<br/>
-                    <small><%=cards[i].weakness%></small>
-                </div>
-
-                <div id="m-resistance">Resistance<br/>
-                    <small><%=cards[i].resistance%></small>
-                </div>
+            <div id="m-resistance">Resistance<br/>
+                <small><%=cards[i].resistance%></small>
             </div>
+        </div>
+</div>
+
         </div>
     </a>
 <% } %>
