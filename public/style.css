@@ -1,13 +1,16 @@
 html {
     background-color: lightgray;
 }
+
 body {
     padding: 0;
     margin: 0;
 }
+
 a {
     text-decoration: none;
 }
+
 h3 {
     padding: 0 20px;
     font-size: 24px;
@@ -26,18 +29,13 @@ h4 {
     text-align: center;
     z-index: 500000;
 }
-
 /*********************** FOOTER ***********************/
 footer {
     /* position: absolute; */
     bottom: 0;
     margin: 20px auto 0 auto;
     width: 100%;
-    padding: 0;
-    margin: 0;
 }
-
-
 /*---------------------- FOOTER ----------------------*/
 /*********************** NAVIGATION ***********************/
 nav {
@@ -45,9 +43,11 @@ nav {
     float: right;
     margin: 0 50px 0 0;
 }
+
 button {
     font-family: 'ZCOOL KuaiLe', courier;
 }
+
 .navBtn {
     margin: 5px;
     font-size: 20px;
@@ -74,7 +74,6 @@ button {
     'footer footer footer footer footer footer';
   grid-gap: 2px;
 }
-
 /*---------------------- HOME PAGE ----------------------*/
 /*********************** USER SHOW PAGE ***********************/
 .grid-user-container {
@@ -93,11 +92,6 @@ button {
 /* .grid-cards-right { grid-area: right; } */
 .grid-cards-footer { grid-area: footer; }
 
-#featured-cards {
-    max-height: 400px;
-    white-space: nowrap;
-}
-
 .grid-cards-container {
   display: grid;
   grid-template-areas:
@@ -110,7 +104,7 @@ button {
 /*---------------------- CARDS INDEX PAGE ----------------------*/
 /*********************** NEW PAGE ***********************/
 .grid-n-header { grid-area: header; }
-.grid-n-menu { grid-area: menu; padding-left: 10px;}
+.grid-n-menu { grid-area: menu; }
 .grid-n-main { grid-area: main; }
 .grid-n-right { grid-area: right; }
 .grid-n-footer { grid-area: footer; }
@@ -140,6 +134,7 @@ button {
     white-space: nowrap;
     overflow-x: scroll;
 }
+
 #inner-menu {
     width: 5000000000px;
 }
@@ -150,16 +145,19 @@ button {
     height: 200px;
     width: 240px;
 }
+
 .right {
     position: relative;
     float: right;
 }
+
 .left {
     position: relative;
     float: left;
     font-size: 17px;
     text-align: left;
 }
+
 input {
     border-radius: 3px;
     margin-top: 1px;
@@ -173,6 +171,7 @@ select {
 .zoom {
     transition: all .2s;
 }
+
 .zoom:hover {
     transform: scale(1.5);
     z-index: 90000000;
@@ -242,6 +241,7 @@ img {
 .attack-box{
     width: 270px;
     margin: 30px 5px 0 5px;
+    font-size: 16px;
     border-top: 1px solid black;
 }
 
@@ -256,8 +256,8 @@ img {
     float: right;
     width: 30px;
     text-align: right;
-
 }
+
 #weak-resist-box {
     position: relative;
     width: 270px;
@@ -273,7 +273,6 @@ img {
     float: left;
     margin: 2px 0 0 5px;
     text-align: center;
-
 }
 
 #resistance {
@@ -298,16 +297,6 @@ img {
     box-shadow: 0 2px 5px 2px black;
     
 }
-
-/* #name {
-    width: 180px;
-    position: relative;
-    font-size: 25px;
-    float: left;
-    margin: 2px 0 0 5px;
-}
-
-} */
 
 #m-name {
     width: 86px;
@@ -358,13 +347,14 @@ img {
     width: 135px;
     margin: 15px 2px 0 2px;
     border-top: 1px solid black;
+    font-size: 8px;
 }
 
 .m-attack {
     margin: 2px 0 0 2px;
     width: 100px;
     float: left;
-    font-size: 12px;
+
 }
 
 .m-damage {
@@ -372,16 +362,14 @@ img {
     float: right;
     width: 15px;
     text-align: right;
-    font-size: 12px;
-
 }
+
 #m-weak-resist-box {
     position: relative;
     width: 135px;
     margin: 44px 2px 0 2px;
     border-top: 1px solid black;
     font-size: 6px;
-
 }
 
 #m-weakness{

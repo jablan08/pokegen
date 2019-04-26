@@ -1,6 +1,6 @@
 <% for (let i = 0; i < cards.length; i++) {%>
     
-    <div id="card-body" class="zoom"
+    <div id="card-body"
         <%if (cards[i].type === "normal") {%>
         style="background-image: url('/images/bg-normal.png')"  
         <%} else if (cards[i].type === "fighting") {%>
@@ -55,7 +55,7 @@
             <%}%> 
         </span>
         <div id="hp-box">
-            <font size="2px">HP</font> <%=cards[i].hp%>
+            <font size="2px">HP</font><%=cards[i].hp%>
         </div>
 
         <div id="img-box-border">
