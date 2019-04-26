@@ -19,7 +19,8 @@ router.get('/', async (req, res) => {
     try {
         const foundUsers = await User.find();
         res.render('users/index.ejs', {
-            users: foundUsers
+            users: foundUsers,
+            logged: req.session.logged
         })
     } catch (err) {
         res.send(err)

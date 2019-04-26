@@ -10,7 +10,8 @@ router.get('/', async (req, res) => {
 
         res.render('main/home.ejs', {
             cards: allCards,
-            users: allUsers
+            users: allUsers,
+            logged: req.session.logged
         })
     } catch(err){
         res.send(err)

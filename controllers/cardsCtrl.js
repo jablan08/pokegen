@@ -19,7 +19,8 @@ router.get("/", async (req,res)=> {
         const allCards = await Card.find({});
         res.render("cards/index.ejs", {
             cards: allCards,
-            message: req.session.message
+            message: req.session.message,
+            logged: req.session.logged
         });
     } catch(err) {
         res.send(err) 
@@ -29,7 +30,10 @@ router.get("/", async (req,res)=> {
 // NEW
 router.get("/new", logUser, async (req,res)=>{
     try {
-        await res.render("cards/new.ejs")
+        await res.render("cards/new.ejs", {
+            logged: req.session.logged
+        })
+        
     } catch(err){
         res.send(err)
     }
@@ -98,7 +102,8 @@ router.get("/:id/edit", async (req,res)=>{
             console.log("success!")
             res.render("cards/edit.ejs", {
                 card: foundUser.cards[0],
-                user: foundUser
+                user: foundUser,
+                logged: req.session.logged
             });
         } else {
             console.log(req.session)
