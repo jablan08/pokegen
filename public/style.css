@@ -22,10 +22,7 @@ h4 {
     text-align: center;
     z-index: 500000;
 }
-/* #scroll-bottom {
-    position: fixed;
-    bottom: 0;
-} */
+
 /*********************** FOOTER ***********************/
 footer {
     /* position: absolute; */
@@ -95,9 +92,7 @@ button {
     'footer footer footer footer footer footer';
   grid-gap: 10px;
 }
-/* .url:hover {
 
-} */
 /*---------------------- CARDS INDEX PAGE ----------------------*/
 /*********************** NEW PAGE ***********************/
 .grid-n-header { grid-area: header; }
@@ -119,9 +114,7 @@ button {
     'footer footer footer footer footer footer';
   grid-gap: 10px;
 }
-/* .url:hover {
 
-} */
 /*---------------------- NEW PAGE ----------------------*/
 /*********************** SCROLL MENU ***********************/
 #menu {
@@ -133,7 +126,6 @@ button {
     white-space: nowrap;
     overflow-x: scroll;
 }
-
 #inner-menu {
     width: 5000000000px;
 }
@@ -142,7 +134,7 @@ button {
 .container {
     position: relative;
     height: 200px;
-    width: 580px;
+    width: 240px;
 }
 .right {
     position: relative;
@@ -203,16 +195,20 @@ select {
     font-size: 12px;
     text-align: right;
 }
+
 img {
     position: absolute;
     width: 100%;
     height: 100%;
     box-shadow: inset  0px 0px 10px 0px black;
 }
+
 .types {
     width: 30px;
     height: 30px;
+    box-shadow: none;
 }
+
 #img-box-border{
     background-image: linear-gradient(to bottom right, rgb(253, 190, 44), rgb(255, 255, 255), gold, rgb(153, 118, 35));
     height: 160px;
