@@ -11,7 +11,7 @@ const cardSchema = mongoose.Schema({
     damage2: Number,
     weakness: String, // limited to types
     resistance: String,
-    favorite: Boolean
+    favorite: [{}]
 })
 
 const Card = mongoose.model('Card', cardSchema);
