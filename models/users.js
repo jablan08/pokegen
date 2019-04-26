@@ -8,6 +8,7 @@ const userSchema = new mongoose.Schema({
         type: mongoose.Schema.Types.ObjectId,
         ref: 'Card'
     }],
+    favorites: [{}],
     admin: Boolean
 })
 
