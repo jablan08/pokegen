@@ -1,6 +1,6 @@
 <% for (let i = 0; i < cards.length; i++) {%>
     
-    <div id="card-body"
+    <div id="card-body" class="zoom"
         <%if (cards[i].type === "normal") {%>
         style="background-image: url('/images/bg-normal.png')"  
         <%} else if (cards[i].type === "fighting") {%>
@@ -65,18 +65,24 @@
         </div>
 
 
-        <div id="attack-box">
-            <div id="attack"><%=cards[i].attack%></div>
-            <div id="damage"><%=cards[i].damage%></div>
+        <div class="attack-box">
+            <div class="attack"><%=cards[i].attack%></div>
+            <div class="damage"><%=cards[i].damage%></div>
         </div>
 
+        <div class="attack-box">
+            <div class="attack"><%=cards[i].attack2%></div>
+            <div class="damage"><%=cards[i].damage2%></div>
+        </div>
 
         <div id="weak-resist-box">
-            <div id="weakness">weakness</div><br/>
-            <small><%=cards[i].weakness%></small>
+            <div id="weakness">weakness<br>
+                <small><%=cards[i].weakness%></small>
+            </div>
 
-            <div id="resistance">resistance</div><br/>
-            <small><%=cards[i].resistance%></small>
+            <div id="resistance">resistance<br>
+                <small><%=cards[i].resistance%></small>
+            </div>
         </div>
 
     </div>

@@ -7,6 +7,8 @@ const cardSchema = mongoose.Schema({
     type: String, // drop down option, 8 types
     attack: String,
     damage: Number,
+    attack2: String,
+    damage2: Number,
     weakness: String, // limited to types
     resistance: String,
     favorite: Boolean

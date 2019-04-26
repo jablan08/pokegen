@@ -56,7 +56,7 @@ button {
 /*---------------------- NAVIGATION ----------------------*/
 /*********************** HOME PAGE ***********************/
 .grid-header { grid-area: header; }
-.grid-menu { grid-area: menu; padding-left: 10px;}
+.grid-menu { grid-area: menu; }
 .grid-main { grid-area: main; }
 .grid-right { grid-area: right; }
 .grid-footer { grid-area: footer; }
@@ -72,7 +72,7 @@ button {
     'header header header header header header'
     'menu menu main main right right'
     'footer footer footer footer footer footer';
-  grid-gap: 10px;
+  grid-gap: 2px;
 }
 
 /*---------------------- HOME PAGE ----------------------*/
@@ -83,28 +83,28 @@ button {
       'header header header header header header'
       'menu menu main main main main'
       'footer footer footer footer footer footer';
-    grid-gap: 10px;
+    grid-gap: 2px;
   }
   /*---------------------- USER SHOW PAGE ----------------------*/
 /*********************** CARDS INDEX PAGE ***********************/
 .grid-cards-header { grid-area: header; }
-.grid-cards-menu { grid-area: menu; padding-left: 10px;}
+/* .grid-cards-menu { grid-area: menu; padding-left: 10px;} */
 .grid-cards-main { grid-area: main; }
-.grid-cards-right { grid-area: right; }
+/* .grid-cards-right { grid-area: right; } */
 .grid-cards-footer { grid-area: footer; }
 
-#new-container {
-    position: relative;
-    z-index: 5;
+#featured-cards {
+    max-height: 400px;
+    white-space: nowrap;
 }
 
 .grid-cards-container {
   display: grid;
   grid-template-areas:
     'header header header header header header'
-    'menu main main main main main'
+    'main main main main main main'
     'footer footer footer footer footer footer';
-  grid-gap: 10px;
+  grid-gap: 2px;
 }
 
 /*---------------------- CARDS INDEX PAGE ----------------------*/
@@ -126,7 +126,7 @@ button {
     'header header header header header header'
     'menu menu main main right right'
     'footer footer footer footer footer footer';
-  grid-gap: 10px;
+  grid-gap: 2px;
 }
 
 /*---------------------- NEW PAGE ----------------------*/
@@ -170,12 +170,12 @@ select {
 }
 /*---------------------- INPUT FORM ----------------------*/
 /*********************** ZOOM HOVER ***********************/
-.zoom{
+.zoom {
     transition: all .2s;
 }
 .zoom:hover {
     transform: scale(1.5);
-    z-index: 500;
+    z-index: 90000000;
 }
 /*---------------------- ZOOM HOVER ----------------------*/
 /*********************** CREATE CARD ***********************/
@@ -183,20 +183,17 @@ select {
     position: relative;
     float: left;
     margin: 5px;
-    /* background-image: url('/public/images/grass-bg.png'); */
     background-image: linear-gradient(to bottom right, blue,lightblue,blue); /*this is default bg*/
     height: 400px;
     width: 280px;
     border: 8px solid gold;
     border-radius: 10px;
-    background-color: blue;
     z-index: 15;
     box-shadow: 0 5px 10px 5px black;
-    
 }
 
 #name {
-    width: 200px;
+    width: 180px;
     position: relative;
     font-size: 25px;
     float: left;
@@ -205,9 +202,17 @@ select {
 
 #hp-box {
     float: right;
-    margin: 2px 5px 0 0;
-    font-size: 12px;
+    margin: 2px 30px 0 0;
+    font-size: 25px;
     text-align: right;
+}
+
+.types {
+    width: 28px;
+    height: 28px;
+    margin-top: 2px;
+    right: 2px;
+    box-shadow: none;
 }
 
 img {
@@ -217,12 +222,6 @@ img {
     box-shadow: inset  0px 0px 10px 0px black;
 }
 
-.types {
-    width: 28px;
-    height: 28px;
-    margin-top: 2px;
-    box-shadow: none;
-}
 #img-box-border{
     background-image: linear-gradient(to bottom right, rgb(253, 190, 44), rgb(255, 255, 255), gold, rgb(153, 118, 35));
     height: 160px;
@@ -238,23 +237,21 @@ img {
     width: 234px;
     max-width: 234px;
     margin: 3px;
-
-    background-color: green;
 }
 
-#attack-box{
+.attack-box{
     width: 270px;
     margin: 30px 5px 0 5px;
     border-top: 1px solid black;
 }
 
-#attack {
+.attack {
     margin: 5px 0 0 5px;
     width: 200px;
     float: left;
 }
 
-#damage {
+.damage {
     margin: 5px 5px 0 0;
     float: right;
     width: 30px;
@@ -264,7 +261,7 @@ img {
 #weak-resist-box {
     position: relative;
     width: 270px;
-    margin: 100px 5px 0 5px;
+    margin: 88px 5px 0 5px;
     border-top: 1px solid black;
     font-size: 12px;
 }
@@ -272,7 +269,7 @@ img {
 #weakness{
     position: relative;
     top: 0;
-    width: 120px;
+    width: 110px;
     float: left;
     margin: 2px 0 0 5px;
     text-align: center;
@@ -282,7 +279,7 @@ img {
 #resistance {
     position: relative;
     top: 0;
-    width: 120px;
+    width: 110px;
     float: right;
     margin: 2px 5px 0 0;
     text-align: center;
@@ -293,19 +290,27 @@ img {
     position: relative;
     float: left;
     margin: 6px;
-    /* background-image: url('/public/images/grass-bg.png'); */
-    /* background-image: linear-gradient(to bottom right, blue,lightblue,blue); */
+    background-image: linear-gradient(to bottom right, blue,lightblue,blue);
     height: 200px;
     width: 140px;
     border: 4px solid gold;
     border-radius: 5px;
-    /* background-color: rgb(59, 59, 243); */
     box-shadow: 0 2px 5px 2px black;
     
 }
 
+/* #name {
+    width: 180px;
+    position: relative;
+    font-size: 25px;
+    float: left;
+    margin: 2px 0 0 5px;
+}
+
+} */
+
 #m-name {
-    width: 100px;
+    width: 86px;
     position: relative;
     font-size: 12px;
     float: left;
@@ -314,7 +319,7 @@ img {
 
 #m-hp-box {
     float: right;
-    margin: 1px 2px 0 0;
+    margin: 1px 15px 0 0;
     font-size: 12px;
     text-align: right;
 }
@@ -329,8 +334,10 @@ img {
     width: 14px;
     height: 14px;
     margin-top: 1px;
+    right: 1px;
     box-shadow: none;
 }
+
 #m-img-box-border{
     background-image: linear-gradient(to bottom right, rgb(253, 190, 44), rgb(255, 255, 255), gold, rgb(153, 118, 35));
     height: 80px;
@@ -345,24 +352,22 @@ img {
     width: 118px;
     max-width: 234px;
     margin: 1px;
-
-    background-color: green;
 }
 
-#m-attack-box{
+.m-attack-box{
     width: 135px;
     margin: 15px 2px 0 2px;
     border-top: 1px solid black;
 }
 
-#m-attack {
+.m-attack {
     margin: 2px 0 0 2px;
     width: 100px;
     float: left;
     font-size: 12px;
 }
 
-#m-damage {
+.m-damage {
     margin: 2px 2px 0 0;
     float: right;
     width: 15px;
@@ -373,15 +378,16 @@ img {
 #m-weak-resist-box {
     position: relative;
     width: 135px;
-    margin: 50px 2px 0 2px;
+    margin: 44px 2px 0 2px;
     border-top: 1px solid black;
     font-size: 6px;
+
 }
 
 #m-weakness{
     position: relative;
     top: 0;
-    width: 30px;
+    width: 60px;
     float: left;
     margin: 1px 0 0 4px;
     text-align: center;
@@ -391,7 +397,7 @@ img {
 #m-resistance {
     position: relative;
     top: 0;
-    width: 30px;
+    width: 60px;
     float: right;
     margin: 1px 4px 0 0;
     text-align: center;
