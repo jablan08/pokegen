@@ -14,6 +14,10 @@ h3 {
     font-family: 'ZCOOL KuaiLe', courier;
 }
 
+.user-font {
+    font-family: 'ZCOOL KuaiLe', courier;
+}
+
 h4 {
     position: sticky;
     bottom: 0;
@@ -72,6 +76,16 @@ button {
 }
 
 /*---------------------- HOME PAGE ----------------------*/
+/*********************** USER SHOW PAGE ***********************/
+.grid-user-container {
+    display: grid;
+    grid-template-areas:
+      'header header header header header header'
+      'menu menu main main main main'
+      'footer footer footer footer footer footer';
+    grid-gap: 10px;
+  }
+  /*---------------------- USER SHOW PAGE ----------------------*/
 /*********************** CARDS INDEX PAGE ***********************/
 .grid-cards-header { grid-area: header; }
 .grid-cards-menu { grid-area: menu; padding-left: 10px;}

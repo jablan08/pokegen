@@ -30,27 +30,27 @@
         <a href="/cards/<%=cards[i]._id%>">    <%=cards[i].name%></a>
         </div>
         <span class="type">
-            <%if (card.type === "normal") {%>
+            <%if (cards.type === "normal") {%>
                 <img class="types" src="/images/normal.png">
-                <%} else if (card.type === "fighting") {%>
+                <%} else if (cards.type === "fighting") {%>
                 <img class="types" src="/images/combat.png">
 
-                <%} else if (card.type === "steel") {%>
+                <%} else if (cards.type === "steel") {%>
                 <img class="types" src="/images/metal.png">
 
-                <%} else if (card.type === "fire") {%>
+                <%} else if (cards.type === "fire") {%>
                 <img class="types" src="/images/fire.png"> 
 
-                <%} else if (card.type === "water") {%>
+                <%} else if (cards.type === "water") {%>
                 <img class="types" src="/images/water.png"> 
 
-                <%} else if (card.type === "grass") {%>
+                <%} else if (cards.type === "grass") {%>
                 <img class="types" src="/images/grass-type.png"> 
 
-                <%}else if (card.type === "electric") {%>
+                <%}else if (cards.type === "electric") {%>
                 <img class="types" src="/images/elektric.png"> 
 
-                <%}else if (card.type === "psychic") {%>
+                <%}else if (cards.type === "psychic") {%>
                 <img class="types" src="/images/psy.png">
             <%}%> 
         </span>
@@ -60,7 +60,7 @@
 
         <div id="img-box-border">
             <div id="img-box">
-                <img class="img-fit" src="<%=cards[i].url%>">
+                <img src="<%=cards[i].url%>">
             </div>
         </div>
 
