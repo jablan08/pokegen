@@ -55,7 +55,7 @@
             <%}%> 
         </span>
         <div id="m-hp-box">
-            <font size="2px">HP</font> <%=cards[i].hp%>
+            <font size="1px">HP</font><%=cards[i].hp%>
         </div>
 
         <div id="m-img-box-border">
@@ -64,19 +64,24 @@
             </div>
         </div>
 
-        
+        <div class="m-attack-box">
+            <div class="m-attack"><%=cards[i].attack%></div>
+            <div class="m-damage"><%=cards[i].damage%></div>
+        </div>
 
-        <div id="m-attack-box">
-            <div id="m-attack"><%=cards[i].attack%></div>
-            <div id="m-damage"><%=cards[i].damage%></div>
+        <div class="m-attack-box">
+            <div class="m-attack"><%=cards[i].attack2%></div>
+            <div class="m-damage"><%=cards[i].damage2%></div>
         </div>
 
         <div id="m-weak-resist-box">
-            <div id="m-weakness">Weakness</div><br/>
-            <small><%=cards[i].weakness%></small>
-            <div id="m-divider"></div>
-            <div id="m-resistance">Resistance</div>
-            <small><%=cards[i].resistance%></small>
+            <div id="m-weakness">Weakness<br/>
+                <small><%=cards[i].weakness%></small>
+            </div>
+
+            <div id="m-resistance">Resistance<br/>
+                <small><%=cards[i].resistance%></small>
+            </div>
         </div>
 
     </div>

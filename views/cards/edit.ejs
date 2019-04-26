@@ -21,15 +21,17 @@
         Element Type:<br />  
         Attack:<br />  
         Damage:<br />  
+        Attack2:<br />  
+        Damage2:<br />  
         Weakness:<br />  
         Resistance:<br />  
     </div>
 
     <div class="right">
         <form action="/cards/<%=card._id%>?_method=PUT" method="POST">
-            <input type="text" name="name" value="<%=card.name%>" /><br/>
+            <input type="text" name="name" maxlength="15" value="<%=card.name%>" /><br/>
             <input type="text" name="url" value="<%=card.url%>" /><br/>
-            <input type="text" name="hp" value="<%=card.hp%>" /><br/>
+            <input type="text" name="hp" maxlength="3" value="<%=card.hp%>" /><br/>
             <select name="type"><br/>
                 <option value="<%=card.type%>" select><%=card.type%></option>
                 <option value="normal">Normal</option>
@@ -41,10 +43,12 @@
                 <option value="electric">Electric</option>
                 <option value="psychic">Psychic</option>
             </select><br/>
-            <input type="text" name="attack" value="<%=card.attack%>" /><br/>
-            <input type="text" name="damage" value="<%=card.damage%>" /><br/>
-            <input type="text" name="weakness" value="<%=card.weakness%>" /><br/>
-            <input type="text" name="resistance" value="<%=card.resistance%>"/><br/>
+            <input type="text" name="attack" maxlength="16" value="<%=card.attack%>" /><br/>
+            <input type="text" name="damage" maxlength="4" value="<%=card.damage%>" /><br/>
+            <input type="text" name="attack2" maxlength="16" value="<%=card.attack2%>" /><br/>
+            <input type="text" name="damage2" maxlength="4" value="<%=card.damage2%>" /><br/>
+            <input type="text" name="weakness" maxlength="13" value="<%=card.weakness%>" /><br/>
+            <input type="text" name="resistance" maxlength="13" value="<%=card.resistance%>"/><br/>
             <button type="submit">Edit Card</button>
         </form>
     </div>
