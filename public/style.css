@@ -218,11 +218,11 @@ img {
 }
 
 .types {
-    width: 30px;
-    height: 30px;
+    width: 28px;
+    height: 28px;
+    margin-top: 2px;
     box-shadow: none;
 }
-
 #img-box-border{
     background-image: linear-gradient(to bottom right, rgb(253, 190, 44), rgb(255, 255, 255), gold, rgb(153, 118, 35));
     height: 160px;
@@ -325,7 +325,12 @@ img {
     /* z-index: 5; */
     box-shadow: inset  0px 0px 5px 0px black;
 }
-
+.m-types {
+    width: 14px;
+    height: 14px;
+    margin-top: 1px;
+    box-shadow: none;
+}
 #m-img-box-border{
     background-image: linear-gradient(to bottom right, rgb(253, 190, 44), rgb(255, 255, 255), gold, rgb(153, 118, 35));
     height: 80px;
