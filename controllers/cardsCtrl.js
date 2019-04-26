@@ -36,15 +36,12 @@ router.get("/new", logUser, async (req,res)=>{
 })
 
 router.post("/", logUser, async (req,res)=>{
+    
     try {
-        Card.create(req.body, (err,createdCard)=>{
+        await Card.create(req.body, (err,createdCard)=>{
             console.log(createdCard)
             User.findById(req.session.userDbId, (err,foundUser)=>{
-                if (err) {
-                    console.log(err)
-                } else {
-                    console.log(foundUser)
-                }
+                // push to user.favorites
                 foundUser.cards.push(createdCard);
                 foundUser.save((err,savedUser)=>{
                     if (err) {
@@ -114,6 +111,7 @@ router.get("/:id/edit", async (req,res)=>{
 
 router.put("/:id", logUser, async (req,res)=>{
     try {
+<<<<<<< HEAD
         if (req.body.favorite === "on"){
             req.body.favorite = true
         } else{
@@ -121,6 +119,29 @@ router.put("/:id", logUser, async (req,res)=>{
         }
         await Card.findByIdAndUpdate(req.params.id, req.body, {new:true});
         res.redirect("/cards/" + req.params.id);
+=======
+        if (req.body.favorite === "on") {
+            req.body.favorite = true;
+        } else {
+            req.body.favorite = false;
+        }
+        const foundUser = await User.findOne({"cards": req.params.id})
+        .populate({path: "cards", match: {_id: req.params.id}});
+        const updatedCard = await Card.findByIdAndUpdate(req.params.id, req.body, {new:true})
+    
+        
+        if (updatedCard.favorite === false) {
+            foundUser.favorites.remove(req.params.id)
+            foundUser.save();
+        } else {
+            foundUser.favorites.push(updatedCard.id);
+            foundUser.save();
+        }
+        console.log(foundUser, "<======zzzzz user")
+        console.log(updatedCard.favorite, "<=====") 
+        res.redirect(`/cards/${req.params.id}/edit`);
+        
+>>>>>>> master
         
     } catch(err) {
         res.send(err)
