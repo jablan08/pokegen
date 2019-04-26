@@ -18,7 +18,7 @@ router.post("/register", async (req,res)=>{
         req.session.logged = true;
         req.session.userDbId = createdUser._id;
         console.log(req.session)
-        res.redirect('/auth/login');
+        res.redirect('/cards/new');
 
     } catch(err) {
         res.send(err)
