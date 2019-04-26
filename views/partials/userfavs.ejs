@@ -1,90 +1,94 @@
-<% for (let i = 0; i < user.favorites.length; i++) {%>
-    <a href="/users/<%=user.favorites[i]._id%>"> 
+<% for (let i = 0; i < user.cards.length; i++) {%>
+    <%if (user.cards[i].favorite) {%>
+        <a href="/cards/<%=user.cards[i]._id%>"> 
         <div id="card-body"
-            <%if (user.favorites[i].type === "normal") {%>
-            style="background-image: url('/images/bg-normal.png')"  
-            <%} else if (user.favorites[i].type === "fighting") {%>
-            style="background-image: url('/images/fight-bg.png')" 
+        <%if (user.cards[i].type === "normal") {%>
+        style="background-image: url('/images/bg-normal.png')"  
+        <%} else if (user.cards[i].type === "fighting") {%>
+        style="background-image: url('/images/fight-bg.png')" 
 
-            <%} else if (user.favorites[i].type === "steel") {%>
-            style="background-image: url('/images/metal-bg.png')" 
+        <%} else if (user.cards[i].type === "ground") {%>
+        style="background-image: url('/images/ground-bg.png')"  
 
-            <%} else if (user.favorites[i].type === "fire") {%>
-            style="background-image: url('/images/bg-red.png')"  
+        <%} else if (user.cards[i].type === "steel") {%>
+        style="background-image: url('/images/metal-bg.png')" 
 
-            <%} else if (user.favorites[i].type === "water") {%>
-            style="background-image: url('/images/blue-bg.png')" 
+        <%} else if (user.cards[i].type === "fire") {%>
+        style="background-image: url('/images/bg-red.png')"  
 
-            <%} else if (user.favorites[i].type === "grass") {%>
-            style="background-image: url('/images/grass-bg.png')"   
+        <%} else if (user.cards[i].type === "water") {%>
+        style="background-image: url('/images/blue-bg.png')" 
 
-            <%}else if (user.favorites[i].type === "electric") {%>
-            style="background-image: url('/images/lightening-bg.png')"   
+        <%} else if (user.cards[i].type === "grass") {%>
+        style="background-image: url('/images/grass-bg.png')"   
 
-            <%}else if (user.favorites[i].type === "psychic") {%>
-            style="background-image: url('/images/purple-bg.png')" 
+        <%}else if (user.cards[i].type === "electric") {%>
+         style="background-image: url('/images/lightening-bg.png')"   
 
-            <%}%> >
+        <%}else if (user.cards[i].type === "psychic") {%>
+        style="background-image: url('/images/purple-bg.png')" 
 
-            <div id="name">
-            <%=user.favorites[i].name%>
-            </div>
-            <span class="type">
-                <%if (user.favorites[i].type === "normal") {%>
-                    <img class="types" src="/images/normal.png">
-                    <%} else if (user.favorites[i].type === "fighting") {%>
-                    <img class="types" src="/images/combat.png">
+        <%}%> >
 
-                    <%} else if (user.favorites[i].type === "steel") {%>
-                    <img class="types" src="/images/metal.png">
-
-                    <%} else if (user.favorites[i].type === "fire") {%>
-                    <img class="types" src="/images/fire.png"> 
-
-                    <%} else if (user.favorites[i].type === "water") {%>
-                    <img class="types" src="/images/water.png"> 
-
-                    <%} else if (user.favorites[i].type === "grass") {%>
-                    <img class="types" src="/images/grass-type.png"> 
-
-                    <%}else if (user.favorites[i].type === "electric") {%>
-                    <img class="types" src="/images/elektric.png"> 
-
-                    <%}else if (user.favorites[i].type === "psychic") {%>
-                    <img class="types" src="/images/psy.png">
-                <%}%> 
-            </span>
-            <div id="hp-box">
-                <font size="2px">HP</font><%=user.favorites[i].hp%>
-            </div>
-
-            <div id="img-box-border">
-                <div id="img-box">
-                    <img src="<%=user.favorites[i].url%>">
-                </div>
-            </div>
-
-
-            <div class="attack-box">
-                <div class="attack"><%=user.favorites[i].attack%></div>
-                <div class="damage"><%=user.favorites[i].damage%></div>
-            </div>
-
-            <div class="attack-box">
-                <div class="attack"><%=user.favorites[i].attack2%></div>
-                <div class="damage"><%=user.favorites[i].damage2%></div>
-            </div>
-
-            <div id="weak-resist-box">
-                <div id="weakness">weakness<br>
-                    <small><%=user.favorites[i].weakness%></small>
-                </div>
-
-                <div id="resistance">resistance<br>
-                    <small><%=user.favorites[i].resistance%></small>
-                </div>
-            </div>
-
+        <div id="name">
+        <%=user.cards[i].name%>
         </div>
+        <span class="type">
+            <%if (user.cards[i].type === "normal") {%>
+                <img class="types" src="/images/normal.png">
+                <%} else if (user.cards[i].type === "fighting") {%>
+                <img class="types" src="/images/combat.png">
+
+                <%} else if (user.cards[i].type === "steel") {%>
+                <img class="types" src="/images/metal.png">
+
+                <%} else if (user.cards[i].type === "fire") {%>
+                <img class="types" src="/images/fire.png"> 
+
+                <%} else if (user.cards[i].type === "water") {%>
+                <img class="types" src="/images/water.png"> 
+
+                <%} else if (user.cards[i].type === "grass") {%>
+                <img class="types" src="/images/grass-type.png"> 
+
+                <%}else if (user.cards[i].type === "electric") {%>
+                <img class="types" src="/images/elektric.png"> 
+
+                <%}else if (user.cards[i].type === "psychic") {%>
+                <img class="types" src="/images/psy.png">
+            <%}%> 
+        </span>
+        <div id="hp-box">
+            <font size="2px">HP</font> <%=user.cards[i].hp%>
+        </div>
+
+        <div id="img-box-border">
+            <div id="img-box">
+                <img src="<%=user.cards[i].url%>">
+            </div>
+        </div>
+          <div class="attack-box">
+            <div class="attack"><%=user.cards[i].attack%></div>
+            <div class="damage"><%=user.cards[i].damage%></div>
+        </div>
+
+        <div class="attack-box">
+            <div class="attack"><%=user.cards[i].attack2%></div>
+            <div class="damage"><%=user.cards[i].damage2%></div>
+        </div>
+
+        <div id="weak-resist-box">
+            <div id="weakness">Weakness<br/>
+                <small><%=user.cards[i].weakness%></small>
+            </div>
+
+            <div id="resistance">Resistance<br/>
+                <small><%=user.cards[i].resistance%></small>
+            </div>
+        </div>
+    </div>
     </a>
+
+    <%}%>
+    
 <% } %>
