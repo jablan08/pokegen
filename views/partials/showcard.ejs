@@ -33,7 +33,29 @@
         <a href="/cards/<%=user.cards[i]._id%>">    <%=user.cards[i].name%></a>
         </div>
         <span class="type">
-            Type:
+            <%if (user.cards[i].type === "normal") {%>
+                <img class="types" src="/images/normal.png">
+                <%} else if (user.cards[i].type === "fighting") {%>
+                <img class="types" src="/images/combat.png">
+
+                <%} else if (user.cards[i].type === "steel") {%>
+                <img class="types" src="/images/metal.png">
+
+                <%} else if (user.cards[i].type === "fire") {%>
+                <img class="types" src="/images/fire.png"> 
+
+                <%} else if (user.cards[i].type === "water") {%>
+                <img class="types" src="/images/water.png"> 
+
+                <%} else if (user.cards[i].type === "grass") {%>
+                <img class="types" src="/images/grass-type.png"> 
+
+                <%}else if (user.cards[i].type === "electric") {%>
+                <img class="types" src="/images/elektric.png"> 
+
+                <%}else if (user.cards[i].type === "psychic") {%>
+                <img class="types" src="/images/psy.png">
+            <%}%> 
         </span>
         <div id="hp-box">
             <font size="2px">HP</font> <%=user.cards[i].hp%>
