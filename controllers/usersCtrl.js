@@ -24,7 +24,7 @@ router.get('/', async (req, res) => {
     } catch (err) {
         res.send(err)
     }
-})
+})   
 
 
 // SHOW
