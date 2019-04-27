@@ -56,7 +56,8 @@ router.get('/:id/edit', logUser, async (req, res) => {
     try {
         const foundUser = await User.findById(req.params.id)
         res.render('users/edit.ejs',{
-            user: foundUser
+            user: foundUser,
+            logged: req.session.logged
         })
     } catch (error) {   
     }
