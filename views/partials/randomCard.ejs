@@ -1,0 +1,74 @@
+<a href="/cards/<%=randomCard.id%>"> 
+        <div id="card-body"
+            <%if (randomCard.type === "normal") {%>
+            style="background-image: url('/images/bg-normal.png')"  
+            <%} else if (randomCard.type === "fighting") {%>
+            style="background-image: url('/images/fight-bg.png')" 
+            <%} else if (randomCard.type === "steel") {%>
+            style="background-image: url('/images/metal-bg.png')" 
+            <%} else if (randomCard.type === "fire") {%>
+            style="background-image: url('/images/bg-red.png')"  
+            <%} else if (randomCard.type === "water") {%>
+            style="background-image: url('/images/blue-bg.png')" 
+            <%} else if (randomCard.type === "grass") {%>
+            style="background-image: url('/images/grass-bg.png')"   
+            <%}else if (randomCard.type === "electric") {%>
+            style="background-image: url('/images/lightening-bg.png')"   
+            <%}else if (randomCard.type === "psychic") {%>
+            style="background-image: url('/images/purple-bg.png')" 
+            <%}%> >
+            <div id="name">
+            <%=randomCard.name%>
+            </div>
+            <span class="type">
+                <%if (randomCard.type === "normal") {%>
+                    <img class="types" src="/images/normal.png">
+                    <%} else if (randomCard.type === "fighting") {%>
+                    <img class="types" src="/images/combat.png">
+                    <%} else if (randomCard.type === "steel") {%>
+                    <img class="types" src="/images/metal.png">
+                    <%} else if (randomCard.type === "fire") {%>
+                    <img class="types" src="/images/fire.png"> 
+                    <%} else if (randomCard.type === "water") {%>
+                    <img class="types" src="/images/water.png"> 
+                    <%} else if (randomCard.type === "grass") {%>
+                    <img class="types" src="/images/grass-type.png"> 
+                    <%}else if (randomCard.type === "electric") {%>
+                    <img class="types" src="/images/elektric.png"> 
+                    <%}else if (randomCard.type === "psychic") {%>
+                    <img class="types" src="/images/psy.png">
+                <%}%> 
+            </span>
+            <div id="hp-box">
+                <font size="2px">HP</font><%=randomCard.hp%>
+            </div>
+            <div id="img-box-border">
+                <div id="img-box">
+                    <img src="<%=randomCard.url%>">
+                </div>
+            </div>
+       <div class="attack-box">
+            <div class="attack"><%=randomCard.attack%></div>
+            <div class="damage"><%=randomCard.damage%></div>
+        </div>
+            <div>    
+                <div class="description"><%=randomCard.description%></div>
+            </div>
+
+        <div class="attack-box2">
+            <div class="attack"><%=randomCard.attack2%></div>
+            <div class="damage"><%=randomCard.damage2%></div>
+        </div>
+            <div>
+                <div class="description"><%=randomCard.description2%></div>
+            </div>
+            <div id="weak-resist-box">
+                <div id="weakness">weakness<br>
+                    <small><%=randomCard.weakness%></small>
+                </div>
+                <div id="resistance">resistance<br>
+                    <small><%=randomCard.resistance%></small>
+                </div>
+            </div>
+        </div>
+    </a>

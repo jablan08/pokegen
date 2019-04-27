@@ -1,6 +1,9 @@
     <nav>    
         <button class="navBtn"><a href='/home'>Home</a></button>
+        <%console.log(logged, "===========logggg???")%>
+        <%if (logged=== undefined){%>
         <button class="navBtn"><a href='/auth/login'>Log In</a></button>
+        <%}%>
         <%if (logged){%>
         <button class="navBtn"><a href="/auth/logout">Logout</a></button>
         <%}%>
