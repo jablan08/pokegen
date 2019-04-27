@@ -18,7 +18,9 @@ router.post("/register", async (req,res)=>{
         req.session.logged = true;
         req.session.userDbId = createdUser._id;
         console.log(req.session)
-        res.redirect('/cards/new');
+        res.redirect('/cards/new', {
+            logged: req.session.logged
+        });
 
     } catch(err) {
         res.send(err)
@@ -58,7 +60,7 @@ router.get('/logout', (req, res) => {
       } else {
      
         console.log("loggedout")  
-        res.redirect('/auth/login');
+        res.redirect('/home');
         
 
       }
