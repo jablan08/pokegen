@@ -49,7 +49,8 @@ h4 {
 }
 /*********************** FOOTER ***********************/
 footer {
-    position: fixed;
+    /* this may be the culprit for the bottom align issue */
+    /* position: fixed; */
     bottom: 0;
     margin: 0 auto;
     width: 100%;
@@ -110,6 +111,10 @@ button {
     'footer footer footer footer footer footer';
   grid-gap: 0;
 }
+
+#feature-card {
+    margin-top: -20px;
+}
 /*---------------------- HOME PAGE ----------------------*/
 /*********************** CARDS INDEX PAGE ***********************/
 .grid-cards-header { grid-area: header; }
@@ -138,6 +143,7 @@ button {
 }
 /*---------------------- CARDS INDEX PAGE ----------------------*/
 /*********************** CARDS SHOW PAGE ***********************/
+/* to lift fave card window */
 #cards-users {
     margin-top: -40px;
 }
@@ -169,17 +175,17 @@ button {
     /* position: relative; */
     /* bottom: 0; */
     /* z-index: 1000000000000000000; */
-    /* margin-top: -30px; */
+    margin-top: -150px;
     background-color: transparent;
     width: auto;
     height: 230px;
     padding: 55px 0;
-    white-space: nowrap;
+    /* white-space: nowrap; */
     overflow-x: scroll;
 }
 
 #inner-menu {
-    width: 5000000000px;
+    width: 5000000000000000000000000px;
 }
 /*---------------------- FOOTER SCROLL MENU ----------------------*/
 /*********************** USER SHOW PAGE ***********************/
@@ -210,7 +216,7 @@ button {
     width: auto;
     height: 230px;
     padding: 55px 0;
-    white-space: nowrap;
+    /* white-space: nowrap; */
     overflow-x: scroll;
 }
 /*---------------------- USER SHOW SCROLL MENU ----------------------*/
@@ -218,7 +224,7 @@ button {
 .container {
     position: relative;
     height: 200px;
-    width: 240px;
+    width: 300px;
 }
 
 .right {
@@ -241,6 +247,13 @@ input {
 select {
     width: 131px;
 }
+/* This doesn't work yet, cannot get lines to break */
+/* .description-input {
+    position: relative;
+    top: 0;
+    height: 40px;
+    word-wrap: break-word;
+} */
 /*---------------------- INPUT FORM ----------------------*/
 /*********************** CREATE CARD ***********************/
 .card-body {
@@ -478,17 +491,15 @@ img {
 }
 
 .m-description {
-    border: 1px solid red;
     margin: 10px 0 0 0;
     position: relative;
     max-width: 132px;
-    height: 20px; 
+    height: 23px; 
     font-size: 6px;
     /* word-wrap: break-word;  */
 }
 
 .m-description2 {
-    border: 1px solid red;
     margin: 10px 0 0 0;
     position: relative;
     width: 130px;

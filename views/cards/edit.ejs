@@ -18,7 +18,8 @@
         Name:<br />  
         Image Url:<br />  
         HP: <br />  
-        Element Type:<br />  
+        Element Type:<br /> 
+        Stats: <br /> 
         Attack:<br /> 
         Description: <br />  
         Damage:<br /> 
@@ -47,8 +48,9 @@
                 <option value="electric">Electric</option>
                 <option value="psychic">Psychic</option>
             </select><br/>
+            <input type="text" name="stats" maxlength="36" value="<%=card.stats%>" /><br/>
             <input type="text" name="attack" maxlength="16" value="<%=card.attack%>" /><br/>
-            <input type="text" name="description" maxlength="100" value="<%=card.description%>"/><br/>
+            <input type="text" name="description" maxlength="100" class="description-input" value="<%=card.description%>"/><br/>
             <input type="text" name="damage" maxlength="4" value="<%=card.damage%>" /><br/>
             <input type="text" name="attack2" maxlength="16" value="<%=card.attack2%>" /><br/>
             <input type="text" name="description2" maxlength="100" value="<%=card.description2%>"/><br/>
