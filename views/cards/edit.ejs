@@ -62,13 +62,14 @@
             <%}%>
             /> <br/>
             <button type="submit">Edit Card</button>
+            <button> <a href="/cards/<%=card._id%>">Go back</a> </button>
         </form>
     </div>
 </div>
     </div>
 
     <div id="cards-users" class="grid-right">
-        <%-include('../partials/samplecard')%>
+        <%-include('../partials/card')%>
     </div>
 
     <div class="grid-footer">

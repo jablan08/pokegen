@@ -11,9 +11,10 @@ router.get('/', async (req, res) => {
         res.render('main/home.ejs', {
             cards: allCards,
             users: allUsers,
-            logged: req.session.logged
-            // randomCard: allCards[Math.floor(Math.random()*allCards.length)]
+            logged: req.session.logged,
+            randomCard: allCards[Math.floor(Math.random()* allCards.length)]
         })
+        console.log(allCards[Math.floor(Math.random()* allCards.length)])
     } catch(err){
         res.send(err)
     }
