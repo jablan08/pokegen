@@ -26,6 +26,8 @@ h3 {
 
 .user-font {
     font-family: 'ZCOOL KuaiLe', courier;
+    position: relative;
+    z-index: 500;
 }
 
 h4 {
