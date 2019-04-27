@@ -75,6 +75,7 @@ router.get('/:id', async (req, res)=>{
         
         console.log(findAdmin, "found admin")
         console.log(foundUser, "<---- foundUser in card's show route");
+        console.log(req.session.logged, "============logged")
         res.render('cards/show.ejs', {
           user: foundUser,
           card: foundUser.cards[0],
@@ -124,7 +125,7 @@ router.put("/:id", logUser, async (req,res)=>{
             req.body.favorite = false;
         }
         const updatedCard = await Card.findByIdAndUpdate(req.params.id, req.body, {new:true})
-        res.redirect("/cards");
+        res.redirect(`/cards/${req.params.id}/edit`);
     } catch(err) {
         res.send(err)
     }
