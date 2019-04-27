@@ -52,7 +52,7 @@ router.post("/", logUser, async (req,res)=>{
                         console.log(err)
                     } else {
                         console.log(savedUser)
-                        res.redirect("/cards")
+                        res.redirect("/cards/")
                     }
                 })
                 
