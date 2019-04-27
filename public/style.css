@@ -235,24 +235,44 @@ button {
 .left {
     position: relative;
     float: left;
-    font-size: 17px;
+    font-size: 20px;
+    line-height: 136%;
     text-align: left;
+    width: 50px;
 }
-
 input {
+    width: 124px;
+}
+input, select, .description-input, .story-input{
+    position: relative;
+    top: 0;
+    width: 122px;
     border-radius: 3px;
+    border: blue 4px solid;
     margin-top: 1px;
+    text-align: left;
+    margin: 2px;
+    word-wrap: break-word;
 }
 
 select {
-    width: 131px;
+    width: 134px;
 }
-/* This doesn't work yet, cannot get lines to break */
-/* .description-input {
-    position: relative;
-    top: 0;
-    height: 40px;
-    word-wrap: break-word;
+
+.description-input {
+    height: 33px;
+}
+.story-input {
+    height: 100px;
+}
+
+.container-right, .container-left {
+    width: 260px;
+}
+/* not an option yet */
+/* .check-box {
+    border-radius: 3px;
+    border: lightblue 4px solid;
 } */
 /*---------------------- INPUT FORM ----------------------*/
 /*********************** CREATE CARD ***********************/
