@@ -151,6 +151,26 @@ button {
 #cards-users {
     margin-top: -40px;
 }
+.edit-delete-buttons {
+    text-align: center;
+    margin-left: 45px;
+}
+
+.show-card-delete-button {
+    display: inline-block;
+    padding-right: 25px;
+}
+
+.show-card-edit-button {
+    display: inline;
+    margin-right: 55px;
+
+}
+
+#show-card-footer {
+    grid-column: 3;
+
+}
 /*---------------------- CARDS SHOW PAGE ----------------------*/
 /*********************** NEW PAGE ***********************/
 .grid-n-header { grid-area: header; }
