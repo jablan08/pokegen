@@ -53,6 +53,8 @@ router.post("/", logUser, async (req,res)=>{
                     } else {
                         console.log(savedUser)
                         res.redirect("/users/" + req.session.userDbId)
+
+
                     }
                 })
                 
