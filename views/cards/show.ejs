@@ -5,35 +5,42 @@
         <%- include('../partials/head')%>
 <h1> THIS IS A SHOW PAGE FOR A CARD</h1>
 
-<h2>Owned By: <a href="/users/<%=user._id%>"><%=user.username%></a>
-</h2>
+<h2>Owned By: <%=user.username%></h2>
+<button><a href="/users/<%=user._id%>">See collection</a></button>
     </div>
 
     <div id="cards-main" class="grid-menu">
-        
-<%if (logged) {%>
-    <%if(currentUser === verifyUser || admin.admin ===true){%>
-    <section>
-        <form action="/cards/<%=card._id%>?_method=DELETE" method="POST" >
-            <button>DELETE CARD</button>
-        </form>
-    </section>
-    <section>
-        <button>
-        <a href="/cards/<%=card._id%>/edit">EDIT</a>
-        </button>
-    </section>
-    <%}%>
-<%}%>
+     <%if (card.story){%>
+        <h1>The story of <%=card.name%></h1>
+        <p><%=card.story%></p>
+       <%} else  {%>
+       <h1>The story of <%=card.name%></h1>
+       <p>Every card has a story, sadly this owner does not have a story for this card. When you make your card be sure to give a story, or else your card’s story won’t be told just like this one.</p>
+       <%}%>
     </div>
 
     <div id="feature-card" class="grid-main">
-        <p>THIS IS A WELCOME PARAGRAPH</p>
        
     </div>
 
     <div id="cards-users" class="grid-right">
-<%- include('../partials/card')%>
+        <%- include('../partials/card')%>
+    </div>
+    <div>
+    <%if (logged) {%>
+    <%if(currentUser === verifyUser || admin.admin ===true){%>
+        <section style="display: inline-block;">
+            <form action="/cards/<%=card._id%>?_method=DELETE" method="POST" >
+                <button>DELETE CARD</button>
+            </form>
+        </section>
+        <section style="display: inline;">
+            <button>
+            <a href="/cards/<%=card._id%>/edit">EDIT</a>
+            </button>
+        </section>
+        <%}%>
+    <%}%>
     </div>
 
     <div class="grid-footer">
