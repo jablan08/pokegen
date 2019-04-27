@@ -166,6 +166,17 @@ button {
     width: 321px;
     border: solid gold 5px;
 }
+
+#user-menu {
+    position: relative;
+    margin-top: -300px;
+    background-color: transparent;
+    width: auto;
+    height: 230px;
+    padding: 55px 0;
+    white-space: nowrap;
+    overflow-x: scroll;
+}
 /*---------------------- USER SCROLL MENU ----------------------*/
 /*********************** USER INPUT FORM ***********************/
 .container {
