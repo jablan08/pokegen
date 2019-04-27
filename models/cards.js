@@ -3,15 +3,15 @@ const mongoose  = require('mongoose');
 const cardSchema = mongoose.Schema({
     name: String,
     url: String,
-    hp: Number,
+    hp: String,
     type: String, // drop down option, 8 types
     stats: String,
     attack: String,
     description: String, 
-    damage: Number,
+    damage: String,
     attack2: String,
     description2: String,
-    damage2: Number, 
+    damage2: String, 
     weakness: String, // limited to types
     resistance: String,
     favorite: Boolean, 
