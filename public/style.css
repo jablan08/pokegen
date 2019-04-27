@@ -1,6 +1,7 @@
 html {
     background: url('images/background-pokegen.png') no-repeat center center fixed;
     background-size: cover;
+    height: 100%;
 }
 
 body {
@@ -37,10 +38,20 @@ h4 {
 }
 /*********************** FOOTER ***********************/
 footer {
-    /* position: absolute; */
+    position: fixed;
     bottom: 0;
     margin: 0 auto;
     width: 100%;
+}
+
+.grass-footer {
+    /* background-image: url('images/grass-footer.png'); */
+    position: fixed;
+    z-index: 9000000000000;
+    height: 20%;
+    width: 100%;
+    /* margin: -20px auto 0 auto; */
+    bottom: 0;
 }
 /*---------------------- FOOTER ----------------------*/
 /*********************** NAVIGATION ***********************/
@@ -66,11 +77,6 @@ button {
 .grid-main { grid-area: main; }
 .grid-right { grid-area: right; }
 .grid-footer { grid-area: footer; }
-
-#home-container {
-    position: relative;
-    z-index: 5;
-}
 
 #home-users {
     width: 300px;
@@ -99,22 +105,24 @@ button {
 /* .grid-cards-menu { grid-area: menu; padding-left: 10px;} */
 .grid-cards-main { grid-area: main; }
 /* .grid-cards-right { grid-area: right; } */
-.grid-cards-footer { grid-area: footer; }
+/* .grid-cards-footer { grid-area: footer; } */
 
 .grid-cards-container {
   display: grid;
   grid-template-areas:
     'header'
-    'main'
-    'footer';
+    'main';
+    /* 'footer'; */
   grid-gap: 0;
 }
 
 .vert-scroll {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    margin: 0 5% 0 5%;
     overflow: auto;
-    height: 428px;
-    padding: 10px;
-    width: 100%;
+    height: 80%;
     min-width: 300px;
 }
 /*---------------------- CARDS INDEX PAGE ----------------------*/
@@ -143,7 +151,8 @@ button {
 /*********************** FOOTER SCROLL MENU ***********************/
 #menu {
     position: relative;
-    margin-top: -40px;
+    /* z-index: 1000000000000000000; */
+    margin-top: -30px;
     background-color: transparent;
     width: auto;
     height: 230px;
@@ -156,7 +165,7 @@ button {
     width: 5000000000px;
 }
 /*---------------------- FOOTER SCROLL MENU ----------------------*/
-/*********************** USER SCROLL MENU ***********************/
+/*********************** USER SHOW SCROLL ***********************/
 .user-vert-scroll {
     position: relative;
     z-index: 15;
@@ -164,7 +173,8 @@ button {
     height: 428px;
     padding: 10px;
     width: 321px;
-    border: solid gold 5px;
+    border: solid black 5px;
+    background-image: linear-gradient(to bottom right, rgb(253, 190, 44), rgb(255, 255, 255), gold, rgb(153, 118, 35));
 }
 
 #user-menu {
@@ -250,14 +260,12 @@ select {
     height: 28px;
     margin-top: 2px;
     right: 2px;
-    box-shadow: none;
 }
 
 img {
     position: absolute;
     width: 100%;
     height: 100%;
-    box-shadow: inset  0px 0px 10px 0px black;
 }
 
 #img-box-border{
@@ -310,7 +318,7 @@ img {
     margin: 20px 4px 0 4px;
     position: relative;
     width: 270;
-    max-height: 40px; 
+    height: 40px; 
     font-size: 12px;
     padding: 0 8px;
     /* word-wrap: break-word; */
@@ -377,15 +385,12 @@ img {
     position: absolute;
     width: 100%;
     height: 100%;
-    /* z-index: 5; */
-    box-shadow: inset  0px 0px 5px 0px black;
 }
 .m-types {
     width: 14px;
     height: 14px;
     margin-top: 1px;
     right: 1px;
-    box-shadow: none;
 }
 
 #m-img-box-border{
