@@ -285,6 +285,17 @@ img {
     margin: 3px;
 }
 
+#yellow-bar {
+    height: 11px;
+    width: 220px;
+    margin: -28px auto -20px auto;
+    background-image: linear-gradient(to  right,rgb(153, 118, 35), rgb(253, 190, 44), rgb(255, 255, 255), gold, rgb(253, 190, 44), rgb(153, 118, 35));
+    text-align: center;
+    font-size: 10px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-style: italic;
+}
+
 .attack-box{
     width: 270px;
     margin: 30px 5px 0 5px;
@@ -302,7 +313,7 @@ img {
 }
 
 .attack {
-    margin: 5px 0 0 5px;
+    margin: 3px 0 0 5px;
     width: 224px;
     float: left;
     font-weight: bold;
@@ -408,6 +419,18 @@ img {
     max-width: 234px;
     margin: 1px;
 }
+
+#m-yellow-bar {
+    height: 6px;
+    width: 100px;
+    margin: -14px auto -10px auto;
+    background-image: linear-gradient(to  right,rgb(153, 118, 35), rgb(253, 190, 44), rgb(255, 255, 255), gold, rgb(253, 190, 44), rgb(153, 118, 35));
+    text-align: center;
+    font-size: 5px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-style: italic;
+}
+
 .m-attack-box{
     width: 132px;
     margin: 15px 4px 0 4px;
