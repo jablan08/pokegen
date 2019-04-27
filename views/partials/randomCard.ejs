@@ -1,5 +1,5 @@
 <a href="/cards/<%=randomCard.id%>"> 
-        <div id="card-body"
+        <div class="card-body zoom click-down"
             <%if (randomCard.type === "normal") {%>
             style="background-image: url('/images/bg-normal.png')"  
             <%} else if (randomCard.type === "fighting") {%>
@@ -47,7 +47,10 @@
                     <img src="<%=randomCard.url%>">
                 </div>
             </div>
-       <div class="attack-box">
+
+        <div id="yellow-bar"><div class="stats"><%=randomCard.stats%></div></div>
+
+        <div class="attack-box">
             <div class="attack"><%=randomCard.attack%></div>
             <div class="damage"><%=randomCard.damage%></div>
         </div>
@@ -59,16 +62,22 @@
             <div class="attack"><%=randomCard.attack2%></div>
             <div class="damage"><%=randomCard.damage2%></div>
         </div>
+
             <div>
                 <div class="description"><%=randomCard.description2%></div>
             </div>
+
             <div id="weak-resist-box">
+
                 <div id="weakness">weakness<br>
                     <small><%=randomCard.weakness%></small>
                 </div>
+
                 <div id="resistance">resistance<br>
                     <small><%=randomCard.resistance%></small>
                 </div>
+
             </div>
+
         </div>
     </a>

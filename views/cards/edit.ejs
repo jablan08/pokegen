@@ -7,73 +7,85 @@
         <h2>THIS STILL NEEDS CURRENT VALUES ADDED<H2>
     </div>
 
-    <div id="cards-main" class="grid-menu">
-        <p>THIS IS A WELCOME PARAGRAPH</p>
+<div id="cards-main" class="grid-menu">
+<div class="container-left">
+    <div>
+        <div class="left">
+            Name:<br />  
+            Image(url):<br />  
+            HP: <br />  
+            Element:<br /> 
+            Stats: <br /> 
+            Story: <br />
+            Favorite:<br/>  
+        </div>
+
+        <div class="right">
+            <form action="/cards/<%=card._id%>?_method=PUT" method="POST">
+                <input type="text" name="name" maxlength="15" value="<%=card.name%>" /><br/>
+                <input type="text" name="url" value="<%=card.url%>" /><br/>
+                <input type="text" name="hp" maxlength="3" value="<%=card.hp%>" /><br/>
+                <select name="type"><br/>
+                    <option value="<%=card.type%>" select><%=card.type%></option>
+                    <option value="normal">Normal</option>
+                    <option value="fighting">Fighting</option>
+                    <option value="steel">Steel</option>
+                    <option value="fire">Fire</option>
+                    <option value="water">Water</option>
+                    <option value="grass">Grass</option>
+                    <option value="electric">Electric</option>
+                    <option value="psychic">Psychic</option>
+                </select><br/>
+                <input type="text" name="stats" maxlength="36" value="<%=card.stats%>" /><br/>
+                <textarea type="text" name="story" class="story-input" value="<%=card.story%>"><%=card.story%></textarea><br/>
+                <input class="check-box" type="checkbox" name="favorite"  
+                    <% if(card.favorite === true){%>
+                        checked
+                <%}%>
+                /> <br/>
+                <button type="submit">Edit Card</button>
+                <button> <a href="/cards/<%=card._id%>">Go back</a> </button>
+        </div>
     </div>
+</div>
+</div>
 
-    <div id="feature-card" class="grid-main">
-<div class="container">
-
-    <div class="left">
-        Name:<br />  
-        Image Url:<br />  
-        HP: <br />  
-        Element Type:<br />  
-        Attack:<br /> 
-        Description: <br />  
-        Damage:<br /> 
-        Attack2:<br /> 
-        Description2: <br />   
-        Damage2:<br /> 
-        Weakness:<br />  
-        Resistance:<br />
-        Story: <br />
-        Favorite card:<br/>  
+<div id="feature-card" class="grid-main">
+<div class="container-right">
+    <div>
+        <div class="left">
+            Attack:<br /> 
+            Damage:<br />
+            Description: <br />  
+                <br/>
+            Attack2:<br /> 
+            Damage2:<br /> 
+            Description2: <br />   
+                <br/>
+            Weakness:<br />  
+            Resistance:<br />
+        </div>
     </div>
-
     <div class="right">
-        <form action="/cards/<%=card._id%>?_method=PUT" method="POST">
-            <input type="text" name="name" maxlength="15" value="<%=card.name%>" /><br/>
-            <input type="text" name="url" value="<%=card.url%>" /><br/>
-            <input type="text" name="hp" maxlength="3" value="<%=card.hp%>" /><br/>
-            <select name="type"><br/>
-                <option value="<%=card.type%>" select><%=card.type%></option>
-                <option value="normal">Normal</option>
-                <option value="fighting">Fighting</option>
-                <option value="steel">Steel</option>
-                <option value="fire">Fire</option>
-                <option value="water">Water</option>
-                <option value="grass">Grass</option>
-                <option value="electric">Electric</option>
-                <option value="psychic">Psychic</option>
-            </select><br/>
             <input type="text" name="attack" maxlength="16" value="<%=card.attack%>" /><br/>
-            <input type="text" name="description" maxlength="100" value="<%=card.description%>"/><br/>
             <input type="text" name="damage" maxlength="4" value="<%=card.damage%>" /><br/>
+            <textarea type="text" name="description" maxlength="100" class="description-input" value="<%=card.description%>"><%=card.description%></textarea><br/>
             <input type="text" name="attack2" maxlength="16" value="<%=card.attack2%>" /><br/>
-            <input type="text" name="description2" maxlength="100" value="<%=card.description2%>"/><br/>
             <input type="text" name="damage2" maxlength="4" value="<%=card.damage2%>" /><br/>
+            <textarea type="text" name="description2" maxlength="100" class="description-input" value="<%=card.description2%>"><%=card.description2%></textarea><br/>
             <input type="text" name="weakness" maxlength="13" value="<%=card.weakness%>" /><br/>
             <input type="text" name="resistance" maxlength="13" value="<%=card.resistance%>"/><br/>
-            <input type="text" name="story" placeholder="Tell us about your card"/><br/>
-            <input type="checkbox" name="favorite"  
-                <% if(card.favorite === true){%>
-                    checked
-            <%}%>
-            /> <br/>
-            <button type="submit">Edit Card</button>
-            <button> <a href="/cards/<%=card._id%>">Go back</a> </button>
         </form>
     </div>
 </div>
-    </div>
+</div>
 
-    <div id="cards-users" class="grid-right">
+<div id="cards-users" class="grid-right">
         <%-include('../partials/card')%>
-    </div>
+</div>
 
-    <div class="grid-footer">
-    </div>
+<div class="grid-footer">
+</div>
 
 </div>
 

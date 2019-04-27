@@ -1,7 +1,7 @@
 <% for (let i = 0; i < user.cards.length; i++) {%>
     <%if (user.cards[i].favorite) {%>
         <a href="/cards/<%=user.cards[i]._id%>"> 
-        <div id="card-body"
+        <div class="card-body"
         <%if (user.cards[i].type === "normal") {%>
         style="background-image: url('/images/bg-normal.png')"  
         <%} else if (user.cards[i].type === "fighting") {%>
@@ -68,7 +68,7 @@
             </div>
         </div>
 
-<div id="yellow-bar">What's something funny for this?  Anyone?</div>
+<div id="yellow-bar"><div class="stats"><%=user.cards[i].stats%></div></div>
 
        <div class="attack-box">
             <div class="attack"><%=user.cards[i].attack%></div>

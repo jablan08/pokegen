@@ -5,6 +5,7 @@ const cardSchema = mongoose.Schema({
     url: String,
     hp: String,
     type: String, // drop down option, 8 types
+    stats: String,
     attack: String,
     description: String, 
     damage: String,

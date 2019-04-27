@@ -1,7 +1,7 @@
 
 <% for (let i = 0; i < user.cards.length; i++) {%>
     <a href="/cards/<%=user.cards[i]._id%>"> 
-        <div id="m-card-body" class="zoom"
+        <div class="m-card-body zoom"
             <%if (user.cards[i].type === "normal") {%>
             style="background-image: url('/images/bg-normal.png')"  
             <%} else if (user.cards[i].type === "fighting") {%>
@@ -51,7 +51,7 @@
                 </div>
             </div>
 
-        <div id="m-yellow-bar">What's something funny for this?  Anyone?</div>
+        <div id="m-yellow-bar"><div class="m-stats"><%=user.cards[i].stats%></div></div>
 
             <div class="m-attack-box">
                 <div class="m-attack"><%=user.cards[i].attack%></div>
