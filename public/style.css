@@ -1,5 +1,6 @@
 html {
-    background-color: lightgray;
+    background-image: url('images/background-pokegen.png');
+    background-size: cover;
 }
 
 body {
@@ -13,7 +14,7 @@ a {
 }
 
 a:hover, a:active, a:focus, a:visited { 
-    text-decoration: none; color: rgb(0, 0, 0, .9)
+    text-decoration: none; color: rgb(0, 0, 0, .6)
 }
 
 h3 {
@@ -84,9 +85,9 @@ button {
 .grid-user-container {
     display: grid;
     grid-template-areas:
-      'header header header header header header'
-      'menu menu main main main main'
-      'footer footer footer footer footer footer';
+      'header header header header'
+      'menu main main main'
+      'footer footer footer footer';
     grid-gap: 2px;
   }
   /*---------------------- USER SHOW PAGE ----------------------*/
@@ -100,9 +101,9 @@ button {
 .grid-cards-container {
   display: grid;
   grid-template-areas:
-    'header header header header header header'
-    'main main main main main main'
-    'footer footer footer footer footer footer';
+    'header'
+    'main'
+    'footer';
   grid-gap: 2px;
 }
 
@@ -110,6 +111,7 @@ button {
     overflow: auto;
     height: 428px;
     padding: 10px;
+    width: 100%;
     min-width: 300px;
 }
 /*---------------------- CARDS INDEX PAGE ----------------------*/
@@ -128,9 +130,9 @@ button {
 .grid-n-container {
   display: grid;
   grid-template-areas:
-    'header header header header header header'
-    'menu menu main main right right'
-    'footer footer footer footer footer footer';
+    'header header header'
+    'menu main right'
+    'footer footer footer';
   grid-gap: 2px;
 }
 
@@ -138,7 +140,7 @@ button {
 /*********************** FOOTER SCROLL MENU ***********************/
 #menu {
     position: relative;
-    background-color: lightgrey;
+    background-color: transparent;
     width: auto;
     height: 230px;
     padding: 55px 0;
@@ -290,10 +292,12 @@ img {
     width: 270;
     max-height: 40px; 
     font-size: 12px;
+    padding: 0 8px;
 }
 
 #weak-resist-box {
-    position: relative;
+    position: absolute;
+    bottom: 0;
     width: 270px;
     margin: 20px 5px 0 5px;
     border-top: 1px solid black;
@@ -397,24 +401,24 @@ img {
     width: 15px;
     text-align: right;
 }
-/* 
+
 .m-description {
     margin: 12px 2px 0 2px;
     position: relative;
     max-width: 132px;
-    height: 14px; 
+    height: 20px; 
     font-size: 6px;
-} */
-/* .m-description2 {
-    margin: auto 2px 0 2px;
+}
+.m-description2 {
+    margin: 12px 2px 0 2px;
     position: relative;
-    max-width: 132px;
     width: 132px;
-    height: 14px; 
+    height: 20px; 
     font-size: 6px;
-} */
+}
 #m-weak-resist-box {
-    position: relative;
+    position: absolute;
+    bottom: 0;
     width: 132px;
     margin: 10px 4px 0 4px;
     border-top: 1px solid black;
