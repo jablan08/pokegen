@@ -14,10 +14,19 @@ a {
     color: black;
 }
 
-a:hover, a:active, a:focus, a:visited { 
+.a-text:hover {
     text-decoration: none; color: rgb(0, 0, 0, .6)
 }
 
+.click-down:active {
+    transform: translateY(4px);
+    box-shadow: 0 4px 5px 0 #000;
+    color: #000;
+}
+.m-click-down:active {
+    box-shadow: 0 1px 2px 0 #000;
+    color: #000;
+}
 h3 {
     padding: 0 20px;
     font-size: 24px;
@@ -47,12 +56,10 @@ footer {
 }
 
 .grass-footer {
-    /* background-image: url('images/grass-footer.png'); */
     position: fixed;
     z-index: 9000000000000;
     height: 20%;
     width: 100%;
-    /* margin: -20px auto 0 auto; */
     bottom: 0;
 }
 /*---------------------- FOOTER ----------------------*/
@@ -73,6 +80,17 @@ button {
     border-radius: 10px;
 }
 /*---------------------- NAVIGATION ----------------------*/
+/*********************** ZOOM HOVER ***********************/
+.zoom {
+    transition: all .2s;
+}
+
+.zoom:hover {
+    transform: scale(1.5);
+    z-index: 90000000;
+    color: #000;
+}
+/*---------------------- ZOOM HOVER ----------------------*/
 /*********************** HOME PAGE ***********************/
 .grid-header { grid-area: header; }
 .grid-menu { grid-area: menu; }
@@ -93,15 +111,6 @@ button {
   grid-gap: 0;
 }
 /*---------------------- HOME PAGE ----------------------*/
-/*********************** USER SHOW PAGE ***********************/
-.grid-user-container {
-    display: grid;
-    grid-template-areas:
-      'header header header header'
-      'menu main main right';
-    grid-gap: 0;
-  }
-  /*---------------------- USER SHOW PAGE ----------------------*/
 /*********************** CARDS INDEX PAGE ***********************/
 .grid-cards-header { grid-area: header; }
 /* .grid-cards-menu { grid-area: menu; padding-left: 10px;} */
@@ -128,6 +137,11 @@ button {
     min-width: 300px;
 }
 /*---------------------- CARDS INDEX PAGE ----------------------*/
+/*********************** CARDS SHOW PAGE ***********************/
+#cards-users {
+    margin-top: -40px;
+}
+/*---------------------- CARDS SHOW PAGE ----------------------*/
 /*********************** NEW PAGE ***********************/
 .grid-n-header { grid-area: header; }
 .grid-n-menu { grid-area: menu; }
@@ -167,6 +181,15 @@ button {
     width: 5000000000px;
 }
 /*---------------------- FOOTER SCROLL MENU ----------------------*/
+/*********************** USER SHOW PAGE ***********************/
+.grid-user-container {
+    display: grid;
+    grid-template-areas:
+      'header header header header'
+      'menu main main right';
+    grid-gap: 0;
+  }
+  /*---------------------- USER SHOW PAGE ----------------------*/
 /*********************** USER SHOW SCROLL ***********************/
 .user-vert-scroll {
     position: relative;
@@ -189,7 +212,7 @@ button {
     white-space: nowrap;
     overflow-x: scroll;
 }
-/*---------------------- USER SCROLL MENU ----------------------*/
+/*---------------------- USER SHOW SCROLL MENU ----------------------*/
 /*********************** USER INPUT FORM ***********************/
 .container {
     position: relative;
@@ -218,18 +241,8 @@ select {
     width: 131px;
 }
 /*---------------------- INPUT FORM ----------------------*/
-/*********************** ZOOM HOVER ***********************/
-.zoom {
-    transition: all .2s;
-}
-
-.zoom:hover {
-    transform: scale(1.5);
-    z-index: 90000000;
-}
-/*---------------------- ZOOM HOVER ----------------------*/
 /*********************** CREATE CARD ***********************/
-#card-body {
+.card-body {
     position: relative;
     float: left;
     margin: 5px 6px 20px 10px;
@@ -239,7 +252,7 @@ select {
     border: 8px solid gold;
     border-radius: 10px;
     z-index: 15;
-    box-shadow: 0 5px 7px 5px black;
+    box-shadow: 0 7px 10px 0 black;
 }
 
 #name {
@@ -365,7 +378,7 @@ img {
 }
 /*---------------------- CREATE CARD ----------------------*/
 /*********************** MINI CARD ***********************/
-#m-card-body {
+.m-card-body {
     position: relative;
     float: left;
     margin: 6px;
@@ -374,7 +387,7 @@ img {
     width: 140px;
     border: 4px solid gold;
     border-radius: 5px;
-    box-shadow: 0 2px 5px 2px black;
+    box-shadow: 0 3px 6px 0px black;
 
 
     
@@ -394,11 +407,13 @@ img {
     font-size: 12px;
     text-align: right;
 }
+
 #m-img {
     position: absolute;
     width: 100%;
     height: 100%;
 }
+
 .m-types {
     width: 14px;
     height: 14px;
@@ -471,7 +486,6 @@ img {
     /* word-wrap: break-word;  */
 }
 
-
 .m-description2 {
     border: 1px solid red;
     margin: 10px 0 0 0;
@@ -508,5 +522,4 @@ img {
     margin: 1px 4px 0 0;
     text-align: center;
 }
-
 /*---------------------- MINI CARD ----------------------*/

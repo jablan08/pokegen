@@ -1,6 +1,6 @@
 <% for (let i = 0; i < cards.length; i++) {%>
     <a href="/cards/<%=cards[i]._id%>"> 
-        <div id="card-body"
+        <div class="card-body click-down"
             <%if (cards[i].type === "normal") {%>
             style="background-image: url('/images/bg-normal.png')"  
             <%} else if (cards[i].type === "fighting") {%>

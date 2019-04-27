@@ -1,7 +1,7 @@
 
 <% for (let i = 0; i < user.cards.length; i++) {%>
     <a href="/cards/<%=user.cards[i]._id%>"> 
-        <div id="m-card-body" class="zoom"
+        <div class="m-card-body zoom"
             <%if (user.cards[i].type === "normal") {%>
             style="background-image: url('/images/bg-normal.png')"  
             <%} else if (user.cards[i].type === "fighting") {%>
