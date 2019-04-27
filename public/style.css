@@ -1,5 +1,6 @@
 html {
-    background-color: lightgray;
+    background: url('images/background-pokegen.png') no-repeat center center fixed;
+    background-size: cover;
 }
 
 body {
@@ -13,7 +14,7 @@ a {
 }
 
 a:hover, a:active, a:focus, a:visited { 
-    text-decoration: none; color: rgb(0, 0, 0, .9)
+    text-decoration: none; color: rgb(0, 0, 0, .6)
 }
 
 h3 {
@@ -38,7 +39,7 @@ h4 {
 footer {
     /* position: absolute; */
     bottom: 0;
-    margin: 20px auto 0 auto;
+    margin: 0 auto;
     width: 100%;
 }
 /*---------------------- FOOTER ----------------------*/
@@ -71,23 +72,26 @@ button {
     z-index: 5;
 }
 
+#home-users {
+    width: 300px;
+    padding: 0 20px 0 40px;
+}
 .grid-container {
   display: grid;
   grid-template-areas:
     'header header header header header header'
     'menu menu main main right right'
     'footer footer footer footer footer footer';
-  grid-gap: 2px;
+  grid-gap: 0;
 }
 /*---------------------- HOME PAGE ----------------------*/
 /*********************** USER SHOW PAGE ***********************/
 .grid-user-container {
     display: grid;
     grid-template-areas:
-      'header header header header header header'
-      'menu menu main main main main'
-      'footer footer footer footer footer footer';
-    grid-gap: 2px;
+      'header header header header'
+      'menu main main right';
+    grid-gap: 0;
   }
   /*---------------------- USER SHOW PAGE ----------------------*/
 /*********************** CARDS INDEX PAGE ***********************/
@@ -100,16 +104,17 @@ button {
 .grid-cards-container {
   display: grid;
   grid-template-areas:
-    'header header header header header header'
-    'main main main main main main'
-    'footer footer footer footer footer footer';
-  grid-gap: 2px;
+    'header'
+    'main'
+    'footer';
+  grid-gap: 0;
 }
 
 .vert-scroll {
     overflow: auto;
     height: 428px;
     padding: 10px;
+    width: 100%;
     min-width: 300px;
 }
 /*---------------------- CARDS INDEX PAGE ----------------------*/
@@ -128,17 +133,18 @@ button {
 .grid-n-container {
   display: grid;
   grid-template-areas:
-    'header header header header header header'
-    'menu menu main main right right'
-    'footer footer footer footer footer footer';
-  grid-gap: 2px;
+    'header header header'
+    'menu main right'
+    'footer footer footer';
+  grid-gap: 0;
 }
 
 /*---------------------- NEW PAGE ----------------------*/
 /*********************** FOOTER SCROLL MENU ***********************/
 #menu {
     position: relative;
-    background-color: lightgrey;
+    margin-top: -40px;
+    background-color: transparent;
     width: auto;
     height: 230px;
     padding: 55px 0;
@@ -151,19 +157,14 @@ button {
 }
 /*---------------------- FOOTER SCROLL MENU ----------------------*/
 /*********************** USER SCROLL MENU ***********************/
-
-.user-menu {
+.user-vert-scroll {
     position: relative;
-    background-color: lightgrey;
-    width: auto;
-    height: 440px;
-    padding: 5px;
-    white-space: nowrap;
-    overflow-x: scroll;
-}
-
-.user-inner-menu {
-    width: 5000000000px;
+    z-index: 15;
+    overflow: auto;
+    height: 428px;
+    padding: 10px;
+    width: 321px;
+    border: solid gold 5px;
 }
 /*---------------------- USER SCROLL MENU ----------------------*/
 /*********************** USER INPUT FORM ***********************/
@@ -270,12 +271,22 @@ img {
     margin: 30px 5px 0 5px;
     font-size: 16px;
     border-top: 1px solid black;
+    font-size: 16px;
+}
+
+.attack-box2{
+    width: 270px;
+    margin: 5px 5px 0 5px;
+    font-size: 16px;
+    border-top: 1px solid black;
+    font-size: 16px;
 }
 
 .attack {
     margin: 5px 0 0 5px;
-    width: 200px;
+    width: 224px;
     float: left;
+    font-weight: bold;
 }
 
 .damage {
@@ -285,17 +296,20 @@ img {
     text-align: right;
 }
 .description {
-    margin: auto 4px 0 4px;
+    margin: 20px 4px 0 4px;
     position: relative;
     width: 270;
     max-height: 40px; 
     font-size: 12px;
+    padding: 0 8px;
+    /* word-wrap: break-word; */
 }
 
 #weak-resist-box {
-    position: relative;
+    position: absolute;
+    bottom: 0;
     width: 270px;
-    margin: 20px 5px 0 5px;
+    margin: 20px 5px 4px 5px;
     border-top: 1px solid black;
     font-size: 12px;
 }
@@ -329,6 +343,8 @@ img {
     border: 4px solid gold;
     border-radius: 5px;
     box-shadow: 0 2px 5px 2px black;
+
+
     
 }
 
@@ -376,47 +392,60 @@ img {
     max-width: 234px;
     margin: 1px;
 }
-
 .m-attack-box{
-    width: 135px;
-    margin: 0px 2px 0 2px;
-    border-top: 1px solid black;
+    width: 132px;
+    margin: 15px 4px 0 4px;
     font-size: 8px;
+    border-top: 1px solid black;
+}
+
+.m-attack-box2{
+    width: 132px;
+    margin: 0 4px 0 4px;
+    font-size: 8px;
+    border-top: 1px solid black;
 }
 
 .m-attack {
-    margin: 2px 0 0 2px;
-    width: 100px;
+    margin: 1px 0 0 4px;
+    width: 110;
     float: left;
-
+    font-weight: bold;
 }
 
 .m-damage {
-    margin: 2px 2px 0 0;
+    margin: 1px 4px 0 0;
     float: right;
-    width: 15px;
+    width: 12px;
     text-align: right;
 }
-/* 
+
 .m-description {
-    margin: 12px 2px 0 2px;
+    border: 1px solid red;
+    margin: 10px 0 0 0;
     position: relative;
     max-width: 132px;
-    height: 14px; 
+    height: 20px; 
     font-size: 6px;
-} */
-/* .m-description2 {
-    margin: auto 2px 0 2px;
+    /* word-wrap: break-word;  */
+}
+
+
+.m-description2 {
+    border: 1px solid red;
+    margin: 10px 0 0 0;
     position: relative;
-    max-width: 132px;
-    width: 132px;
-    height: 14px; 
+    width: 130px;
+    height: 20px; 
     font-size: 6px;
-} */
+    /* word-wrap: break-word; */
+}
+
 #m-weak-resist-box {
-    position: relative;
+    position: absolute;
+    bottom: 0;
     width: 132px;
-    margin: 10px 4px 0 4px;
+    margin: 10px 4px 2px 4px;
     border-top: 1px solid black;
     font-size: 6px;
 }
@@ -439,31 +468,4 @@ img {
     text-align: center;
 }
 
-/* 
-#m-weak-resist-box {
-    position: relative;
-    width: 135px;
-    margin: 44px 2px 0 2px;
-    border-top: 1px solid black;
-    font-size: 6px;
-}
-
-#m-weakness{
-    position: relative;
-    top: 0;
-    width: 60px;
-    float: left;
-    margin: 1px 0 0 4px;
-    text-align: center;
-
-}
-
-#m-resistance {
-    position: relative;
-    top: 0;
-    width: 60px;
-    float: right;
-    margin: 1px 4px 0 0;
-    text-align: center;
-} */
 /*---------------------- MINI CARD ----------------------*/

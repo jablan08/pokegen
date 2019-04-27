@@ -6,12 +6,12 @@
     <div class="grid-header">
         <%- include('../partials/head')%>
         <h1>THIS IS A SHOW PAGE FOR USERS<h1>
-        <h2>ADD CONTENT, MENU, MAIN WITH VERT SCROLL OF FAVORITES</h2>
-        <H2>BENEATH THAT HAVE A VERT SCROLL FOR ALL USERS CARDS</h2>
-        <h1> <%=user.username %>'s PokeGen Cards<h1>
     </div>
 
     <div id="users-main" class="grid-menu">
+    
+        <h1> <%=user.username %>'s PokeGen Cards<h1>
+        
         <%if (logged) {%>
             <%if(currentUser === verifyUser || admin.admin ===true){%>
                 <section>    
@@ -28,22 +28,18 @@
         <%}%>
     </div>
     
-    <div id="feature-card" class="grid-main">
+    <div id="feature-card" class="grid-right user-vert-scroll">
         <%- include("../partials/userfavs")%>
     </div>
 
-
-
-
-
-    <div class="grid-footer">
-    </div>
-
 </div>
-
-
-<%- include('../partials/footer')%>
-
+<div id="menu">
+    <div id="inner-menu">
+        <%-include('../partials/user-minicards')%>
+    </div>
+</div>
+<br><br><br><br><br><br><br><br><br><br><br><br><br>
+<%-include('../partials/footer')%>
 
 
 
