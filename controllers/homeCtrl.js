@@ -12,6 +12,7 @@ router.get('/', async (req, res) => {
             cards: allCards,
             users: allUsers,
             logged: req.session.logged
+            // randomCard: allCards[Math.floor(Math.random()*allCards.length)]
         })
     } catch(err){
         res.send(err)
