@@ -124,7 +124,7 @@ button {
 .grid-cards-header { grid-area: header; }
 /* .grid-cards-menu { grid-area: menu; padding-left: 10px;} */
 .grid-cards-main { grid-area: main; }
-/* .grid-cards-right { grid-area: right; } */
+.grid-cards-right { grid-area: right; }
 /* .grid-cards-footer { grid-area: footer; } */
 
 .grid-cards-container {
@@ -135,6 +135,15 @@ button {
     /* 'footer'; */
   grid-gap: 0;
 }
+.grid-cards-edit-container {
+    display: grid;
+    grid-template-areas:
+      'header header'
+      'main right;';
+      /* 'footer'; */
+    grid-gap: 0;
+  }
+
 
 .vert-scroll {
     position: fixed;
@@ -225,24 +234,33 @@ button {
 }
 /*---------------------- USER SHOW SCROLL MENU ----------------------*/
 /*********************** USER INPUT FORM ***********************/
-.container {
-    position: relative;
-    height: 200px;
-    width: 300px;
+.left-side-exp{
+    width: 80px;
+    margin: 1px 0;
+    border: 2px solid black;
 }
-
+.left, .right {
+    border: 5px solid red;
+    width: 230px;
+    height: 100%;
+    float: left;
+}
 .right {
-    position: relative;
-    float: right;
+    /* position: absolute; */
+    /* margin-left: 300px */
 }
-
-.left {
+.left-exp {
+    width: 260px;
+    border: 2px solid red;
+}
+.left-exp-float {
     position: relative;
     float: left;
-    font-size: 20px;
-    line-height: 136%;
-    text-align: left;
-    width: 50px;
+    border: 2px solid green;
+}
+.exp-container {
+    /* width: 560px; */
+    /* height: 800px; */
 }
 input {
     width: 124px;
@@ -270,9 +288,7 @@ select {
     height: 100px;
 }
 
-.container-right, .container-left {
-    width: 260px;
-}
+
 /* not an option yet */
 /* .check-box {
     border-radius: 3px;
