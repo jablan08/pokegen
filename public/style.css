@@ -50,7 +50,6 @@ h4 {
 }
 /*********************** FOOTER ***********************/
 footer {
-    /* this may be the culprit for the bottom align issue */
     position: fixed;
     bottom: 0;
     margin: 0 auto;
@@ -190,19 +189,16 @@ button {
     color: transparent;
 }
 
-/* #feature-card {} */
+/* #feature-card { margin-top: -24px } */
 
 .user-vert-scroll {
     margin: 32px 0 0 32px;
-    background-color: rgb(58, 104, 168);
-    /* background-image: linear-gradient(to bottom right, rgb(253, 190, 44), rgb(255, 255, 255), gold, rgb(153, 118, 35)); */
     position: absolute;
     z-index: 15;
     overflow: auto;
     padding: 10px 10px 10px 10px;
     width: 316px;
     height: 426px;
-    /* border: solid black 5px; */
 }
 
 #user-menu {  
