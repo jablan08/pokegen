@@ -262,11 +262,11 @@ select { width: 134px; }
     background-image: linear-gradient(to bottom right, blue,lightblue,blue); /*this is default bg*/
     position: relative;
     float: left;
+    word-wrap: break-word; 
 }
 
 .card-body {
     margin: 10px;
-    /* padding: 10px; */
     height: 400px;
     width: 280px;
     border: 8px solid gold;
@@ -346,8 +346,9 @@ img {
 }
 
 .attack {
-    margin: 3px 0 0 5px;
-    width: 224px;
+    margin: 3px 3px 0 5px;
+    /* width: 224px; */
+    width: auto;
     float: left;
     font-weight: bold;
 }
@@ -359,7 +360,8 @@ img {
     text-align: right;
 }
 .description {
-    margin: 20px 4px 0 4px;
+    margin: 8px 4px 0 4px;
+    /* margin: 20px 4px 0 4px; */
     position: relative;
     width: 270;
     height: 40px; 
@@ -474,7 +476,7 @@ img {
 }
 
 .m-attack {
-    margin: 1px 0 0 4px;
+    margin: 1px 2px 0 4px;
     width: 110;
     float: left;
     font-weight: bold;
@@ -486,20 +488,21 @@ img {
     width: 12px;
     text-align: right;
 }
-
+/* .description {
+    margin: 8px 4px 0 4px;
+} */
 .m-description, .m-description2 {
+    margin: 3px 0 0 0;
     font-size: 6px;
     position: relative;
-        /* word-wrap: break-word;  */
+    padding: 0 4px;
 } 
 .m-description {
-    margin: 10px 0 0 0;
     max-width: 132px;
     height: 23px; 
 }
 
 .m-description2 {
-    margin: 10px 0 0 0;
     width: 130px;
     height: 20px; 
 }
