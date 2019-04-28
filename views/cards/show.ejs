@@ -19,31 +19,36 @@
        <%}%>
     </div>
 
-    <div id="" class="grid-main">
-       
+
+    <div id="feature-card" class="grid-main">
+        <div>
+        <%- include('../partials/card')%>
+        </div>
     </div>
 
     <div id="cards-users" class="grid-right">
-                <%- include('../partials/card')%>
-    </div>
-    <div>
-    <%if (logged) {%>
-    <%if(currentUser === verifyUser || admin.admin ===true){%>
-        <section style="display: inline-block;">
-            <form action="/cards/<%=card._id%>?_method=DELETE" method="POST" >
-                <button>DELETE CARD</button>
-            </form>
-        </section>
-        <section style="display: inline;">
-            <button>
-            <a href="/cards/<%=card._id%>/edit">EDIT</a>
-            </button>
-        </section>
-        <%}%>
-    <%}%>
-    </div>
+       
 
-    <div class="grid-footer">
+    </div>
+   
+  
+    <div class="grid-footer" id="show-card-footer">
+        <div class="edit-delete-buttons">
+            <%if (logged) {%>
+            <%if(currentUser === verifyUser || admin.admin ===true){%>
+                <section class="show-card-delete-button">
+                    <form action="/cards/<%=card._id%>?_method=DELETE" method="POST" >
+                        <button>DELETE CARD</button>
+                    </form>
+                </section>
+                <section class="show-card-edit-button">
+                    <button>
+                    <a href="/cards/<%=card._id%>/edit">EDIT</a>
+                    </button>
+                </section>
+                <%}%>
+            <%}%>
+        </div>
     </div>
 
 </div>
