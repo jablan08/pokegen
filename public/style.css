@@ -9,18 +9,14 @@ body {
     margin: 0;
 }
 
-h2 {
-    margin-bottom: 5px;
-}
+h2 { margin-bottom: 5px; }
 
 a {
     text-decoration: none;
     color: black;
 }
 
-.a-text:hover {
-    text-decoration: none; color: rgb(0, 0, 0, .6)
-}
+.a-text:hover { text-decoration: none; color: rgb(0, 0, 0, .6) }
 
 .click-down:active {
     transform: translateY(4px);
@@ -31,6 +27,7 @@ a {
     box-shadow: 0 1px 2px 0 #000;
     color: #000;
 }
+
 h3 {
     padding: 0 20px;
     font-size: 24px;
@@ -75,8 +72,10 @@ nav {
     margin: 0 50px 0 0;
 }
 
-button {
-    font-family: 'ZCOOL KuaiLe', courier;
+button { 
+    font-family: 'ZCOOL KuaiLe', courier; 
+    border: rgb(76, 168, 204) 4px solid;
+    border-radius: 5px;
 }
 
 .navBtn {
@@ -86,10 +85,7 @@ button {
 }
 /*---------------------- NAVIGATION ----------------------*/
 /*********************** ZOOM HOVER ***********************/
-.zoom {
-    transition: all .2s;
-}
-
+.zoom { transition: all .2s; }
 .zoom:hover {
     transform: scale(1.5);
     z-index: 90000000;
@@ -103,10 +99,6 @@ button {
 .grid-right { grid-area: right; }
 .grid-footer { grid-area: footer; }
 
-#home-users {
-    width: 300px;
-    padding: 0 20px 0 40px;
-}
 .grid-container {
   display: grid;
   grid-template-areas:
@@ -115,18 +107,16 @@ button {
     'footer footer footer footer footer footer';
   grid-gap: 0;
 }
+#home-users {
+    width: 300px;
+    padding: 0 20px 0 40px;
+}
 
 #feature-card {
-    margin-top: -20px;
+    margin-top: -24px;
 }
 /*---------------------- HOME PAGE ----------------------*/
 /*********************** CARDS INDEX PAGE ***********************/
-.grid-cards-header { grid-area: header; }
-/* .grid-cards-menu { grid-area: menu; padding-left: 10px;} */
-.grid-cards-main { grid-area: main; }
-.grid-cards-right { grid-area: right; }
-/* .grid-cards-footer { grid-area: footer; } */
-
 .grid-cards-container {
   display: grid;
   grid-template-areas:
@@ -135,15 +125,6 @@ button {
     /* 'footer'; */
   grid-gap: 0;
 }
-.grid-cards-edit-container {
-    display: grid;
-    grid-template-areas:
-      'header header'
-      'main right;';
-      /* 'footer'; */
-    grid-gap: 0;
-  }
-
 
 .vert-scroll {
     position: fixed;
@@ -162,17 +143,6 @@ button {
 }
 /*---------------------- CARDS SHOW PAGE ----------------------*/
 /*********************** NEW PAGE ***********************/
-.grid-n-header { grid-area: header; }
-.grid-n-menu { grid-area: menu; }
-.grid-n-main { grid-area: main; }
-.grid-n-right { grid-area: right; }
-.grid-n-footer { grid-area: footer; }
-
-#new-container {
-    position: relative;
-    z-index: 5;
-}
-
 .grid-n-container {
   display: grid;
   grid-template-areas:
@@ -182,12 +152,13 @@ button {
   grid-gap: 0;
 }
 
+#new-container {
+    position: relative;
+    z-index: 5;
+}
 /*---------------------- NEW PAGE ----------------------*/
 /*********************** FOOTER SCROLL MENU ***********************/
 #menu {
-    /* position: relative; */
-    /* bottom: 0; */
-    /* z-index: 1000000000000000000; */
     margin-top: -150px;
     background-color: transparent;
     width: auto;
@@ -234,30 +205,24 @@ button {
 }
 /*---------------------- USER SHOW SCROLL MENU ----------------------*/
 /*********************** USER INPUT FORM ***********************/
+.left-margin { margin-left: auto; }
+.left-exp { width: 260px; }
+
 .left-side-exp{
     width: 80px;
     margin: 1px 0;
 }
+
 .left, .right {
     width: 230px;
     height: 100%;
     float: left;
 }
-.left-margin {
-    /* position: absolute; */
-    margin-left: auto;
-}
-.left-exp {
-    width: 260px;
-}
+
 .left-exp-float {
     padding: 4px 0 0 0;
     position: relative;
     float: left;
-}
-
-input {
-    width: 124px;
 }
 
 input, select, .description-input, .story-input{
@@ -272,17 +237,10 @@ input, select, .description-input, .story-input{
     word-wrap: break-word;
 }
 
-select {
-    width: 134px;
-}
-
-.description-input {
-    height: 33px;
-}
-.story-input {
-    height: 100px;
-}
-
+input { width: 124px; }
+select { width: 134px; }
+.description-input { height: 33px; }
+.story-input { height: 100px; }
 
 /* not an option yet */
 /* .check-box {
@@ -360,20 +318,18 @@ img {
     font-style: italic;
 }
 
-.attack-box{
+.attack-box, .attack-box2 {
     width: 270px;
-    margin: 30px 5px 0 5px;
     font-size: 16px;
     border-top: 1px solid black;
-    font-size: 16px;
 }
 
-.attack-box2{
-    width: 270px;
+.attack-box {
+    margin: 30px 5px 0 5px;
+}
+
+.attack-box2 {
     margin: 5px 5px 0 5px;
-    font-size: 16px;
-    border-top: 1px solid black;
-    font-size: 16px;
 }
 
 .attack {
@@ -408,22 +364,21 @@ img {
     font-size: 12px;
 }
 
-#weakness{
+#weakness, #resistance {
     position: relative;
     top: 0;
     width: 110px;
-    float: left;
-    margin: 2px 0 0 5px;
     text-align: center;
 }
 
+#weakness {
+    float: left;
+    margin: 2px 0 0 5px;
+}
+
 #resistance {
-    position: relative;
-    top: 0;
-    width: 110px;
     float: right;
     margin: 2px 5px 0 0;
-    text-align: center;
 }
 /*---------------------- CREATE CARD ----------------------*/
 /*********************** MINI CARD ***********************/
@@ -437,9 +392,6 @@ img {
     border: 4px solid gold;
     border-radius: 5px;
     box-shadow: 0 3px 6px 0px black;
-
-
-    
 }
 
 #m-name {
@@ -497,18 +449,18 @@ img {
     font-style: italic;
 }
 
-.m-attack-box{
+.m-attack-box, .m-attack-box2 {
     width: 132px;
-    margin: 15px 4px 0 4px;
     font-size: 8px;
     border-top: 1px solid black;
 }
 
+.m-attack-box{
+    margin: 15px 4px 0 4px;
+}
+
 .m-attack-box2{
-    width: 132px;
     margin: 0 4px 0 4px;
-    font-size: 8px;
-    border-top: 1px solid black;
 }
 
 .m-attack {
@@ -525,22 +477,21 @@ img {
     text-align: right;
 }
 
+.m-description, .m-description2 {
+    font-size: 6px;
+    position: relative;
+        /* word-wrap: break-word;  */
+} 
 .m-description {
     margin: 10px 0 0 0;
-    position: relative;
     max-width: 132px;
     height: 23px; 
-    font-size: 6px;
-    /* word-wrap: break-word;  */
 }
 
 .m-description2 {
     margin: 10px 0 0 0;
-    position: relative;
     width: 130px;
     height: 20px; 
-    font-size: 6px;
-    /* word-wrap: break-word; */
 }
 
 #m-weak-resist-box {
@@ -552,21 +503,20 @@ img {
     font-size: 6px;
 }
 
-#m-weakness{
+#m-resistance, #m-weakness {
     position: relative;
     top: 0;
     width: 55px;
-    float: left;
-    margin: 1px 0 0 4px;
     text-align: center;
 }
 
+#m-weakness{
+    float: left;
+    margin: 1px 0 0 4px;
+}
+
 #m-resistance {
-    position: relative;
-    top: 0;
-    width: 55px;
     float: right;
     margin: 1px 4px 0 0;
-    text-align: center;
 }
 /*---------------------- MINI CARD ----------------------*/
