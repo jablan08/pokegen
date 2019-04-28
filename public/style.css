@@ -237,40 +237,35 @@ button {
 .left-side-exp{
     width: 80px;
     margin: 1px 0;
-    border: 2px solid black;
 }
 .left, .right {
-    border: 5px solid red;
     width: 230px;
     height: 100%;
     float: left;
 }
-.right {
+.left-margin {
     /* position: absolute; */
-    /* margin-left: 300px */
+    margin-left: auto;
 }
 .left-exp {
     width: 260px;
-    border: 2px solid red;
 }
 .left-exp-float {
+    padding: 4px 0 0 0;
     position: relative;
     float: left;
-    border: 2px solid green;
 }
-.exp-container {
-    /* width: 560px; */
-    /* height: 800px; */
-}
+
 input {
     width: 124px;
 }
+
 input, select, .description-input, .story-input{
     position: relative;
     top: 0;
     width: 122px;
     border-radius: 3px;
-    border: blue 4px solid;
+    border: rgb(76, 168, 204) 4px solid;
     margin-top: 1px;
     text-align: left;
     margin: 2px;

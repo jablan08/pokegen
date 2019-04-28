@@ -8,8 +8,8 @@
 
 
 
-    <div class="grid-n-menu">
-<form action="/cards/<%=card._id%>?_method=PUT" method="POST">
+    <div class="grid-n-menu left-margin">
+    <form action="/cards/<%=card._id%>?_method=PUT" method="POST">
 
         <div class="left">
             <section class="left-exp">
@@ -106,16 +106,18 @@
                 <input type="text" name="resistance" maxlength="4" value="<%=card.resistance%>" />
             </section>
         </div>
-</form>        
+    </form>        
     </div>
 
     <div id="" class="grid-n-main">
+        <%-include('../partials/card')%>
     </div>
 
     <div id="" class="grid-n-right">
-    <%-include('../partials/card')%>
     </div>
 
-
+    <div id="" class="grid-n-footer">
+    </div>
+</div>
 <%-include('../partials/footer')%>
 
