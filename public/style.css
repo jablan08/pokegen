@@ -348,10 +348,15 @@ select { width: 134px; }
     white-space: nowrap;
     /* word-wrap: wrap none; */
 }
-
+.attack, .m-attack {
+    width: auto;
+    float: left;
+    font-weight: bold;
+}
 .damage, .m-damage {
     float: right;
     width: auto;
+    margin-bottom: -2px;
     text-align: right;
 }
 
@@ -451,20 +456,14 @@ img {
     margin: 5px 5px 0 5px;
 }
 
-.attack, .m-attack {
-    width: auto;
-    float: left;
-    font-weight: bold;
-
-}
-
 .attack {
+    font-size: 16px;
     margin: 3px 3px -3px 5px;
     max-width: 210px;
 }
 
 .damage {
-    margin: 5px 5px 0 2px;
+    margin: 3px 5px 0 2px;
     max-width: 46px;
 }
 .description {
@@ -506,7 +505,7 @@ img {
 }
 /**/
 #bottom-box {
-    border: 1px gold solid;
+    border: 2px gold solid;
     margin: 24px auto 0 auto;
     height: 22px;
     width: 220px;
