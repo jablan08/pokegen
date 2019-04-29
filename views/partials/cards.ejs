@@ -9,6 +9,10 @@
             style="background-image: url('/images/metal-bg.png')" 
             <%} else if (cards[i].type === "fire") {%>
             style="background-image: url('/images/bg-red.png')"  
+            <%} else if (cards[i].type === "ground") {%>
+            style="background-image: url('/images/ground-bg.png')"  
+            <%} else if (cards[i].type === "dragon") {%>
+            style="background-image: url('/images/dragon-bg.png')"  
             <%} else if (cards[i].type === "water") {%>
             style="background-image: url('/images/blue-bg.png')" 
             <%} else if (cards[i].type === "grass") {%>
@@ -19,7 +23,7 @@
             style="background-image: url('/images/purple-bg.png')" 
             <%}%> >
             <div id="name">
-            <%=cards[i].name%>
+                <%=cards[i].name%>
             </div>
             <span class="type">
                 <%if (cards[i].type === "normal") {%>
@@ -30,6 +34,10 @@
                     <img class="types" src="/images/metal.png">
                     <%} else if (cards[i].type === "fire") {%>
                     <img class="types" src="/images/fire.png"> 
+                    <%} else if (cards[i].type === "ground") {%>
+                    <img class="types" src="/images/ground-type.png"> 
+                    <%} else if (cards[i].type === "dragon") {%>
+                    <img class="types" src="/images/dragon-type.png"> 
                     <%} else if (cards[i].type === "water") {%>
                     <img class="types" src="/images/water.png"> 
                     <%} else if (cards[i].type === "grass") {%>
@@ -49,9 +57,13 @@
                 </div>
             </div>
 
-<div id="yellow-bar"><div class="stats"><%=cards[i].stats%></div></div>
+        <div id="yellow-bar">
+            <div class="stats">
+                <%=cards[i].stats%>
+            </div>
+        </div>
 
-       <div class="attack-box">
+        <div class="attack-box">
             <div class="attack"><%=cards[i].attack%></div>
             <div class="damage"><%=cards[i].damage%></div>
         </div>
