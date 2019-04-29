@@ -98,9 +98,13 @@
     </form>        
     </div>
 
-
+    
     <div id="" class="grid-main">
+        <%if (user.cards.length === 0) {%>
+        <small class="create-message"><%= newMessage %></small> 
+        <%}%>
         <%-include('../partials/samplecard')%>
+        
     </div>
 
     <div id="" class="grid-right">
