@@ -58,6 +58,10 @@ footer {
     width: 100%;
     bottom: 0;
 }
+
+.grass-footer2 {
+    height: 50px;
+}
 /*---------------------- FOOTER ----------------------*/
 /*********************** NAVIGATION ***********************/
 a {
@@ -310,13 +314,25 @@ button:hover {
 #user-box {
     /* text-align: center; */
     /* padding-top: 10%; */
-    margin: 10px 50px 0 50px;
-    width: auto;
+    /* margin: 10px 50px 0 50px; */
+    /* width: auto; */
+}
+
+.fit {
+    position: static;
+}
+
+#userlist-box {
+    margin-top: -5px;
+    min-width: 100px
 }
 
 .name-vert-scroll {
-    /* margin: 32px 0 0 32px; */
-    position: relative;
+    display: block;
+    text-align: center;
+    /* margin-left: -80px; */
+    /* margin: 32px 100px 0 0px; */
+    position: absolute;
     z-index: 15;
     overflow: auto;
     /* padding: 10px 10px 10px 10px; */
