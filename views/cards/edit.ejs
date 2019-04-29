@@ -49,19 +49,13 @@
             </section>
 
             <section class="left-exp">
-                <div class="left-exp-float left-side-exp">Story:</div>
-                <textarea type="text" name="story" class="story-input" value="<%=card.story%>"><%=card.story%></textarea>
+                <div class="left-exp-float left-side-exp">Bottom:</div>
+                <input class="boxBottom" type="text" name="boxBottom" maxlength="20" value="<%=card.boxBottom%>" />
             </section>
 
             <section class="left-exp">
-                <div class="left-exp-float left-side-exp">Favorite:</div>             
-                    <input class="check-box" type="checkbox" name="favorite"  
-                        <% if(card.favorite === true){%>
-                            checked
-                        <%}%>               
-                    />           
-                <br/>
-                    <button type="submit">Edit Card</button><button> <a href="/cards/<%=card._id%>">Go back</a> </button>                            
+                <div class="left-exp-float left-side-exp">Story:</div>
+                <textarea type="text" name="story" class="story-input" value="<%=card.story%>"><%=card.story%></textarea>
             </section>
 
         </div>
@@ -106,6 +100,18 @@
                 <div class="left-exp-float left-side-exp">Resistance:</div>
                 <input type="text" name="resistance" maxlength="4" value="<%=card.resistance%>" />
             </section>
+
+            <section class="left-exp">
+                <div class="left-exp-float left-side-exp">Favorite:</div>             
+                    <input class="check-box" type="checkbox" name="favorite"  
+                        <% if(card.favorite === true){%>
+                            checked
+                        <%}%>               
+                    />           
+                <br/>
+                    <button type="submit">Edit Card</button><button> <a href="/cards/<%=card._id%>">Go back</a> </button>                            
+            </section>
+
         </div>
     </form>        
     </div>
@@ -120,9 +126,7 @@
     <div id="" class="grid-right">
     </div>
 
-    <div id="" class="grid-footer">
-    WOULDNT IT BE COOL TO DO THE SAME THING HERE AS ON THE EDIT PAGE WITH A "PREVIEW" BUTTON THAT SAVES THE CARD AND [0] ON THE PARTIAL??
-    
+    <div id="" class="grid-footer">  
     </div>
 </div>
 <%-include('../partials/footer')%>
