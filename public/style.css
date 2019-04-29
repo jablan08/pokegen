@@ -78,6 +78,10 @@ button {
     border-radius: 5px;
 }
 
+button:hover {
+    background: transparent;
+}
+
 .navBtn {
     margin: 5px;
     font-size: 20px;
@@ -208,7 +212,7 @@ button {
 /*********************** USER SHOW SCROLL ***********************/
 /* background-image: url("./images/decor/pixel-frame.png"); */
 #feature-frame {
-    margin-top: -24px;
+    /* margin-top: -24px; */
     position: relative;
     z-index: 500;
     height: 510px;
@@ -384,7 +388,7 @@ img {
 }
 
 .damage {
-    margin: 5px 5px 0 0;
+    margin: 5px 5px 0 2px;
     float: right;
     width: auto;
     max-width: 46px;
@@ -515,7 +519,7 @@ img {
 }
 
 .m-damage {
-    margin: 1px 4px 0 0;
+    margin: 1px 4px 0 1px;
     float: right;
     width: auto;
     max-width: 26px;
