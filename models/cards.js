@@ -18,7 +18,6 @@ const cardSchema = mongoose.Schema({
     story: String,
     boxBottom: String
 
-
 })
 
 const Card = mongoose.model('Card', cardSchema);
