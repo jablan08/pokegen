@@ -1,22 +1,30 @@
 <%- include('../partials/header')%>
 
-  <h1>Login</h1>
-  <form action="/auth/login" method="POST">
-    <input type="text" name="username" placeholder="username">
-    <input type="password" name="password" placeholder="password">
-    <button type="submit">Login</button>
-  </form>
+<div class="grid-auth-container">
+
+    <div class="grid-header">
+        <%- include('../partials/head')%>
+    
+    </div>
+
+    <div class="auth-container">
+        <h1>Login</h1>
+        <form action="/auth/login" method="POST" class="login-form">
+            <input type="text" name="username" placeholder="username">
+            <input type="password" name="password" placeholder="password">
+            <button type="submit">Login</button>
+        </form>
 
 
-  <small><%= message %></small>
+        <small><%= logMessage %></small>
+        <small><%= invalidMessage %></small>
 
-  <h1>Register</h1>
-  <form action="/auth/register" method="POST">
-    <input type="text" name="username" placeholder="username">
-    <input type="password" name="password" placeholder="password">
-    <button type="submit">Register</button>
-  </form>
-
-
-
+        <h1>Register</h1>
+        <form action="/auth/register" method="POST" class="register-form">
+            <input type="text" name="username" placeholder="username">
+            <input type="password" name="password" placeholder="password">
+            <button type="submit">Register</button>
+        </form>
+    </div>
+</div>
 <%- include('../partials/footer')%>

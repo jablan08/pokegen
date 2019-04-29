@@ -8,6 +8,7 @@ const logUser = (req, res, next) => {
         
         next()
     } else {
+        req.session.verifyMessage = "Please login or register to make a card."
         res.redirect("/auth/login");
     }
 }
@@ -19,7 +20,6 @@ router.get("/", async (req,res)=> {
         const allCards = await Card.find({});
         res.render("cards/index.ejs", {
             cards: allCards,
-            message: req.session.message,
             logged: req.session.logged
         });
     } catch(err) {
@@ -30,8 +30,15 @@ router.get("/", async (req,res)=> {
 // NEW
 router.get("/new", logUser, async (req,res)=>{
     try {
-        await res.render("cards/new.ejs", {
-            logged: req.session.logged
+        const findUser = await User.findById(req.session.userDbId);
+        console.log(findUser.cards.length, "=========")
+        console.log(req.session)
+        req.session.startMessage = "Create your first card!"
+        res.render("cards/new.ejs", {
+        user: findUser,
+        newMessage: req.session.startMessage,
+        logged: req.session.logged
+            
         })
         
     } catch(err){

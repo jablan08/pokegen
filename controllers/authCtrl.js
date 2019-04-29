@@ -6,7 +6,10 @@ const bcrypt = require("bcryptjs")
 
 router.get("/login", (req,res)=>{ 
     res.render("main/auth.ejs", {
-        message: req.session.message
+        logMessage: req.session.verifyMessage,
+        logged: req.session.logged,
+        invalidMessage: req.session.invalidMessage
+
     })
 })
 
@@ -18,9 +21,8 @@ router.post("/register", async (req,res)=>{
         req.session.logged = true;
         req.session.userDbId = createdUser._id;
         console.log(req.session)
-        res.redirect('/cards/new', {
-            logged: req.session.logged
-        });
+        req.session.startMessage = "Create your first card!"
+        res.redirect('/cards/new');
 
     } catch(err) {
         res.send(err)
@@ -34,16 +36,15 @@ router.post("/login", async (req,res)=>{
             if (foundUser.validPassword(req.body.password)) {
                 req.session.logged = true;
                 req.session.userDbId = foundUser._id;
-                req.session.message = "success!"
                 console.log(req.session, "login success!");
                 res.redirect('/home');
             } else {
-                req.session.message = "Username or password is incorrect";
+                req.session.invalidMessage = "Username or password is incorrect";
                 
                 res.redirect("/auth/login");
             }
         } else {
-            req.session.message = 'Username or password is incorrect';
+            req.session.invalidMessage = 'Username or password is incorrect';
             console.log("boop")
 
             res.redirect('/auth/login');
