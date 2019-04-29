@@ -42,7 +42,22 @@ h4 {
     font-size: 26px;
     position: relative;
     z-index: 500;
+	-webkit-transition: all 1s ease-in-out;
+	-moz-transition:    all 1s ease-in-out;
+	-o-transition:      all 1s ease-in-out;
+	-ms-transition:     all 1s ease-in-out;
 }
+
+.user-font:hover {
+   
+	-webkit-transform: rotate(-3deg) scale(1.1);
+	-moz-transform:    rotate(-3deg) scale(1.1);
+	-o-transform:      rotate(-3deg) scale(1.1);
+	-ms-transform:     rotate(-3deg) scale(1.1);
+	}
+
+
+
 /*********************** FOOTER ***********************/
 footer {
     position: fixed;
