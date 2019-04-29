@@ -9,6 +9,11 @@ body {
     margin: 0;
 }
 
+h1 {
+    position: relative;
+    z-index: 99999999999999999999999;
+}
+
 h2 { margin-bottom: 5px; }
 
 a {
@@ -59,6 +64,7 @@ footer {
 nav {
     position: relative;
     float: right;
+    z-index: 99999999999999999999999;
     margin: 0 50px 0 0;
 }
 
@@ -113,7 +119,7 @@ button:hover {
 .grid-pad-menu { grid-area: menu; padding: 0 0 0 20px; }
 .grid-right { grid-area: right; }
 .grid-footer { grid-area: footer; }
-
+/* .grid-spacer { width: 100000px; } */
 .grid-container {
   display: grid;
   grid-template-areas:
@@ -143,9 +149,9 @@ button:hover {
     position: fixed;
     bottom: 0;
     left: 0;
-    margin: 0 5% 0 5%;
+    margin: 0 auto 0 auto;
     overflow: auto;
-    height: 80%;
+    height: 100%;
     min-width: 300px;
 }
 /*---------------------- CARDS INDEX PAGE ----------------------*/
