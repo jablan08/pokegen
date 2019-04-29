@@ -8,14 +8,18 @@
 
 
     <div class="grid-menu left-margin">
-        <h1 id="pTitle">Generate PokeGen Card!</h1>
+
+        <h1 class="pTitle new-card-title">Generate PokéGen Card!</h1>
+         <%if (user.cards.length === 0) {%>
+        <h2 class="create-message"><%= newMessage %></h2> 
+        <%}%>
 
     <form action="/cards" method="POST">
 
         <div class="left">
             <section class="left-exp">
                 <div class="left-exp-float left-side-exp">Name:</div>
-                <input type="text" name="name" maxlength="15" placeholder="add PokeGen name" />
+                <input type="text" name="name" maxlength="15" placeholder="add PokéGen name" />
             </section>
 
             <section class="left-exp">
@@ -103,9 +107,6 @@
 
     
     <div id="sample-card" class="grid-main">
-        <%if (user.cards.length === 0) {%>
-        <small class="create-message"><%= newMessage %></small> 
-        <%}%>
 
         <%-include('../partials/samplecard')%>
         

@@ -23,11 +23,10 @@
         <%}%>
     </div>
     <div class="grid-showcard-main">
-        <h2>ACCOUNT INFO.</h2>
+       
          <%if (logged) {%>
             <%if(currentUser === verifyUser || admin.admin ===true){%>
-
-
+                <h2>ACCOUNT INFO.</h2>
                 <section>
                     <a href="/users/<%=user._id%>/edit"><button>EDIT ACCOUNT</button></a>
                     <form action="/users/<%=user._id%>?_method=DELETE" method="POST">

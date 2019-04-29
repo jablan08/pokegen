@@ -227,7 +227,14 @@ button:hover {
     position: relative;
     z-index: 5;
 }
+.new-card-title {
+    margin-bottom: 0px;
+}
 
+.create-message {
+    display: block;
+    font-size: 15px;
+}
 #sample-card {
     padding-left: 60px;
 }
@@ -398,11 +405,6 @@ select { width: 134px; }
 }
 /*---------------------- UNIVERSAL CARD FEATURES ----------------------*/
 /*********************** CREATE CARD ***********************/
-.create-message {
-    display: block;
-    margin-left: 15px;
-    font-size: 15px;
-}
 
 .card-body {
     display: inline-block;
