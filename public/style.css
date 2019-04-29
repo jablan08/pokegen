@@ -356,9 +356,8 @@ input, select, .description-input, .story-input{
 
 input { width: 124px; }
 select { width: 134px; }
-.description-input { height: 33px; }
-.story-input { height: 100px; }
-
+.description-input, .boxBottom { height: 33px; }
+.story-input { height: 94px; }
 /* not an option yet */
 /* .check-box {
     border-radius: 3px;
