@@ -1,5 +1,4 @@
 <%- include('../partials/header')%>
-
 <div id="users-container" class="grid-user-container">
 
 
@@ -7,21 +6,25 @@
         <%- include('../partials/head')%>
     </div>
 
+    
+    
+    
     <div id="users-main" class="grid-pad-menu">
         <h1>THIS IS A SHOW PAGE FOR USERS<h1>
+
         <h1> <%=user.username %>'s PokeGen Cards<h1>
         
         <%if (logged) {%>
             <%if(currentUser === verifyUser || admin.admin ===true){%>
                 <section>    
-                <a href="/cards/new"><button>GENERATE CARD</button></a>
-                <a href="/users/<%=user._id%>/edit"><button>EDIT USER</button></a>
+                    <a href="/cards/new"><button>GENERATE CARD</button></a>
+                    <a href="/users/<%=user._id%>/edit"><button>EDIT USER</button></a>
                 </section> 
 
                 <section>
-                <form action="/users/<%=user._id%>?_method=DELETE" method="POST">
-                <button type="submit">Delete</button>
-                </form>
+                    <form action="/users/<%=user._id%>?_method=DELETE" method="POST">
+                        <button type="submit">Delete</button>
+                    </form>
                 </section>
             <%}%>
         <%}%>
@@ -31,12 +34,17 @@
 
         <div>
         <div id="feature-frame">
-            <div class="user-vert-scroll">
-            <%- include("../partials/userfavs")%>
-            </div>
-                    
-                </div>
 
+
+
+            <div class="user-vert-scroll">
+                <%- include("../partials/userfavs")%>
+            </div>       
+
+
+            <div id="frame-banner"></div>
+
+        </div>
         </div>
 
     </div>

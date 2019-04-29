@@ -239,6 +239,17 @@ button:hover {
       'menu main main right';
     grid-gap: 0;
   }
+
+  #frame-banner {
+      height: 72px;
+      width: 400px;
+      position: absolute;
+      bottom: 0;
+      padding-bottom: 30px;
+      z-index: 3000000000000000000000000;
+      background-image: url('./images/decor/frame-banner.png');
+      background-repeat: no-repeat;
+  }
   /*---------------------- USER SHOW PAGE ----------------------*/
 /*********************** USER SHOW SCROLL ***********************/
 /* background-image: url("./images/decor/pixel-frame.png"); */
