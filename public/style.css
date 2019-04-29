@@ -443,12 +443,13 @@ img {
     text-align: right;
 }
 .description {
+    line-height: 12px;/**/
     letter-spacing: -.04rem;
     margin: 8px 4px 0 4px;
     /* margin: 20px 4px 0 4px; */
     position: relative;
     width: 270;
-    height: 40px; 
+    height: 42px; /**/
     font-size: 12px;
     padding: 0 8px;
     /* word-wrap: break-word; */
@@ -458,12 +459,14 @@ img {
     position: absolute;
     bottom: 0;
     width: 270px;
+    height: 50px; /**/
     margin: 20px 5px 4px 5px;
     border-top: 1px solid black;
     font-size: 12px;
 }
 
 #weakness, #resistance {
+    line-height: 8px; /**/
     position: relative;
     top: 0;
     width: 110px;
@@ -478,6 +481,17 @@ img {
 #resistance {
     float: right;
     margin: 2px 5px 0 0;
+}
+/**/
+#bottom-box {
+    /* position: relative; */
+    /* bottom: 0; */
+    border: 1px gold solid;
+    margin: 24px auto 0 auto;
+    height: 22px;
+    width: 220px;
+    font-size: 10px;
+    font-style: italic;
 }
 /*---------------------- CREATE CARD ----------------------*/
 /*********************** MINI CARD ***********************/
@@ -578,12 +592,14 @@ img {
     margin: 8px 4px 0 4px;
 } */
 .m-description, .m-description2 {
+    line-height: 7px;
     letter-spacing: -.04rem;
     margin: 3px 0 0 0;
     font-size: 6px;
     position: relative;
     padding: 0 4px;
 } 
+
 .m-description {
     max-width: 132px;
     height: 23px; 
@@ -597,10 +613,12 @@ img {
 #m-weak-resist-box {
     position: absolute;
     bottom: 0;
+    height: 25px;
     width: 132px;
     margin: 10px 4px 2px 4px;
     border-top: 1px solid black;
     font-size: 6px;
+    line-height: 4px;
 }
 
 #m-resistance, #m-weakness {
@@ -618,6 +636,15 @@ img {
 #m-resistance {
     float: right;
     margin: 1px 4px 0 0;
+}
+
+#m-bottom-box {
+    border: 1px gold solid;
+    margin: 12px auto 0 auto;
+    height: 11px;
+    width: 110px;
+    font-size: 5px;
+    font-style: italic;
 }
 /*---------------------- MINI CARD ----------------------*/
 
