@@ -57,27 +57,29 @@ router.get('/:id/edit', logUser, async (req, res) => {
         const foundUser = await User.findById(req.params.id)
         res.render('users/edit.ejs',{
             user: foundUser,
-            logged: req.session.logged
+            logged: req.session.logged,
+            userTakenMessage: req.session.userTaken
+
         })
-    } catch (error) {   
+    } catch (err) {   
+        res.send(err)
     }
 })
 
-router.put('/:id', logUser,(req, res) => {
+router.put('/:id', logUser, async (req, res) => {
     if(!req.body.password){
         delete req.body.password
     } else {
        req.body.password = bcrypt.hashSync(req.body.password, bcrypt.genSaltSync(10)) 
     }
     try {
-        User.findByIdAndUpdate(req.params.id, req.body, {new: true}, (err, updatedUser)=>{
-            if(err){
-                console.log(err)
-            }else{console.log(updatedUser)
-                res.redirect('/users/' + req.params.id)}
-            
-        })
-    } catch (err) {    
+        const updatedUser = await User.findByIdAndUpdate(req.params.id, req.body, {new: true});
+            console.log(updatedUser)
+            res.redirect('/users/' + req.params.id)
+    } catch (err) {
+        console.log(err)
+        req.session.userTaken = "Username has been taken."
+        res.redirect(`/users/${req.params.id}/edit`)
     }
 })
 
