@@ -10,7 +10,7 @@
     
     
     <div id="users-main" class="grid-pad-menu">
-        <h1 id="pTitle">TRAINER'S COLLECTION<h1>
+        <h1 class="pTitle">TRAINER'S COLLECTION<h1>
 
         <h1> <%=user.username %>'s PokéGen Cards</h1>
         <button><a href="/home">GO TO POKÉCENTER</a></button>
@@ -26,7 +26,7 @@
        
          <%if (logged) {%>
             <%if(currentUser === verifyUser || admin.admin ===true){%>
-                <h2>ACCOUNT INFO.</h2>
+                <h2 class="pTitle">ACCOUNT INFO.</h2>
                 <section>
                     <a href="/users/<%=user._id%>/edit"><button>EDIT ACCOUNT</button></a>
                     <button><a href="#open-modal">DELETE USER</a></button>
