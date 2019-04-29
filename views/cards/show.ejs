@@ -32,9 +32,17 @@
         <div id="show-card-footer" class="edit-delete-buttons">
             <%if (logged) {%>
             <%if(currentUser === verifyUser || admin.admin ===true){%>
+            <button type=""><a href="#open-modal">DELETE CARD</a></button>
+                <div id="open-modal" class="modal-window"><div>
+                <a href="#modal-close" title="Close" class="modal-close">close &times;</a>
+                <h1>ARE YOU SURE!?</h1>
+                <div>
                 <section class="show-card-delete-button">
                     <form action="/cards/<%=card._id%>?_method=DELETE" method="POST" >
                         <button>DELETE CARD</button>
+                    </form></div>
+                </div>
+                </div>
                     </form>
                 </section>
                 <section class="show-card-edit-button">

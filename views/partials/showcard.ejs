@@ -15,6 +15,12 @@
         <%} else if (user.cards[i].type === "fire") {%>
         style="background-image: url('/images/bg-red.png')"  
 
+        <%} else if (user.cards[i].type === "ground") {%>
+        style="background-image: url('/images/ground-bg.png')"  
+
+        <%} else if (user.cards[i].type === "dragon") {%>
+        style="background-image: url('/images/dragon-bg.png')"  
+
         <%} else if (user.cards[i].type === "water") {%>
         style="background-image: url('/images/blue-bg.png')" 
 
@@ -43,6 +49,12 @@
 
                 <%} else if (user.cards[i].type === "fire") {%>
                 <img class="types" src="/images/fire.png"> 
+
+                <%} else if (user.cards[i].type === "ground") {%>
+                <img class="types" src="/images/ground-type.png"> 
+
+                <%} else if (user.cards[i].type === "dragon") {%>
+                <img class="types" src="/images/dragon-type.png"> 
 
                 <%} else if (user.cards[i].type === "water") {%>
                 <img class="types" src="/images/water.png"> 
