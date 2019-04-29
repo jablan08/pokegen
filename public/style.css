@@ -456,6 +456,11 @@ img {
     margin: 5px 5px 0 5px;
 }
 
+.create-button {
+    text-align: center;
+    margin-left: 60px;
+}
+
 .attack {
     font-size: 16px;
     margin: 3px 3px -3px 5px;
