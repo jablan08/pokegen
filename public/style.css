@@ -193,8 +193,15 @@ button:hover {
 
 }
 
-#story {
-    padding: 5px 30px;
+#cards-main {
+    word-wrap: break-word; 
+}
+
+.story {
+    margin: 0 auto;
+    padding: 5px auto;
+    max-width: 500px;
+    word-wrap: break-word; 
 }
 /*---------------------- CARD SHOW PAGE ----------------------*/
 /*********************** NEW PAGE ***********************/
@@ -427,7 +434,7 @@ img {
 }
 
 .attack {
-    margin: 3px 3px 0 5px;
+    margin: 3px 3px -3px 5px;
     /* width: 224px; */
     width: auto;
     max-width: 210px;
@@ -443,10 +450,9 @@ img {
     text-align: right;
 }
 .description {
-    line-height: 12px;/**/
-    letter-spacing: -.04rem;
+    line-height: 12px;
+    letter-spacing: -.03rem;
     margin: 8px 4px 0 4px;
-    /* margin: 20px 4px 0 4px; */
     position: relative;
     width: 270;
     height: 42px; /**/
@@ -574,7 +580,8 @@ img {
 }
 
 .m-attack {
-    margin: 1px 2px 0 4px;
+    letter-spacing: -.02rem;
+    margin: 1px 2px -5px 4px;
     max-width: 100px;
     width: auto;
     float: left;
