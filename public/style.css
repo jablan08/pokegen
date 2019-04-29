@@ -193,10 +193,6 @@ button:hover {
 
 }
 
-#cards-main {
-    word-wrap: break-word; 
-}
-
 .story {
     margin: 0 auto;
     padding: 5px auto;
@@ -230,7 +226,6 @@ button:hover {
     width: auto;
     height: 230px;
     padding: 55px 0;
-    /* white-space: nowrap; */
     overflow-x: scroll;
 }
 
@@ -337,13 +332,45 @@ select { width: 134px; }
     border: lightblue 4px solid;
 } */
 /*---------------------- INPUT FORM ----------------------*/
-/*********************** CREATE CARD ***********************/
+/*********************** UNIVERSAL CARD FEATURES ***********************/
 .card-body, .m-card-body {
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    background-size: cover;
     background-image: linear-gradient(to bottom right, blue,lightblue,blue); /*this is default bg*/
     position: relative;
     float: left;
     word-wrap: break-word; 
+}
+
+#name, #m-name {
+    float: left;
+    position: relative;
+    white-space: nowrap;
+    /* word-wrap: wrap none; */
+}
+
+.damage, .m-damage {
+    float: right;
+    width: auto;
+    text-align: right;
+}
+
+#weakness, #resistance, #m-weakness, #m-resistance {
+    position: relative;
+    top: 0;
+    text-align: center;
+}
+
+#bottom-box, #m-bottom-box {
+    font-style: italic;
+    text-align: center;
+}
+/*---------------------- UNIVERSAL CARD FEATURES ----------------------*/
+/*********************** CREATE CARD ***********************/
+.create-message {
+    display: block;
+    margin-left: 15px;
+    font-size: 15px;
 }
 
 .card-body {
@@ -356,19 +383,10 @@ select { width: 134px; }
     box-shadow: 0 7px 10px 0 black;
 }
 
-.create-message {
-    display: block;
-    margin-left: 15px;
-    font-size: 15px;
-}
-
 #name {
-    width: 180px;
-    position: relative;
+    width: 188px;
     font-size: 25px;
-    float: left;
     margin: 2px 0 0 5px;
-    /* word-wrap: wrap none; */
 }
 
 #hp-box {
@@ -433,21 +451,21 @@ img {
     margin: 5px 5px 0 5px;
 }
 
-.attack {
-    margin: 3px 3px -3px 5px;
-    /* width: 224px; */
+.attack, .m-attack {
     width: auto;
-    max-width: 210px;
     float: left;
     font-weight: bold;
+
+}
+
+.attack {
+    margin: 3px 3px -3px 5px;
+    max-width: 210px;
 }
 
 .damage {
     margin: 5px 5px 0 2px;
-    float: right;
-    width: auto;
     max-width: 46px;
-    text-align: right;
 }
 .description {
     line-height: 12px;
@@ -473,10 +491,8 @@ img {
 
 #weakness, #resistance {
     line-height: 8px; /**/
-    position: relative;
     top: 0;
     width: 110px;
-    text-align: center;
 }
 
 #weakness {
@@ -490,14 +506,11 @@ img {
 }
 /**/
 #bottom-box {
-    /* position: relative; */
-    /* bottom: 0; */
     border: 1px gold solid;
     margin: 24px auto 0 auto;
     height: 22px;
     width: 220px;
     font-size: 10px;
-    font-style: italic;
 }
 /*---------------------- CREATE CARD ----------------------*/
 /*********************** MINI CARD ***********************/
@@ -510,17 +523,16 @@ img {
     box-shadow: 0 3px 6px 0px black;
 }
 
+
 #m-name {
-    width: 86px;
-    position: relative;
+    width: 94px;
     font-size: 12px;
-    float: left;
-    margin: 1px 0 0 2px;
+    margin: 1px 0 0 2px;  
 }
 
 #m-hp-box {
     float: right;
-    margin: 1px 15px 0 0;
+    margin: 1px 15px 0 -10px;
     font-size: 12px;
     text-align: right;
 }
@@ -583,17 +595,11 @@ img {
     letter-spacing: -.02rem;
     margin: 1px 2px -5px 4px;
     max-width: 100px;
-    width: auto;
-    float: left;
-    font-weight: bold;
 }
 
 .m-damage {
     margin: 1px 4px 0 1px;
-    float: right;
-    width: auto;
     max-width: 26px;
-    text-align: right;
 }
 /* .description {
     margin: 8px 4px 0 4px;
@@ -629,10 +635,7 @@ img {
 }
 
 #m-resistance, #m-weakness {
-    position: relative;
-    top: 0;
     width: 55px;
-    text-align: center;
 }
 
 #m-weakness{
@@ -651,7 +654,6 @@ img {
     height: 11px;
     width: 110px;
     font-size: 5px;
-    font-style: italic;
 }
 /*---------------------- MINI CARD ----------------------*/
 
