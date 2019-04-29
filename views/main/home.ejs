@@ -6,21 +6,24 @@
     </div>
 
     <div id="home-main" class="grid-pad-menu">
-    <h1>Welcome to PokéGen</h1>
-        <h2>Welcome to PokeGen where you can Generate your own Pokemon Cards!!</h2>
-        <p> This can be where we welcome people and tell them about our product.<br>
-            Lorem ipsum dolor sit amet, consectetuer adipiscing elit...<br>
-
-            Maybe make this into a table with colums and rows to avoid BS
-        </p>
+        <div>
+        <h1 id="pTitle">Welcome to PokéGen!</h1>
+            <h2>Generate your own Pokemon Cards!!</h2>
+            <p> PokeGen is a unique universe where you can become both a           pokemon and the master! <br>
+                Make as many cards as you like to collect them all, pick your favorites, and share with your friends to see who has the best deck. <br>
+                </p>
+        </div>
     </div>
     <div id="feature-card" class="grid-main">
 
         <%-include('../partials/randomCard')%>
     </div>
     <div id="home-users" class="grid-right">
-        <h2>Know Yo Foe:</h2>
-        <%-include('../partials/userlist')%>
+    
+        <h1 id="pTitle">PokeGen Trainers:</h1>
+        
+        <%-include(`../partials/userlist`)%>
+
     </div>
 
     <div class="grid-footer">
