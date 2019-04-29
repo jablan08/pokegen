@@ -1,5 +1,5 @@
     <nav>    
-        <button class="navBtn"><a href='/home'>Home</a></button>
+        <button class="navBtn"><a href='/home'>PokéCenter</a></button>
         <%console.log(logged, "===========logggg???")%>
         <%if (logged=== undefined){%>
         <button class="navBtn"><a href='/auth/login'>Log In</a></button>
@@ -7,7 +7,7 @@
         <%if (logged){%>
         <button class="navBtn"><a href="/auth/logout">Logout</a></button>
         <%}%>
-        <button class="navBtn"><a href='/cards'>Card Index</a></button>
-        <button class="navBtn"><a href='/cards/new'>Create Card</a></button>
-        <button class="navBtn"><a href='/users'>User Index</a></button>
+        <button class="navBtn"><a href='/cards'>Pokédex</a></button>
+        <button class="navBtn"><a href='/cards/new'>Generate Card</a></button>
+        <button class="navBtn"><a href='/users'>Trainers</a></button>
     </nav>

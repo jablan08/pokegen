@@ -201,6 +201,12 @@ button:hover {
     max-width: 500px;
     word-wrap: break-word; 
 }
+
+.grid-showcard-main {
+    grid-area: main;
+    grid-column: 3/3;
+    width: 200px; 
+}
 /*---------------------- CARD SHOW PAGE ----------------------*/
 /*********************** NEW PAGE ***********************/
 .grid-n-container {
@@ -469,6 +475,11 @@ img {
 
 .attack-box2 {
     margin: 5px 5px 0 5px;
+}
+
+.create-button {
+    text-align: center;
+    margin-left: 60px;
 }
 
 .attack {

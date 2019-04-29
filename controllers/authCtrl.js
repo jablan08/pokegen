@@ -6,9 +6,10 @@ const bcrypt = require("bcryptjs")
 
 router.get("/login", (req,res)=>{ 
     res.render("main/auth.ejs", {
-        logMessage: req.session.verifyMessage,
+        verifyMessage: req.session.verifyMessage,
         logged: req.session.logged,
-        invalidMessage: req.session.invalidMessage
+        invalidMessage: req.session.invalidMessage,
+        userTakenMessage: req.session.userTaken
 
     })
 })
@@ -25,7 +26,8 @@ router.post("/register", async (req,res)=>{
         res.redirect('/cards/new');
 
     } catch(err) {
-        res.send(err)
+        req.session.userTaken = "Username has been taken."
+        res.redirect("/auth/login")
     }
 })
 

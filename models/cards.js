@@ -15,7 +15,9 @@ const cardSchema = mongoose.Schema({
     weakness: String, // limited to types
     resistance: String,
     favorite: Boolean, 
-    story: String
+    story: String,
+    boxBottom: String
+
 
 })
 

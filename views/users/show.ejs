@@ -12,24 +12,34 @@
     <div id="users-main" class="grid-pad-menu">
         <h1>THIS IS A SHOW PAGE FOR USERS<h1>
 
-        <h1> <%=user.username %>'s PokeGen Cards<h1>
-        
+        <h1> <%=user.username %>'s PokéGen Cards</h1>
+        <button><a href="/home">GO TO POKÉCENTER</a></button>
         <%if (logged) {%>
             <%if(currentUser === verifyUser || admin.admin ===true){%>
-                <section>    
+            <section>    
                     <a href="/cards/new"><button>GENERATE CARD</button></a>
-                    <a href="/users/<%=user._id%>/edit"><button>EDIT USER</button></a>
                 </section> 
+            <%}%>
+        <%}%>
+    </div>
+    <div class="grid-showcard-main">
+        <h2>ACCOUNT INFO.</h2>
+         <%if (logged) {%>
+            <%if(currentUser === verifyUser || admin.admin ===true){%>
+
 
                 <section>
+                    <a href="/users/<%=user._id%>/edit"><button>EDIT ACCOUNT</button></a>
                     <form action="/users/<%=user._id%>?_method=DELETE" method="POST">
-                        <button type="submit">Delete</button>
+                        <button type="submit">DELETE ACCOUNT</button>
                     </form>
                 </section>
             <%}%>
         <%}%>
     </div>
     
+
+
     <div id="feature-card" class="grid-right">
 
         <div>
