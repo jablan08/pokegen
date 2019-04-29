@@ -199,6 +199,12 @@ button:hover {
     max-width: 500px;
     word-wrap: break-word; 
 }
+
+.grid-showcard-main {
+    grid-area: main;
+    grid-column: 3/3;
+    width: 200px; 
+}
 /*---------------------- CARD SHOW PAGE ----------------------*/
 /*********************** NEW PAGE ***********************/
 .grid-n-container {
