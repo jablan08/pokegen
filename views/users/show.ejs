@@ -29,9 +29,17 @@
                 <h2>ACCOUNT INFO.</h2>
                 <section>
                     <a href="/users/<%=user._id%>/edit"><button>EDIT ACCOUNT</button></a>
-                    <form action="/users/<%=user._id%>?_method=DELETE" method="POST">
+                    <button><a href="#open-modal">DELETE USER</a></button>
+                    <div id="open-modal" class="modal-window">
+                    <div>
+                        <a href="#modal-close" title="Close" class="modal-close">close &times;</a>
+                        <h1>ARE YOU SURE?!</h1>
+                        <div><form action="/users/<%=user._id%>?_method=DELETE" method="POST">
                         <button type="submit">DELETE ACCOUNT</button>
-                    </form>
+                    </form></div>
+                    </div>
+                    </div>
+                    
                 </section>
             <%}%>
         <%}%>
