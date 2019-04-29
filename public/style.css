@@ -74,7 +74,7 @@ nav {
 
 button { 
     font-family: 'ZCOOL KuaiLe', courier; 
-    border: rgb(76, 168, 204) 4px solid;
+    border: rgb(108, 148, 239) 4px solid;
     border-radius: 5px;
 }
 
@@ -92,10 +92,11 @@ button {
     color: #000;
 }
 /*---------------------- ZOOM HOVER ----------------------*/
-/*********************** HOME PAGE ***********************/
-.grid-header { grid-area: header; }
+/*********************** PARENT GRID ***********************/
+.grid-header { grid-area: header; padding: 0 0 0 20px; }
 .grid-menu { grid-area: menu; }
 .grid-main { grid-area: main; }
+.grid-pad-menu { grid-area: menu; padding: 0 0 0 20px; }
 .grid-right { grid-area: right; }
 .grid-footer { grid-area: footer; }
 
@@ -107,6 +108,8 @@ button {
     'footer footer footer footer footer footer';
   grid-gap: 0;
 }
+/*---------------------- PARENT GRID ----------------------*/
+/*********************** HOME PAGE ***********************/
 #home-users {
     width: 300px;
     padding: 0 20px 0 40px;
@@ -132,11 +135,12 @@ button {
     min-width: 300px;
 }
 /*---------------------- CARDS INDEX PAGE ----------------------*/
-/*********************** CARDS SHOW PAGE ***********************/
+/*********************** CARD SHOW PAGE ***********************/
 /* to lift fave card window */
 #cards-users {
     margin-top: -40px;
 }
+
 .edit-delete-buttons {
     text-align: center;
     margin-left: 45px;
@@ -157,7 +161,11 @@ button {
     grid-column: 3;
 
 }
-/*---------------------- CARDS SHOW PAGE ----------------------*/
+
+#story {
+    padding: 5px 30px;
+}
+/*---------------------- CARD SHOW PAGE ----------------------*/
 /*********************** NEW PAGE ***********************/
 .grid-n-container {
   display: grid;
@@ -258,7 +266,7 @@ input, select, .description-input, .story-input{
     top: 0;
     width: 122px;
     border-radius: 3px;
-    border: rgb(76, 168, 204) 4px solid;
+    border:  rgb(108, 148, 239) 4px solid;
     margin-top: 1px;
     text-align: left;
     margin: 2px;
@@ -301,6 +309,7 @@ select { width: 134px; }
     font-size: 25px;
     float: left;
     margin: 2px 0 0 5px;
+    /* word-wrap: wrap none; */
 }
 
 #hp-box {
@@ -369,6 +378,7 @@ img {
     margin: 3px 3px 0 5px;
     /* width: 224px; */
     width: auto;
+    max-width: 210px;
     float: left;
     font-weight: bold;
 }
@@ -376,7 +386,8 @@ img {
 .damage {
     margin: 5px 5px 0 0;
     float: right;
-    width: 30px;
+    width: auto;
+    max-width: 46px;
     text-align: right;
 }
 .description {
@@ -497,7 +508,8 @@ img {
 
 .m-attack {
     margin: 1px 2px 0 4px;
-    width: 110;
+    max-width: 100px;
+    width: auto;
     float: left;
     font-weight: bold;
 }
@@ -505,7 +517,8 @@ img {
 .m-damage {
     margin: 1px 4px 0 0;
     float: right;
-    width: 12px;
+    width: auto;
+    max-width: 26px;
     text-align: right;
 }
 /* .description {
