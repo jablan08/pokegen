@@ -342,7 +342,7 @@ button:hover {
     float: left;
 }
 
-input, select, .description-input, .story-input{
+input, select, .description-input, .story-input, .boxBottom {
     position: relative;
     top: 0;
     width: 122px;
@@ -357,7 +357,7 @@ input, select, .description-input, .story-input{
 input { width: 124px; }
 select { width: 134px; }
 .description-input, .boxBottom { height: 33px; }
-.story-input { height: 94px; }
+.story-input { height: 105px; }
 /* not an option yet */
 /* .check-box {
     border-radius: 3px;
