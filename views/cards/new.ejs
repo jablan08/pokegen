@@ -3,11 +3,12 @@
 
     <div class="grid-header">
         <%- include('../partials/head')%>
-         <h1>Generate PokeGen Card!</h1>
     </div>
 
 
     <div class="grid-menu left-margin">
+        <h1>Generate PokeGen Card!</h1>
+
     <form action="/cards" method="POST">
 
         <div class="left">
@@ -99,10 +100,11 @@
     </div>
 
     
-    <div id="" class="grid-main">
+    <div id="sample-card" class="grid-main">
         <%if (user.cards.length === 0) {%>
         <small class="create-message"><%= newMessage %></small> 
         <%}%>
+
         <%-include('../partials/samplecard')%>
         
     </div>

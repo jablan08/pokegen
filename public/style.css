@@ -18,16 +18,6 @@ a {
 
 .a-text:hover { text-decoration: none; color: rgb(0, 0, 0, .6) }
 
-.click-down:active {
-    transform: translateY(4px);
-    box-shadow: 0 4px 5px 0 #000;
-    color: #000;
-}
-.m-click-down:active {
-    box-shadow: 0 1px 2px 0 #000;
-    color: #000;
-}
-
 h3 {
     padding: 0 20px;
     font-size: 24px;
@@ -74,8 +64,12 @@ nav {
 
 button { 
     font-family: 'ZCOOL KuaiLe', courier; 
-    border: rgb(76, 168, 204) 4px solid;
+    border: rgb(108, 148, 239) 4px solid;
     border-radius: 5px;
+}
+
+button:hover {
+    background: transparent;
 }
 
 .navBtn {
@@ -84,18 +78,39 @@ button {
     border-radius: 10px;
 }
 /*---------------------- NAVIGATION ----------------------*/
-/*********************** ZOOM HOVER ***********************/
-.zoom { transition: all .2s; }
-.zoom:hover {
-    transform: scale(1.5);
-    z-index: 90000000;
+/*********************** CLICK CARD ***********************/
+.click-down:active {
+    transform: translateY(4px);
+    transition-delay: none; 
+    box-shadow: 0 4px 5px 0 #000;
     color: #000;
 }
+.m-click-down:active {
+    transition-delay: none; 
+    box-shadow: 0 1px 2px 0 #000;
+    color: #000;
+}
+/*---------------------- CLICK CARD ----------------------*/
+/*********************** ZOOM HOVER ***********************/
+/* .zoom, .zoomer { transition: all .2s; } */
+.zoom:hover {   
+    transition: all .2s;
+    transition-delay: .5s;
+    transform: scale(1.5);
+    z-index: 900000000;
+    /* color: #000; */
+}
+.zoomer:hover { 
+    transition: all .2s;
+    transition-delay: none; 
+    transform: scale(1.5);
+    z-index: 80000000;}
 /*---------------------- ZOOM HOVER ----------------------*/
-/*********************** HOME PAGE ***********************/
-.grid-header { grid-area: header; }
+/*********************** PARENT GRID ***********************/
+.grid-header { grid-area: header; padding: 0 0 0 20px; }
 .grid-menu { grid-area: menu; }
 .grid-main { grid-area: main; }
+.grid-pad-menu { grid-area: menu; padding: 0 0 0 20px; }
 .grid-right { grid-area: right; }
 .grid-footer { grid-area: footer; }
 
@@ -107,6 +122,8 @@ button {
     'footer footer footer footer footer footer';
   grid-gap: 0;
 }
+/*---------------------- PARENT GRID ----------------------*/
+/*********************** HOME PAGE ***********************/
 #home-users {
     width: 300px;
     padding: 0 20px 0 40px;
@@ -132,11 +149,12 @@ button {
     min-width: 300px;
 }
 /*---------------------- CARDS INDEX PAGE ----------------------*/
-/*********************** CARDS SHOW PAGE ***********************/
+/*********************** CARD SHOW PAGE ***********************/
 /* to lift fave card window */
 #cards-users {
     margin-top: -40px;
 }
+
 .edit-delete-buttons {
     text-align: center;
     margin-left: 45px;
@@ -157,7 +175,11 @@ button {
     grid-column: 3;
 
 }
-/*---------------------- CARDS SHOW PAGE ----------------------*/
+
+#story {
+    padding: 5px 30px;
+}
+/*---------------------- CARD SHOW PAGE ----------------------*/
 /*********************** NEW PAGE ***********************/
 .grid-n-container {
   display: grid;
@@ -171,6 +193,10 @@ button {
 #new-container {
     position: relative;
     z-index: 5;
+}
+
+#sample-card {
+    padding-left: 60px;
 }
 /*---------------------- NEW PAGE ----------------------*/
 /*********************** FOOTER SCROLL MENU ***********************/
@@ -200,7 +226,7 @@ button {
 /*********************** USER SHOW SCROLL ***********************/
 /* background-image: url("./images/decor/pixel-frame.png"); */
 #feature-frame {
-    margin-top: -24px;
+    /* margin-top: -24px; */
     position: relative;
     z-index: 500;
     height: 510px;
@@ -258,7 +284,7 @@ input, select, .description-input, .story-input{
     top: 0;
     width: 122px;
     border-radius: 3px;
-    border: rgb(76, 168, 204) 4px solid;
+    border:  rgb(108, 148, 239) 4px solid;
     margin-top: 1px;
     text-align: left;
     margin: 2px;
@@ -307,6 +333,7 @@ select { width: 134px; }
     font-size: 25px;
     float: left;
     margin: 2px 0 0 5px;
+    /* word-wrap: wrap none; */
 }
 
 #hp-box {
@@ -375,17 +402,20 @@ img {
     margin: 3px 3px 0 5px;
     /* width: 224px; */
     width: auto;
+    max-width: 210px;
     float: left;
     font-weight: bold;
 }
 
 .damage {
-    margin: 5px 5px 0 0;
+    margin: 5px 5px 0 2px;
     float: right;
-    width: 30px;
+    width: auto;
+    max-width: 46px;
     text-align: right;
 }
 .description {
+    letter-spacing: -1px;
     margin: 8px 4px 0 4px;
     /* margin: 20px 4px 0 4px; */
     position: relative;
@@ -503,21 +533,24 @@ img {
 
 .m-attack {
     margin: 1px 2px 0 4px;
-    width: 110;
+    max-width: 100px;
+    width: auto;
     float: left;
     font-weight: bold;
 }
 
 .m-damage {
-    margin: 1px 4px 0 0;
+    margin: 1px 4px 0 1px;
     float: right;
-    width: 12px;
+    width: auto;
+    max-width: 26px;
     text-align: right;
 }
 /* .description {
     margin: 8px 4px 0 4px;
 } */
 .m-description, .m-description2 {
+    letter-spacing: -1px;
     margin: 3px 0 0 0;
     font-size: 6px;
     position: relative;
