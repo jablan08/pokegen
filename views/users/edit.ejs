@@ -7,17 +7,15 @@
     </div>
 
     <div id="users-main" class="grid-menu">
-      <h1>THIS IS AN EDIT PAGE FOR USERS</h1>
-
       
       
     </div>
 
-    <div id="feature-card" class="grid-main">
+    <div id="feature-card" class="edit-user grid-main">
 
 
 
-<h1>THIS IS AN EDIT PAGE FOR USERS</h1>
+<h1 class="pTitle">EDIT ACCOUNT INFORMATION</h1>
 
 
 
@@ -27,12 +25,11 @@
       <form action="/users/<%=user._id%>?_method=PUT" method="POST">
       Username:<input type="text" name="username" value="<%=user.username%>"><br>
       Password: <input type="password" name="password" placeholder=""><br>
-      <button type="submit">update</button>
+      <button id="update" type="submit">update</button>
       </form>
     </div>
 
     <div id="users-users" class="grid-right">
-<h1>THIS IS AN EDIT PAGE FOR USERS</h1>
     </div>
 
     <div class="grid-footer">

@@ -6,8 +6,8 @@
     </div>
 
     <div id="cards-main" class="grid-pad-menu">
-        <h1 id="pTitle"> THIS IS A SHOW PAGE FOR A CARD</h1>
-        <h1><%=card.name%></h1>
+        <h1 class="pTitle"> THIS IS A SHOW PAGE FOR A CARD</h1>
+        <h1 class="pTitle"><%=card.name%></h1>
         <h2>Owned By: <%=user.username%></h2>
         <button><a href="/users/<%=user._id%>">See collection</a></button>
     
@@ -17,7 +17,7 @@
                 <h1>The story of <%=card.name%></h1>
                 <p><%=card.story%></p>
             <%} else  {%>
-            <h1>The story of <%=card.name%></h1>
+            <h1 class="pTitle">The story of <%=card.name%></h1>
             <p>Every card has a story, sadly this owner does not have a story for this card. When you make your card be sure to give a story, or else your card’s story won’t be told just like this one.</p>
             <%}%>
         </div>

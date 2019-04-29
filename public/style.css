@@ -738,6 +738,7 @@ img {
   /*---------------------- LOGIN PAGE ----------------------*/
 
 
+/*---------------------- MODAL CSS ----------------------*/
 
   .modal-window {
     position: fixed;
@@ -791,4 +792,14 @@ img {
   .modal-window h1 {
     font-size: 150%;
     margin: 0 0 15px;
+  }
+
+  /*---------------------- MODAL CSS ----------------------*/
+
+  .edit-user{
+      text-align: center;  
+  }
+
+  #update{
+      margin-left: 65px;
   }
