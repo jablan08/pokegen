@@ -16,7 +16,7 @@ const cardSchema = mongoose.Schema({
     resistance: String,
     favorite: Boolean, 
     story: String,
-    boxBottom: String
+    boxBottom: String,
 
 })
 

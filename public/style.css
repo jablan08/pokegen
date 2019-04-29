@@ -312,11 +312,20 @@ button:hover {
 /*********************** USER INDEX ***********************/
 #user-box {
     /* text-align: center; */
-    padding-top: 10%;
+    /* padding-top: 10%; */
     margin: 10px 50px 0 50px;
     width: auto;
 }
 
+.name-vert-scroll {
+    /* margin: 32px 0 0 32px; */
+    position: relative;
+    z-index: 15;
+    overflow: auto;
+    /* padding: 10px 10px 10px 10px; */
+    /* width: 316px; */
+    height: 80%;
+}
 /* .user-name {
     font-size: 
 } */
@@ -342,7 +351,7 @@ button:hover {
     float: left;
 }
 
-input, select, .description-input, .story-input{
+input, select, .description-input, .story-input, .boxBottom {
     position: relative;
     top: 0;
     width: 122px;
@@ -356,8 +365,10 @@ input, select, .description-input, .story-input{
 
 input { width: 124px; }
 select { width: 134px; }
-.description-input, .boxbottom { height: 33px; }
-.story-input { height: 94px; }
+
+.description-input, .boxBottom { height: 33px; }
+.story-input { height: 105px; }
+
 /* not an option yet */
 /* .check-box {
     border-radius: 3px;
