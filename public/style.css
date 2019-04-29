@@ -154,6 +154,17 @@ button:hover {
     height: 100%;
     min-width: 300px;
 }
+
+#card-index {
+    font-size: 40px;
+    font-family: 'ZCOOL KuaiLe', courier; 
+    /* text-shadow: 0 7px 10px 0 black; */
+}
+
+#sky {
+    position: relative;
+    max-height: 150px;
+}
 /*---------------------- CARDS INDEX PAGE ----------------------*/
 /*********************** CARD SHOW PAGE ***********************/
 /* to lift fave card window */
@@ -421,7 +432,7 @@ img {
     text-align: right;
 }
 .description {
-    letter-spacing: -1px;
+    letter-spacing: -.04rem;
     margin: 8px 4px 0 4px;
     /* margin: 20px 4px 0 4px; */
     position: relative;
@@ -556,7 +567,7 @@ img {
     margin: 8px 4px 0 4px;
 } */
 .m-description, .m-description2 {
-    letter-spacing: -1px;
+    letter-spacing: -.04rem;
     margin: 3px 0 0 0;
     font-size: 6px;
     position: relative;
