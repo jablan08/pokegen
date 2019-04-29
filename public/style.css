@@ -4,9 +4,15 @@ html {
     height: 100%;
 }
 
+#pTitle {
+    font-family: 'Wendy One', sans-serif;
+    
+}
+
 body {
     padding: 0;
     margin: 0;
+    font-family: 'Arimo', sans-serif;
 }
 
 h1, h3 {
@@ -31,12 +37,34 @@ h4 {
     z-index: 50000000000000000000;
 }
 
+h5 {    
+    font-size: 24px;
+    margin-block-start: 5px;
+    margin-block-end: 0;
+}
+
 .user-font {
-    font-family: 'ZCOOL KuaiLe', courier;
-    font-size: 36px;
+    font-family: 'Wendy One', sans-serif;
+    font-size: 26px;
     position: relative;
     z-index: 500;
+	-webkit-transition: all .5s ease-in-out;
+	-moz-transition:    all .5s ease-in-out;
+	-o-transition:      all .5s ease-in-out;
+	-ms-transition:     all .5s ease-in-out;
 }
+
+
+.user-font:hover {
+   
+	-webkit-transform: rotate(-3deg) scale(1.1);
+	-moz-transform:    rotate(-3deg) scale(1.1);
+	-o-transform:      rotate(-3deg) scale(1.1);
+	-ms-transform:     rotate(-3deg) scale(1.1);
+	}
+
+
+
 /*********************** FOOTER ***********************/
 footer {
     position: fixed;
@@ -151,7 +179,8 @@ button:hover {
     position: fixed;
     bottom: 0;
     left: 0;
-    margin: 0 auto 0 auto;
+    text-align: center;
+    margin: 0;
     overflow: auto;
     height: 100%;
     min-width: 300px;
@@ -170,42 +199,18 @@ button:hover {
 /*---------------------- CARDS INDEX PAGE ----------------------*/
 /*********************** CARD SHOW PAGE ***********************/
 /* to lift fave card window */
-#cards-users {
-    margin-top: -40px;
-}
-
-.edit-delete-buttons {
-    text-align: center;
-    margin-left: 45px;
-}
-
-.show-card-delete-button {
-    display: inline-block;
-    padding-right: 25px;
-}
-
-.show-card-edit-button {
-    display: inline;
-    margin-right: 55px;
-
-}
-
-#show-card-footer {
-    grid-column: 3;
-
-}
+#cards-users { margin-top: -40px; }
+.edit-delete-buttons { text-align: center; }
+.show-card-delete-button { display: inline-block; }
+.show-card-edit-button { display: inline; }
+.margin-auto{ width: 315px; }
+/* #show-card-footer {} */
 
 .story {
     margin: 0 auto;
     padding: 5px auto;
     max-width: 500px;
     word-wrap: break-word; 
-}
-
-.grid-showcard-main {
-    grid-area: main;
-    grid-column: 3/3;
-    width: 200px; 
 }
 /*---------------------- CARD SHOW PAGE ----------------------*/
 /*********************** NEW PAGE ***********************/
@@ -363,10 +368,10 @@ select { width: 134px; }
 /*********************** UNIVERSAL CARD FEATURES ***********************/
 .card-body, .m-card-body {
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    text-align: left;
     background-size: cover;
     background-image: linear-gradient(to bottom right, blue,lightblue,blue); /*this is default bg*/
     position: relative;
-    float: left;
     word-wrap: break-word; 
 }
 
@@ -402,6 +407,8 @@ select { width: 134px; }
 /*********************** CREATE CARD ***********************/
 
 .card-body {
+    display: inline-block;
+    vertical-align: top;
     margin: 10px;
     height: 400px;
     width: 280px;
@@ -542,6 +549,7 @@ img {
 /*---------------------- CREATE CARD ----------------------*/
 /*********************** MINI CARD ***********************/
 .m-card-body {
+    float: left;
     margin: 6px;
     height: 200px;
     width: 140px;
@@ -697,11 +705,11 @@ img {
       text-align: center;
   }
 
-  .login-form {
-      margin-left: 55px;
-  }
+  /* .login-form { margin-left: 55px; } */
 
-  .register-form {
-      margin-left: 75px;
+  /* .register-form { margin-left: 75px; } */
+
+  .auth {
+      margin: 40px 0;
   }
   /*---------------------- LOGIN PAGE ----------------------*/

@@ -3,29 +3,33 @@
 <div class="grid-auth-container">
 
     <div class="grid-header">
-        <%- include('../partials/head')%>
-    
+        <%- include('../partials/head')%>    
     </div>
 
     <div class="auth-container">
-        <h1>Login</h1>
-        <form action="/auth/login" method="POST" class="login-form">
-            <input type="text" name="username" placeholder="username">
-            <input type="password" name="password" placeholder="password">
-            <button type="submit">Login</button>
-        </form>
 
+        <section id="login" class="auth">
+            <h1 id="pTitle">Login</h1>
+            <form action="/auth/login" method="POST" class="login-form">
+                <input type="text" name="username" placeholder="username">
+                <input type="password" name="password" placeholder="password">
+                    <br />
+                <button type="submit">Login</button>
+            </form>
+                <small><%= verifyMessage %></small>
+                <small><%= invalidMessage %></small>
+        </section>
 
-        <small><%= verifyMessage %></small>
-        <small><%= invalidMessage %></small>
-
-        <h1>Register</h1>
-        <form action="/auth/register" method="POST" class="register-form">
-            <input type="text" name="username" placeholder="username">
-            <input type="password" name="password" placeholder="password">
-            <button type="submit">Register</button>
-        </form>
-        <small><%= userTakenMessage %></small>
+        <section id="resgister" class="auth">
+            <h5>Register</h5>
+            <form action="/auth/register" method="POST" class="register-form">
+                <input type="text" name="username" placeholder="username">
+                <input type="password" name="password" placeholder="password">
+                    <br />
+                <button type="submit">Register</button>
+            </form>
+                <small><%= userTakenMessage %></small>
+        </section>
     </div>
 </div>
 <%- include('../partials/footer')%>

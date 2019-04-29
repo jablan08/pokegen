@@ -4,22 +4,21 @@
 
     <div class="grid-header">
         <%- include('../partials/head')%>
-        <h1 id="card-index">Cards Gallery</h1>
+        <h1 id="pTitle">Cards Gallery</h1>
     </div>
     
     <div class="grid-main feature-card">
-    <div class="grid-spacer">
-    </div>
-        <div class="vert-scroll">
-        <section>
-            <img id="sky" src="../images/decor/sky.png">
-        </section>
-        <section>
-            <%- include('../partials/cards')%>
-        </section>
+        <div class="grid-spacer">
         </div>
-    <div class="grid-spacer">
-    </div>
+
+        <div class="vert-scroll">
+            <img id="sky" src="../images/decor/sky.png">
+            <%- include('../partials/cards')%>
+        
+        </div>
+
+        <div class="grid-spacer">
+        </div>
     </div>
 
 </div>

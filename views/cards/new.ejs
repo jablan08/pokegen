@@ -1,13 +1,15 @@
 <%- include('../partials/header')%>
 <div id="new-container" class="grid-n-container">
 
+
     <div class="grid-header">
         <%- include('../partials/head')%>
     </div>
 
 
     <div class="grid-menu left-margin">
-        <h1 class="new-card-title">Generate PokéGen Card!</h1>
+
+        <h1 class="pTitle new-card-title">Generate PokéGen Card!</h1>
          <%if (user.cards.length === 0) {%>
         <h2 class="create-message"><%= newMessage %></h2> 
         <%}%>
