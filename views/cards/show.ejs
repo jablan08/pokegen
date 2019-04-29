@@ -26,19 +26,10 @@
 
 
     <div id="feature-card" class="grid-main">
-        <div>
-        <%- include('../partials/card')%>
-        </div>
-    </div>
+        <div class="margin-auto">
+            <%- include('../partials/card')%>  
 
-    <div id="cards-users" class="grid-right">
-       
-
-    </div>
-   
-  
-    <div class="grid-footer" id="show-card-footer">
-        <div class="edit-delete-buttons">
+        <div id="show-card-footer" class="edit-delete-buttons">
             <%if (logged) {%>
             <%if(currentUser === verifyUser || admin.admin ===true){%>
                 <section class="show-card-delete-button">
@@ -48,12 +39,22 @@
                 </section>
                 <section class="show-card-edit-button">
                     <button>
-                    <a href="/cards/<%=card._id%>/edit">EDIT</a>
+                    <a href="/cards/<%=card._id%>/edit">EDIT CARD</a>
                     </button>
                 </section>
                 <%}%>
             <%}%>
         </div>
+                </div> 
+    </div>
+
+    <div id="cards-users" class="grid-right">
+       
+
+    </div>
+   
+  
+    <div class="grid-footer">
     </div>
 
 </div>

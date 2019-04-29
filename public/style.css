@@ -43,6 +43,7 @@ h5 {
     position: relative;
     z-index: 500;
 }
+
 /*********************** FOOTER ***********************/
 footer {
     position: fixed;
@@ -153,10 +154,6 @@ button:hover {
   grid-gap: 0;
 }
 
-.card-body {
-
-}
-
 .vert-scroll {
     position: fixed;
     bottom: 0;
@@ -181,42 +178,18 @@ button:hover {
 /*---------------------- CARDS INDEX PAGE ----------------------*/
 /*********************** CARD SHOW PAGE ***********************/
 /* to lift fave card window */
-#cards-users {
-    margin-top: -40px;
-}
-
-.edit-delete-buttons {
-    text-align: center;
-    margin-left: 45px;
-}
-
-.show-card-delete-button {
-    display: inline-block;
-    padding-right: 25px;
-}
-
-.show-card-edit-button {
-    display: inline;
-    margin-right: 55px;
-
-}
-
-#show-card-footer {
-    grid-column: 3;
-
-}
+#cards-users { margin-top: -40px; }
+.edit-delete-buttons { text-align: center; }
+.show-card-delete-button { display: inline-block; }
+.show-card-edit-button { display: inline; }
+.margin-auto{ width: 315px; }
+/* #show-card-footer {} */
 
 .story {
     margin: 0 auto;
     padding: 5px auto;
     max-width: 500px;
     word-wrap: break-word; 
-}
-
-.grid-showcard-main {
-    grid-area: main;
-    grid-column: 3/3;
-    width: 200px; 
 }
 /*---------------------- CARD SHOW PAGE ----------------------*/
 /*********************** NEW PAGE ***********************/
@@ -367,7 +340,7 @@ select { width: 134px; }
 /*********************** UNIVERSAL CARD FEATURES ***********************/
 .card-body, .m-card-body {
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-        text-align: left;
+    text-align: left;
     background-size: cover;
     background-image: linear-gradient(to bottom right, blue,lightblue,blue); /*this is default bg*/
     position: relative;
