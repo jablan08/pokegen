@@ -18,16 +18,6 @@ a {
 
 .a-text:hover { text-decoration: none; color: rgb(0, 0, 0, .6) }
 
-.click-down:active {
-    transform: translateY(4px);
-    box-shadow: 0 4px 5px 0 #000;
-    color: #000;
-}
-.m-click-down:active {
-    box-shadow: 0 1px 2px 0 #000;
-    color: #000;
-}
-
 h3 {
     padding: 0 20px;
     font-size: 24px;
@@ -88,13 +78,33 @@ button:hover {
     border-radius: 10px;
 }
 /*---------------------- NAVIGATION ----------------------*/
-/*********************** ZOOM HOVER ***********************/
-.zoom { transition: all .2s; }
-.zoom:hover {
-    transform: scale(1.5);
-    z-index: 90000000;
+/*********************** CLICK CARD ***********************/
+.click-down:active {
+    transform: translateY(4px);
+    transition-delay: none; 
+    box-shadow: 0 4px 5px 0 #000;
     color: #000;
 }
+.m-click-down:active {
+    transition-delay: none; 
+    box-shadow: 0 1px 2px 0 #000;
+    color: #000;
+}
+/*---------------------- CLICK CARD ----------------------*/
+/*********************** ZOOM HOVER ***********************/
+/* .zoom, .zoomer { transition: all .2s; } */
+.zoom:hover {   
+    transition: all .2s;
+    transition-delay: .5s;
+    transform: scale(1.5);
+    z-index: 900000000;
+    /* color: #000; */
+}
+.zoomer:hover { 
+    transition: all .2s;
+    transition-delay: none; 
+    transform: scale(1.5);
+    z-index: 80000000;}
 /*---------------------- ZOOM HOVER ----------------------*/
 /*********************** PARENT GRID ***********************/
 .grid-header { grid-area: header; padding: 0 0 0 20px; }
@@ -183,6 +193,10 @@ button:hover {
 #new-container {
     position: relative;
     z-index: 5;
+}
+
+#sample-card {
+    padding-left: 60px;
 }
 /*---------------------- NEW PAGE ----------------------*/
 /*********************** FOOTER SCROLL MENU ***********************/
@@ -395,6 +409,7 @@ img {
     text-align: right;
 }
 .description {
+    letter-spacing: -1px;
     margin: 8px 4px 0 4px;
     /* margin: 20px 4px 0 4px; */
     position: relative;
@@ -529,6 +544,7 @@ img {
     margin: 8px 4px 0 4px;
 } */
 .m-description, .m-description2 {
+    letter-spacing: -1px;
     margin: 3px 0 0 0;
     font-size: 6px;
     position: relative;
