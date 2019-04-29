@@ -8,20 +8,26 @@
 
     <div id="users-main" class="grid-menu">
       <h1>THIS IS AN EDIT PAGE FOR USERS</h1>
+
+      
+      
     </div>
 
     <div id="feature-card" class="grid-main">
 
 
+
 <h1>THIS IS AN EDIT PAGE FOR USERS</h1>
+
+
+
 <small><%= userTakenMessage %></small><br>
 
-      <form action="/users/<%=user._id%>?_method=PUT" method="POST">
-        <input type="text" name="username" value="<%=user.username%>"><br>
-        
-        <input type="password" name="password" placeholder=""><br>
-        <button type="submit">update</button> <br>
 
+      <form action="/users/<%=user._id%>?_method=PUT" method="POST">
+      Username:<input type="text" name="username" value="<%=user.username%>"><br>
+      Password: <input type="password" name="password" placeholder=""><br>
+      <button type="submit">update</button>
       </form>
     </div>
 
@@ -33,8 +39,6 @@
     </div>
 
 </div>
-
-
 
 
 

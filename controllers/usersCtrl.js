@@ -18,9 +18,11 @@ router.get('/', async (req, res) => {
     console.log(req.session, "this user is")
     try {
         const foundUsers = await User.find();
+        const allCards = await Card.find();
         res.render('users/index.ejs', {
             users: foundUsers,
-            logged: req.session.logged
+            logged: req.session.logged,
+            randomCard: allCards[Math.floor(Math.random()* allCards.length)]
         })
     } catch (err) {
         res.send(err)
