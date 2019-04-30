@@ -52,6 +52,7 @@ router.post("/", logUser, async (req,res)=>{
             User.findById(req.session.userDbId, (err,foundUser)=>{
                 foundUser.cards.push(createdCard);
                 foundUser.save()
+                res.redirect(`/cards/${createdCard.id}`)
             })
         })
     } catch(err) {

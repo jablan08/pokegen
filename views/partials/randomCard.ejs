@@ -1,29 +1,4 @@
 <a href="/cards/<%=randomCard.id%>"> 
-<<<<<<< HEAD
-        <div class="card-body click-down"
-            <%if (randomCard.type === "normal") {%>
-            style="background-image: url('/images/bg-normal.png')"  
-            <%} else if (randomCard.type === "fighting") {%>
-            style="background-image: url('/images/fight-bg.png')" 
-            <%} else if (randomCard.type === "steel") {%>
-            style="background-image: url('/images/metal-bg.png')" 
-            <%} else if (randomCard.type === "fire") {%>
-            style="background-image: url('/images/bg-red.png')"  
-            <%} else if (randomCard.type === "ground") {%>
-            style="background-image: url('/images/ground-bg.png')"  
-            <%} else if (randomCard.type === "dragon") {%>
-            style="background-image: url('/images/dragon-bg.png')"  
-            <%} else if (randomCard.type === "water") {%>
-            style="background-image: url('/images/blue-bg.png')" 
-            <%} else if (randomCard.type === "grass") {%>
-            style="background-image: url('/images/grass-bg.png')"   
-            <%}else if (randomCard.type === "electric") {%>
-            style="background-image: url('/images/lightening-bg.png')"   
-            <%}else if (randomCard.type === "psychic") {%>
-            style="background-image: url('/images/purple-bg.png')" 
-            <%}%> >
-            <div id="name">
-=======
  <div class="card-body zoom"
     <%if (randomCard.type === "normal") {%>
             style="background-image: url('/images/types/bg-normal.png')"  
@@ -45,26 +20,25 @@
             style="background-image: url('/images/types/lightening-bg.png')" 
         <%}else if (randomCard.type === "psychic") {%>
             style="background-image: url('/images/types/purple-bg.png')" 
-                <%}else if (randomCard.type === "poison") {%>
+        <%}else if (randomCard.type === "poison") {%>
             style="background-image: url('/images/types/poison-bg.png')" 
-                <%}else if (randomCard.type === "dark") {%>
+        <%}else if (randomCard.type === "dark") {%>
             style="background-image: url('/images/types/dark-bg.png')" 
-                <%}else if (randomCard.type === "ice") {%>
+        <%}else if (randomCard.type === "ice") {%>
             style="background-image: url('/images/types/ice-bg.png')" 
-                <%}else if (randomCard.type === "fairy") {%>
+        <%}else if (randomCard.type === "fairy") {%>
             style="background-image: url('/images/types/fairy-bg.png')" 
-                <%}else if (randomCard.type === "rock") {%>
+        <%}else if (randomCard.type === "rock") {%>
             style="background-image: url('/images/types/rock-bg.png')" 
-                <%}else if (randomCard.type === "bug") {%>
+        <%}else if (randomCard.type === "bug") {%>
             style="background-image: url('/images/types/bug-bg.png')" 
-                <%}else if (randomCard.type === "flying") {%>
+        <%}else if (randomCard.type === "flying") {%>
             style="background-image: url('/images/types/flying-bg.png')" 
-                <%}else if (randomCard.type === "ghost") {%>
+        <%}else if (randomCard.type === "ghost") {%>
             style="background-image: url('/images/types/ghost-bg.png')"     
         <%}%> 
         >
         <div id="name">
->>>>>>> master
             <%=randomCard.name%>
         </div>
              
