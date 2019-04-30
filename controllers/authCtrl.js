@@ -18,15 +18,13 @@ router.post("/register", async (req,res)=>{
 
     try {
         const createdUser = await User.create(req.body);
-        console.log(createdUser)
         req.session.logged = true;
         req.session.userDbId = createdUser._id;
-        console.log(req.session)
-        req.session.startMessage = "Create your first card!"
+        req.session.startMessage = "Create your first card!";
         res.redirect('/cards/new');
-
     } catch(err) {
-        req.session.userTaken = "Username has been taken."
+        req.session.userTaken = "Username has been taken.";
+        req.session.invalidMessage = "";
         res.redirect("/auth/login")
     }
 })
@@ -38,7 +36,6 @@ router.post("/login", async (req,res)=>{
             if (foundUser.validPassword(req.body.password)) {
                 req.session.logged = true;
                 req.session.userDbId = foundUser._id;
-                console.log(req.session, "login success!");
                 res.redirect('/home');
             } else {
                 req.session.invalidMessage = "Username or password is incorrect";
@@ -60,11 +57,7 @@ router.get('/logout', (req, res) => {
       if(err){
         res.send(err);
       } else {
-     
-        console.log("loggedout")  
         res.redirect('/home');
-        
-
       }
     })
 })
