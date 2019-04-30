@@ -1,5 +1,5 @@
 
-<% for (let i = 0; i < user.cards.length; i++) {%>
+<% for (let i = user.cards.length -1 ; i >= 0 ; i--) {%>
     <a href="/cards/<%=user.cards[i]._id%>"> 
     <div class="m-card-body zoom"
     <%if (user.cards[i].type === "normal") {%>
