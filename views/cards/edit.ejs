@@ -70,6 +70,36 @@
                 <input type="text" name="attack" maxlength="15" value="<%=card.attack%>" />
             </section>
             
+
+
+
+            <section class="left-exp">
+                <div class="left-exp-float left-side-exp">Type:</div>     
+                    <select class="attackTypeOption" name="attackType1a">
+                        <option value="<%=card.attackType1a%>" select><%=card.attackType1a%></option>
+                        <%-include('../partials/types/options')%>
+                    </select>   
+                    <select class="attackTypeOption" name="attackType1b">
+                        <option value="<%=card.attackType1b%>" select><%=card.attackType1b%></option>
+                        <%-include('../partials/types/options')%>
+                    </select>              
+            </section>
+            
+
+            <section class="left-exp">
+                <div class="left-exp-float left-side-exp">Type:</div>     
+                    <select class="attackTypeOption" name="attackType1c">
+                        <option value="<%=card.attackType1c%>" select><%=card.attackType1c%></option>
+                        <%-include('../partials/types/options')%>
+                    </select>         
+                    <select class="attackTypeOption" name="attackType1d">
+                        <option value="<%=card.attackType1d%>" select><%=card.attackType1d%></option>
+                        <%-include('../partials/types/options')%>
+                    </select>      
+            </section>
+
+
+
             <section class="left-exp">
                 <div class="left-exp-float left-side-exp">Damage:</div>
                 <input type="text" name="damage" maxlength="4" value="<%=card.damage%>" />

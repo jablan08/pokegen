@@ -401,6 +401,9 @@ select { width: 134px; }
 .description-input, .boxBottom { height: 33px; }
 .story-input { height: 105px; }
 
+.attackTypeOption {
+    width: 60px;
+}
 /* not an option yet */
 /* .check-box {
     border-radius: 3px;
@@ -428,6 +431,9 @@ select { width: 134px; }
     float: left;
     font-weight: bold;
 }
+
+
+
 .damage, .m-damage {
     float: right;
     width: auto;
@@ -537,6 +543,15 @@ img {
     font-size: 16px;
     margin: 3px 3px -3px 5px;
     max-width: 210px;
+}
+
+.attackTypes {
+    position: relative;
+    height: 14px;
+    width: 14px;
+    float: left;
+    max-width: 28px;
+    max-height: 28px;
 }
 
 .damage {
