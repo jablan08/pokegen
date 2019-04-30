@@ -107,26 +107,20 @@ button:hover {
     border-radius: 10px;
 }
 
-.a-text:hover { text-decoration: none; color: rgb(0, 0, 0, .6); font-size: 36px; transition: all .2s ease-in-out;; }
+.a-text:hover { 
+    text-decoration: none; 
+    color: rgb(0, 0, 0, .6); 
+    font-size: 36px; 
+    transition: all .2s ease-in-out;; }
 
 .user-font {
     font-family: 'Wendy One', sans-serif;
     font-size: 26px;
     position: relative;
     z-index: 500;
-	/* -webkit-transition: all .5s ease-in-out;
-	-moz-transition:    all .5s ease-in-out;
-	-o-transition:      all .5s ease-in-out;
-	-ms-transition:     all .5s ease-in-out; */
 }
 
-.user-font:hover {  
-    transform: scale(1.5);
-	/* -webkit-transform: scale(1.1);
-	-moz-transform:    scale(1.1);
-	-o-transform:      scale(1.1);
-	-ms-transform:     scale(1.1); */
-}
+.user-font:hover { transform: scale(1.5); }
 
 /*---------------------- NAVIGATION ----------------------*/
 /*********************** CLICK CARD ***********************/
