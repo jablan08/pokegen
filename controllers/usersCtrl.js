@@ -24,6 +24,7 @@ router.get('/', async (req, res) => {
             users: foundUsers,
             user: findUser,
             logged: req.session.logged,
+            cards: allCards,
             randomCard: allCards[Math.floor(Math.random()* allCards.length)]
         })
     } catch (err) {

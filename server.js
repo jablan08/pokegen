@@ -2,7 +2,7 @@ const express        = require("express");
 const app            = express();
 const session        = require("express-session");
 const logger         = require("morgan");
-const PORT           = process.env.PORT || 8070
+const PORT           = process.env.PORT || 8070;
 const methodOverride = require("method-override");
 require("dotenv").config()
 require("./db/db")
