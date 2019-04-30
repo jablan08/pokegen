@@ -296,7 +296,6 @@ button:hover { background: transparent; }
       position: absolute;
       bottom: 0;
       margin-bottom: -10px;
-      /* padding-bottom: 30px; */
       z-index: 3000000000000000000000000;
       background-image: url('./images/decor/frame-banner.png');
       background-repeat: no-repeat;
@@ -348,8 +347,8 @@ button:hover { background: transparent; }
 /*********************** USER INDEX ***********************/
 #user-box {
     text-align: justify;
-    margin: 20px;
-    width: 40%;
+    margin: 26px;
+    width: 100%;
 }
 
 .fit { position: static; }
