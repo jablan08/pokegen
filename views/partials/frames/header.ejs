@@ -12,5 +12,20 @@
     </head>
 <body>
 <header>
-    <h3 id="title">PokéGen</h3>    
+    <h3 id="title">PokéGen</h3>
+    <nav>    
+        <button class="navBtn"><a href='/home'>PokéCenter</a></button>
+        <%console.log(logged, "===========logggg???")%>
+        <button class="navBtn"><a href='/cards'>Pokédex</a></button>
+        <button class="navBtn"><a href='/cards/new'>Generate Card</a></button>
+        <button class="navBtn"><a href='/users'>Trainers</a></button>
+        <%if (logged=== undefined){%>
+            <button class="navBtn"><a href='/auth/login'>Log In</a></button>
+        <%}%>
+        <%if (logged){%>
+            <button class="navBtn"><a href="/users/<%=user.id%>">My Cards</a></button>
+            <button class="navBtn"><a href="/auth/logout">Logout</a></button>
+        <%}%>
+        
+    </nav>
 </header>
