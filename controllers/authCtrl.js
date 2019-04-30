@@ -42,13 +42,12 @@ router.post("/login", async (req,res)=>{
                 res.redirect('/home');
             } else {
                 req.session.invalidMessage = "Username or password is incorrect";
-                
+                req.session.verifyMessage = "";
                 res.redirect("/auth/login");
             }
         } else {
             req.session.invalidMessage = 'Username or password is incorrect';
-            console.log("boop")
-
+            req.session.verifyMessage = "";
             res.redirect('/auth/login');
         }
     } catch(err){

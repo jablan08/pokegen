@@ -9,6 +9,7 @@ const logUser = (req, res, next) => {
         next()
     } else {
         req.session.verifyMessage = "Please login or register to make a card."
+        req.session.invalidMessage = "";
         res.redirect("/auth/login");
     }
 }
