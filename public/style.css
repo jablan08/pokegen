@@ -45,10 +45,12 @@ h5 {
 
 .pTitle2 {
     font-family: 'ZCOOL KuaiLe', courier;   
+    font-size: 36px;
     text-align: center;   
-    position: fixed;
+    position: sticky;
+    margin-top: 4%;
     bottom: 0;
-    width: 100%;
+    /* width: 100%; */
     z-index: 99999990009999999999999999;
 }
 /*********************** FOOTER ***********************/
