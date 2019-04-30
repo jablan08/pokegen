@@ -101,9 +101,7 @@ button {
         border-radius: 5px;
 }
 
-button:hover {
-    background: transparent;
-}
+button:hover { background: transparent; }
 
 .navBtn {
     margin: 5px;
@@ -113,10 +111,14 @@ button:hover {
 
 .a-text:hover { 
     text-decoration: none; 
+    line-height:20px;
+    /* vertical-align: top; */
     color: rgb(0, 0, 0, .6); 
     font-size: 32px; 
     transition: all .2s ease-in-out;
-    transform: scaleY(-10px); }
+    /* transform: scaleY(-10px);  */
+    /* z-index: 990000000000000000000000000000000000000000;  */
+}
 
 .user-font {
     font-family: 'Arimo Bold', sans-serif;
@@ -125,7 +127,6 @@ button:hover {
     position: relative;
     z-index: 500;
     margin: 15px;
-    /* display: inline; */
     float: left;
 }
 
@@ -365,8 +366,8 @@ button:hover {
 #user-box {
 
     text-align: justify;
-    margin: 10px 50px 20px 50px;
-    width: 50%;
+    margin: 20px;
+    width: 40%;
 }
 
 .fit {
