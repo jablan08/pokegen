@@ -1,9 +1,9 @@
-<%- include('../partials/header')%>
+<%- include('../partials/frames/header')%>
 <div id="new-container" class="grid-n-container">
 
 
     <div class="grid-header">
-        <%- include('../partials/head')%>
+        <%- include('../partials/frames/head')%>
     </div>
 
 
@@ -70,6 +70,30 @@
                 <input type="text" name="attack" maxlength="15" placeholder="add 1st attack" />
             </section>
             
+
+            <section class="left-exp">
+                <div class="left-exp-float left-side-exp">Type:</div>     
+                    <select class="attackTypeOption" name="attackType1a">
+                        <%-include('../partials/types/options')%>
+                    </select>   
+                    <select class="attackTypeOption" name="attackType1b">
+                        <%-include('../partials/types/options')%>
+                    </select>              
+            </section>
+            
+
+            <section class="left-exp">
+                <div class="left-exp-float left-side-exp">Type:</div>     
+                    <select class="attackTypeOption" name="attackType1c">
+                        <%-include('../partials/types/options')%>
+                    </select>         
+                    <select class="attackTypeOption" name="attackType1d">
+                        <%-include('../partials/types/options')%>
+                    </select>      
+            </section>
+
+
+
             <section class="left-exp">
                 <div class="left-exp-float left-side-exp">Damage:</div>
                 <input type="text" name="damage" maxlength="4" placeholder="add 1st damage" />
@@ -83,6 +107,25 @@
             <section class="left-exp">
                 <div class="left-exp-float left-side-exp">Attack 2:</div>
                 <input type="text" name="attack2" maxlength="15" placeholder="add 2nd attack" />
+            </section>
+
+            <section class="left-exp">
+                <div class="left-exp-float left-side-exp">Type:</div>     
+                    <select class="attackTypeOption" name="attackType2a">
+                        <%-include('../partials/types/options')%>
+                    </select>   
+                    <select class="attackTypeOption" name="attackType2b">
+                        <%-include('../partials/types/options')%>
+                    </select>              
+            </section>   
+            <section class="left-exp">
+                <div class="left-exp-float left-side-exp">Type:</div>     
+                    <select class="attackTypeOption" name="attackType2c">
+                        <%-include('../partials/types/options')%>
+                    </select>         
+                    <select class="attackTypeOption" name="attackType2d">
+                        <%-include('../partials/types/options')%>
+                    </select>      
             </section>
 
             <section class="left-exp">
@@ -123,9 +166,12 @@
     </div>
 
     <div id="" class="grid-footer">
+<<<<<<< HEAD
     <h4 class="new-card-note">Note: Please use the direct link for the image URL ending in .jpg or .png. Example: https://i.imgur.com/ZI94U71.jpg </h4>
     
+=======
+>>>>>>> master
     </div>
 </div>
-<%-include('../partials/footer')%>
+<%-include('../partials/frames/footer')%>
 
