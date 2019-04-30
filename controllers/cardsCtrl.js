@@ -78,9 +78,9 @@ router.get('/:id', async (req, res)=>{
       res.send(err);
     }
 });
- 
+
 // EDIT
-router.get("/:id/edit", async (req,res)=>{
+router.get("/:id/edit", logUser, async (req,res)=>{
     try {
         const foundUser = await User.findOne({'cards': req.params.id})
         .populate({path: 'cards', match: {_id: req.params.id}});
@@ -92,7 +92,7 @@ router.get("/:id/edit", async (req,res)=>{
                 logged: req.session.logged
             });
         } else {
-            res.redirect("/cards");  
+            res.redirect("/auth/login");  
         }
     } catch(err){
         res.send(err);

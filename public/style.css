@@ -265,7 +265,7 @@ button:hover {
 /*---------------------- NEW PAGE ----------------------*/
 /*********************** FOOTER SCROLL MENU ***********************/
 #menu {
-    margin-top: -150px;
+    margin-top: -60px;
     background-color: transparent;
     width: auto;
     height: 230px;
@@ -324,7 +324,7 @@ button:hover {
 
 #user-menu {  
     position: relative;
-    margin-top: -240px;
+    margin-top: -50px;
     background-color: transparent;
     width: auto;
     height: 230px;

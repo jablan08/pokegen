@@ -1,4 +1,4 @@
-<% for (let i = 0; i < user.cards.length; i++) {%>
+<% for (let i = user.cards.length -1; i >= 0; i--) {%>
     <%if (user.cards[i].favorite) {%>
         <a href="/cards/<%=user.cards[i]._id%>"> 
 <div class="card-body zoom"
@@ -67,6 +67,8 @@
                     <img class="types" src="/images/types/psy.png">
                 <%}else if (user.cards[i].type === "poison") {%>
                     <img class="types" src="/images/types/poison-type.png">
+                <%}else if (user.cards[i].type === "ghost") {%>
+                    <img class="types" src="/images/types/ghost-type.png">
                 <%}else if (user.cards[i].type === "bug") {%>
                     <img class="types" src="/images/types/bug-type.png">
                 <%}else if (user.cards[i].type === "flying") {%>
@@ -114,6 +116,8 @@
                                 <img class="attackTypes" src="/images/types/water.png"> 
                             <%} else if (user.cards[i].attackType1a === "grass") {%>
                                 <img class="attackTypes" src="/images/types/grass-type.png"> 
+                            <%}else if (user.cards[i].attackType1a === "poison") {%>
+                                <img class="attackTypes" src="/images/types/poison-type.png"> 
                             <%}else if (user.cards[i].attackType1a === "electric") {%>
                                 <img class="attackTypes" src="/images/types/elektric.png"> 
                             <%}else if (user.cards[i].attackType1a === "psychic") {%>
@@ -151,6 +155,8 @@
                                 <img class="attackTypes" src="/images/types/water.png"> 
                             <%} else if (user.cards[i].attackType1b === "grass") {%>
                                 <img class="attackTypes" src="/images/types/grass-type.png"> 
+                            <%}else if (user.cards[i].attackType1b === "poison") {%>
+                                <img class="attackTypes" src="/images/types/poison-type.png"> 
                             <%}else if (user.cards[i].attackType1b === "electric") {%>
                                 <img class="attackTypes" src="/images/types/elektric.png"> 
                             <%}else if (user.cards[i].attackType1b === "psychic") {%>
@@ -190,6 +196,8 @@
                                 <img class="attackTypes" src="/images/types/water.png"> 
                             <%} else if (user.cards[i].attackType1c === "grass") {%>
                                 <img class="attackTypes" src="/images/types/grass-type.png"> 
+                            <%}else if (user.cards[i].attackType1c === "poison") {%>
+                                <img class="attackTypes" src="/images/types/poison-type.png"> 
                             <%}else if (user.cards[i].attackType1c === "electric") {%>
                                 <img class="attackTypes" src="/images/types/elektric.png"> 
                             <%}else if (user.cards[i].attackType1c === "psychic") {%>
@@ -227,6 +235,8 @@
                                 <img class="attackTypes" src="/images/types/water.png">     
                             <%} else if (user.cards[i].attackType1d === "grass") {%>
                                 <img class="attackTypes" src="/images/types/grass-type.png">    
+                            <%}else if (user.cards[i].attackType1d === "poison") {%>
+                                <img class="attackTypes" src="/images/types/poison-type.png"> 
                             <%}else if (user.cards[i].attackType1d === "electric") {%>
                                 <img class="attackTypes" src="/images/types/elektric.png">  
                             <%}else if (user.cards[i].attackType1d === "psychic") {%>
@@ -277,6 +287,8 @@
                                 <img class="attackTypes" src="/images/types/water.png"> 
                             <%} else if (user.cards[i].attackType2a === "grass") {%>
                                 <img class="attackTypes" src="/images/types/grass-type.png"> 
+                            <%}else if (user.cards[i].attackType2a === "poison") {%>
+                                <img class="attackTypes" src="/images/types/poison-type.png"> 
                             <%}else if (user.cards[i].attackType2a === "electric") {%>
                                 <img class="attackTypes" src="/images/types/elektric.png"> 
                             <%}else if (user.cards[i].attackType2a === "psychic") {%>
@@ -314,6 +326,8 @@
                                 <img class="attackTypes" src="/images/types/water.png"> 
                             <%} else if (user.cards[i].attackType2b === "grass") {%>
                                 <img class="attackTypes" src="/images/types/grass-type.png"> 
+                            <%}else if (user.cards[i].attackType2b === "poison") {%>
+                                <img class="attackTypes" src="/images/types/poison-type.png"> 
                             <%}else if (user.cards[i].attackType2b === "electric") {%>
                                 <img class="attackTypes" src="/images/types/elektric.png"> 
                             <%}else if (user.cards[i].attackType2b === "psychic") {%>
@@ -351,6 +365,8 @@
                                 <img class="attackTypes" src="/images/types/water.png"> 
                             <%} else if (user.cards[i].attackType2c === "grass") {%>
                                 <img class="attackTypes" src="/images/types/grass-type.png"> 
+                            <%}else if (user.cards[i].attackType2c === "poison") {%>
+                                <img class="attackTypes" src="/images/types/poison-type.png"> 
                             <%}else if (user.cards[i].attackType2c === "electric") {%>
                                 <img class="attackTypes" src="/images/types/elektric.png"> 
                             <%}else if (user.cards[i].attackType2c === "psychic") {%>
@@ -388,6 +404,8 @@
                                 <img class="attackTypes" src="/images/types/water.png">     
                             <%} else if (user.cards[i].attackType2d === "grass") {%>
                                 <img class="attackTypes" src="/images/types/grass-type.png">    
+                            <%}else if (user.cards[i].attackType2d === "poison") {%>
+                                <img class="attackTypes" src="/images/types/poison-type.png"> 
                             <%}else if (user.cards[i].attackType2d === "electric") {%>
                                 <img class="attackTypes" src="/images/types/elektric.png">  
                             <%}else if (user.cards[i].attackType2d === "psychic") {%>
