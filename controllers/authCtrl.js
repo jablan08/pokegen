@@ -4,10 +4,12 @@ const User = require("../models/users");
 const bcrypt = require("bcryptjs")
 
 
-router.get("/login", (req,res)=>{ 
+router.get("/login", async (req,res)=>{
+    const findUser = await User.findById(req.session.userDbId); 
     res.render("main/auth.ejs", {
         verifyMessage: req.session.verifyMessage,
         logged: req.session.logged,
+        user: findUser,
         invalidMessage: req.session.invalidMessage,
         userTakenMessage: req.session.userTaken
 
