@@ -74,8 +74,8 @@ nav {
 
 button { 
     font-family: 'ZCOOL KuaiLe', courier; 
-    border: rgb(108, 148, 239) 4px solid;
-    border-radius: 5px;
+        border: rgb(108, 148, 239) 4px solid;
+        border-radius: 5px;
 }
 
 button:hover {
@@ -734,9 +734,9 @@ img {
     z-index: 999;
     opacity: 0;
     pointer-events: none;
-    -webkit-transition: all 0.3s;
-    -moz-transition: all 0.3s;
-    transition: all 0.3s;
+    -webkit-transition: all 0.1s;
+    -moz-transition: all 0.1s;
+    transition: all 0.1s;
   }
   
   .modal-window:target {
@@ -750,7 +750,11 @@ img {
     margin: 10% auto;
     padding: 2rem;
     background: #fff;
+    opacity: 1;
     color: #444;
+    border: rgb(108, 148, 239) 4px solid;
+    border-radius: 5px;
+    display: none;
   }
   
   .modal-window header {
