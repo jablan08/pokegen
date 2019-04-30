@@ -15,12 +15,14 @@ const logUser = (req, res, next) => {
 
 // INDEX
 router.get('/', async (req, res) => {
-    console.log(req.session, "this user is")
+    
     try {
         const foundUsers = await User.find();
         const allCards = await Card.find();
+        const findUser = await User.findById(req.session.userDbId);
         res.render('users/index.ejs', {
             users: foundUsers,
+            user: findUser,
             logged: req.session.logged,
             randomCard: allCards[Math.floor(Math.random()* allCards.length)]
         })
@@ -36,10 +38,6 @@ router.get('/:id', async (req, res) => {
         const foundUser = await User.findById(req.params.id)
         .populate('cards');
         const findAdmin = await User.findById(req.session.userDbId);
-
-        console.log(findAdmin, "found admin")
-        console.log(foundUser)
-        console.log(req.session.logged, "<==== logged in")
         res.render('users/show.ejs',{
             user: foundUser,
             currentUser: req.session.userDbId,
@@ -61,7 +59,6 @@ router.get('/:id/edit', logUser, async (req, res) => {
             user: foundUser,
             logged: req.session.logged,
             userTakenMessage: req.session.userTaken
-
         })
     } catch (err) {   
         res.send(err)
@@ -76,10 +73,8 @@ router.put('/:id', logUser, async (req, res) => {
     }
     try {
         const updatedUser = await User.findByIdAndUpdate(req.params.id, req.body, {new: true});
-            console.log(updatedUser)
-            res.redirect('/users/' + req.params.id)
+        res.redirect('/users/' + req.params.id)
     } catch (err) {
-        console.log(err)
         req.session.userTaken = "Username has been taken."
         res.redirect(`/users/${req.params.id}/edit`)
     }
@@ -92,19 +87,16 @@ router.delete('/:id',logUser, (req, res) => {
         if(err){
             res.send(err)
         } else {
-            console.log(deletedUser, "<------ deleted user");
             Card.deleteMany({
                 _id: {
                     $in: deletedUser.cards
                 }
             },(err, data) =>{
-                console.log(data)
                 res.redirect('/users')
             }
             )
         }
     })
-
 })
 
 module.exports = router;

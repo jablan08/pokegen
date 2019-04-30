@@ -1,9 +1,9 @@
-<%- include('../partials/header')%>
+<%- include('../partials/frames/header')%>
 <div id="users-container" class="grid-user-container">
 
 
     <div class="grid-header">
-        <%- include('../partials/head')%>
+        <%- include('../partials/frames/head')%>
     </div>
 
     
@@ -15,7 +15,7 @@
         <h1> <%=user.username %>'s PokéGen Cards</h1>
         <button><a href="/home">GO TO POKÉCENTER</a></button>
         <%if (logged) {%>
-            <%if(currentUser === verifyUser || admin.admin ===true){%>
+            <%if(currentUser === verifyUser || admin.admin){%>
             <section>    
                     <a href="/cards/new"><button>GENERATE CARD</button></a>
                 </section> 
@@ -25,7 +25,7 @@
     <div class="grid-showcard-main">
        
          <%if (logged) {%>
-            <%if(currentUser === verifyUser || admin.admin ===true){%>
+            <%if(currentUser === verifyUser || admin.admin){%>
                 <h2 class="pTitle">ACCOUNT INFO.</h2>
                 <section>
                     <a href="/users/<%=user._id%>/edit"><button>EDIT ACCOUNT</button></a>
@@ -40,8 +40,6 @@
                     </form>
                     </div>
                     </div>
-                    </div>
-                    
                 </section>
             <%}%>
         <%}%>
@@ -74,7 +72,7 @@
         <%-include('../partials/user-minicards')%>
     </div>
 </div>
-<%-include('../partials/footer')%>
+<%-include('../partials/frames/footer')%>
 
 
 

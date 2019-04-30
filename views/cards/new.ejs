@@ -1,9 +1,9 @@
-<%- include('../partials/header')%>
+<%- include('../partials/frames/header')%>
 <div id="new-container" class="grid-n-container">
 
 
     <div class="grid-header">
-        <%- include('../partials/head')%>
+        <%- include('../partials/frames/head')%>
     </div>
 
 
@@ -36,15 +36,19 @@
                 <div class="left-exp-float left-side-exp">Element:</div>     
                     <select name="type">
                         <option value="normal">Normal</option>
-                        <option value="fighting">Fighting</option>
-                        <option value="steel">Steel</option>
-                        <option value="fire">Fire</option>
-                        <option value="ground">Ground</option>
                         <option value="dragon">Dragon</option>
-                        <option value="water">Water</option>
-                        <option value="grass">Grass</option>
                         <option value="electric">Electric</option>
-                        <option value="psychic">Psychic</option>
+                        <option value="fairy">Fairy</option>
+                        <option value="fighting">Fighting</option>
+                        <option value="fire">Fire</option>
+                        <option value="ghost">Ghost</option>
+                        <option value="grass">Grass</option>
+                        <option value="ground">Ground</option> 
+                        <option value="ice">Ice</option>                     
+                        <option value="steel">Steel</option>
+                        <option value="poison">Poison</option> 
+                        <option value="psychic">Psychic</option> 
+                        <option value="water">Water</option>
                     </select>             
             </section>
 
@@ -70,6 +74,30 @@
                 <input type="text" name="attack" maxlength="15" placeholder="add 1st attack" />
             </section>
             
+
+            <section class="left-exp">
+                <div class="left-exp-float left-side-exp">Type:</div>     
+                    <select class="attackTypeOption" name="attackType1a">
+                        <%-include('../partials/types/options')%>
+                    </select>   
+                    <select class="attackTypeOption" name="attackType1b">
+                        <%-include('../partials/types/options')%>
+                    </select>              
+            </section>
+            
+
+            <section class="left-exp">
+                <div class="left-exp-float left-side-exp">Type:</div>     
+                    <select class="attackTypeOption" name="attackType1c">
+                        <%-include('../partials/types/options')%>
+                    </select>         
+                    <select class="attackTypeOption" name="attackType1d">
+                        <%-include('../partials/types/options')%>
+                    </select>      
+            </section>
+
+
+
             <section class="left-exp">
                 <div class="left-exp-float left-side-exp">Damage:</div>
                 <input type="text" name="damage" maxlength="4" placeholder="add 1st damage" />
@@ -83,6 +111,25 @@
             <section class="left-exp">
                 <div class="left-exp-float left-side-exp">Attack 2:</div>
                 <input type="text" name="attack2" maxlength="15" placeholder="add 2nd attack" />
+            </section>
+
+            <section class="left-exp">
+                <div class="left-exp-float left-side-exp">Type:</div>     
+                    <select class="attackTypeOption" name="attackType2a">
+                        <%-include('../partials/types/options')%>
+                    </select>   
+                    <select class="attackTypeOption" name="attackType2b">
+                        <%-include('../partials/types/options')%>
+                    </select>              
+            </section>   
+            <section class="left-exp">
+                <div class="left-exp-float left-side-exp">Type:</div>     
+                    <select class="attackTypeOption" name="attackType2c">
+                        <%-include('../partials/types/options')%>
+                    </select>         
+                    <select class="attackTypeOption" name="attackType2d">
+                        <%-include('../partials/types/options')%>
+                    </select>      
             </section>
 
             <section class="left-exp">
@@ -123,9 +170,9 @@
     </div>
 
     <div id="" class="grid-footer">
-    WOULDNT IT BE COOL TO DO THE SAME THING HERE AS ON THE EDIT PAGE WITH A "PREVIEW" BUTTON THAT SAVES THE CARD AND [0] ON THE PARTIAL??
+    <h4 class="new-card-note">Note: Please use the direct link for the image URL ending in .jpg or .png. Example: https://i.imgur.com/ZI94U71.jpg </h4>
     
     </div>
 </div>
-<%-include('../partials/footer')%>
+<%-include('../partials/frames/footer')%>
 

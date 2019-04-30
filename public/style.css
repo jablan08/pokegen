@@ -58,6 +58,10 @@ footer {
     width: 100%;
     bottom: 0;
 }
+
+.grass-footer2 {
+    height: 50px;
+}
 /*---------------------- FOOTER ----------------------*/
 /*********************** NAVIGATION ***********************/
 a {
@@ -161,6 +165,25 @@ button:hover {
     max-width: 300px;
     padding: 0 20px 0 40px;
 }
+
+.home-vert-scroll {
+    display: block;
+    text-align: center;
+    /* margin-left: -80px; */
+    /* margin: 32px 100px 0 0px; */
+    position: absolute;
+    z-index: 0;
+    overflow: auto;
+    /* padding: 10px 10px 10px 10px; */
+    /* width: 316px; */
+    height: 65%;
+}
+
+.box{
+    border: transparent;
+    width: 100px;
+    min-height: 300px;
+}
 /*---------------------- HOME PAGE ----------------------*/
 /*********************** CARDS INDEX PAGE ***********************/
 .grid-cards-container {
@@ -234,6 +257,10 @@ button:hover {
 }
 #sample-card {
     padding-left: 60px;
+}
+
+.new-card-note {
+    font-size: 12px;
 }
 /*---------------------- NEW PAGE ----------------------*/
 /*********************** FOOTER SCROLL MENU ***********************/
@@ -310,18 +337,30 @@ button:hover {
 #user-box {
     /* text-align: center; */
     /* padding-top: 10%; */
-    margin: 10px 50px 0 50px;
-    width: auto;
+    /* margin: 10px 50px 0 50px; */
+    /* width: auto; */
+}
+
+.fit {
+    position: static;
+}
+
+#userlist-box {
+    margin-top: -5px;
+    min-width: 100px
 }
 
 .name-vert-scroll {
-    /* margin: 32px 0 0 32px; */
-    position: relative;
+    display: block;
+    text-align: center;
+    /* margin-left: -80px; */
+    /* margin: 32px 100px 0 0px; */
+    position: absolute;
     z-index: 15;
     overflow: auto;
     /* padding: 10px 10px 10px 10px; */
     /* width: 316px; */
-    height: 80%;
+    height: 82%;
 }
 /* .user-name {
     font-size: 
@@ -366,6 +405,7 @@ select { width: 134px; }
 .description-input, .boxBottom { height: 33px; }
 .story-input { height: 105px; }
 
+.attackTypeOption { width: 60px; }
 /* not an option yet */
 /* .check-box {
     border-radius: 3px;
@@ -393,6 +433,9 @@ select { width: 134px; }
     float: left;
     font-weight: bold;
 }
+
+
+
 .damage, .m-damage {
     float: right;
     width: auto;
@@ -500,8 +543,23 @@ img {
 
 .attack {
     font-size: 16px;
-    margin: 3px 3px -3px 5px;
+    margin: 3px 3px -3px 0;
     max-width: 210px;
+}
+
+.attackTypeParent { transform: translateY(5px); }
+
+.attackType {
+    position: relative;
+    float: left;
+    max-width: 36px;
+    max-height: 36px;
+}
+
+.attackTypes {
+    position: relative;
+    height: 18px;
+    width: 18px;
 }
 
 .damage {
@@ -524,7 +582,7 @@ img {
     position: absolute;
     bottom: 0;
     width: 270px;
-    height: 50px; /**/
+    height: 58px; /**/
     margin: 20px 5px 4px 5px;
     border-top: 1px solid black;
     font-size: 12px;
@@ -548,7 +606,7 @@ img {
 /**/
 #bottom-box {
     border: 2px gold solid;
-    margin: 24px auto 0 auto;
+    margin: 32px auto 0 auto;
     height: 22px;
     width: 220px;
     font-size: 10px;
@@ -635,10 +693,26 @@ img {
 
 .m-attack {
     letter-spacing: -.02rem;
-    margin: 1px 2px -5px 4px;
+    margin: 1px 2px -5px 0px;
     max-width: 100px;
 }
 
+.m-attackTypeParent { transform: translateY(2px); }
+
+.m-attackType {
+    position: relative;
+    float: left;
+    max-width: 18px;
+    max-height: 18px;
+}
+
+.m-attackTypes {
+    text-align: center;
+    position: relative;
+    height: 9px;
+    width: 9px;
+    float: left;
+}
 .m-damage {
     margin: 1px 4px 0 1px;
     max-width: 26px;
@@ -668,7 +742,7 @@ img {
 #m-weak-resist-box {
     position: absolute;
     bottom: 0;
-    height: 25px;
+    height: 30px;
     width: 132px;
     margin: 10px 4px 2px 4px;
     border-top: 1px solid black;
@@ -691,8 +765,9 @@ img {
 }
 
 #m-bottom-box {
+
     border: 1px gold solid;
-    margin: 12px auto 0 auto;
+    margin: 16px auto 0 auto;
     height: 11px;
     width: 110px;
     font-size: 5px;
