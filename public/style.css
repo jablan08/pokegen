@@ -258,6 +258,10 @@ button:hover {
 #sample-card {
     padding-left: 60px;
 }
+
+.new-card-note {
+    font-size: 12px;
+}
 /*---------------------- NEW PAGE ----------------------*/
 /*********************** FOOTER SCROLL MENU ***********************/
 #menu {
