@@ -96,8 +96,8 @@ nav {
 
 button { 
     font-family: 'ZCOOL KuaiLe', courier; 
-        border: rgb(108, 148, 239) 4px solid;
-        border-radius: 5px;
+    border: rgb(108, 148, 239) 4px solid;
+    border-radius: 5px;
 }
 
 button:hover { background: transparent; }
