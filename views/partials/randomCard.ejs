@@ -1,62 +1,96 @@
 <a href="/cards/<%=randomCard.id%>"> 
-        <div class="card-body zoomer click-down"
-            <%if (randomCard.type === "normal") {%>
+ <div class="card-body zoom"
+    <%if (randomCard.type === "normal") {%>
             style="background-image: url('/images/types/bg-normal.png')"  
-            <%} else if (randomCard.type === "fighting") {%>
+        <%} else if (randomCard.type === "fighting") {%>
             style="background-image: url('/images/types/fight-bg.png')" 
-            <%} else if (randomCard.type === "steel") {%>
+        <%} else if (randomCard.type === "steel") {%>
             style="background-image: url('/images/types/metal-bg.png')" 
-            <%} else if (randomCard.type === "fire") {%>
+        <%} else if (randomCard.type === "fire") {%>
             style="background-image: url('/images/types/bg-red.png')"  
-            <%} else if (randomCard.type === "ground") {%>
+        <%} else if (randomCard.type === "ground") {%>
             style="background-image: url('/images/types/ground-bg.png')"  
-            <%} else if (randomCard.type === "dragon") {%>
+        <%} else if (randomCard.type === "dragon") {%>
             style="background-image: url('/images/types/dragon-bg.png')"  
-            <%} else if (randomCard.type === "water") {%>
+        <%} else if (randomCard.type === "water") {%>
             style="background-image: url('/images/types/blue-bg.png')" 
-            <%} else if (randomCard.type === "grass") {%>
+        <%} else if (randomCard.type === "grass") {%>
             style="background-image: url('/images/types/grass-bg.png')"   
-            <%}else if (randomCard.type === "electric") {%>
-            style="background-image: url('/images/types/lightening-bg.png')"   
-            <%}else if (randomCard.type === "psychic") {%>
+        <%}else if (randomCard.type === "electric") {%>
+            style="background-image: url('/images/types/lightening-bg.png')" 
+        <%}else if (randomCard.type === "psychic") {%>
             style="background-image: url('/images/types/purple-bg.png')" 
-            <%}%> >
-            <div id="name">
+                <%}else if (randomCard.type === "poison") {%>
+            style="background-image: url('/images/types/poison-bg.png')" 
+                <%}else if (randomCard.type === "dark") {%>
+            style="background-image: url('/images/types/dark-bg.png')" 
+                <%}else if (randomCard.type === "ice") {%>
+            style="background-image: url('/images/types/ice-bg.png')" 
+                <%}else if (randomCard.type === "fairy") {%>
+            style="background-image: url('/images/types/fairy-bg.png')" 
+                <%}else if (randomCard.type === "rock") {%>
+            style="background-image: url('/images/types/rock-bg.png')" 
+                <%}else if (randomCard.type === "bug") {%>
+            style="background-image: url('/images/types/bug-bg.png')" 
+                <%}else if (randomCard.type === "flying") {%>
+            style="background-image: url('/images/types/flying-bg.png')" 
+                <%}else if (randomCard.type === "ghost") {%>
+            style="background-image: url('/images/types/ghost-bg.png')"     
+        <%}%> 
+        >
+        <div id="name">
             <%=randomCard.name%>
-            </div>
-            <span class="type">
-                <%if (randomCard.type === "normal") {%>
+        </div>
+             
+         <span class="type">
+            <%if (randomCard.type === "normal") {%>
                     <img class="types" src="/images/types/normal.png">
-                    <%} else if (randomCard.type === "fighting") {%>
+                <%} else if (randomCard.type === "fighting") {%>
                     <img class="types" src="/images/types/combat.png">
-                    <%} else if (randomCard.type === "steel") {%>
+                <%} else if (randomCard.type === "steel") {%>
                     <img class="types" src="/images/types/metal.png">
-                    <%} else if (randomCard.type === "fire") {%>
+                <%} else if (randomCard.type === "fire") {%>
                     <img class="types" src="/images/types/fire.png"> 
-                    <%} else if (randomCard.type === "ground") {%>
+                <%} else if (randomCard.type === "ground") {%>
                     <img class="types" src="/images/types/ground-type.png"> 
-                    <%} else if (randomCard.type === "dragon") {%>
+                <%} else if (randomCard.type === "dragon") {%>
                     <img class="types" src="/images/types/dragon-type.png"> 
-                    <%} else if (randomCard.type === "water") {%>
+                <%} else if (randomCard.type === "water") {%>
                     <img class="types" src="/images/types/water.png"> 
-                    <%} else if (randomCard.type === "grass") {%>
+                <%} else if (randomCard.type === "grass") {%>
                     <img class="types" src="/images/types/grass-type.png"> 
-                    <%}else if (randomCard.type === "electric") {%>
+                <%}else if (randomCard.type === "electric") {%>
                     <img class="types" src="/images/types/elektric.png"> 
-                    <%}else if (randomCard.type === "psychic") {%>
+                <%}else if (randomCard.type === "psychic") {%>
                     <img class="types" src="/images/types/psy.png">
-                <%}%> 
-            </span>
-            <div id="hp-box">
-                <font size="2px">HP</font><%=randomCard.hp%>
-            </div>
-            <div id="img-box-border">
-                <div id="img-box">
-                    <img src="<%=randomCard.url%>">
-                </div>
-            </div>
+                <%}else if (randomCard.type === "poison") {%>
+                    <img class="types" src="/images/types/poison-type.png">
+                <%}else if (randomCard.type === "bug") {%>
+                    <img class="types" src="/images/types/bug-type.png">
+                <%}else if (randomCard.type === "flying") {%>
+                    <img class="types" src="/images/types/flying-type.png">
+                <%}else if (randomCard.type === "dark") {%>
+                    <img class="types" src="/images/types/dark-type.png">
+                <%}else if (randomCard.type === "ice") {%>
+                    <img class="types" src="/images/types/ice-type.png">
+                <%}else if (randomCard.type === "rock") {%>
+                    <img class="types" src="/images/types/rock-type.png">
+                <%}else if (randomCard.type === "fairy") {%>
+                    <img class="types" src="/images/types/fairy-type.png">    
+            <%}%> 
+        </span>
 
-        <div id="yellow-bar"><div class="stats"><%=randomCard.stats%></div></div>
+        <div id="hp-box">
+            <font size="2px">HP</font><%=randomCard.hp%>
+        </div>
+
+        <div id="img-box-border">
+            <div id="img-box">
+                <img src="<%=randomCard.url%>">
+            </div>
+        </div>
+
+<div id="yellow-bar"><div class="stats"><%=randomCard.stats%></div></div>
 
         <div class="attack-box">
             <div class="attackTypeParent">
@@ -82,6 +116,20 @@
                                 <img class="attackTypes" src="/images/types/elektric.png"> 
                             <%}else if (randomCard.attackType1a === "psychic") {%>
                                 <img class="attackTypes" src="/images/types/psy.png">
+                            <%}else if (randomCard.attackType1a === "bug") {%>
+                                <img class="attackTypes" src="/images/types/bug-type.png">
+                            <%}else if (randomCard.attackType1a === "ice") {%>
+                                <img class="attackTypes" src="/images/types/ice-type.png">  
+                            <%}else if (randomCard.attackType1a === "rock") {%>
+                                <img class="attackTypes" src="/images/types/rock-type.png">
+                            <%}else if (randomCard.attackType1a === "dark") {%>
+                                <img class="attackTypes" src="/images/types/dark-type.png">   
+                            <%}else if (randomCard.attackType1a === "fairy") {%>
+                                <img class="attackTypes" src="/images/types/fairy-type.png"> 
+                            <%}else if (randomCard.attackType1a === "ghost") {%>
+                                <img class="attackTypes" src="/images/types/ghost-type.png"> 
+                            <%}else if (randomCard.attackType1a === "flying") {%>
+                                <img class="attackTypes" src="/images/types/flying-type.png"> 
                         <%}%> 
                     </span>
                     <span class="attackType">
@@ -105,6 +153,22 @@
                                 <img class="attackTypes" src="/images/types/elektric.png"> 
                             <%}else if (randomCard.attackType1b === "psychic") {%>
                                 <img class="attackTypes" src="/images/types/psy.png">
+                            <%}else if (randomCard.attackType1b === "bug") {%>
+                                <img class="attackTypes" src="/images/types/bug-type.png">
+                            <%}else if (randomCard.attackType1b === "ice") {%>
+                                <img class="attackTypes" src="/images/types/ice-type.png">  
+                            <%}else if (randomCard.attackType1b === "rock") {%>
+                                <img class="attackTypes" src="/images/types/rock-type.png">
+                            <%}else if (randomCard.attackType1b === "dark") {%>
+                                <img class="attackTypes" src="/images/types/dark-type.png">   
+                            <%}else if (randomCard.attackType1b === "fairy") {%>
+                                <img class="attackTypes" src="/images/types/fairy-type.png"> 
+                            <%}else if (randomCard.attackType1b === "ghost") {%>
+                                <img class="attackTypes" src="/images/types/ghost-type.png"> 
+                            <%}else if (randomCard.attackType1b === "flying") {%>
+                                <img class="attackTypes" src="/images/types/flying-type.png"> 
+
+
                         <%}%> 
                     </span>
                     <span class="attackType">
@@ -128,6 +192,20 @@
                                 <img class="attackTypes" src="/images/types/elektric.png"> 
                             <%}else if (randomCard.attackType1c === "psychic") {%>
                                 <img class="attackTypes" src="/images/types/psy.png">
+                            <%}else if (randomCard.attackType1c === "bug") {%>
+                                <img class="attackTypes" src="/images/types/bug-type.png">
+                            <%}else if (randomCard.attackType1c === "ice") {%>
+                                <img class="attackTypes" src="/images/types/ice-type.png">  
+                            <%}else if (randomCard.attackType1c === "rock") {%>
+                                <img class="attackTypes" src="/images/types/rock-type.png">
+                            <%}else if (randomCard.attackType1c === "dark") {%>
+                                <img class="attackTypes" src="/images/types/dark-type.png">   
+                            <%}else if (randomCard.attackType1c === "fairy") {%>
+                                <img class="attackTypes" src="/images/types/fairy-type.png"> 
+                            <%}else if (randomCard.attackType1c === "ghost") {%>
+                                <img class="attackTypes" src="/images/types/ghost-type.png"> 
+                            <%}else if (randomCard.attackType1c === "flying") {%>
+                                <img class="attackTypes" src="/images/types/flying-type.png">  
                         <%}%> 
                     </span>
                     <span class="attackType">
@@ -151,10 +229,25 @@
                                 <img class="attackTypes" src="/images/types/elektric.png">  
                             <%}else if (randomCard.attackType1d === "psychic") {%>
                                 <img class="attackTypes" src="/images/types/psy.png">
+                            <%}else if (randomCard.attackType1d === "bug") {%>
+                                <img class="attackTypes" src="/images/types/bug-type.png">
+                            <%}else if (randomCard.attackType1d === "ice") {%>
+                                <img class="attackTypes" src="/images/types/ice-type.png">  
+                            <%}else if (randomCard.attackType1d === "rock") {%>
+                                <img class="attackTypes" src="/images/types/rock-type.png">
+                            <%}else if (randomCard.attackType1d === "dark") {%>
+                                <img class="attackTypes" src="/images/types/dark-type.png">   
+                            <%}else if (randomCard.attackType1d === "fairy") {%>
+                                <img class="attackTypes" src="/images/types/fairy-type.png"> 
+                            <%}else if (randomCard.attackType1d === "ghost") {%>
+                                <img class="attackTypes" src="/images/types/ghost-type.png"> 
+                            <%}else if (randomCard.attackType1d === "flying") {%>
+                                <img class="attackTypes" src="/images/types/flying-type.png">                                                                                                                                       
                         <%}%> 
                     </span>
             </div>
             </div>
+            
             <div class="attack"><%=randomCard.attack%></div>
             <div class="damage"><%=randomCard.damage%></div>
         </div>
@@ -186,6 +279,20 @@
                                 <img class="attackTypes" src="/images/types/elektric.png"> 
                             <%}else if (randomCard.attackType2a === "psychic") {%>
                                 <img class="attackTypes" src="/images/types/psy.png">
+                            <%}else if (randomCard.attackType2a === "bug") {%>
+                                <img class="attackTypes" src="/images/types/bug-type.png">
+                            <%}else if (randomCard.attackType2a === "ice") {%>
+                                <img class="attackTypes" src="/images/types/ice-type.png">  
+                            <%}else if (randomCard.attackType2a === "rock") {%>
+                                <img class="attackTypes" src="/images/types/rock-type.png">
+                            <%}else if (randomCard.attackType2a === "dark") {%>
+                                <img class="attackTypes" src="/images/types/dark-type.png">   
+                            <%}else if (randomCard.attackType2a === "fairy") {%>
+                                <img class="attackTypes" src="/images/types/fairy-type.png"> 
+                            <%}else if (randomCard.attackType2a === "ghost") {%>
+                                <img class="attackTypes" src="/images/types/ghost-type.png"> 
+                            <%}else if (randomCard.attackType2a === "flying") {%>
+                                <img class="attackTypes" src="/images/types/flying-type.png"> 
                         <%}%> 
                     </span>
                     <span class="attackType">
@@ -209,6 +316,20 @@
                                 <img class="attackTypes" src="/images/types/elektric.png"> 
                             <%}else if (randomCard.attackType2b === "psychic") {%>
                                 <img class="attackTypes" src="/images/types/psy.png">
+                            <%}else if (randomCard.attackType2b === "bug") {%>
+                                <img class="attackTypes" src="/images/types/bug-type.png">
+                            <%}else if (randomCard.attackType2b === "ice") {%>
+                                <img class="attackTypes" src="/images/types/ice-type.png">  
+                            <%}else if (randomCard.attackType2b === "rock") {%>
+                                <img class="attackTypes" src="/images/types/rock-type.png">
+                            <%}else if (randomCard.attackType2b === "dark") {%>
+                                <img class="attackTypes" src="/images/types/dark-type.png">   
+                            <%}else if (randomCard.attackType2b === "fairy") {%>
+                                <img class="attackTypes" src="/images/types/fairy-type.png"> 
+                            <%}else if (randomCard.attackType2b === "ghost") {%>
+                                <img class="attackTypes" src="/images/types/ghost-type.png"> 
+                            <%}else if (randomCard.attackType2b === "flying") {%>
+                                <img class="attackTypes" src="/images/types/flying-type.png"> 
                         <%}%> 
                     </span>
                     <span class="attackType">
@@ -232,6 +353,20 @@
                                 <img class="attackTypes" src="/images/types/elektric.png"> 
                             <%}else if (randomCard.attackType2c === "psychic") {%>
                                 <img class="attackTypes" src="/images/types/psy.png">
+                            <%}else if (randomCard.attackType2c === "bug") {%>
+                                <img class="attackTypes" src="/images/types/bug-type.png">
+                            <%}else if (randomCard.attackType2c === "ice") {%>
+                                <img class="attackTypes" src="/images/types/ice-type.png">  
+                            <%}else if (randomCard.attackType2c === "rock") {%>
+                                <img class="attackTypes" src="/images/types/rock-type.png">
+                            <%}else if (randomCard.attackType2c === "dark") {%>
+                                <img class="attackTypes" src="/images/types/dark-type.png">   
+                            <%}else if (randomCard.attackType2c === "fairy") {%>
+                                <img class="attackTypes" src="/images/types/fairy-type.png"> 
+                            <%}else if (randomCard.attackType2c === "ghost") {%>
+                                <img class="attackTypes" src="/images/types/ghost-type.png"> 
+                            <%}else if (randomCard.attackType2c === "flying") {%>
+                                <img class="attackTypes" src="/images/types/flying-type.png"> 
                         <%}%> 
                     </span>
                     <span class="attackType">
@@ -255,6 +390,20 @@
                                 <img class="attackTypes" src="/images/types/elektric.png">  
                             <%}else if (randomCard.attackType2d === "psychic") {%>
                                 <img class="attackTypes" src="/images/types/psy.png">
+                            <%}else if (randomCard.attackType2d === "bug") {%>
+                                <img class="attackTypes" src="/images/types/bug-type.png">
+                            <%}else if (randomCard.attackType2d === "ice") {%>
+                                <img class="attackTypes" src="/images/types/ice-type.png">  
+                            <%}else if (randomCard.attackType2d === "rock") {%>
+                                <img class="attackTypes" src="/images/types/rock-type.png">
+                            <%}else if (randomCard.attackType2d === "dark") {%>
+                                <img class="attackTypes" src="/images/types/dark-type.png">   
+                            <%}else if (randomCard.attackType2d === "fairy") {%>
+                                <img class="attackTypes" src="/images/types/fairy-type.png"> 
+                            <%}else if (randomCard.attackType2d === "ghost") {%>
+                                <img class="attackTypes" src="/images/types/ghost-type.png"> 
+                            <%}else if (randomCard.attackType2d === "flying") {%>
+                                <img class="attackTypes" src="/images/types/flying-type.png"> 
                         <%}%> 
                     </span>
             </div>
@@ -262,24 +411,21 @@
             <div class="attack"><%=randomCard.attack2%></div>
             <div class="damage"><%=randomCard.damage2%></div>
         </div>
-
             <div>
                 <div class="description"><%=randomCard.description2%></div>
             </div>
 
-            <div id="weak-resist-box">
-
-                <div id="weakness">weakness<br>
-                    <small><%=randomCard.weakness%></small>
-                </div>
-
-                <div id="resistance">resistance<br>
-                    <small><%=randomCard.resistance%></small>
-                </div>
-
-                <div id="bottom-box"><%=randomCard.boxBottom%></div>
-
+        <div id="weak-resist-box">
+            <div id="weakness">Weakness<br/>
+                <small><%=randomCard.weakness%></small>
             </div>
 
+            <div id="resistance">Resistance<br/>
+                <small><%=randomCard.resistance%></small>
+            </div>
+
+            <div id="bottom-box"><%=randomCard.boxBottom%></div>
+            
         </div>
+</div>
     </a>

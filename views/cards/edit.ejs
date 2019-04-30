@@ -32,10 +32,23 @@
                 <div class="left-exp-float left-side-exp">Element:</div>     
                     <select name="type">
                         <option value="<%=card.type%>" select><%=card.type%></option>
-                    <%-include('../partials/types/options')%>
+                        <option value="">None</option>
+                        <option value="normal">Normal</option>
+                        <option value="dragon">Dragon</option>
+                        <option value="electric">Electric</option>
+                        <option value="fairy">Fairy</option>
+                        <option value="fighting">Fighting</option>
+                        <option value="fire">Fire</option>
+                        <option value="ghost">Ghost</option>
+                        <option value="grass">Grass</option>
+                        <option value="ground">Ground</option> 
+                        <option value="ice">Ice</option>                     
+                        <option value="steel">Steel</option>
+                        <option value="posion">Poison</option> 
+                        <option value="psychic">Psychic</option> 
+                        <option value="water">Water</option>
                     </select>             
             </section>
-
             <section class="left-exp">
                 <div class="left-exp-float left-side-exp">Stats:</div>
                 <input type="text" name="stats" maxlength="36" value="<%=card.stats%>" />
@@ -43,9 +56,7 @@
 
             <section class="left-exp">
                 <div class="left-exp-float left-side-exp">Bottom:</div>
-                
                 <textarea  class="boxBottom" type="text" name="boxBottom" maxlength="80" value="<%=card.boxBottom%>"><%=card.boxBottom%></textarea> 
-
             </section>
 
             <section class="left-exp">
