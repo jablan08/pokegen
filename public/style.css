@@ -56,6 +56,12 @@ p { margin-left: 36px; }
     bottom: 0;
     z-index: 99999990009999999999999999;
 }
+
+header {
+    /* position: stick */
+}
+
+
 /*********************** FOOTER ***********************/
 footer {
     position: fixed;
@@ -90,8 +96,8 @@ nav {
 
 button { 
     font-family: 'ZCOOL KuaiLe', courier; 
-        border: rgb(108, 148, 239) 4px solid;
-        border-radius: 5px;
+    border: rgb(108, 148, 239) 4px solid;
+    border-radius: 5px;
 }
 
 button:hover { background: transparent; }
@@ -242,6 +248,14 @@ button:hover { background: transparent; }
     max-width: 500px;
     word-wrap: break-word; 
 }
+
+.story2 {
+    margin-left: 20%;
+    font-size: 16px;
+    text-align: left;
+}
+
+
 /*---------------------- CARD SHOW PAGE ----------------------*/
 /*********************** NEW PAGE ***********************/
 .grid-n-container {
@@ -285,8 +299,8 @@ button:hover { background: transparent; }
     width: 100%;
     display: grid;
     grid-template-areas:
-      'header header header header'
-      'menu main main right';
+      'header header header'
+      'menu main right';
     grid-gap: 0;
   }
 
