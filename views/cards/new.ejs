@@ -10,7 +10,7 @@
     <div class="grid-menu left-margin">
 
         <h1 class="pTitle new-card-title">Generate PokéGen Card!</h1>
-         <%if (user.cards.length === 0) {%>
+         <%if (!user.cards.length) {%>
         <h2 class="create-message"><%= newMessage %></h2> 
         <%}%>
 
