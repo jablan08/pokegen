@@ -158,7 +158,6 @@ button:hover {
     z-index: 80000000;}
 /*---------------------- ZOOM HOVER ----------------------*/
 /*********************** PARENT GRID ***********************/
-.grid-filler { background-size: cover;  background-image: url('./images/decor/sky.png')}
 .grid-header { grid-area: header; padding: 0 0 0 20px; }
 .grid-menu { grid-area: menu; }
 .grid-main { grid-area: main; }
@@ -166,7 +165,7 @@ button:hover {
 .grid-right { grid-area: right; }
 .grid-pad-right { grid-area: right; padding: 0 20px; text-align: justify;}
 .grid-footer { grid-area: footer; }
-/* .grid-spacer { width: 100000px; } */
+
 .grid-container {
     width: 100%;
     display: grid;
@@ -175,6 +174,11 @@ button:hover {
     'menu menu main main right right'
     'footer footer footer footer footer footer';
      grid-gap: 0;
+}
+
+.grid-filler { 
+    background-size: cover;  
+    background-image: url('./images/decor/sky.png')
 }
 /*---------------------- PARENT GRID ----------------------*/
 /*********************** HOME PAGE ***********************/
