@@ -43,14 +43,9 @@ h5 {
     margin-block-end: 0;
 }
 
-p {
-    margin-left: 36px;
-}
+p { margin-left: 36px; }
 
-.pTitle {
-    font-family: 'Arimo Bold', sans-serif;
-    
-}
+.pTitle { font-family: 'Arimo Bold', sans-serif; }
 
 .pTitle2 {
     font-family: 'ZCOOL KuaiLe', courier;   
@@ -78,9 +73,7 @@ footer {
     bottom: 0;
 }
 
-.grass-footer2 {
-    height: 50px;
-}
+.grass-footer2 { height: 50px; }
 /*---------------------- FOOTER ----------------------*/
 /*********************** NAVIGATION ***********************/
 a {
@@ -101,9 +94,7 @@ button {
         border-radius: 5px;
 }
 
-button:hover {
-    background: transparent;
-}
+button:hover { background: transparent; }
 
 .navBtn {
     margin: 5px;
@@ -113,10 +104,13 @@ button:hover {
 
 .a-text:hover { 
     text-decoration: none; 
+    line-height: 20px;
     color: rgb(0, 0, 0, .6); 
     font-size: 32px; 
+    margin-left: 5px;
+    margin-right: 0px;
     transition: all .2s ease-in-out;
-    transform: scaleY(-10px); }
+}
 
 .user-font {
     font-family: 'Arimo Bold', sans-serif;
@@ -124,8 +118,7 @@ button:hover {
     font-size: 26px;
     position: relative;
     z-index: 500;
-    margin: 15px;
-    /* display: inline; */
+    margin: 10px;
     float: left;
 }
 
@@ -265,21 +258,15 @@ button:hover {
     position: relative;
     z-index: 5;
 }
-.new-card-title {
-    margin-bottom: 0px;
-}
 
 .create-message {
     display: block;
     font-size: 15px;
 }
-#sample-card {
-    padding-left: 60px;
-}
 
-.new-card-note {
-    font-size: 12px;
-}
+#sample-card { padding-left: 60px; }
+.new-card-title { margin-bottom: 0px; }
+.new-card-note { font-size: 12px; }
 /*---------------------- NEW PAGE ----------------------*/
 /*********************** FOOTER SCROLL MENU ***********************/
 #menu {
@@ -291,9 +278,7 @@ button:hover {
     overflow-x: scroll;
 }
 
-#inner-menu {
-    width: 5000000000000000000000000px;
-}
+#inner-menu { width: 5000000000000000000000000px; }
 /*---------------------- FOOTER SCROLL MENU ----------------------*/
 /*********************** USER SHOW PAGE ***********************/
 .grid-user-container {
@@ -311,7 +296,6 @@ button:hover {
       position: absolute;
       bottom: 0;
       margin-bottom: -10px;
-      /* padding-bottom: 30px; */
       z-index: 3000000000000000000000000;
       background-image: url('./images/decor/frame-banner.png');
       background-repeat: no-repeat;
@@ -357,42 +341,30 @@ button:hover {
     width: auto;
     height: 230px;
     padding: 55px 0;
-    /* white-space: nowrap; */
     overflow-x: scroll;
 }
 /*---------------------- USER SHOW SCROLL MENU ----------------------*/
 /*********************** USER INDEX ***********************/
 #user-box {
-
     text-align: justify;
-    margin: 10px 50px 20px 50px;
-    width: 50%;
+    margin: 26px;
+    width: 100%;
 }
 
-.fit {
-    position: static;
-}
+.fit { position: static; }
 
 #userlist-box {
-    /* margin-top: -5px; */
     min-width: 100px;
 }
 
 .name-vert-scroll {
     display: block;
     text-align: center;
-    /* margin-left: -80px; */
-    /* margin: 32px 100px 0 0px; */
     position: absolute;
     z-index: 15;
     overflow: auto;
-    /* padding: 10px 10px 10px 10px; */
-    /* width: 316px; */
-    height: 82%;
 }
-/* .user-name {
-    font-size: 
-} */
+
 /*---------------------- USER INDEX ----------------------*/
 /*********************** INPUT FORM ***********************/
 .left-margin { margin-left: auto; }
