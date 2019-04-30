@@ -44,7 +44,7 @@ h5 {
 }
 
 .pTitle {
-    font-family: 'Wendy One', sans-serif;
+    font-family: 'Arimo Bold', sans-serif;
     
 }
 
@@ -110,14 +110,14 @@ button:hover {
 .a-text:hover { text-decoration: none; color: rgb(0, 0, 0, .6); font-size: 36px; transition: all .2s ease-in-out;; }
 
 .user-font {
-    font-family: 'Wendy One', sans-serif;
+    font-family: 'Arimo Bold', sans-serif;
+    font-weight: bold;
     font-size: 26px;
     position: relative;
     z-index: 500;
-	/* -webkit-transition: all .5s ease-in-out;
-	-moz-transition:    all .5s ease-in-out;
-	-o-transition:      all .5s ease-in-out;
-	-ms-transition:     all .5s ease-in-out; */
+    margin: 0 10px;
+    /* display: inline; */
+    float: left;
 }
 
 .user-font:hover {  
@@ -176,10 +176,7 @@ button:hover {
      grid-gap: 0;
 }
 
-.grid-filler { 
-    background-size: cover;  
-    background-image: url('./images/decor/sky.png')
-}
+.grid-filler { background-size: cover; background-image: url('./images/decor/sky.png') }
 /*---------------------- PARENT GRID ----------------------*/
 /*********************** HOME PAGE ***********************/
 #home-users {
@@ -252,12 +249,13 @@ button:hover {
 /*---------------------- CARD SHOW PAGE ----------------------*/
 /*********************** NEW PAGE ***********************/
 .grid-n-container {
-  display: grid;
+    width: 100%;
+    display: grid;
   grid-template-areas:
     'header header header'
     'menu main right'
     'footer footer footer';
-  grid-gap: 0;
+    grid-gap: 0;
 }
 
 #new-container {
@@ -296,6 +294,7 @@ button:hover {
 /*---------------------- FOOTER SCROLL MENU ----------------------*/
 /*********************** USER SHOW PAGE ***********************/
 .grid-user-container {
+    width: 100%;
     display: grid;
     grid-template-areas:
       'header header header header'
@@ -341,7 +340,7 @@ button:hover {
 
 #user-menu {  
     position: relative;
-    margin-top: -50px;
+    margin-top: -200px;
     background-color: transparent;
     width: auto;
     height: 230px;
@@ -352,10 +351,11 @@ button:hover {
 /*---------------------- USER SHOW SCROLL MENU ----------------------*/
 /*********************** USER INDEX ***********************/
 #user-box {
-    /* text-align: center; */
-    /* padding-top: 10%; */
-    /* margin: 10px 50px 0 50px; */
-    /* width: auto; */
+
+    text-align: justify;
+    padding-top: 10%;
+    margin: 10px 50px 0 50px;
+    width: auto;
 }
 
 .fit {
@@ -364,7 +364,8 @@ button:hover {
 
 #userlist-box {
     margin-top: -5px;
-    min-width: 100px
+    min-width: 100px;
+    width: 500px;
 }
 
 .name-vert-scroll {
