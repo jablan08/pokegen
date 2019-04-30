@@ -578,7 +578,7 @@ img {
     position: absolute;
     bottom: 0;
     width: 270px;
-    height: 50px; /**/
+    height: 58px; /**/
     margin: 20px 5px 4px 5px;
     border-top: 1px solid black;
     font-size: 12px;
@@ -602,7 +602,7 @@ img {
 /**/
 #bottom-box {
     border: 2px gold solid;
-    margin: 24px auto 0 auto;
+    margin: 32px auto 0 auto;
     height: 22px;
     width: 220px;
     font-size: 10px;
@@ -738,7 +738,7 @@ img {
 #m-weak-resist-box {
     position: absolute;
     bottom: 0;
-    height: 25px;
+    height: 30px;
     width: 132px;
     margin: 10px 4px 2px 4px;
     border-top: 1px solid black;
@@ -761,8 +761,9 @@ img {
 }
 
 #m-bottom-box {
+
     border: 1px gold solid;
-    margin: 12px auto 0 auto;
+    margin: 16px auto 0 auto;
     height: 11px;
     width: 110px;
     font-size: 5px;
