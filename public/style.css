@@ -43,14 +43,9 @@ h5 {
     margin-block-end: 0;
 }
 
-p {
-    margin-left: 36px;
-}
+p { margin-left: 36px; }
 
-.pTitle {
-    font-family: 'Arimo Bold', sans-serif;
-    
-}
+.pTitle { font-family: 'Arimo Bold', sans-serif; }
 
 .pTitle2 {
     font-family: 'ZCOOL KuaiLe', courier;   
@@ -78,9 +73,7 @@ footer {
     bottom: 0;
 }
 
-.grass-footer2 {
-    height: 50px;
-}
+.grass-footer2 { height: 50px; }
 /*---------------------- FOOTER ----------------------*/
 /*********************** NAVIGATION ***********************/
 a {
@@ -111,13 +104,12 @@ button:hover { background: transparent; }
 
 .a-text:hover { 
     text-decoration: none; 
-    line-height:20px;
-    /* vertical-align: top; */
+    line-height: 20px;
     color: rgb(0, 0, 0, .6); 
     font-size: 32px; 
+    margin-left: 5px;
+    margin-right: 0px;
     transition: all .2s ease-in-out;
-    /* transform: scaleY(-10px);  */
-    /* z-index: 990000000000000000000000000000000000000000;  */
 }
 
 .user-font {
@@ -126,7 +118,7 @@ button:hover { background: transparent; }
     font-size: 26px;
     position: relative;
     z-index: 500;
-    margin: 15px;
+    margin: 10px;
     float: left;
 }
 
@@ -266,21 +258,15 @@ button:hover { background: transparent; }
     position: relative;
     z-index: 5;
 }
-.new-card-title {
-    margin-bottom: 0px;
-}
 
 .create-message {
     display: block;
     font-size: 15px;
 }
-#sample-card {
-    padding-left: 60px;
-}
 
-.new-card-note {
-    font-size: 12px;
-}
+#sample-card { padding-left: 60px; }
+.new-card-title { margin-bottom: 0px; }
+.new-card-note { font-size: 12px; }
 /*---------------------- NEW PAGE ----------------------*/
 /*********************** FOOTER SCROLL MENU ***********************/
 #menu {
@@ -292,9 +278,7 @@ button:hover { background: transparent; }
     overflow-x: scroll;
 }
 
-#inner-menu {
-    width: 5000000000000000000000000px;
-}
+#inner-menu { width: 5000000000000000000000000px; }
 /*---------------------- FOOTER SCROLL MENU ----------------------*/
 /*********************** USER SHOW PAGE ***********************/
 .grid-user-container {
@@ -358,42 +342,30 @@ button:hover { background: transparent; }
     width: auto;
     height: 230px;
     padding: 55px 0;
-    /* white-space: nowrap; */
     overflow-x: scroll;
 }
 /*---------------------- USER SHOW SCROLL MENU ----------------------*/
 /*********************** USER INDEX ***********************/
 #user-box {
-
     text-align: justify;
     margin: 20px;
     width: 40%;
 }
 
-.fit {
-    position: static;
-}
+.fit { position: static; }
 
 #userlist-box {
-    /* margin-top: -5px; */
     min-width: 100px;
 }
 
 .name-vert-scroll {
     display: block;
     text-align: center;
-    /* margin-left: -80px; */
-    /* margin: 32px 100px 0 0px; */
     position: absolute;
     z-index: 15;
     overflow: auto;
-    /* padding: 10px 10px 10px 10px; */
-    /* width: 316px; */
-    height: 82%;
 }
-/* .user-name {
-    font-size: 
-} */
+
 /*---------------------- USER INDEX ----------------------*/
 /*********************** INPUT FORM ***********************/
 .left-margin { margin-left: auto; }
