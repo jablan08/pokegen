@@ -81,12 +81,207 @@
 
 <div id="yellow-bar"><div class="stats"><%=user.cards[i].stats%></div></div>
 
-          <div class="attack-box">
+        <div class="attack-box">
+            <div class="attackTypeParent">
+            <div class="attackType">
+                    <span>
+                        <%if (user.cards[i].attackType1a === "normal") {%>
+                                <img class="attackTypes" src="/images/types/normal.png">
+                            <%} else if (user.cards[i].attackType1a === "fighting") {%>
+                                <img class="attackTypes" src="/images/types/combat.png">
+                            <%} else if (user.cards[i].attackType1a === "steel") {%>
+                                <img class="attackTypes" src="/images/types/metal.png">
+                            <%} else if (user.cards[i].attackType1a === "fire") {%>
+                                <img class="attackTypes" src="/images/types/fire.png"> 
+                            <%} else if (user.cards[i].attackType1a === "ground") {%>
+                                <img class="attackTypes" src="/images/types/ground-type.png"> 
+                            <%} else if (user.cards[i].attackType1a === "dragon") {%>
+                                <img class="attackTypes" src="/images/types/dragon-type.png"> 
+                            <%} else if (user.cards[i].attackType1a === "water") {%>
+                                <img class="attackTypes" src="/images/types/water.png"> 
+                            <%} else if (user.cards[i].attackType1a === "grass") {%>
+                                <img class="attackTypes" src="/images/types/grass-type.png"> 
+                            <%}else if (user.cards[i].attackType1a === "electric") {%>
+                                <img class="attackTypes" src="/images/types/elektric.png"> 
+                            <%}else if (user.cards[i].attackType1a === "psychic") {%>
+                                <img class="attackTypes" src="/images/types/psy.png">
+                        <%}%> 
+                    </span>
+                    <span class="attackType">
+                        <%if (user.cards[i].attackType1b === "normal") {%>
+                                <img class="attackTypes" src="/images/types/normal.png">
+                            <%} else if (user.cards[i].attackType1b === "fighting") {%>
+                                <img class="attackTypes" src="/images/types/combat.png">
+                            <%} else if (user.cards[i].attackType1b === "steel") {%>
+                                <img class="attackTypes" src="/images/types/metal.png">
+                            <%} else if (user.cards[i].attackType1b === "fire") {%>
+                                <img class="attackTypes" src="/images/types/fire.png"> 
+                            <%} else if (user.cards[i].attackType1b === "ground") {%>
+                                <img class="attackTypes" src="/images/types/ground-type.png"> 
+                            <%} else if (user.cards[i].attackType1b === "dragon") {%>
+                                <img class="attackTypes" src="/images/types/dragon-type.png"> 
+                            <%} else if (user.cards[i].attackType1b === "water") {%>
+                                <img class="attackTypes" src="/images/types/water.png"> 
+                            <%} else if (user.cards[i].attackType1b === "grass") {%>
+                                <img class="attackTypes" src="/images/types/grass-type.png"> 
+                            <%}else if (user.cards[i].attackType1b === "electric") {%>
+                                <img class="attackTypes" src="/images/types/elektric.png"> 
+                            <%}else if (user.cards[i].attackType1b === "psychic") {%>
+                                <img class="attackTypes" src="/images/types/psy.png">
+                        <%}%> 
+                    </span>
+                    <span class="attackType">
+                        <%if (user.cards[i].attackType1c === "normal") {%>
+                                <img class="attackTypes" src="/images/types/normal.png">
+                            <%} else if (user.cards[i].attackType1c === "fighting") {%>
+                                <img class="attackTypes" src="/images/types/combat.png">
+                            <%} else if (user.cards[i].attackType1c === "steel") {%>
+                                <img class="attackTypes" src="/images/types/metal.png">
+                            <%} else if (user.cards[i].attackType1c === "fire") {%>
+                                <img class="attackTypes" src="/images/types/fire.png"> 
+                            <%} else if (user.cards[i].attackType1c === "ground") {%>
+                                <img class="attackTypes" src="/images/types/ground-type.png"> 
+                            <%} else if (user.cards[i].attackType1c === "dragon") {%>
+                                <img class="attackTypes" src="/images/types/dragon-type.png"> 
+                            <%} else if (user.cards[i].attackType1c === "water") {%>
+                                <img class="attackTypes" src="/images/types/water.png"> 
+                            <%} else if (user.cards[i].attackType1c === "grass") {%>
+                                <img class="attackTypes" src="/images/types/grass-type.png"> 
+                            <%}else if (user.cards[i].attackType1c === "electric") {%>
+                                <img class="attackTypes" src="/images/types/elektric.png"> 
+                            <%}else if (user.cards[i].attackType1c === "psychic") {%>
+                                <img class="attackTypes" src="/images/types/psy.png">
+                        <%}%> 
+                    </span>
+                    <span class="attackType">
+                        <%if (user.cards[i].attackType1d === "normal") {%>
+                                <img class="attackTypes" src="/images/types/normal.png">
+                            <%} else if (user.cards[i].attackType1d === "fighting") {%>
+                                <img class="attackTypes" src="/images/types/combat.png">    
+                            <%} else if (user.cards[i].attackType1d === "steel") {%>
+                                <img class="attackTypes" src="/images/types/metal.png"> 
+                            <%} else if (user.cards[i].attackType1d === "fire") {%>
+                                <img class="attackTypes" src="/images/types/fire.png">  
+                            <%} else if (user.cards[i].attackType1d === "ground") {%>
+                                <img class="attackTypes" src="/images/types/ground-type.png">   
+                            <%} else if (user.cards[i].attackType1d === "dragon") {%>
+                                <img class="attackTypes" src="/images/types/dragon-type.png">   
+                            <%} else if (user.cards[i].attackType1d === "water") {%>
+                                <img class="attackTypes" src="/images/types/water.png">     
+                            <%} else if (user.cards[i].attackType1d === "grass") {%>
+                                <img class="attackTypes" src="/images/types/grass-type.png">    
+                            <%}else if (user.cards[i].attackType1d === "electric") {%>
+                                <img class="attackTypes" src="/images/types/elektric.png">  
+                            <%}else if (user.cards[i].attackType1d === "psychic") {%>
+                                <img class="attackTypes" src="/images/types/psy.png">
+                        <%}%> 
+                    </span>
+            </div>
+            </div>
             <div class="attack"><%=user.cards[i].attack%></div>
             <div class="damage"><%=user.cards[i].damage%></div>
         </div>
+            <div>    
+                <div class="description"><%=user.cards[i].description%></div>
+            </div>
 
-        <div class="attack-box">
+        <div class="attack-box2">
+            <div class="attackTypeParent">
+            <div class="attackType">
+                    <span>
+                        <%if (user.cards[i].attackType2a === "normal") {%>
+                                <img class="attackTypes" src="/images/types/normal.png">
+                            <%} else if (user.cards[i].attackType2a === "fighting") {%>
+                                <img class="attackTypes" src="/images/types/combat.png">
+                            <%} else if (user.cards[i].attackType2a === "steel") {%>
+                                <img class="attackTypes" src="/images/types/metal.png">
+                            <%} else if (user.cards[i].attackType2a === "fire") {%>
+                                <img class="attackTypes" src="/images/types/fire.png"> 
+                            <%} else if (user.cards[i].attackType2a === "ground") {%>
+                                <img class="attackTypes" src="/images/types/ground-type.png"> 
+                            <%} else if (user.cards[i].attackType2a === "dragon") {%>
+                                <img class="attackTypes" src="/images/types/dragon-type.png"> 
+                            <%} else if (user.cards[i].attackType2a === "water") {%>
+                                <img class="attackTypes" src="/images/types/water.png"> 
+                            <%} else if (user.cards[i].attackType2a === "grass") {%>
+                                <img class="attackTypes" src="/images/types/grass-type.png"> 
+                            <%}else if (user.cards[i].attackType2a === "electric") {%>
+                                <img class="attackTypes" src="/images/types/elektric.png"> 
+                            <%}else if (user.cards[i].attackType2a === "psychic") {%>
+                                <img class="attackTypes" src="/images/types/psy.png">
+                        <%}%> 
+                    </span>
+                    <span class="attackType">
+                        <%if (user.cards[i].attackType2b === "normal") {%>
+                                <img class="attackTypes" src="/images/types/normal.png">
+                            <%} else if (user.cards[i].attackType2b === "fighting") {%>
+                                <img class="attackTypes" src="/images/types/combat.png">
+                            <%} else if (user.cards[i].attackType2b === "steel") {%>
+                                <img class="attackTypes" src="/images/types/metal.png">
+                            <%} else if (user.cards[i].attackType2b === "fire") {%>
+                                <img class="attackTypes" src="/images/types/fire.png"> 
+                            <%} else if (user.cards[i].attackType2b === "ground") {%>
+                                <img class="attackTypes" src="/images/types/ground-type.png"> 
+                            <%} else if (user.cards[i].attackType2b === "dragon") {%>
+                                <img class="attackTypes" src="/images/types/dragon-type.png"> 
+                            <%} else if (user.cards[i].attackType2b === "water") {%>
+                                <img class="attackTypes" src="/images/types/water.png"> 
+                            <%} else if (user.cards[i].attackType2b === "grass") {%>
+                                <img class="attackTypes" src="/images/types/grass-type.png"> 
+                            <%}else if (user.cards[i].attackType2b === "electric") {%>
+                                <img class="attackTypes" src="/images/types/elektric.png"> 
+                            <%}else if (user.cards[i].attackType2b === "psychic") {%>
+                                <img class="attackTypes" src="/images/types/psy.png">
+                        <%}%> 
+                    </span>
+                    <span class="attackType">
+                        <%if (user.cards[i].attackType2c === "normal") {%>
+                                <img class="attackTypes" src="/images/types/normal.png">
+                            <%} else if (user.cards[i].attackType2c === "fighting") {%>
+                                <img class="attackTypes" src="/images/types/combat.png">
+                            <%} else if (user.cards[i].attackType2c === "steel") {%>
+                                <img class="attackTypes" src="/images/types/metal.png">
+                            <%} else if (user.cards[i].attackType2c === "fire") {%>
+                                <img class="attackTypes" src="/images/types/fire.png"> 
+                            <%} else if (user.cards[i].attackType2c === "ground") {%>
+                                <img class="attackTypes" src="/images/types/ground-type.png"> 
+                            <%} else if (user.cards[i].attackType2c === "dragon") {%>
+                                <img class="attackTypes" src="/images/types/dragon-type.png"> 
+                            <%} else if (user.cards[i].attackType2c === "water") {%>
+                                <img class="attackTypes" src="/images/types/water.png"> 
+                            <%} else if (user.cards[i].attackType2c === "grass") {%>
+                                <img class="attackTypes" src="/images/types/grass-type.png"> 
+                            <%}else if (user.cards[i].attackType2c === "electric") {%>
+                                <img class="attackTypes" src="/images/types/elektric.png"> 
+                            <%}else if (user.cards[i].attackType2c === "psychic") {%>
+                                <img class="attackTypes" src="/images/types/psy.png">
+                        <%}%> 
+                    </span>
+                    <span class="attackType">
+                        <%if (user.cards[i].attackType2d === "normal") {%>
+                                <img class="attackTypes" src="/images/types/normal.png">
+                            <%} else if (user.cards[i].attackType2d === "fighting") {%>
+                                <img class="attackTypes" src="/images/types/combat.png">    
+                            <%} else if (user.cards[i].attackType2d === "steel") {%>
+                                <img class="attackTypes" src="/images/types/metal.png"> 
+                            <%} else if (user.cards[i].attackType2d === "fire") {%>
+                                <img class="attackTypes" src="/images/types/fire.png">  
+                            <%} else if (user.cards[i].attackType2d === "ground") {%>
+                                <img class="attackTypes" src="/images/types/ground-type.png">   
+                            <%} else if (user.cards[i].attackType2d === "dragon") {%>
+                                <img class="attackTypes" src="/images/types/dragon-type.png">   
+                            <%} else if (user.cards[i].attackType2d === "water") {%>
+                                <img class="attackTypes" src="/images/types/water.png">     
+                            <%} else if (user.cards[i].attackType2d === "grass") {%>
+                                <img class="attackTypes" src="/images/types/grass-type.png">    
+                            <%}else if (user.cards[i].attackType2d === "electric") {%>
+                                <img class="attackTypes" src="/images/types/elektric.png">  
+                            <%}else if (user.cards[i].attackType2d === "psychic") {%>
+                                <img class="attackTypes" src="/images/types/psy.png">
+                        <%}%> 
+                    </span>
+            </div>
+            </div>
             <div class="attack"><%=user.cards[i].attack2%></div>
             <div class="damage"><%=user.cards[i].damage2%></div>
         </div>

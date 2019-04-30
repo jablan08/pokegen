@@ -401,9 +401,7 @@ select { width: 134px; }
 .description-input, .boxBottom { height: 33px; }
 .story-input { height: 105px; }
 
-.attackTypeOption {
-    width: 60px;
-}
+.attackTypeOption { width: 60px; }
 /* not an option yet */
 /* .check-box {
     border-radius: 3px;
@@ -541,17 +539,23 @@ img {
 
 .attack {
     font-size: 16px;
-    margin: 3px 3px -3px 5px;
+    margin: 3px 3px -3px 0;
     max-width: 210px;
+}
+
+.attackTypeParent { transform: translateY(5px); }
+
+.attackType {
+    position: relative;
+    float: left;
+    max-width: 36px;
+    max-height: 36px;
 }
 
 .attackTypes {
     position: relative;
-    height: 14px;
-    width: 14px;
-    float: left;
-    max-width: 28px;
-    max-height: 28px;
+    height: 18px;
+    width: 18px;
 }
 
 .damage {
@@ -685,10 +689,26 @@ img {
 
 .m-attack {
     letter-spacing: -.02rem;
-    margin: 1px 2px -5px 4px;
+    margin: 1px 2px -5px 0px;
     max-width: 100px;
 }
 
+.m-attackTypeParent { transform: translateY(2px); }
+
+.m-attackType {
+    position: relative;
+    float: left;
+    max-width: 18px;
+    max-height: 18px;
+}
+
+.m-attackTypes {
+    text-align: center;
+    position: relative;
+    height: 9px;
+    width: 9px;
+    float: left;
+}
 .m-damage {
     margin: 1px 4px 0 1px;
     max-width: 26px;

@@ -116,6 +116,29 @@
             </section>
 
             <section class="left-exp">
+                <div class="left-exp-float left-side-exp">Type:</div>     
+                    <select class="attackTypeOption" name="attackType2a">
+                        <option value="<%=card.attackType2a%>" select><%=card.attackType2a%></option>
+                        <%-include('../partials/types/options')%>
+                    </select>   
+                    <select class="attackTypeOption" name="attackType2b">
+                        <option value="<%=card.attackType2b%>" select><%=card.attackType2b%></option>
+                        <%-include('../partials/types/options')%>
+                    </select>              
+            </section>     
+            <section class="left-exp">
+                <div class="left-exp-float left-side-exp">Type:</div>     
+                    <select class="attackTypeOption" name="attackType2c">
+                        <option value="<%=card.attackType2c%>" select><%=card.attackType2c%></option>
+                        <%-include('../partials/types/options')%>
+                    </select>         
+                    <select class="attackTypeOption" name="attackType2d">
+                        <option value="<%=card.attackType2d%>" select><%=card.attackType2d%></option>
+                        <%-include('../partials/types/options')%>
+                    </select>      
+            </section>
+
+            <section class="left-exp">
                 <div class="left-exp-float left-side-exp">Damage 2:</div>
                 <input type="text" name="damage2" maxlength="4" value="<%=card.damage2%>" />
             </section>
