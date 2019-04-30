@@ -32,16 +32,7 @@
                 <div class="left-exp-float left-side-exp">Element:</div>     
                     <select name="type">
                         <option value="<%=card.type%>" select><%=card.type%></option>
-                        <option value="normal">Normal</option>
-                        <option value="fighting">Fighting</option>
-                        <option value="steel">Steel</option>
-                        <option value="fire">Fire</option>
-                        <option value="ground">Ground</option>
-                        <option value="dragon">Dragon</option>
-                        <option value="water">Water</option>
-                        <option value="grass">Grass</option>
-                        <option value="electric">Electric</option>
-                        <option value="psychic">Psychic</option>
+                    <%-include('../partials/types/options')%>
                     </select>             
             </section>
 
