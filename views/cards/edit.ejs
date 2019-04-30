@@ -64,6 +64,17 @@
                 <textarea type="text" name="story" class="story-input" value="<%=card.story%>"><%=card.story%></textarea>
             </section>
 
+            <section class="left-exp">
+                <div class="left-exp-float left-side-exp">Favorite:</div>             
+                    <input class="check-box" type="checkbox" name="favorite"  
+                        <% if(card.favorite === true){%>
+                            checked
+                        <%}%>               
+                    />           
+                <br/>
+                <button type="submit">Edit Card</button><button> <a href="/cards/<%=card._id%>">Go back</a> </button>                            
+            </section>
+
         </div>
 
         <div class="right"> 
@@ -72,9 +83,6 @@
                 <input type="text" name="attack" maxlength="15" value="<%=card.attack%>" />
             </section>
             
-
-
-
             <section class="left-exp">
                 <div class="left-exp-float left-side-exp">Type:</div>     
                     <select class="attackTypeOption" name="attackType1a">
@@ -158,17 +166,6 @@
             <section class="left-exp">
                 <div class="left-exp-float left-side-exp">Resistance:</div>
                 <input type="text" name="resistance" maxlength="4" value="<%=card.resistance%>" />
-            </section>
-
-            <section class="left-exp">
-                <div class="left-exp-float left-side-exp">Favorite:</div>             
-                    <input class="check-box" type="checkbox" name="favorite"  
-                        <% if(card.favorite === true){%>
-                            checked
-                        <%}%>               
-                    />           
-                <br/>
-                    <button type="submit">Edit Card</button><button> <a href="/cards/<%=card._id%>">Go back</a> </button>                            
             </section>
 
         </div>

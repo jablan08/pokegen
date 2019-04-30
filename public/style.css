@@ -42,6 +42,15 @@ h5 {
     font-family: 'Wendy One', sans-serif;
     
 }
+
+.pTitle2 {
+    font-family: 'ZCOOL KuaiLe', courier;   
+    text-align: center;   
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    z-index: 99999990009999999999999999;
+}
 /*********************** FOOTER ***********************/
 footer {
     position: fixed;
