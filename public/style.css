@@ -43,12 +43,16 @@ h5 {
     margin-block-end: 0;
 }
 
+p {
+    margin-left: 36px;
+}
+
 .pTitle {
     font-family: 'Arimo Bold', sans-serif;
     
 }
 
-#pTitle2 {
+.pTitle2 {
     font-family: 'ZCOOL KuaiLe', courier;   
     font-size: 36px;
     text-align: center;   
@@ -107,7 +111,12 @@ button:hover {
     border-radius: 10px;
 }
 
-.a-text:hover { text-decoration: none; color: rgb(0, 0, 0, .6); font-size: 36px; transition: all .2s ease-in-out;; }
+.a-text:hover { 
+    text-decoration: none; 
+    color: rgb(0, 0, 0, .6); 
+    font-size: 32px; 
+    transition: all .2s ease-in-out;
+    transform: scaleY(-10px); }
 
 .user-font {
     font-family: 'Arimo Bold', sans-serif;
@@ -115,18 +124,12 @@ button:hover {
     font-size: 26px;
     position: relative;
     z-index: 500;
-    margin: 0 10px;
+    margin: 15px;
     /* display: inline; */
     float: left;
 }
 
-.user-font:hover {  
-    transform: scale(1.5);
-	/* -webkit-transform: scale(1.1);
-	-moz-transform:    scale(1.1);
-	-o-transform:      scale(1.1);
-	-ms-transform:     scale(1.1); */
-}
+.user-font:hover { transform: scale(1.5); }
 
 /*---------------------- NAVIGATION ----------------------*/
 /*********************** CLICK CARD ***********************/
@@ -163,7 +166,7 @@ button:hover {
 .grid-main { grid-area: main; }
 .grid-pad-menu { grid-area: menu; padding: 0 20px; text-align: justify }
 .grid-right { grid-area: right; }
-.grid-pad-right { grid-area: right; padding: 0 20px; text-align: justify;}
+.grid-pad-right { grid-area: right; padding: 0 20px; text-align: center;}
 .grid-footer { grid-area: footer; }
 
 .grid-container {
@@ -315,6 +318,15 @@ button:hover {
   }
   /*---------------------- USER SHOW PAGE ----------------------*/
 /*********************** USER SHOW SCROLL ***********************/
+.grid-user-i-container {
+    width: 100%;
+    display: grid;
+    grid-template-areas:
+      'header header'
+      'menu  right';
+    grid-gap: 0;
+  }
+
 /* background-image: url("./images/decor/pixel-frame.png"); */
 #feature-frame {
     /* margin-top: -24px; */
@@ -353,9 +365,8 @@ button:hover {
 #user-box {
 
     text-align: justify;
-    padding-top: 10%;
-    margin: 10px 50px 0 50px;
-    width: auto;
+    margin: 10px 50px 20px 50px;
+    width: 50%;
 }
 
 .fit {
@@ -363,9 +374,8 @@ button:hover {
 }
 
 #userlist-box {
-    margin-top: -5px;
+    /* margin-top: -5px; */
     min-width: 100px;
-    width: 500px;
 }
 
 .name-vert-scroll {
@@ -795,9 +805,11 @@ img {
 /*---------------------- LOGIN PAGE ----------------------*/
 /*********************** AUTH PAGE ***********************/
 .grid-auth-container {
+    width: 100%;
     display: grid;
     grid-template-areas:
-      'header' 'main';
+      'header'
+      'main';
     grid-gap: 0;
   }
 
