@@ -1,8 +1,8 @@
-<%- include('../partials/header')%>
+<%- include('../partials/frames/header')%>
 <div id="new-container" class="grid-n-container">
 
     <div class="grid-header">
-        <%- include('../partials/head')%>
+        <%- include('../partials/frames/head')%>
     </div>
 
 
@@ -32,19 +32,23 @@
                 <div class="left-exp-float left-side-exp">Element:</div>     
                     <select name="type">
                         <option value="<%=card.type%>" select><%=card.type%></option>
+                        <option value="">None</option>
                         <option value="normal">Normal</option>
-                        <option value="fighting">Fighting</option>
-                        <option value="steel">Steel</option>
-                        <option value="fire">Fire</option>
-                        <option value="ground">Ground</option>
                         <option value="dragon">Dragon</option>
-                        <option value="water">Water</option>
-                        <option value="grass">Grass</option>
                         <option value="electric">Electric</option>
-                        <option value="psychic">Psychic</option>
+                        <option value="fairy">Fairy</option>
+                        <option value="fighting">Fighting</option>
+                        <option value="fire">Fire</option>
+                        <option value="ghost">Ghost</option>
+                        <option value="grass">Grass</option>
+                        <option value="ground">Ground</option> 
+                        <option value="ice">Ice</option>                     
+                        <option value="steel">Steel</option>
+                        <option value="posion">Poison</option> 
+                        <option value="psychic">Psychic</option> 
+                        <option value="water">Water</option>
                     </select>             
             </section>
-
             <section class="left-exp">
                 <div class="left-exp-float left-side-exp">Stats:</div>
                 <input type="text" name="stats" maxlength="36" value="<%=card.stats%>" />
@@ -52,9 +56,7 @@
 
             <section class="left-exp">
                 <div class="left-exp-float left-side-exp">Bottom:</div>
-                
                 <textarea  class="boxBottom" type="text" name="boxBottom" maxlength="80" value="<%=card.boxBottom%>"><%=card.boxBottom%></textarea> 
-
             </section>
 
             <section class="left-exp">
@@ -70,6 +72,36 @@
                 <input type="text" name="attack" maxlength="15" value="<%=card.attack%>" />
             </section>
             
+
+
+
+            <section class="left-exp">
+                <div class="left-exp-float left-side-exp">Type:</div>     
+                    <select class="attackTypeOption" name="attackType1a">
+                        <option value="<%=card.attackType1a%>" select><%=card.attackType1a%></option>
+                        <%-include('../partials/types/options')%>
+                    </select>   
+                    <select class="attackTypeOption" name="attackType1b">
+                        <option value="<%=card.attackType1b%>" select><%=card.attackType1b%></option>
+                        <%-include('../partials/types/options')%>
+                    </select>              
+            </section>
+            
+
+            <section class="left-exp">
+                <div class="left-exp-float left-side-exp">Type:</div>     
+                    <select class="attackTypeOption" name="attackType1c">
+                        <option value="<%=card.attackType1c%>" select><%=card.attackType1c%></option>
+                        <%-include('../partials/types/options')%>
+                    </select>         
+                    <select class="attackTypeOption" name="attackType1d">
+                        <option value="<%=card.attackType1d%>" select><%=card.attackType1d%></option>
+                        <%-include('../partials/types/options')%>
+                    </select>      
+            </section>
+
+
+
             <section class="left-exp">
                 <div class="left-exp-float left-side-exp">Damage:</div>
                 <input type="text" name="damage" maxlength="4" value="<%=card.damage%>" />
@@ -83,6 +115,29 @@
             <section class="left-exp">
                 <div class="left-exp-float left-side-exp">Attack 2:</div>
                 <input type="text" name="attack2" maxlength="15" value="<%=card.attack2%>" />
+            </section>
+
+            <section class="left-exp">
+                <div class="left-exp-float left-side-exp">Type:</div>     
+                    <select class="attackTypeOption" name="attackType2a">
+                        <option value="<%=card.attackType2a%>" select><%=card.attackType2a%></option>
+                        <%-include('../partials/types/options')%>
+                    </select>   
+                    <select class="attackTypeOption" name="attackType2b">
+                        <option value="<%=card.attackType2b%>" select><%=card.attackType2b%></option>
+                        <%-include('../partials/types/options')%>
+                    </select>              
+            </section>     
+            <section class="left-exp">
+                <div class="left-exp-float left-side-exp">Type:</div>     
+                    <select class="attackTypeOption" name="attackType2c">
+                        <option value="<%=card.attackType2c%>" select><%=card.attackType2c%></option>
+                        <%-include('../partials/types/options')%>
+                    </select>         
+                    <select class="attackTypeOption" name="attackType2d">
+                        <option value="<%=card.attackType2d%>" select><%=card.attackType2d%></option>
+                        <%-include('../partials/types/options')%>
+                    </select>      
             </section>
 
             <section class="left-exp">
@@ -133,5 +188,5 @@
     <div id="" class="grid-footer">  
     </div>
 </div>
-<%-include('../partials/footer')%>
+<%-include('../partials/frames/footer')%>
 
