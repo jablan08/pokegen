@@ -157,7 +157,7 @@ button:hover { background: transparent; }
     transition: all .2s;
     transition-delay: none; 
     transform: scale(1.5);
-    z-index: 80000000;}
+    z-index: 99999999999999999999999999999999999999999999999999999989;}
 /*---------------------- ZOOM HOVER ----------------------*/
 /*********************** PARENT GRID ***********************/
 .grid-header { grid-area: header; padding: 0 0 0 20px; }
@@ -193,6 +193,13 @@ button:hover { background: transparent; }
     z-index: 0;
     overflow: auto;
     height: 65%;
+}
+
+.modal-button-box {
+    transform: scale(1.5);
+    position: relative;
+    text-align: center;
+    z-index: 9999999999999999999999999999999999999999999999999999999;
 }
 
 .box{
@@ -284,7 +291,7 @@ button:hover { background: transparent; }
 /*---------------------- NEW PAGE ----------------------*/
 /*********************** FOOTER SCROLL MENU ***********************/
 #menu {
-    margin-top: -60px;
+    margin-top: -120px;
     background-color: transparent;
     width: auto;
     height: 230px;
