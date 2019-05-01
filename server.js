@@ -2,7 +2,7 @@ const express        = require("express");
 const app            = express();
 const session        = require("express-session");
 const logger         = require("morgan");
-const PORT           = process.env.PORT || 8070
+const PORT           = process.env.PORT || 8070;
 const methodOverride = require("method-override");
 require("dotenv").config()
 require("./db/db")
@@ -24,16 +24,10 @@ app.use(session({
     saveUninitialized: false
 }))  
 
-
-app.get('/', (req, res) => {
-    res.render('minisample.ejs')
-})
-
-
 app.use("/users", userController);
 app.use("/cards", cardsController);
 app.use("/auth", authController);
-app.use("/home", homeController);
+app.use("/", homeController);
 
 
 

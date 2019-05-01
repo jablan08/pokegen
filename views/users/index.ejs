@@ -20,8 +20,7 @@
 
                     <div id="user-box">
 
-            <%- include('../partials/userlist')%><%- include('../partials/userlist')%><%- include('../partials/userlist')%><%- include('../partials/userlist')%>
-            <%- include('../partials/userlist')%><%- include('../partials/userlist')%><%- include('../partials/userlist')%><%- include('../partials/userlist')%>
+            <%- include('../partials/userlist')%>
                     </div>
         </div>
                 
@@ -29,7 +28,9 @@
     </div>
 
     <div class="grid-pad-right">
+        <%if (users.length > 0){%>
         <%-include('../partials/randomCard')%>
+        <%}%>
     </div>
 
 
