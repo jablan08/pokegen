@@ -14,6 +14,7 @@ PokéGen was created for the love of Pokémon, Pokémon cards, and the love of c
 
 ### Wireframes
 ![alt text](https://raw.githubusercontent.com/jablan08/pokegen/readme/public/images/readMe/wire-frame.png)
+View our [wireframes](https://sketch.cloud/s/zqLA5) here!
 The planning of what content was displayed on each page and where it was displayed on the page was a work in progress through this whole project. We wanted the user to always be influenced to make an card or just see other cards that were created. We also wanted to make sure all cards get to be seen at least once, so we created a different card to be displayed on the homepage and the user list page each item the page is refreshed. 
 
 
