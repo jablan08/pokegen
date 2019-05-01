@@ -18,7 +18,7 @@ The planning of what content was displayed on each page and where it was display
 
 
 ## PokéGenerating a card
-![alt text](https://raw.githubusercontent.com/jablan08/pokegen/master/public/images/readMe/makecard.png)![alt text](https://raw.githubusercontent.com/jablan08/pokegen/master/public/images/readMe/samplemadecard.png)
+![alt text](https://raw.githubusercontent.com/jablan08/pokegen/master/public/images/readMe/makecard.png)![alt text](https://raw.githubusercontent.com/jablan08/pokegen/master/public/images/Team7.png)
 
 In order to create a PokéGen card you have to log in or register, but only a username and password is needed. Once you register you will asked to create your first card! 
 
