@@ -38,7 +38,7 @@ router.post("/login", async (req,res)=>{
             if (foundUser.validPassword(req.body.password)) {
                 req.session.logged = true;
                 req.session.userDbId = foundUser._id;
-                res.redirect('/home');
+                res.redirect('/');
             } else {
                 req.session.invalidMessage = "Username or password is incorrect";
                 req.session.verifyMessage = "";

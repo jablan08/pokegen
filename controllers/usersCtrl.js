@@ -92,7 +92,7 @@ router.delete('/:id',logUser, (req, res) => {
                     $in: deletedUser.cards
                 }
             },(err, data) =>{
-                res.redirect('/users')
+                res.redirect('/')
             }
             )
         }
