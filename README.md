@@ -8,16 +8,9 @@ PokéGen was created for the love of Pokémon, Pokémon cards, and the love of c
 
 
 ## Planning & Wireframes
-### When planning PokéGen the following user stories were considered:
-* User should be able to see all cards created whether logged in or not.
-* User should be able to log in and register if they don't have an account.
-* User should be able to create a card after they logged in/registered.
-* User should be able to see all the cards they have created.
-* User should be able to favorite cards and have them displayed in a special way.
-* User should be able to see other users collection of cards.
-* User should be able to edit their card and change all values only if it is their card.
-* User should be able to click a card and it brings them to the card's show page.
-* User should be able to log out. 
+
+### When planning PokéGen the follwing [user stories](https://raw.githubusercontent.com/jablan08/pokegen/master/public/images/readMe/user_stories.png) were considered.
+
 
 ### Wireframes
 ![alt text](https://raw.githubusercontent.com/jablan08/pokegen/readme/public/images/readMe/wire-frame.png)
