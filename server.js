@@ -24,12 +24,6 @@ app.use(session({
     saveUninitialized: false
 }))  
 
-
-app.get('/', (req, res) => {
-    res.render('minisample.ejs')
-})
-
-
 app.use("/users", userController);
 app.use("/cards", cardsController);
 app.use("/auth", authController);
