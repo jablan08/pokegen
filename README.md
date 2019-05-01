@@ -22,7 +22,7 @@ The planning of what content was displayed on each page and where it was display
 
 In order to create a PokéGen card you have to log in or register, but only a username and password is needed. Once you register you will asked to create your first card! 
 
-Each card is a bunch of <div>'s stacked on top of each other in other to get the full design. Each input has a maximum value for the position of the images and text to be rendered on the card, but we gave enough space for good humor.
+Each card is a div's stacked on top of each other in other to get the full design. Each input has a maximum value for the position of the images and text to be rendered on the card, but we gave enough space for good humor.
 
 
 
