@@ -243,6 +243,7 @@ button:hover { background: transparent; }
 .show-card-delete-button { display: inline-block; }
 .show-card-edit-button { display: inline; }
 .margin-auto{ width: 315px; }
+.pad { padding-top: 46px}
 
 .story {
     margin: 0 auto;
