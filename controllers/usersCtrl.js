@@ -32,7 +32,6 @@ router.get('/', async (req, res) => {
     }
 })   
 
-
 // SHOW
 router.get('/:id', async (req, res) => {
     try {
