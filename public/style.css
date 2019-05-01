@@ -1,3 +1,4 @@
+/*********************** MAINFRAME ***********************/
 html {
     background: url('images/decor/background-pokegen.png') no-repeat center center fixed;
     background-size: cover;
@@ -56,12 +57,7 @@ p { margin-left: 36px; }
     bottom: 0;
     z-index: 99999990009999999999999999;
 }
-
-header {
-    /* position: stick */
-}
-
-
+/*---------------------- MAINFRAME ----------------------*/
 /*********************** FOOTER ***********************/
 footer {
     position: fixed;
@@ -129,7 +125,6 @@ button:hover { background: transparent; }
 }
 
 .user-font:hover { transform: scale(1.5); }
-
 /*---------------------- NAVIGATION ----------------------*/
 /*********************** CLICK CARD ***********************/
 .click-down:active {
@@ -138,6 +133,7 @@ button:hover { background: transparent; }
     box-shadow: 0 4px 5px 0 #000;
     color: #000;
 }
+
 .m-click-down:active {
     transition-delay: none; 
     box-shadow: 0 1px 2px 0 #000;
@@ -151,7 +147,6 @@ button:hover { background: transparent; }
     transition-delay: .5s;
     transform: scale(1.5);
     z-index: 900000000;
-    /* color: #000; */
 }
 .zoomer:hover { 
     transition: all .2s;
@@ -232,7 +227,6 @@ button:hover { background: transparent; }
 #card-index {
     font-size: 40px;
     font-family: 'ZCOOL KuaiLe', courier; 
-    /* text-shadow: 0 7px 10px 0 black; */
 }
 
 #sky {
@@ -247,7 +241,6 @@ button:hover { background: transparent; }
 .show-card-delete-button { display: inline-block; }
 .show-card-edit-button { display: inline; }
 .margin-auto{ width: 315px; }
-/* #show-card-footer {} */
 
 .story {
     margin: 0 auto;
@@ -261,8 +254,6 @@ button:hover { background: transparent; }
     font-size: 16px;
     text-align: left;
 }
-
-
 /*---------------------- CARD SHOW PAGE ----------------------*/
 /*********************** NEW PAGE ***********************/
 .grid-n-container {
@@ -332,9 +323,7 @@ button:hover { background: transparent; }
     grid-gap: 0;
   }
 
-/* background-image: url("./images/decor/pixel-frame.png"); */
 #feature-frame {
-    /* margin-top: -24px; */
     position: relative;
     z-index: 500;
     height: 510px;
@@ -342,8 +331,6 @@ button:hover { background: transparent; }
     background-image: url("./images/decor/pixel-frame.png");
     color: transparent;
 }
-
-/* #feature-card { margin-top: -24px } */
 
 .user-vert-scroll {
     margin: 32px 0 0 32px;
@@ -373,10 +360,7 @@ button:hover { background: transparent; }
 }
 
 .fit { position: static; }
-
-#userlist-box {
-    min-width: 100px;
-}
+#userlist-box { min-width: 100px; }
 
 .name-vert-scroll {
     display: block;
@@ -425,7 +409,6 @@ select { width: 134px; }
 
 .description-input, .boxBottom { height: 33px; }
 .story-input { height: 105px; }
-
 .attackTypeOption { width: 60px; }
 /* not an option yet */
 /* .check-box {
@@ -447,15 +430,13 @@ select { width: 134px; }
     float: left;
     position: relative;
     white-space: nowrap;
-    /* word-wrap: wrap none; */
 }
+
 .attack, .m-attack {
     width: auto;
     float: left;
     font-weight: bold;
 }
-
-
 
 .damage, .m-damage {
     float: right;
@@ -549,13 +530,8 @@ img {
     border-top: 1px solid black;
 }
 
-.attack-box {
-    margin: 30px 5px 0 5px;
-}
-
-.attack-box2 {
-    margin: 5px 5px 0 5px;
-}
+.attack-box { margin: 30px 5px 0 5px; }
+.attack-box2 { margin: 5px 5px 0 5px; }
 
 .create-button {
     text-align: center;
@@ -593,24 +569,23 @@ img {
     margin: 8px 4px 0 4px;
     position: relative;
     width: 270;
-    height: 42px; /**/
+    height: 42px;
     font-size: 12px;
     padding: 0 8px;
-    /* word-wrap: break-word; */
 }
 
 #weak-resist-box {
     position: absolute;
     bottom: 0;
     width: 270px;
-    height: 58px; /**/
+    height: 58px; 
     margin: 20px 5px 4px 5px;
     border-top: 1px solid black;
     font-size: 12px;
 }
 
 #weakness, #resistance {
-    line-height: 8px; /**/
+    line-height: 8px; 
     top: 0;
     width: 110px;
 }
@@ -624,7 +599,7 @@ img {
     float: right;
     margin: 2px 5px 0 0;
 }
-/**/
+
 #bottom-box {
     border: 2px gold solid;
     margin: 32px auto 0 auto;
@@ -704,13 +679,8 @@ img {
     border-top: 1px solid black;
 }
 
-.m-attack-box{
-    margin: 15px 4px 0 4px;
-}
-
-.m-attack-box2{
-    margin: 0 4px 0 4px;
-}
+.m-attack-box { margin: 15px 4px 0 4px; }
+.m-attack-box2 { margin: 0 4px 0 4px; }
 
 .m-attack {
     letter-spacing: -.02rem;
@@ -738,9 +708,7 @@ img {
     margin: 1px 4px 0 1px;
     max-width: 26px;
 }
-/* .description {
-    margin: 8px 4px 0 4px;
-} */
+
 .m-description, .m-description2 {
     line-height: 7px;
     letter-spacing: -.04rem;
@@ -771,9 +739,7 @@ img {
     line-height: 4px;
 }
 
-#m-resistance, #m-weakness {
-    width: 55px;
-}
+#m-resistance, #m-weakness { width: 55px; }
 
 #m-weakness{
     float: left;
@@ -786,7 +752,6 @@ img {
 }
 
 #m-bottom-box {
-
     border: 1px gold solid;
     margin: 16px auto 0 auto;
     height: 11px;
@@ -794,8 +759,6 @@ img {
     font-size: 5px;
 }
 /*---------------------- MINI CARD ----------------------*/
-
-/*---------------------- LOGIN PAGE ----------------------*/
 /*********************** AUTH PAGE ***********************/
 .grid-auth-container {
     width: 100%;
@@ -806,23 +769,16 @@ img {
     grid-gap: 0;
   }
 
-  .auth-container {
-      text-align: center;
-  }
+.auth-container { text-align: center; }
+.auth { margin: 40px 0; }
+/*---------------------- LOGIN PAGE ----------------------*/
+/*********************** USER INFO ***********************/
+.edit-user{ text-align: center; }
+#update { margin-left: 65px; }
+/*---------------------- LOGIN PAGE ----------------------*/
+/*********************** MODAL CSS ***********************/
 
-  /* .login-form { margin-left: 55px; } */
-
-  /* .register-form { margin-left: 75px; } */
-
-  .auth {
-      margin: 40px 0;
-  }
-  /*---------------------- LOGIN PAGE ----------------------*/
-
-
-/*---------------------- MODAL CSS ----------------------*/
-
-  .modal-window {
+.modal-window {
     position: fixed;
     background-color: rgba(200, 200, 200, 0.75);
     top: 0;
@@ -835,14 +791,14 @@ img {
     -webkit-transition: all 0.1s;
     -moz-transition: all 0.1s;
     transition: all 0.1s;
-  }
-  
-  .modal-window:target {
+}
+
+.modal-window:target {
     opacity: 1;
     pointer-events: auto;
-  }
-  
-  .modal-window>div {
+}
+
+.modal-window>div {
     width: 400px;
     position: relative;
     margin: 10% auto;
@@ -853,13 +809,11 @@ img {
     border: rgb(108, 148, 239) 4px solid;
     border-radius: 5px;
     display: none;
-  }
-  
-  .modal-window header {
-    font-weight: bold;
-  }
-  
-  .modal-close {
+}
+
+.modal-window header { font-weight: bold; }
+
+.modal-close {
     color: #aaa;
     line-height: 50px;
     font-size: 80%;
@@ -869,23 +823,13 @@ img {
     top: 0;
     width: 70px;
     text-decoration: none;
-  }
-  
-  .modal-close:hover {
-    color: #000;
-  }
-  
-  .modal-window h1 {
+}
+
+.modal-close:hover { color: #000; }
+
+.modal-window h1 {
     font-size: 150%;
     margin: 0 0 15px;
-  }
+}
+/*---------------------- MODAL CSS ----------------------*/
 
-  /*---------------------- MODAL CSS ----------------------*/
-
-  .edit-user{
-      text-align: center;  
-  }
-
-  #update{
-      margin-left: 65px;
-  }
