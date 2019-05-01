@@ -8,7 +8,7 @@ const logUser = (req, res, next) => {
         
         next()
     } else {
-        req.session.verifyMessage = "Please login or register to make a card."
+        req.session.verifyMessage = "Please login or register to continue."
         req.session.invalidMessage = "";
         res.redirect("/auth/login");
     }
@@ -124,7 +124,7 @@ router.delete("/:id", logUser, async (req,res)=>{
         }
         foundUser.cards.remove(req.params.id);
         await foundUser.save();
-        res.redirect("/cards")
+        res.redirect(`/users/${req.session.userDbId}`)
     } catch(err) {
         res.send(err)
     }
