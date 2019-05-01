@@ -13,11 +13,12 @@
                 <br>
                 Make as many cards as you like to collect them all, pick your favorites, and share with your friends to see who has the best deck. Will your creation be the best there ever was?!
                 <br>
-                <%if (logged=== undefined){%>
-                    <br>
-                    In order to create cards, please <button><a href="/auth/login">Login</a> </button> or <button><a href="/auth/login">Register.</a></button> <br>
-                <%}%>
             </p>
+            <br>
+             <%if (logged=== undefined){%>
+                    In order to create cards, please <button><a href="/auth/login">Login</a> </button> or <button><a href="/auth/login">Register.</a></button> 
+                <%}%>
+            <br>
             <button class="modal-button">
                 <a href="#open-modal">Where to start</a>
             </button>
@@ -35,7 +36,7 @@
 </div>
 
     <div id="feature-card" class="grid-main">
-        <%if (cards.length > 0){%>
+        <%if (cards.length > 0){%> 
         <%-include('../partials/randomCard')%>
         <%}%>
     </div>
