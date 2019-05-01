@@ -25,8 +25,13 @@ The planning of what content was displayed on each page and where it was display
 
 
 ## PokéGenerating a card
-![alt text](https://raw.githubusercontent.com/jablan08/pokegen/readme/public/images/readMe/generator.png)
+![alt text](https://raw.githubusercontent.com/jablan08/pokegen/master/public/images/readMe/makecard.png)![alt text](https://raw.githubusercontent.com/jablan08/pokegen/master/public/images/readMe/samplemadecard.png)
+
 In order to create a PokéGen card you have to log in or register, but only a username and password is needed. Once you register you will asked to create your first card! 
+
+Each card is a bunch of <div>'s stacked on top of each other in other to get the full design. Each input has a maximum value for the position of the images and text to be rendered on the card, but we gave enough space for good humor.
+
+
 
 ## Future development
 * User should be able to upload their own images, and not always have to use the direct link URL
@@ -36,11 +41,8 @@ In order to create a PokéGen card you have to log in or register, but only a us
 
 
 ## Unsolved problems
-
-
-### 
-
-
+* On the userlist, when hovering over the last user the names become stacked on top of each other.
+* As said before, page layout is a constant work in progress, but more of the positioning of all the content on each page.
 
 
 
@@ -57,8 +59,3 @@ In order to create a PokéGen card you have to log in or register, but only a us
 * EJS
 * CSS3
 * Node.js
-
-
-A README.md file with explanations of the technologies used, what problem your app solves/why you made it, the approach taken, installation instructions/requirements, contributor information, unsolved problems, forthcoming features, etc. The README.md should also include
-(links to) Wireframes of your app, hosted somewhere & linked in your readme
-(a link to) User stories you created
