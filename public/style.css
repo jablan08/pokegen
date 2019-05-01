@@ -157,7 +157,7 @@ button:hover { background: transparent; }
     z-index: 99999999999999999999999999999999999999999999999999999989;}
 /*---------------------- ZOOM HOVER ----------------------*/
 /*********************** PARENT GRID ***********************/
-.grid-header { grid-area: header; padding: 0 0 0 20px; }
+.grid-header { grid-area: header; padding: 0 20px; }
 .grid-menu { grid-area: menu; }
 .grid-main { grid-area: main; }
 .grid-pad-menu { grid-area: menu; padding: 0 20px; text-align: justify }
