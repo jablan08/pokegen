@@ -39,7 +39,7 @@ Each card is a div's stacked on top of each other in other to get the full desig
 
 
 
-## [Generate](https://pokegen.herokuapp.com/) your cards now!
+## [Generate](https://pokegen.herokuapp.com/) your cards at PokéGen now!
 
 
 
