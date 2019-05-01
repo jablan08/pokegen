@@ -27,7 +27,7 @@ Each card is a div's stacked on top of each other in other to get the full desig
 
 
 ## Future development
-* User should be able to upload their own images, and not always have to use the direct link URL
+* User should be able to upload their own images, and not always have to use the direct link URL.
 * Implement a like system and those with the highest likes will have a special display.
 * Have more user to user interaction, possibly like a trading system?
 
@@ -36,7 +36,7 @@ Each card is a div's stacked on top of each other in other to get the full desig
 ## Unsolved problems
 * On the user list, when hovering over the last user the names become stacked on top of each other.
 * As said before, page layout is a constant work in progress, but more of the positioning of all the content on each page.
-
+* Scalability.
 
 
 ## [Generate](https://pokegen.herokuapp.com/) your cards at PokéGen now!
@@ -46,9 +46,13 @@ Each card is a div's stacked on top of each other in other to get the full desig
 ## Technologies used:
 * Javascript
 * Vanilla JS
+* HTML
+* CSS3
 * Express
 * Mongoose 
 * Mongo
 * EJS
-* CSS3
 * Node.js
+* Sketch
+* Photoshop
+
