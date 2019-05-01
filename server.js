@@ -27,7 +27,7 @@ app.use(session({
 app.use("/users", userController);
 app.use("/cards", cardsController);
 app.use("/auth", authController);
-app.use("/home", homeController);
+app.use("/", homeController);
 
 
 
