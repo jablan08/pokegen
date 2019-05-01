@@ -278,9 +278,14 @@ button:hover { background: transparent; }
     font-size: 15px;
 }
 
-#sample-card { padding-left: 60px; }
-.new-card-title { margin-bottom: 0px; }
-.new-card-note { font-size: 12px; }
+#sample-card { 
+    padding: 30px 0 0 60px; 
+}
+.new-card-title { 
+}
+.new-card-note { 
+    font-size: 12px; 
+}
 /*---------------------- NEW PAGE ----------------------*/
 /*********************** FOOTER SCROLL MENU ***********************/
 #menu {
