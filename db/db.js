@@ -1,6 +1,7 @@
 const mongoose = require("mongoose");
 
-const connectionString = process.env.MONGO_URI;
+const connectionString = "mongodb://localhost/pokegen";
+// const connectionString = process.env.MONGO_URI;
 
 mongoose.connect(connectionString, {
     useCreateIndex: true,

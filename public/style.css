@@ -490,7 +490,7 @@ select { width: 134px; }
     text-align: right;
 }
 
-.types {
+.type > img {
     width: 28px;
     height: 28px;
     margin-top: 2px;
@@ -560,7 +560,7 @@ img {
     max-height: 36px;
 }
 
-.attackTypes {
+.attackTypes > img {
     position: relative;
     height: 18px;
     width: 18px;
@@ -646,7 +646,7 @@ img {
     height: 100%;
 }
 
-.m-types {
+.m-types > img {
     width: 14px;
     height: 14px;
     margin-top: 1px;
