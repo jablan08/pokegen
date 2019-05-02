@@ -128,13 +128,17 @@ img {
 
 .attackTypeParent { 
     transform: translateY(5px); 
+    position: relative;
+    float: left;
+    max-width: 42px;
+    max-height: 42px;
 }
 
 .attackType {
     position: relative;
     float: left;
-    max-width: 36px;
-    max-height: 36px;
+    max-width: 42px;
+    max-height: 42px;
 }
 
 .attackTypes > img {
