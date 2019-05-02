@@ -98,7 +98,7 @@
 
         <div class="m-attack-box">
             <div class="m-attackTypeParent">
-            <div>
+            
                     <span class="m-attackTypes">
                         <%if (user.cards[i].attackType1a === "normal") {%>
                                 <img src="/images/types/normal.png">
@@ -257,7 +257,7 @@
                                 <img src="/images/types/flying-type.png">                                                                                                                                       
                         <%}%> 
                     </span>
-            </div>
+            
             </div>
             
             <div class="m-attack"><%=user.cards[i].attack%></div>
@@ -269,8 +269,8 @@
 
         <div class="m-attack-box2">
             <div class="m-attackTypeParent">
-            <div class="m-attackTypes">
-                    <span>
+            <div>
+                    <span class="m-attackTypes">
                         <%if (user.cards[i].attackType2a === "normal") {%>
                                 <img src="/images/types/normal.png">
                             <%} else if (user.cards[i].attackType2a === "fighting") {%>

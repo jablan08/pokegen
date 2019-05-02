@@ -94,11 +94,13 @@
             </div>
         </div>
 
-<div id="yellow-bar"><div class="stats"><%=user.cards[i].stats%></div></div>
+        <div id="yellow-bar">
+            <div class="stats"><%=user.cards[i].stats%></div>
+        </div>
 
         <div class="attack-box">
             <div class="attackTypeParent">
-            <div>
+            
                     <span class="attackTypes">
                         <%if (user.cards[i].attackType1a === "normal") {%>
                                 <img src="/images/types/normal.png">
@@ -255,7 +257,7 @@
                                 <img src="/images/types/flying-type.png">                                                                                                                                       
                         <%}%> 
                     </span>
-            </div>
+            
             </div>
             
             <div class="attack"><%=user.cards[i].attack%></div>
@@ -265,9 +267,9 @@
                 <div class="description"><%=user.cards[i].description%></div>
             </div>
 
-        <div class="attack-box2">
+    <div class="attack-box2">
         <div class="attackTypeParent">
-            <div>
+            
                     <span class="attackTypes">
                         <%if (user.cards[i].attackType2a === "normal") {%>
                                 <img src="/images/types/normal.png">
@@ -424,7 +426,7 @@
                                 <img src="/images/types/flying-type.png"> 
                         <%}%> 
                     </span>
-            </div>
+            
             </div>
             <div class="attack"><%=user.cards[i].attack2%></div>
             <div class="damage"><%=user.cards[i].damage2%></div>

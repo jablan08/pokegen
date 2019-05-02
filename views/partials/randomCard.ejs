@@ -96,7 +96,7 @@
 
         <div class="attack-box">
             <div class="attackTypeParent">
-            <div>
+            
                     <span class="attackTypes">
                         <%if (randomCard.attackType1a === "normal") {%>
                                 <img src="/images/types/normal.png">
@@ -255,7 +255,7 @@
                                 <img src="/images/types/flying-type.png">                                                                                                                                       
                         <%}%> 
                     </span>
-            </div>
+            
             </div>
             
             <div class="attack"><%=randomCard.attack%></div>
@@ -267,8 +267,8 @@
 
         <div class="attack-box2">
             <div class="attackTypeParent">
-            <div>
-                    <span class="attackType">
+            
+                    <span class="attackTypes">
                         <%if (randomCard.attackType2a === "normal") {%>
                                 <img src="/images/types/normal.png">
                             <%} else if (randomCard.attackType2a === "fighting") {%>
@@ -424,7 +424,7 @@
                                 <img src="/images/types/flying-type.png"> 
                         <%}%> 
                     </span>
-            </div>
+            
             </div>
             <div class="attack"><%=randomCard.attack2%></div>
             <div class="damage"><%=randomCard.damage2%></div>

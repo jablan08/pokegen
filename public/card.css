@@ -134,13 +134,6 @@ img {
     max-height: 42px;
 }
 
-.attackType {
-    position: relative;
-    float: left;
-    max-width: 42px;
-    max-height: 42px;
-}
-
 .attackTypes > img {
     position: relative;
     height: 18px;
@@ -282,9 +275,8 @@ img {
     max-width: 100px;
 }
 
-.m-attackTypeParent { transform: translateY(2px); }
-
-.m-attackType {
+.m-attackTypeParent { 
+    transform: translateY(3px); 
     position: relative;
     float: left;
     max-width: 18px;
