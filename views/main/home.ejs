@@ -43,7 +43,9 @@
     <div id="feature-card" class="grid-main pad">
         <%if (cards.length > 0){%> 
         <%-include('../partials/randomCard')%>
-        <%}%>
+        <%} else {%>
+        <%-include('../parials/samplecard')%>
+        <% } %>
     </div>
 
     <div id="home-users" class="grid-right">   
