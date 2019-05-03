@@ -144,9 +144,8 @@ button:hover {
 /*********************** ZOOM HOVER ***********************/
 .zoom, .zoomer { 
     transition: all .2s ease-in-out; 
-    /* transition-timing-function: ease-in-out; */
-    
 }
+
 .zoom:hover {   
     transform: scale(1.5);
     transition-delay: .5s;
