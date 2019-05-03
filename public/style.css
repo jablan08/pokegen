@@ -16,15 +16,15 @@ h1{
     z-index: 99999999999999999999999;
 }
 
-h3 {
-    position: absolute;
+.tag {
+    position: relative;
     font-size: 24px;
     font-family: 'ZCOOL KuaiLe', courier;    
     display: inline;
-    margin-block-start: 0;
+    /* margin-block-start: 0;
     margin-block-end: 0;
     margin-inline-start: 0;
-    margin-inline-end: 0;
+    margin-inline-end: 0; */
     font-weight: bold;
     z-index: 99999999999999999999999;
 }
@@ -86,7 +86,7 @@ nav {
     /* float: right; */
     width: 100%;
     z-index: 99999999999999999999999;
-    margin: 0 15px 20px 0;
+    /* margin: 0 15px 20px 0; */
 }
 
 button { 
@@ -101,8 +101,9 @@ button:hover {
 
 .nav-btn > button {
     margin-left: 5px;
+    margin-bottom: -5px;
     font-size: 18px;
-    border-radius: 10px;
+    border-radius: 8px;
     float: right;
 }
 
@@ -141,8 +142,9 @@ button:hover {
 }
 /*---------------------- CLICK CARD ----------------------*/
 /*********************** ZOOM HOVER ***********************/
-.zoom:hover, .zoomer:hover { 
-    transition: all .2s; 
+.zoom, .zoomer { 
+    transition: all .2s ease-in-out; 
+    /* transition-timing-function: ease-in-out; */
     
 }
 .zoom:hover {   
@@ -158,7 +160,7 @@ button:hover {
 /*********************** PARENT GRID ***********************/
 .grid-header { 
     grid-area: header; 
-    padding: 10px 5% 0 5%
+    padding: 10px 2% 0 2%
 }
 .grid-menu { 
     grid-area: menu; 
@@ -212,7 +214,7 @@ button:hover {
 .box-spacer {
     border: transparent;
     width: 100px;
-    min-height: 300px;
+    min-height: 120px;
 }
 /*---------------------- HOME PAGE ----------------------*/
 /*********************** CARDS INDEX PAGE ***********************/
@@ -273,6 +275,7 @@ button:hover {
     margin: -150px 0 0 0;
     /* background-color: transparent; */
     width: 100%;
+    /* z-index: -5; */
     /* height: 230px; */
     /* padding: 55px 0; */
     overflow-x: scroll;
