@@ -44,11 +44,13 @@ h5 {
     margin-block-end: 0;
 }
 
-p { margin-left: 36px; }
+p { margin-left: 10%; }
 
-.pTitle { font-family: 'Arimo Bold', sans-serif; }
+.p-title { 
+    margin-top: 0;
+    font-family: 'Arimo Bold', sans-serif; }
 
-.pTitle2 {
+.p-title2 {
     font-family: 'ZCOOL KuaiLe', courier;   
     font-size: 36px;
     text-align: center;   
@@ -157,25 +159,39 @@ button:hover { background: transparent; }
     z-index: 99999999999999999999999999999999999999999999999999999989;}
 /*---------------------- ZOOM HOVER ----------------------*/
 /*********************** PARENT GRID ***********************/
-.grid-header { grid-area: header; padding: 0 20px; }
-.grid-menu { grid-area: menu; }
-.grid-main { grid-area: main; }
-.grid-pad-menu { grid-area: menu; padding: 0 20px; text-align: justify }
-.grid-right { grid-area: right; }
-.grid-pad-right { grid-area: right; padding: 0 20px; text-align: center;}
-.grid-footer { grid-area: footer; }
-
+.grid-header { 
+    grid-area: header; 
+}
+.grid-menu { 
+    grid-area: menu; 
+    padding: 10% 0 0 10%;
+}
+.grid-main { 
+    grid-area: main; 
+    padding-top: 10%;
+}
+/* .grid-right { grid-area: right; } */
+/* .grid-footer { grid-area: footer; } */
+.grid-main-container {
+    width: 100%;
+    display: grid;
+  grid-template-areas:
+    'header header'
+    'main main';
+    /* 'footer footer footer footer'; */
+     grid-gap: 0;
+}
 .grid-container {
     width: 100%;
     display: grid;
   grid-template-areas:
-    'header header header header header header'
-    'menu menu main main right right'
-    'footer footer footer footer footer footer';
+    'header header'
+    'menu main';
+    /* 'footer footer footer footer'; */
      grid-gap: 0;
 }
 
-.grid-filler { background-size: cover; background-image: url('./images/decor/sky.png') }
+/* .grid-filler { background-size: cover; background-image: url('./images/decor/sky.png') } */
 /*---------------------- PARENT GRID ----------------------*/
 /*********************** HOME PAGE ***********************/
 #home-users {
@@ -193,28 +209,21 @@ button:hover { background: transparent; }
 }
 
 .modal-button-box {
-    transform: scale(1.5);
+    /* transform: scale(1.2); */
     position: relative;
-    text-align: center;
+    display: inline;
+    /* text-align: center; */
+    border-radius: 100px;
     z-index: 9999999999999999999999999999999999999999999999999999999;
 }
 
-.box{
+.box-spacer {
     border: transparent;
     width: 100px;
     min-height: 300px;
 }
 /*---------------------- HOME PAGE ----------------------*/
 /*********************** CARDS INDEX PAGE ***********************/
-.grid-cards-container {
-  display: grid;
-  grid-template-areas:
-    'header'
-    'main';
-    /* 'footer'; */
-  grid-gap: 0;
-}
-
 .vert-scroll {
     position: fixed;
     bottom: 0;
@@ -258,16 +267,6 @@ button:hover { background: transparent; }
 }
 /*---------------------- CARD SHOW PAGE ----------------------*/
 /*********************** NEW PAGE ***********************/
-.grid-n-container {
-    width: 100%;
-    display: grid;
-  grid-template-areas:
-    'header header header'
-    'menu main right'
-    'footer footer footer';
-    grid-gap: 0;
-}
-
 #new-container {
     position: relative;
     z-index: 5;
@@ -281,17 +280,13 @@ button:hover { background: transparent; }
 #sample-card { 
     padding: 46px 0 0 60px; 
 }
-.new-card-title { 
-}
-.new-card-note { 
-    font-size: 12px; 
-}
 /*---------------------- NEW PAGE ----------------------*/
 /*********************** FOOTER SCROLL MENU ***********************/
 #menu {
-    margin-top: -120px;
+    bottom: 0;
+    margin: -200px 0 0 0;
     background-color: transparent;
-    width: auto;
+    width: 100%;
     height: 230px;
     padding: 55px 0;
     overflow-x: scroll;
@@ -303,15 +298,6 @@ button:hover { background: transparent; }
 }
 /*---------------------- FOOTER SCROLL MENU ----------------------*/
 /*********************** USER SHOW PAGE ***********************/
-.grid-user-container {
-    width: 100%;
-    display: grid;
-    grid-template-areas:
-      'header header header'
-      'menu main right';
-    grid-gap: 0;
-  }
-
   #frame-banner {
       height: 72px;
       width: 400px;
@@ -324,16 +310,8 @@ button:hover { background: transparent; }
   }
   /*---------------------- USER SHOW PAGE ----------------------*/
 /*********************** USER SHOW SCROLL ***********************/
-.grid-user-i-container {
-    width: 100%;
-    display: grid;
-    grid-template-areas:
-      'header header'
-      'menu  right';
-    grid-gap: 0;
-  }
-
 #feature-frame {
+    margin-top: -5%;
     position: relative;
     z-index: 500;
     height: 510px;
@@ -341,7 +319,6 @@ button:hover { background: transparent; }
     background-image: url("./images/decor/pixel-frame.png");
     color: transparent;
 }
-
 .user-vert-scroll {
     margin: 32px 0 0 32px;
     position: absolute;
@@ -350,16 +327,6 @@ button:hover { background: transparent; }
     padding: 10px 10px 10px 10px;
     width: 316px;
     height: 426px;
-}
-
-#user-menu {  
-    position: relative;
-    margin-top: -200px;
-    background-color: transparent;
-    width: auto;
-    height: 230px;
-    padding: 55px 0;
-    overflow-x: scroll;
 }
 /*---------------------- USER SHOW SCROLL MENU ----------------------*/
 /*********************** USER INDEX ***********************/
@@ -382,21 +349,15 @@ button:hover { background: transparent; }
 
 /*---------------------- USER INDEX ----------------------*/
 /*********************** INPUT FORM ***********************/
-.left-margin { margin-left: auto; }
-.left-exp { width: 260px; }
-
-.left-side-exp{
-    width: 80px;
-    margin: 1px 0;
-}
-
 .left, .right {
     width: 230px;
     height: 100%;
-    float: left;
+    float: right;
 }
 
-.left-exp-float {
+.input-box > section > div {
+    width: 80px;
+    margin: 1px 0;
     padding: 4px 0 0 0;
     position: relative;
     float: left;
@@ -420,31 +381,17 @@ select { width: 134px; }
 .description-input, .boxBottom { height: 33px; }
 .story-input { height: 105px; }
 .attackTypeOption { width: 63px; }
-/* not an option yet */
-/* .check-box {
-    border-radius: 3px;
-    border: lightblue 4px solid;
-} */
+
 /*---------------------- INPUT FORM ----------------------*/
 /*********************** AUTH PAGE ***********************/
-.grid-auth-container {
-    width: 100%;
-    display: grid;
-    grid-template-areas:
-      'header'
-      'main';
-    grid-gap: 0;
-  }
-
 .auth-container { text-align: center; }
-.auth { margin: 40px 0; }
-/*---------------------- LOGIN PAGE ----------------------*/
+
+/*---------------------- AUTH PAGE ----------------------*/
 /*********************** USER INFO ***********************/
 .edit-user{ text-align: center; }
 #update { margin-left: 65px; }
-/*---------------------- LOGIN PAGE ----------------------*/
+/*---------------------- USER INFO ----------------------*/
 /*********************** MODAL CSS ***********************/
-
 .modal-window {
     position: fixed;
     background-color: rgba(200, 200, 200, 0.75);
