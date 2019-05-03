@@ -191,6 +191,12 @@ img {
 }
 /*---------------------- CREATE CARD ----------------------*/
 /*********************** MINI CARD ***********************/
+.mini {
+    transform: scale(.5)
+}
+
+
+
 .m-card-body {
     float: left;
     margin: 6px;
