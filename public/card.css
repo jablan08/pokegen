@@ -192,7 +192,8 @@ img {
 /*---------------------- CREATE CARD ----------------------*/
 /*********************** MINI CARD ***********************/
 .mini {
-    transform: scale(.5)
+    transform: scale(.5);
+    margin: 0 -60px;
 }
 
 

@@ -1,7 +1,7 @@
 
 <% for (let i = user.cards.length -1 ; i >= 0 ; i--) {%>
     <a href="/cards/<%=user.cards[i]._id%>"> 
-    <div class="m-card-body zoom"
+    <div class="card-body mini zoom"
     <%if (user.cards[i].type === "normal") {%>
             style="background-image: url('/images/types/bg-normal.png')"  
         <%} else if (user.cards[i].type === "fighting") {%>
@@ -40,11 +40,11 @@
             style="background-image: url('/images/types/ghost-bg.png')"     
         <%}%> 
         >
-        <div id="m-name">
+        <div id="name">
             <%=user.cards[i].name%>
         </div>
              
-         <span class="m-types">
+         <span class="type">
             <%if (user.cards[i].type === "normal") {%>
                     <img src="/images/types/normal.png">
                 <%} else if (user.cards[i].type === "fighting") {%>
@@ -84,22 +84,22 @@
             <%}%> 
         </span>
 
-        <div id="m-hp-box">
+        <div id="hp-box">
             <font size="2px">HP</font><%=user.cards[i].hp%>
         </div>
 
-        <div id="m-img-box-border">
-            <div id="m-img-box">
+        <div id="img-box-border">
+            <div id="img-box">
                 <img src="<%=user.cards[i].url%>">
             </div>
         </div>
 
-<div id="m-yellow-bar"><div class="m-stats"><%=user.cards[i].stats%></div></div>
+<div id="yellow-bar"><div class="stats"><%=user.cards[i].stats%></div></div>
 
-        <div class="m-attack-box">
-            <div class="m-attackTypeParent">
+        <div class="attack-box">
+            <div class="attackTypeParent">
             
-                    <span class="m-attackTypes">
+                    <span class="attackTypes">
                         <%if (user.cards[i].attackType1a === "normal") {%>
                                 <img src="/images/types/normal.png">
                             <%} else if (user.cards[i].attackType1a === "fighting") {%>
@@ -138,7 +138,7 @@
                                 <img src="/images/types/flying-type.png"> 
                         <%}%> 
                     </span>
-                    <span class="m-attackTypes">
+                    <span class="attackTypes">
                         <%if (user.cards[i].attackType1b === "normal") {%>
                                 <img src="/images/types/normal.png">
                             <%} else if (user.cards[i].attackType1b === "fighting") {%>
@@ -179,7 +179,7 @@
 
                         <%}%> 
                     </span>
-                    <span class="m-attackTypes">
+                    <span class="attackTypes">
                         <%if (user.cards[i].attackType1c === "normal") {%>
                                 <img src="/images/types/normal.png">
                             <%} else if (user.cards[i].attackType1c === "fighting") {%>
@@ -218,7 +218,7 @@
                                 <img src="/images/types/flying-type.png">  
                         <%}%> 
                     </span>
-                    <span class="m-attackTypes">
+                    <span class="attackTypes">
                         <%if (user.cards[i].attackType1d === "normal") {%>
                                 <img src="/images/types/normal.png">
                             <%} else if (user.cards[i].attackType1d === "fighting") {%>
@@ -260,17 +260,17 @@
             
             </div>
             
-            <div class="m-attack"><%=user.cards[i].attack%></div>
-            <div class="m-damage"><%=user.cards[i].damage%></div>
+            <div class="attack"><%=user.cards[i].attack%></div>
+            <div class="damage"><%=user.cards[i].damage%></div>
         </div>
                 
-                <div class="m-description"><%=user.cards[i].description%></div>
+                <div class="description"><%=user.cards[i].description%></div>
             
 
-        <div class="m-attack-box2">
-            <div class="m-attackTypeParent">
+        <div class="attack-box2">
+            <div class="attackTypeParent">
             
-                    <span class="m-attackTypes">
+                    <span class="attackTypes">
                         <%if (user.cards[i].attackType2a === "normal") {%>
                                 <img src="/images/types/normal.png">
                             <%} else if (user.cards[i].attackType2a === "fighting") {%>
@@ -309,7 +309,7 @@
                                 <img src="/images/types/flying-type.png"> 
                         <%}%> 
                     </span>
-                    <span class="m-attackTypes">
+                    <span class="attackTypes">
                         <%if (user.cards[i].attackType2b === "normal") {%>
                                 <img src="/images/types/normal.png">
                             <%} else if (user.cards[i].attackType2b === "fighting") {%>
@@ -348,7 +348,7 @@
                                 <img src="/images/types/flying-type.png"> 
                         <%}%> 
                     </span>
-                    <span class="m-attackTypes">
+                    <span class="attackTypes">
                         <%if (user.cards[i].attackType2c === "normal") {%>
                                 <img src="/images/types/normal.png">
                             <%} else if (user.cards[i].attackType2c === "fighting") {%>
@@ -387,7 +387,7 @@
                                 <img src="/images/types/flying-type.png"> 
                         <%}%> 
                     </span>
-                    <span class="m-attackTypes">
+                    <span class="attackTypes">
                         <%if (user.cards[i].attackType2d === "normal") {%>
                                 <img src="/images/types/normal.png">
                             <%} else if (user.cards[i].attackType2d === "fighting") {%>
@@ -428,23 +428,23 @@
                     </span>
             
             </div>
-            <div class="m-attack"><%=user.cards[i].attack2%></div>
-            <div class="m-damage"><%=user.cards[i].damage2%></div>
+            <div class="attack"><%=user.cards[i].attack2%></div>
+            <div class="damage"><%=user.cards[i].damage2%></div>
         </div>
             
-                <div class="m-description"><%=user.cards[i].description2%></div>
+                <div class="description"><%=user.cards[i].description2%></div>
             
 
-        <div id="m-weak-resist-box">
-            <div id="m-weakness">Weakness<br/>
+        <div id="weak-resist-box">
+            <div id="weakness">Weakness<br/>
                 <small><%=user.cards[i].weakness%></small>
             </div>
 
-            <div id="m-resistance">Resistance<br/>
+            <div id="resistance">Resistance<br/>
                 <small><%=user.cards[i].resistance%></small>
             </div>
 
-            <div id="m-bottom-box"><%=user.cards[i].boxBottom%></div>
+            <div id="bottom-box"><%=user.cards[i].boxBottom%></div>
             
         </div>
 </div>
