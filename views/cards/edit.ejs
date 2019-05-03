@@ -83,11 +83,11 @@
             
             <section>
                 <div>Type:</div>     
-                    <select class="attackTypeOption" name="attackType1a">
+                    <select class="attack-option" name="attackType1a">
                         <option value="<%=card.attackType1a%>" select><%=card.attackType1a%></option>
                         <%-include('../partials/types/options')%>
                     </select>   
-                    <select class="attackTypeOption" name="attackType1b">
+                    <select class="attack-option" name="attackType1b">
                         <option value="<%=card.attackType1b%>" select><%=card.attackType1b%></option>
                         <%-include('../partials/types/options')%>
                     </select>              
@@ -96,11 +96,11 @@
 
             <section>
                 <div>Type:</div>     
-                    <select class="attackTypeOption" name="attackType1c">
+                    <select class="attack-option" name="attackType1c">
                         <option value="<%=card.attackType1c%>" select><%=card.attackType1c%></option>
                         <%-include('../partials/types/options')%>
                     </select>         
-                    <select class="attackTypeOption" name="attackType1d">
+                    <select class="attack-option" name="attackType1d">
                         <option value="<%=card.attackType1d%>" select><%=card.attackType1d%></option>
                         <%-include('../partials/types/options')%>
                     </select>      
@@ -123,11 +123,11 @@
 
             <section>
                 <div>Type:</div>     
-                    <select class="attackTypeOption" name="attackType2a">
+                    <select class="attack-option" name="attackType2a">
                         <option value="<%=card.attackType2a%>" select><%=card.attackType2a%></option>
                         <%-include('../partials/types/options')%>
                     </select>   
-                    <select class="attackTypeOption" name="attackType2b">
+                    <select class="attack-option" name="attackType2b">
                         <option value="<%=card.attackType2b%>" select><%=card.attackType2b%></option>
                         <%-include('../partials/types/options')%>
                     </select>              
@@ -135,11 +135,11 @@
 
             <section>
                 <div>Type:</div>     
-                    <select class="attackTypeOption" name="attackType2c">
+                    <select class="attack-option" name="attackType2c">
                         <option value="<%=card.attackType2c%>" select><%=card.attackType2c%></option>
                         <%-include('../partials/types/options')%>
                     </select>         
-                    <select class="attackTypeOption" name="attackType2d">
+                    <select class="attack-option" name="attackType2d">
                         <option value="<%=card.attackType2d%>" select><%=card.attackType2d%></option>
                         <%-include('../partials/types/options')%>
                     </select>      
@@ -173,7 +173,7 @@
     <div id="sample-card" class="grid-main">
     <div>
         <%-include('../partials/card')%>
-           <button class="modal-button"><a href="#open-modal">Need Help?</a></button>
+           <button class="modal-button"><a href="#open-modal">?</a></button>
             <div id="open-modal" class="modal-window">
                 <div class='modal'>
                     <a href="#modal-close" title="Close" class="modal-close">close &times;</a>

@@ -38,12 +38,6 @@ h4 {
     z-index: 50000000000000000000;
 }
 
-h5 {    
-    font-size: 24px;
-    margin-block-start: 5px;
-    margin-block-end: 0;
-}
-
 p { margin-left: 10%; }
 
 .p-title { 
@@ -108,7 +102,7 @@ button:hover { background: transparent; }
     float: right;
 }
 
-.a-text:hover { 
+.user-font:hover { 
     text-decoration: none; 
     line-height: 20px;
     color: rgb(0, 0, 0, .6); 
@@ -127,8 +121,6 @@ button:hover { background: transparent; }
     margin: 10px;
     float: left;
 }
-
-.user-font:hover { transform: scale(1.5); }
 /*---------------------- NAVIGATION ----------------------*/
 /*********************** CLICK CARD ***********************/
 .click-down:active {
@@ -145,17 +137,16 @@ button:hover { background: transparent; }
 }
 /*---------------------- CLICK CARD ----------------------*/
 /*********************** ZOOM HOVER ***********************/
-/* .zoom, .zoomer { transition: all .2s; } */
-.zoom:hover {   
-    transition: all .2s;
-    transition-delay: .5s;
+.zoom:hover, .zoomer:hover { 
+    transition: all .2s; 
     transform: scale(1.5);
+}
+.zoom:hover {   
+    transition-delay: .5s;
     z-index: 900000000;
 }
 .zoomer:hover { 
-    transition: all .2s;
     transition-delay: none; 
-    transform: scale(1.5);
     z-index: 99999999999999999999999999999999999999999999999999999989;}
 /*---------------------- ZOOM HOVER ----------------------*/
 /*********************** PARENT GRID ***********************/
@@ -170,15 +161,18 @@ button:hover { background: transparent; }
     grid-area: main; 
     padding-top: 10%;
 }
-/* .grid-right { grid-area: right; } */
-/* .grid-footer { grid-area: footer; } */
+.grid-footer {
+    grid-area: footer;
+    bottom: 0;
+    /* position: fixed; */
+}
+
 .grid-main-container {
     width: 100%;
     display: grid;
   grid-template-areas:
-    'header header'
-    'main main';
-    /* 'footer footer footer footer'; */
+    'header'
+    'main';
      grid-gap: 0;
 }
 .grid-container {
@@ -186,19 +180,14 @@ button:hover { background: transparent; }
     display: grid;
   grid-template-areas:
     'header header'
-    'menu main';
-    /* 'footer footer footer footer'; */
+    'menu main'
+    'footer footer';
      grid-gap: 0;
 }
 
 /* .grid-filler { background-size: cover; background-image: url('./images/decor/sky.png') } */
 /*---------------------- PARENT GRID ----------------------*/
 /*********************** HOME PAGE ***********************/
-#home-users {
-    max-width: 300px;
-    padding: 0 20px 0 40px;
-}
-
 .home-vert-scroll {
     display: block;
     text-align: center;
@@ -209,12 +198,8 @@ button:hover { background: transparent; }
 }
 
 .modal-button-box {
-    /* transform: scale(1.2); */
     position: relative;
     display: inline;
-    /* text-align: center; */
-    border-radius: 100px;
-    z-index: 9999999999999999999999999999999999999999999999999999999;
 }
 
 .box-spacer {
@@ -235,11 +220,6 @@ button:hover { background: transparent; }
     min-width: 300px;
 }
 
-#card-index {
-    font-size: 40px;
-    font-family: 'ZCOOL KuaiLe', courier; 
-}
-
 #sky {
     position: relative;
     max-height: 150px;
@@ -247,7 +227,6 @@ button:hover { background: transparent; }
 /*---------------------- CARDS INDEX PAGE ----------------------*/
 /*********************** CARD SHOW PAGE ***********************/
 /* to lift fave card window */
-#cards-users { margin-top: -40px; }
 .edit-delete-buttons { text-align: center; }
 .show-card-delete-button { display: inline-block; }
 .show-card-edit-button { display: inline; }
@@ -255,7 +234,7 @@ button:hover { background: transparent; }
 
 .story {
     margin: 0 auto;
-    padding: 5px auto;
+    padding: 5% auto;
     max-width: 500px;
     word-wrap: break-word; 
 }
@@ -278,13 +257,13 @@ button:hover { background: transparent; }
 }
 
 #sample-card { 
-    padding: 46px 0 0 60px; 
+    padding: 10% 0 0 10%; 
 }
 /*---------------------- NEW PAGE ----------------------*/
 /*********************** FOOTER SCROLL MENU ***********************/
 #menu {
     bottom: 0;
-    margin: -200px 0 0 0;
+    margin: -150px 0 0 0;
     background-color: transparent;
     width: 100%;
     height: 230px;
@@ -308,7 +287,7 @@ button:hover { background: transparent; }
       background-image: url('./images/decor/frame-banner.png');
       background-repeat: no-repeat;
   }
-  /*---------------------- USER SHOW PAGE ----------------------*/
+/*---------------------- USER SHOW PAGE ----------------------*/
 /*********************** USER SHOW SCROLL ***********************/
 #feature-frame {
     margin-top: -5%;
@@ -319,6 +298,7 @@ button:hover { background: transparent; }
     background-image: url("./images/decor/pixel-frame.png");
     color: transparent;
 }
+
 .user-vert-scroll {
     margin: 32px 0 0 32px;
     position: absolute;
@@ -335,18 +315,6 @@ button:hover { background: transparent; }
     margin: 26px;
     width: 100%;
 }
-
-.fit { position: static; }
-#userlist-box { min-width: 100px; }
-
-.name-vert-scroll {
-    display: block;
-    text-align: center;
-    position: absolute;
-    z-index: 15;
-    overflow: auto;
-}
-
 /*---------------------- USER INDEX ----------------------*/
 /*********************** INPUT FORM ***********************/
 .left, .right {
@@ -365,8 +333,7 @@ button:hover { background: transparent; }
 
 input, select, .description-input, .story-input, .boxBottom {
     position: relative;
-    top: 0;
-    width: 122px;
+    top: 0;   
     border-radius: 3px;
     border:  rgb(108, 148, 239) 4px solid;
     margin-top: 1px;
@@ -375,17 +342,16 @@ input, select, .description-input, .story-input, .boxBottom {
     word-wrap: break-word;
 }
 
+.description-input, .story-input, .boxBottom { width: 122px; }
 input { width: 124px; }
 select { width: 134px; }
+.attack-option { width: 63px; }
 
 .description-input, .boxBottom { height: 33px; }
 .story-input { height: 105px; }
-.attackTypeOption { width: 63px; }
-
 /*---------------------- INPUT FORM ----------------------*/
 /*********************** AUTH PAGE ***********************/
 .auth-container { text-align: center; }
-
 /*---------------------- AUTH PAGE ----------------------*/
 /*********************** USER INFO ***********************/
 .edit-user{ text-align: center; }
@@ -412,7 +378,7 @@ select { width: 134px; }
     pointer-events: auto;
 }
 
-.modal-window>div {
+.modal-window > div {
     width: 400px;
     position: relative;
     margin: 10% auto;
