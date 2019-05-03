@@ -139,13 +139,15 @@ button:hover { background: transparent; }
 /*********************** ZOOM HOVER ***********************/
 .zoom:hover, .zoomer:hover { 
     transition: all .2s; 
-    transform: scale(1.5);
+    
 }
 .zoom:hover {   
+    transform: scale(1.5);
     transition-delay: .5s;
     z-index: 900000000;
 }
 .zoomer:hover { 
+    transform: scale(1);
     transition-delay: none; 
     z-index: 99999999999999999999999999999999999999999999999999999989;}
 /*---------------------- ZOOM HOVER ----------------------*/
