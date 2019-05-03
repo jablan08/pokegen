@@ -297,7 +297,10 @@ button:hover { background: transparent; }
     overflow-x: scroll;
 }
 
-#inner-menu { width: 5000000000000000000000000px; }
+#inner-menu { 
+    width: 5000000000000000000000000px; 
+    /* display: inline-block */
+}
 /*---------------------- FOOTER SCROLL MENU ----------------------*/
 /*********************** USER SHOW PAGE ***********************/
 .grid-user-container {

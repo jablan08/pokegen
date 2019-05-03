@@ -1,8 +1,8 @@
 
 <% for (let i = cards.length -1 ; i >=0 ; i--) {%>
     <a href="/cards/<%=cards[i]._id%>"> 
+    
     <div class="m-click-down m-card-body zoomer"
-
     <%if (cards[i].type === "normal") {%>
             style="background-image: url('/images/types/bg-normal.png')"  
         <%} else if (cards[i].type === "fighting") {%>
@@ -264,9 +264,9 @@
             <div class="m-attack"><%=cards[i].attack%></div>
             <div class="m-damage"><%=cards[i].damage%></div>
         </div>
-            <div>    
+               
                 <div class="m-description"><%=cards[i].description%></div>
-            </div>
+            
 
         <div class="m-attack-box2">
             <div class="m-attackTypeParent">
@@ -432,9 +432,9 @@
             <div class="m-attack"><%=cards[i].attack2%></div>
             <div class="m-damage"><%=cards[i].damage2%></div>
         </div>
-            <div>
+            
                 <div class="m-description"><%=cards[i].description2%></div>
-            </div>
+            
 
         <div id="m-weak-resist-box">
             <div id="m-weakness">Weakness<br/>
