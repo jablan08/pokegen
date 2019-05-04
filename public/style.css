@@ -41,6 +41,7 @@ h4 {
 p { margin-left: 10%; }
 
 .p-title { 
+    /* text-align: center; */
     margin-top: 0;
     font-family: 'Arimo Bold', sans-serif; }
 
@@ -106,26 +107,6 @@ button:hover {
     border-radius: 8px;
     float: right;
 }
-
-.user-font:hover { 
-    text-decoration: none; 
-    line-height: 20px;
-    color: rgb(0, 0, 0, .6); 
-    font-size: 32px; 
-    margin-left: 5px;
-    margin-right: 0px;
-    transition: all .2s ease-in-out;
-}
-
-.user-font {
-    font-family: 'Arimo Bold', sans-serif;
-    font-weight: bold;
-    font-size: 26px;
-    position: relative;
-    z-index: 500;
-    margin: 10px;
-    float: left;
-}
 /*---------------------- NAVIGATION ----------------------*/
 /*********************** CLICK CARD ***********************/
 .click-down:active {
@@ -151,10 +132,11 @@ button:hover {
     transition-delay: .5s;
     z-index: 900000000;
 }
+
 .zoomer:hover { 
     transform: scale(.8);
     transition-delay: none; 
-    z-index: 99999999999999999999999999999999999999999999999999999989;}
+    z-index: 999999999999999999999999999999999999999999999999999999999999999;}
 /*---------------------- ZOOM HOVER ----------------------*/
 /*********************** PARENT GRID ***********************/
 .grid-header { 
@@ -319,10 +301,36 @@ button:hover {
 }
 /*---------------------- USER SHOW SCROLL MENU ----------------------*/
 /*********************** USER INDEX ***********************/
+
+.user-font:hover { 
+    text-decoration: none; 
+    border: none;
+    line-height: 20px;
+    color: rgb(0, 0, 0, .6); 
+    font-size: 32px; 
+    margin-left: 5px;
+    margin-right: 0px;
+    transition: all .2s ease-in-out;
+}
+
+.user-font {
+    font-family: 'Arimo Bold', sans-serif;
+    font-weight: bold;
+    font-size: 26px;
+    position: relative;
+    z-index: 500;
+    margin: 10px;
+    display: inline-block;
+    /* float: left; */
+    border: 10px yellow solid;
+}
+
 #user-box {
-    text-align: justify;
-    margin: 26px;
-    width: 100%;
+    /* text-align: justify; */
+    margin: 0 0 20px 10%;
+    /* width: 100%; */
+    border: 2px solid red;
+    background-color: green;
 }
 /*---------------------- USER INDEX ----------------------*/
 /*********************** INPUT FORM ***********************/

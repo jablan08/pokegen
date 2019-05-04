@@ -1,23 +1,6 @@
 /*********************** UNIVERSAL CARD FEATURES ***********************/
-
-.attack {
-
-}
-
-.damage {
-
-}
-
-#weakness, #resistance {
-
-}
-
-#bottom-box {
-
-}
 /*---------------------- UNIVERSAL CARD FEATURES ----------------------*/
 /*********************** CREATE CARD ***********************/
-
 .card-body  {
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     text-align: left;
@@ -25,7 +8,6 @@
     background-image: linear-gradient(to bottom right, blue,lightblue,blue); /*this is default bg*/
     position: relative;
     word-wrap: break-word; 
-
     display: inline-block;
     vertical-align: top;
     margin: 10px;
@@ -117,7 +99,7 @@ img {
     max-width: 210px;
 }
 
-.attackTypeParent { 
+.attack-container { 
     transform: translateY(5px); 
     position: relative;
     float: left;
@@ -125,7 +107,7 @@ img {
     max-height: 42px;
 }
 
-.attackTypes > img {
+.attack-types > img {
     position: relative;
     height: 18px;
     width: 18px;

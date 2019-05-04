@@ -8,8 +8,10 @@
 
 
     <div id="users-main" class="grid-menu">
+    <h1 class="p-title">PokéGen Community</h1>
         <div class="story">
-            <h1 class="p-title">PokéGen Community</h1><br>
+
+
             <h3 class="p-title">The gang is all here! </h3><br/>
             <br/>
             <p>Check out the newest members top of the list, and the veteran trainers at the bottom. 
@@ -18,10 +20,19 @@
             Get inspired to make your own and become a PokéGen master! 
             </p>
 
-                    <div id="user-box">
+            <section id="user-box">
+                <% for (let i = users.length-1; i >= 0; i--) {%>
+                    
+                        <a class="user-font" href="/users/<%=users[i]._id%>"><%= users[i].username%></a>
+                    
+                <% } %>
+                <% for (let b = users.length-1; b >= 0; b--) {%>
+                    
+                        <a class="user-font" href="/users/<%=users[b]._id%>"><%= users[b].username%></a>
+                    
+                <% } %>
+            </section>
 
-            <%- include('../partials/userlist')%>
-                    </div>
         </div>
                 
 
