@@ -332,7 +332,7 @@ select { width: 134px; }
 
 }
 
-#user-box {
+.user-box {
     margin: 0 0 40px 10%;
 }
 /*---------------------- USER INDEX ----------------------*/
@@ -350,9 +350,14 @@ select { width: 134px; }
 
 /*---------------------- USER SHOW PAGE ----------------------*/
 /*********************** USER SHOW SCROLL ***********************/
-.user-cards-container {
+.user-container {
     overflow: auto;
     height: 400px;
+    max-width: 440px
+}
+
+.mini-u:hover {
+    transform: scale(.32)
 }
 
 #feature-frame {

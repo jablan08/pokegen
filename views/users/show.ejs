@@ -11,6 +11,12 @@
         <h1 class="p-title">TRAINER'S COLLECTION<h1>
             <div class="story2">
         <h1> <%=user.username %>'s PokéGen Cards</h1>
+
+        <section class="user-cards-container">
+            <%-include('../partials/user-minicards')%>
+        </section>
+
+
                 <%if (logged) {%>
                 <%if(currentUser === verifyUser || admin.admin){%>
                 <section>
@@ -32,9 +38,7 @@
                 </section>
                 <%}%>
                 <%}%>
-        <section class="user-cards-container">
-            <%-include('../partials/user-minicards')%>
-        </section>
+
     </div>
     </div>
 
