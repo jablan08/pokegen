@@ -80,7 +80,7 @@ a {
 nav {
     position: relative;
     width: 100%;
-    z-index: 50000;
+    z-index: 90000;
 }
 
 button { 
@@ -347,8 +347,14 @@ select { width: 134px; }
       background-image: url('./images/decor/frame-banner.png');
       background-repeat: no-repeat;
   }
+
 /*---------------------- USER SHOW PAGE ----------------------*/
 /*********************** USER SHOW SCROLL ***********************/
+.user-cards-container {
+    overflow: auto;
+    height: 400px;
+}
+
 #feature-frame {
     margin-top: -5%;
     position: relative;

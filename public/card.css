@@ -178,4 +178,9 @@ img {
     margin: 0 -60px;
     display: inline-block;
 }
+.mini-u {
+    transform: scale(.3);
+    margin: -140px -100px;
+    display: inline-block;
+}
 /*---------------------- MINI CARD ----------------------*/
