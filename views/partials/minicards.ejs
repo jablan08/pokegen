@@ -1,8 +1,8 @@
 
+<div class="inner-menu">
 <% for (let i = cards.length -1 ; i >=0 ; i--) {%>
-    <a href="/cards/<%=cards[i]._id%>"> 
-    
-    <div class="click-down mini card-body zoomer"
+    <a href="/cards/<%=cards[i]._id%>">    
+    <div class="mini card-body zoomer"
     <%if (cards[i].type === "normal") {%>
             style="background-image: url('/images/types/bg-normal.png')"  
         <%} else if (cards[i].type === "fighting") {%>
@@ -451,3 +451,4 @@
 </div>
     </a>
 <% } %>
+</div>

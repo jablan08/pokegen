@@ -15,7 +15,7 @@
     width: 280px;
     border: 8px solid gold;
     border-radius: 10px;
-    z-index: 999999999999999999999999999999999999999999999999999999999999999 !important;
+    z-index: 90000 !important;
     box-shadow: 0 7px 10px 0 black;
 }
 
@@ -176,6 +176,6 @@ img {
 .mini {
     transform: scale(.5);
     margin: 0 -60px;
-    /* z-index: -1; */
+    display: inline-block;
 }
 /*---------------------- MINI CARD ----------------------*/

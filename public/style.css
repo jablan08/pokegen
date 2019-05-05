@@ -13,7 +13,7 @@ body {
 
 h1{
     position: relative;
-    z-index: 99999999999999999999999;
+    z-index: 50000;
 }
 
 .tag {
@@ -21,12 +21,8 @@ h1{
     font-size: 24px;
     font-family: 'ZCOOL KuaiLe', courier;    
     display: inline;
-    /* margin-block-start: 0;
-    margin-block-end: 0;
-    margin-inline-start: 0;
-    margin-inline-end: 0; */
     font-weight: bold;
-    z-index: 99999999999999999999999;
+    z-index: 50000;
 }
 
 h4 {
@@ -35,7 +31,7 @@ h4 {
     font-size: 8px;
     font-family: Arial, Helvetica, sans-serif;
     text-align: center;
-    z-index: 50000000000000000000;
+    z-index: 50000;
 }
 
 p { margin-left: 10%; }
@@ -52,7 +48,6 @@ p { margin-left: 10%; }
     position: sticky;
     margin-top: 4%;
     bottom: 0;
-    z-index: 99999990009999999999999999;
 }
 /*---------------------- MAINFRAME ----------------------*/
 /*********************** FOOTER ***********************/
@@ -61,12 +56,12 @@ footer {
     bottom: 0;
     margin: 0px auto 0 auto;
     width: 100%;
-    z-index: 99999999999999999999999;
+    z-index: 80000;
 }
 
 .grass-footer {
     position: fixed;
-    z-index: 9000000000000;
+    z-index: 90000;
     height: 20%;
     width: 100%;
     bottom: 0;
@@ -84,10 +79,8 @@ a {
 
 nav {
     position: relative;
-    /* float: right; */
     width: 100%;
-    z-index: 99999999999999999999999;
-    /* margin: 0 15px 20px 0; */
+    z-index: 50000;
 }
 
 button { 
@@ -115,12 +108,6 @@ button:hover {
     box-shadow: 0 4px 5px 0 #000;
     color: #000;
 }
-
-.m-click-down:active {
-    transition-delay: none; 
-    box-shadow: 0 1px 2px 0 #000;
-    color: #000;
-}
 /*---------------------- CLICK CARD ----------------------*/
 /*********************** ZOOM HOVER ***********************/
 .zoom, .zoomer { 
@@ -128,16 +115,21 @@ button:hover {
 }
 
 .zoom:hover {   
-    transform: scale(1.5);
+    transform: scale(1.5) translateY(5%);
     transition-delay: .5s;
-    z-index: 900000000;
+    z-index: 90000;
 }
 
 .zoomer:hover { 
     transform: scale(.8);
-    transition-delay: none; 
-    z-index: 999999999999999999999999999999999999999999999999999999999999999;}
+    transition-delay: none;
+    /* display: inline-block; */
+    /* position: relative !important; */
+    z-index: 90009 !important;
+}
 /*---------------------- ZOOM HOVER ----------------------*/
+
+
 /*********************** PARENT GRID ***********************/
 .grid-header { 
     grid-area: header; 
@@ -154,7 +146,8 @@ button:hover {
 .grid-footer {
     grid-area: footer;
     bottom: 0;
-    /* position: fixed; */
+    /* z-index: 3000;
+    position: relative; */
 }
 
 .grid-main-container {
@@ -177,6 +170,31 @@ button:hover {
 
 /* .grid-filler { background-size: cover; background-image: url('./images/decor/sky.png') } */
 /*---------------------- PARENT GRID ----------------------*/
+/*********************** FOOTER SCROLL MENU ***********************/
+#menu {
+    bottom: 0;
+    margin: -150px 0 0 0;
+    width: auto;
+    height: auto;
+    overflow-x: scroll;
+    overflow-y: hidden;
+}
+
+.inner-menu { 
+    width: 5000000000000000000000000px; 
+    display: inline-block;
+}
+
+.z:hover{
+    z-index: 90000;
+}
+.z {
+    position: relative;
+    z-index: 80000;
+}
+/*---------------------- FOOTER SCROLL MENU ----------------------*/
+
+
 /*********************** HOME PAGE ***********************/
 .home-vert-scroll {
     display: block;
@@ -198,6 +216,15 @@ button:hover {
     min-height: 120px;
 }
 /*---------------------- HOME PAGE ----------------------*/
+/*********************** AUTH PAGE ***********************/
+.auth-container { text-align: center; }
+/*---------------------- AUTH PAGE ----------------------*/
+/*********************** USER INFO ***********************/
+.edit-user{ text-align: center; }
+#update { margin-left: 65px; }
+/*---------------------- USER INFO ----------------------*/
+
+
 /*********************** CARDS INDEX PAGE ***********************/
 .vert-scroll {
     position: fixed;
@@ -216,7 +243,6 @@ button:hover {
 }
 /*---------------------- CARDS INDEX PAGE ----------------------*/
 /*********************** CARD SHOW PAGE ***********************/
-/* to lift fave card window */
 .edit-delete-buttons { text-align: center; }
 .show-card-delete-button { display: inline-block; }
 .show-card-edit-button { display: inline; }
@@ -235,12 +261,7 @@ button:hover {
     text-align: left;
 }
 /*---------------------- CARD SHOW PAGE ----------------------*/
-/*********************** NEW PAGE ***********************/
-#new-container {
-    position: relative;
-    z-index: 5;
-}
-
+/*********************** NEW CARD PAGE ***********************/
 .create-message {
     display: block;
     font-size: 15px;
@@ -249,90 +270,7 @@ button:hover {
 #sample-card { 
     padding: 10% 0 0 10%; 
 }
-/*---------------------- NEW PAGE ----------------------*/
-/*********************** FOOTER SCROLL MENU ***********************/
-#menu {
-    bottom: 0;
-    margin: -150px 0 0 0;
-    /* background-color: transparent; */
-    width: 100%;
-    /* z-index: -5; */
-    /* height: 230px; */
-    /* padding: 55px 0; */
-    overflow-x: scroll;
-}
-
-#inner-menu { 
-    width: 5000000000000000000000000px; 
-    /* display: inline-block */
-}
-/*---------------------- FOOTER SCROLL MENU ----------------------*/
-/*********************** USER SHOW PAGE ***********************/
-  #frame-banner {
-      height: 72px;
-      width: 400px;
-      position: absolute;
-      bottom: 0;
-      margin-bottom: -10px;
-      z-index: 3000000000000000000000000;
-      background-image: url('./images/decor/frame-banner.png');
-      background-repeat: no-repeat;
-  }
-/*---------------------- USER SHOW PAGE ----------------------*/
-/*********************** USER SHOW SCROLL ***********************/
-#feature-frame {
-    margin-top: -5%;
-    position: relative;
-    z-index: 500;
-    height: 510px;
-    width: 400px;
-    background-image: url("./images/decor/pixel-frame.png");
-    color: transparent;
-}
-
-.user-vert-scroll {
-    margin: 32px 0 0 32px;
-    position: absolute;
-    z-index: 15;
-    overflow: auto;
-    padding: 10px 10px 10px 10px;
-    width: 316px;
-    height: 426px;
-}
-/*---------------------- USER SHOW SCROLL MENU ----------------------*/
-/*********************** USER INDEX ***********************/
-
-.user-font:hover { 
-    text-decoration: none; 
-    border: none;
-    line-height: 20px;
-    color: rgb(0, 0, 0, .6); 
-    font-size: 32px; 
-    margin-left: 5px;
-    margin-right: 0px;
-    transition: all .2s ease-in-out;
-}
-
-.user-font {
-    font-family: 'Arimo Bold', sans-serif;
-    font-weight: bold;
-    font-size: 26px;
-    position: relative;
-    z-index: 500;
-    margin: 10px;
-    display: inline-block;
-    /* float: left; */
-    border: 10px yellow solid;
-}
-
-#user-box {
-    /* text-align: justify; */
-    margin: 0 0 20px 10%;
-    /* width: 100%; */
-    border: 2px solid red;
-    background-color: green;
-}
-/*---------------------- USER INDEX ----------------------*/
+/*---------------------- NEW CARD PAGE ----------------------*/
 /*********************** INPUT FORM ***********************/
 .left, .right {
     width: 230px;
@@ -367,13 +305,72 @@ select { width: 134px; }
 .description-input, .boxBottom { height: 33px; }
 .story-input { height: 105px; }
 /*---------------------- INPUT FORM ----------------------*/
-/*********************** AUTH PAGE ***********************/
-.auth-container { text-align: center; }
-/*---------------------- AUTH PAGE ----------------------*/
-/*********************** USER INFO ***********************/
-.edit-user{ text-align: center; }
-#update { margin-left: 65px; }
-/*---------------------- USER INFO ----------------------*/
+
+
+/*********************** USER INDEX ***********************/
+
+.user-font:hover { 
+    text-decoration: none; 
+    /* border: none; */
+    line-height: 20px;
+    color: rgb(0, 0, 0, .6); 
+    font-size: 32px; 
+    margin-left: 5px;
+    margin-right: 0px;
+    transition: all .2s ease-in-out;
+}
+
+.user-font {
+    font-family: 'Arimo Bold', sans-serif;
+    font-weight: bold;
+    font-size: 26px;
+    position: relative;
+    z-index: 500;
+    margin: 10px;
+    display: inline-block;
+    /* float: left; */
+
+}
+
+#user-box {
+    margin: 0 0 40px 10%;
+}
+/*---------------------- USER INDEX ----------------------*/
+/*********************** USER SHOW PAGE ***********************/
+  #frame-banner {
+      height: 72px;
+      width: 400px;
+      position: absolute;
+      bottom: 0;
+      margin-bottom: -10px;
+      z-index: 90000;
+      background-image: url('./images/decor/frame-banner.png');
+      background-repeat: no-repeat;
+  }
+/*---------------------- USER SHOW PAGE ----------------------*/
+/*********************** USER SHOW SCROLL ***********************/
+#feature-frame {
+    margin-top: -5%;
+    position: relative;
+    z-index: 60000;
+    height: 510px;
+    width: 400px;
+    background-image: url("./images/decor/pixel-frame.png");
+    color: transparent;
+}
+
+.user-vert-scroll {
+    margin: 32px 0 0 32px;
+    position: absolute;
+    z-index: 40000;
+    overflow: auto;
+    padding: 10px 10px 10px 10px;
+    width: 316px;
+    height: 426px;
+}
+/*---------------------- USER SHOW SCROLL MENU ----------------------*/
+
+
 /*********************** MODAL CSS ***********************/
 .modal-window {
     position: fixed;
@@ -382,7 +379,7 @@ select { width: 134px; }
     right: 0;
     bottom: 0;
     left: 0;
-    z-index: 9999999999999999999999999999999999999999999999999999999999;
+    z-index: 99999;
     opacity: 0;
     pointer-events: none;
     -webkit-transition: all 0.1s;
