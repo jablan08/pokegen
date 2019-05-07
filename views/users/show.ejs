@@ -4,22 +4,31 @@
     <div class="grid-header">
         <%- include('../partials/frames/header')%>
     </div>
-
     
-    <div id="users-main" class="grid-menu">
+    <div class="grid-menu">
+        <h1 class="p-title">TRAINER'S COLLECTION</h1>
+        <div class="story2">
+            <h1> <%=user.username %>'s PokéGen Cards</h1>
+            <section class="user-cards-container">
+                <%-include('../partials/user-minicards')%>
+            </section>
+        </div>
+    </div>
 
-        <h1 class="p-title">TRAINER'S COLLECTION<h1>
-            <div class="story2">
-        <h1> <%=user.username %>'s PokéGen Cards</h1>
+    <div class="grid-main"> 
+        <div id="feature-frame">
+            <div class="user-vert-scroll">
+                <%- include("../partials/userfavs")%>
+            </div>       
+            <div id="frame-banner"></div>
+        </div> 
+    </div>
 
-        <section class="user-cards-container">
-            <%-include('../partials/user-minicards')%>
-        </section>
 
-
-                <%if (logged) {%>
-                <%if(currentUser === verifyUser || admin.admin){%>
-                <section>
+    <div class="grid-footer">
+        <%if (logged) {%>
+            <%if(currentUser === verifyUser || admin.admin){%>
+                <section class="account">
                     <a href="/users/<%=user._id%>/edit"><button>EDIT ACCOUNT</button></a>
                     <button class="modal-button">
                         <a href="#open-modal">DELETE USER</a>
@@ -28,36 +37,20 @@
                         <div class="modal">
                             <a href="#modal-close" title="Close" class="modal-close">close &times;</a>
                             <h1>ARE YOU SURE?!</h1>
-                                <div>
-                                    <form action="/users/<%=user._id%>?_method=DELETE" method="POST">
-                                        <button type="submit">DELETE ACCOUNT</button>
-                                    </form>
-                                </div>
+                            <div>
+                                <form action="/users/<%=user._id%>?_method=DELETE" method="POST">
+                                    <button type="submit">DELETE ACCOUNT</button>
+                                </form>
+                            </div>
                         </div>
                     </div>
                 </section>
-                <%}%>
-                <%}%>
-
+            <%}%>
+        <%}%>
     </div>
-    </div>
-
-
-    <div class="grid-main">
-        <div>
-            <div id="feature-frame">
-                <div class="user-vert-scroll">
-                    <%- include("../partials/userfavs")%>
-                </div>       
-                <div id="frame-banner"></div>
-            </div>
-        </div>
-    </div>
-
 </div>
-<div class="grid-footer">
 
-</div>
+
 <%-include('../partials/frames/footer')%>
 
 

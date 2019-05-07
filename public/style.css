@@ -28,7 +28,6 @@ h1{
 h4 {
     position: sticky;
     bottom: 0;
-    font-size: 8px;
     font-family: Arial, Helvetica, sans-serif;
     text-align: center;
     z-index: 50000;
@@ -55,13 +54,13 @@ footer {
     bottom: 0;
     margin: 0px auto 0 auto;
     width: 100%;
-    z-index: 80000;
+    z-index: 90000;
 }
 
 .grass-footer {
     position: fixed;
     z-index: 90000;
-    height: 20%;
+    height: 15%;
     width: 100%;
     bottom: 0;
 }
@@ -143,6 +142,8 @@ button:hover {
 .grid-footer {
     grid-area: footer;
     bottom: 0;
+    margin-top: 10%;
+    text-align: center;
 }
 
 .grid-main-container {
@@ -153,6 +154,7 @@ button:hover {
     'main';
      grid-gap: 0;
 }
+
 .grid-container {
     width: 100%;
     display: grid;
@@ -190,28 +192,30 @@ button:hover {
         'footer';
         grid-gap: 0;
     }
+
     .nav-btn > button {
         transform: scale(.9)
     }
-
+    h1 {
+        text-align: center
+    }
+    h2 {
+        margin-top: 0
+    }
+    h4 {
+        font-size: 6px;
+    }
     p {
         margin: 0 auto 40px auto;
         text-align: justify;
     }
-
-    h1 {
-        text-align: center
-    }
-
-    h2 {
-        margin-top: 0
-    }
     .p-title { 
         text-align: center;
-        margin: 0;
-        font-family: 'Arimo Bold', sans-serif; }
+        font-family: 'Arimo Bold', sans-serif; 
+    }
     .story {
         text-align: center;
+        max-width: 400px;
         margin: 0;
         padding: 5%;
     }
@@ -220,19 +224,25 @@ button:hover {
         font-size: 16px;
         margin: 0 auto;
     }
+
     #feature-frame {
         transform: scale(.9);
         margin: 0 -20px;
     }
-
     .zoom:hover {
         transform: scale(1.2)
     }
+
     .left, .right {
         width: 230px;
         height: 100%;
-        margin: 0 auto;
+        margin-right: auto;
+        margin-left: auto;
     }
+    .right {
+        padding-bottom: 40px;
+    }
+
     .user-box {
         margin: 2%;
         text-align: justify;
@@ -240,21 +250,29 @@ button:hover {
 }
 
 @media screen and (min-width: 415px) {
+    h4 {
+        font-size: 8px;
+    }
+
     .left, .right {
         width: 230px;
         height: 100%;
         float: right;
+    }
+
+    .story {
+        max-width: 500px;
     }
     .story2 {
         margin-left: 20%;
         font-size: 16px;
         text-align: left;
     }
+
     .user-box {
         margin: 0 0 40px 10%;
     }
 }
-/* .grid-filler { background-size: cover; background-image: url('./images/decor/sky.png') } */
 /*---------------------- PARENT GRID ----------------------*/
 /*********************** FOOTER SCROLL MENU ***********************/
 #menu {
@@ -274,6 +292,7 @@ button:hover {
 .z:hover{
     z-index: 90000;
 }
+
 .z {
     position: relative;
     z-index: 80000;
@@ -299,7 +318,7 @@ button:hover {
 .box-spacer {
     border: transparent;
     width: 100px;
-    min-height: 120px;
+    min-height: 200px;
 }
 /*---------------------- HOME PAGE ----------------------*/
 /*********************** AUTH PAGE ***********************/
@@ -337,11 +356,8 @@ button:hover {
 .story {
     margin: 0 auto;
     padding: 5% auto;
-    max-width: 500px;
     word-wrap: break-word; 
 }
-
-
 /*---------------------- CARD SHOW PAGE ----------------------*/
 /*********************** NEW CARD PAGE ***********************/
 .create-message {
@@ -354,8 +370,6 @@ button:hover {
 }
 /*---------------------- NEW CARD PAGE ----------------------*/
 /*********************** INPUT FORM ***********************/
-
-
 .input-box > section > div {
     width: 80px;
     margin: 1px 0;
@@ -375,21 +389,19 @@ input, select, .description-input, .story-input, .boxBottom {
     word-wrap: break-word;
 }
 
-.description-input, .story-input, .boxBottom { width: 122px; }
 input { width: 124px; }
 select { width: 134px; }
-.attack-option { width: 63px; }
 
+.description-input, .story-input, .boxBottom { width: 122px; }
+.attack-option { width: 63px; }
 .description-input, .boxBottom { height: 33px; }
 .story-input { height: 105px; }
 /*---------------------- INPUT FORM ----------------------*/
 
 
 /*********************** USER INDEX ***********************/
-
 .user-font:hover { 
     text-decoration: none; 
-    /* border: none; */
     line-height: 20px;
     color: rgb(0, 0, 0, .6); 
     font-size: 32px; 
@@ -407,7 +419,6 @@ select { width: 134px; }
     margin: 10px;
     display: inline-block;
 }
-
 /*---------------------- USER INDEX ----------------------*/
 /*********************** USER SHOW PAGE ***********************/
   #frame-banner {
@@ -420,7 +431,6 @@ select { width: 134px; }
       background-image: url('./images/decor/frame-banner.png');
       background-repeat: no-repeat;
   }
-
 /*---------------------- USER SHOW PAGE ----------------------*/
 /*********************** USER SHOW SCROLL ***********************/
 .user-cards-container {
@@ -443,7 +453,7 @@ select { width: 134px; }
     z-index: 60000;
     height: 510px;
     width: 400px;
-    background-image: url("./images/decor/pixel-frame.png");
+    background-image: url('./images/decor/pixel-frame.png');
     color: transparent;
 }
 
@@ -514,4 +524,3 @@ select { width: 134px; }
     margin: 0 0 15px;
 }
 /*---------------------- MODAL CSS ----------------------*/
-

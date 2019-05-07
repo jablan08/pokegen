@@ -9,15 +9,14 @@
         <h1 class="p-title"><%=card.name%></h1>
         <h2>Owned By: <%=user.username%></h2>
         <button><a href="/users/<%=user._id%>">See collection</a></button>
-    
-
+        <br />
+        <br />
         <div class="story">
             <%if (card.story){%>
                 <h1>The story of <%=card.name%>:</h1>
                 <p><%=card.story%></p>
             <%} else  {%>
             <h1 class="p-title">The story of <%=card.name%>:</h1>
-            <br />
             <p>Every card has a story, sadly this owner does not have a story for this card. When you make your card be sure to give a story, or else your card’s story won’t be told just like this one. You can also add a story to each of your cards in the card edit page.</p>
             <%}%>
         </div>
