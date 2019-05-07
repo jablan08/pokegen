@@ -10,11 +10,11 @@
     <div class="edit-user grid-main">
 
         <h1 class="p-title">EDIT ACCOUNT INFORMATION</h1>
-        <small><%= userTakenMessage %></small><br>
+        <small><%= userTakenMessage %></small><br />
 
       <form action="/users/<%=user._id%>?_method=PUT" method="POST">
-        Username:<input type="text" name="username" value="<%=user.username%>"><br>
-        Password: <input type="password" name="password" placeholder=""><br>
+        Username:<input type="text" name="username" value="<%=user.username%>"><br />
+        Password: <input type="password" name="password" placeholder=""><br />
         <button id="update" type="submit">update</button>
       </form>
 

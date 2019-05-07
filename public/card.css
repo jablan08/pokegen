@@ -100,7 +100,9 @@ img {
 }
 
 .attack-container { 
-    transform: translateY(5px); 
+    margin-left: 5px;
+    margin-right: -2px;
+    transform: translateY(7px);
     position: relative;
     float: left;
     max-width: 42px;
@@ -111,6 +113,7 @@ img {
     position: relative;
     height: 18px;
     width: 18px;
+    margin: -1px;
 }
 
 .damage {

@@ -37,7 +37,6 @@ h4 {
 p { margin-left: 10%; }
 
 .p-title { 
-    /* text-align: center; */
     margin-top: 0;
     font-family: 'Arimo Bold', sans-serif; }
 
@@ -95,7 +94,7 @@ button:hover {
 
 .nav-btn > button {
     margin-left: 5px;
-    margin-bottom: -5px;
+    margin-bottom: -4px;
     font-size: 18px;
     border-radius: 8px;
     float: right;
@@ -123,8 +122,6 @@ button:hover {
 .zoomer:hover { 
     transform: scale(.8);
     transition-delay: none;
-    /* display: inline-block; */
-    /* position: relative !important; */
     z-index: 90009 !important;
 }
 /*---------------------- ZOOM HOVER ----------------------*/
@@ -146,8 +143,6 @@ button:hover {
 .grid-footer {
     grid-area: footer;
     bottom: 0;
-    /* z-index: 3000;
-    position: relative; */
 }
 
 .grid-main-container {
@@ -167,7 +162,98 @@ button:hover {
     'footer footer';
      grid-gap: 0;
 }
+@media screen and (max-width: 414px) {
+    .grid-header { 
+        grid-area: header; 
+        padding: 10px 2% 0 2%
+    }
+    .grid-menu { 
+        grid-area: menu; 
+        padding: 5%;
+    }
+    .grid-main { 
+        grid-area: main; 
+        margin: 0 auto;
+        padding-top: 5%;
+    }
+    .grid-footer {
+        grid-area: footer;
+        bottom: 0;
+    }
+    .grid-container {
+        width: 100%;
+        display: grid;
+    grid-template-areas:
+        'header'
+        'main'
+        'menu'
+        'footer';
+        grid-gap: 0;
+    }
+    .nav-btn > button {
+        transform: scale(.9)
+    }
 
+    p {
+        margin: 0 auto 40px auto;
+        text-align: justify;
+    }
+
+    h1 {
+        text-align: center
+    }
+
+    h2 {
+        margin-top: 0
+    }
+    .p-title { 
+        text-align: center;
+        margin: 0;
+        font-family: 'Arimo Bold', sans-serif; }
+    .story {
+        text-align: center;
+        margin: 0;
+        padding: 5%;
+    }
+    .story2 {
+        width: auto;
+        font-size: 16px;
+        margin: 0 auto;
+    }
+    #feature-frame {
+        transform: scale(.9);
+        margin: 0 -20px;
+    }
+
+    .zoom:hover {
+        transform: scale(1.2)
+    }
+    .left, .right {
+        width: 230px;
+        height: 100%;
+        margin: 0 auto;
+    }
+    .user-box {
+        margin: 2%;
+        text-align: justify;
+    }
+}
+
+@media screen and (min-width: 415px) {
+    .left, .right {
+        width: 230px;
+        height: 100%;
+        float: right;
+    }
+    .story2 {
+        margin-left: 20%;
+        font-size: 16px;
+        text-align: left;
+    }
+    .user-box {
+        margin: 0 0 40px 10%;
+    }
+}
 /* .grid-filler { background-size: cover; background-image: url('./images/decor/sky.png') } */
 /*---------------------- PARENT GRID ----------------------*/
 /*********************** FOOTER SCROLL MENU ***********************/
@@ -255,11 +341,7 @@ button:hover {
     word-wrap: break-word; 
 }
 
-.story2 {
-    margin-left: 20%;
-    font-size: 16px;
-    text-align: left;
-}
+
 /*---------------------- CARD SHOW PAGE ----------------------*/
 /*********************** NEW CARD PAGE ***********************/
 .create-message {
@@ -272,11 +354,7 @@ button:hover {
 }
 /*---------------------- NEW CARD PAGE ----------------------*/
 /*********************** INPUT FORM ***********************/
-.left, .right {
-    width: 230px;
-    height: 100%;
-    float: right;
-}
+
 
 .input-box > section > div {
     width: 80px;
@@ -328,13 +406,8 @@ select { width: 134px; }
     z-index: 500;
     margin: 10px;
     display: inline-block;
-    /* float: left; */
-
 }
 
-.user-box {
-    margin: 0 0 40px 10%;
-}
 /*---------------------- USER INDEX ----------------------*/
 /*********************** USER SHOW PAGE ***********************/
   #frame-banner {
@@ -350,6 +423,10 @@ select { width: 134px; }
 
 /*---------------------- USER SHOW PAGE ----------------------*/
 /*********************** USER SHOW SCROLL ***********************/
+.user-cards-container {
+    text-align: center;
+}
+
 .user-container {
     overflow: auto;
     height: 400px;
