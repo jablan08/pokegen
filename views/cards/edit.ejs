@@ -5,7 +5,6 @@
         <%- include('../partials/frames/header')%>
     </div>
 
-
     <div class="grid-menu">
         <h1 class="p-title">Edit Your PokeGen Card!</h1>
     <form action="/cards/<%=card._id%>?_method=PUT" method="POST">
@@ -30,23 +29,10 @@
                 <div>Element:</div>     
                     <select name="type">
                         <option value="<%=card.type%>" select><%=card.type%></option>
-                        <option value="">None</option>
-                        <option value="normal">Normal</option>
-                        <option value="dragon">Dragon</option>
-                        <option value="electric">Electric</option>
-                        <option value="fairy">Fairy</option>
-                        <option value="fighting">Fighting</option>
-                        <option value="fire">Fire</option>
-                        <option value="ghost">Ghost</option>
-                        <option value="grass">Grass</option>
-                        <option value="ground">Ground</option> 
-                        <option value="ice">Ice</option>                     
-                        <option value="steel">Steel</option>
-                        <option value="poison">Poison</option> 
-                        <option value="psychic">Psychic</option> 
-                        <option value="water">Water</option>
+                        <%-include('../partials/types/elements')%>
                     </select>             
             </section>
+
             <section>
                 <div>Stats:</div>
                 <input type="text" name="stats" maxlength="36" value="<%=card.stats%>" />
@@ -169,13 +155,12 @@
     </form>        
     </div>
 
-
     <div id="sample-card" class="grid-main">
     <div>
         <%-include('../partials/card')%>
            <button class="modal-button"><a href="#open-modal">?</a></button>
             <div id="open-modal" class="modal-window">
-                <div class='modal'>
+                <div class="modal">
                     <a href="#modal-close" title="Close" class="modal-close">close &times;</a>
                     <h1>For the best card follow these steps</h1>
                     <div>

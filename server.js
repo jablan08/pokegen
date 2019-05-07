@@ -30,8 +30,6 @@ app.use('/auth', authController);
 app.use('/', homeController);
 
 
-
-
 app.listen(PORT, ()=> {
     console.log('connected on', PORT)
 })

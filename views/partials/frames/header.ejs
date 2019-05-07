@@ -1,19 +1,19 @@
 <header>
 
     <nav class="nav-btn">    
-    <div class="tag">PokéGen</div>
+        <div class="tag">PokéGen</div>
 
         <%if (logged=== undefined){%>
-            <button><a href='/auth/login'>Log In</a></button>
+            <button><a href="/auth/login">Log In</a></button>
         <%}%>
         <%if (logged){%>
             <button><a href="/auth/logout">Logout</a></button>
             <button><a href="/users/<%=user.id%>">My Cards</a></button>
         <%}%>
-        <button><a href='/users'>Trainers</a></button>
-        <button><a href='/cards/new'>Generate Card</a></button>
-        <button><a href='/cards'>PokéDecks</a></button>
-        <button><a href='/'>PokéCenter</a></button>   
+            <button><a href="/users">Trainers</a></button>
+            <button><a href="/cards/new">Generate Card</a></button>
+            <button><a href="/cards">PokéDecks</a></button>
+            <button><a href="/">PokéCenter</a></button>   
     </nav>
 
 </header>

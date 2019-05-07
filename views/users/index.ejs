@@ -1,17 +1,13 @@
 <%- include('../partials/frames/head')%>
-
 <div class="grid-container">
 
     <div class="grid-header">
         <%- include('../partials/frames/header')%>
     </div>
 
-
     <div class="grid-menu">
-    <h1 class="p-title">PokéGen Community</h1>
+        <h1 class="p-title">PokéGen Community</h1>
         <div class="story">
-
-
             <h3 class="p-title">The gang is all here! </h3>
             <br/>
             <p>Check out the newest members top of the list, and the veteran trainers at the bottom. 
@@ -21,21 +17,15 @@
             </p>
 
             <section class="user-box">
-                <% for (let i = users.length-1; i >= 0; i--) {%>
-                    
-                        <a class="user-font" href="/users/<%=users[i]._id%>"><%= users[i].username%></a>
-                    
+                <% for (let i = users.length-1; i >= 0; i--) {%>                  
+                        <a class="user-font" href="/users/<%=users[i]._id%>"><%= users[i].username%></a>             
                 <% } %>
                 <% for (let b = users.length-1; b >= 0; b--) {%>
-                    
                         <a class="user-font" href="/users/<%=users[b]._id%>"><%= users[b].username%></a>
-                    
                 <% } %>
             </section>
 
         </div>
-                
-
     </div>
 
     <div class="grid-main">
@@ -45,6 +35,4 @@
     </div>
 
 </div>
-
-
 <%- include('../partials/frames/footer')%>
