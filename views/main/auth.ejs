@@ -1,10 +1,11 @@
 <%- include('../partials/frames/head')%>
 
-<div class="grid-auth-container">
+<div class="grid-main-container">
 
     <div class="grid-header">   
         <%- include('../partials/frames/header')%>
     </div>
+<<<<<<< HEAD
     <div class="grid-auth-container">
         <div class="grid-main">
             <div class="auth-container">
@@ -31,6 +32,35 @@
                         <small><%= userTakenMessage %></small>
                 </section>
             </div>
+=======
+
+    <div class="grid-main">
+        <div class="auth-container">
+
+            <section id="login" class="auth">
+                <h1 class="p-title">Login</h1>
+                <form action="/auth/login" method="POST" class="login-form">
+                    <input type="text" name="username" placeholder="username">
+                    <input type="password" name="password" placeholder="password">
+                        <br />
+                    <button type="submit">Login</button>
+                </form>
+                    <small><%= verifyMessage %></small>
+                    <small><%= invalidMessage %></small>
+            </section>
+        <br />
+            <section id="resgister" class="auth">
+                <h1 class="p-title">Register</h1>
+                <form action="/auth/register" method="POST" class="register-form">
+                    <input type="text" name="username" placeholder="username">
+                    <input type="password" name="password" placeholder="password">
+                        <br />
+                    <button type="submit">Register</button>
+                </form>
+                    <small><%= userTakenMessage %></small>
+            </section>
+        </div>
+>>>>>>> 64050673bb354b2579a9f35e675b46b852d3cf68
     </div>
 </div>
 

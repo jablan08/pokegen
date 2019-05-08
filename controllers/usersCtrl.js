@@ -1,15 +1,15 @@
 const express = require('express');
 const router  = express.Router();
-const User = require("../models/users");
-const Card = require("../models/cards");
-const bcrypt = require("bcryptjs");
+const User = require('../models/users');
+const Card = require('../models/cards');
+const bcrypt = require('bcryptjs');
  
 
 const logUser = (req, res, next) => {
     if(req.session.logged) {
         next()
     } else {
-        res.redirect("/auth/login");
+        res.redirect('/auth/login');
     }
 }
 
@@ -75,7 +75,7 @@ router.put('/:id', logUser, async (req, res) => {
         const updatedUser = await User.findByIdAndUpdate(req.params.id, req.body, {new: true});
         res.redirect('/users/' + req.params.id)
     } catch (err) {
-        req.session.userTaken = "Username has been taken."
+        req.session.userTaken = 'Username has been taken.'
         res.redirect(`/users/${req.params.id}/edit`)
     }
 })

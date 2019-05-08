@@ -1,71 +1,55 @@
 <%- include('../partials/frames/head')%>
-<div id="new-container" class="grid-n-container">
+<div class="grid-container">
 
     <div class="grid-header">
         <%- include('../partials/frames/header')%>
     </div>
 
-
-    <div class="grid-menu left-margin">
-    
-        <h1 class="pTitle">Edit Your PokeGen Card!</h1>
-
+    <div class="grid-menu">
+        <h1 class="p-title">Edit Your PokeGen Card!</h1>
     <form action="/cards/<%=card._id%>?_method=PUT" method="POST">
 
-        <div class="left">
-            <section class="left-exp">
-                <div class="left-exp-float left-side-exp">Name:</div>
+        <div class="left input-box">
+            <section>
+                <div>Name:</div>
                 <input type="text" name="name" maxlength="15" value="<%=card.name%>" />
             </section>
 
-            <section class="left-exp">
-                <div class="left-exp-float left-side-exp">Image(url):</div>
+            <section>
+                <div>Image(url):</div>
                 <input type="text" name="url" value="<%=card.url%>" />
             </section>
 
-            <section class="left-exp">
-                <div class="left-exp-float left-side-exp">HP:</div>
+            <section>
+                <div>HP:</div>
                 <input type="text" name="hp" maxlength="3" value="<%=card.hp%>" />
             </section>
 
-            <section class="left-exp">
-                <div class="left-exp-float left-side-exp">Element:</div>     
+            <section>
+                <div>Element:</div>     
                     <select name="type">
                         <option value="<%=card.type%>" select><%=card.type%></option>
-                        <option value="">None</option>
-                        <option value="normal">Normal</option>
-                        <option value="dragon">Dragon</option>
-                        <option value="electric">Electric</option>
-                        <option value="fairy">Fairy</option>
-                        <option value="fighting">Fighting</option>
-                        <option value="fire">Fire</option>
-                        <option value="ghost">Ghost</option>
-                        <option value="grass">Grass</option>
-                        <option value="ground">Ground</option> 
-                        <option value="ice">Ice</option>                     
-                        <option value="steel">Steel</option>
-                        <option value="poison">Poison</option> 
-                        <option value="psychic">Psychic</option> 
-                        <option value="water">Water</option>
+                        <%-include('../partials/types/elements')%>
                     </select>             
             </section>
-            <section class="left-exp">
-                <div class="left-exp-float left-side-exp">Stats:</div>
+
+            <section>
+                <div>Stats:</div>
                 <input type="text" name="stats" maxlength="36" value="<%=card.stats%>" />
             </section>
 
-            <section class="left-exp">
-                <div class="left-exp-float left-side-exp">Bottom:</div>
+            <section>
+                <div>Bottom:</div>
                 <textarea  class="boxBottom" type="text" name="boxBottom" maxlength="80" value="<%=card.boxBottom%>"><%=card.boxBottom%></textarea> 
             </section>
 
-            <section class="left-exp">
-                <div class="left-exp-float left-side-exp">Story:</div>
+            <section>
+                <div>Story:</div>
                 <textarea type="text" name="story" class="story-input" value="<%=card.story%>"><%=card.story%></textarea>
             </section>
 
-            <section class="left-exp">
-                <div class="left-exp-float left-side-exp">Favorite:</div>             
+            <section>
+                <div>Favorite:</div>             
                     <input class="check-box" type="checkbox" name="favorite"  
                         <% if(card.favorite === true){%>
                             checked
@@ -77,94 +61,93 @@
 
         </div>
 
-        <div class="right"> 
-            <section class="left-exp">
-                <div class="left-exp-float left-side-exp">Attack:</div>
+        <div class="right input-box"> 
+            <section>
+                <div>Attack:</div>
                 <input type="text" name="attack" maxlength="20" value="<%=card.attack%>" />
             </section>
             
-            <section class="left-exp">
-                <div class="left-exp-float left-side-exp">Type:</div>     
-                    <select class="attackTypeOption" name="attackType1a">
+            <section>
+                <div>Type:</div>     
+                    <select class="attack-option" name="attackType1a">
                         <option value="<%=card.attackType1a%>" select><%=card.attackType1a%></option>
                         <%-include('../partials/types/options')%>
                     </select>   
-                    <select class="attackTypeOption" name="attackType1b">
+                    <select class="attack-option" name="attackType1b">
                         <option value="<%=card.attackType1b%>" select><%=card.attackType1b%></option>
                         <%-include('../partials/types/options')%>
                     </select>              
             </section>
             
 
-            <section class="left-exp">
-                <div class="left-exp-float left-side-exp">Type:</div>     
-                    <select class="attackTypeOption" name="attackType1c">
+            <section>
+                <div>Type:</div>     
+                    <select class="attack-option" name="attackType1c">
                         <option value="<%=card.attackType1c%>" select><%=card.attackType1c%></option>
                         <%-include('../partials/types/options')%>
                     </select>         
-                    <select class="attackTypeOption" name="attackType1d">
+                    <select class="attack-option" name="attackType1d">
                         <option value="<%=card.attackType1d%>" select><%=card.attackType1d%></option>
                         <%-include('../partials/types/options')%>
                     </select>      
             </section>
 
-
-
-            <section class="left-exp">
-                <div class="left-exp-float left-side-exp">Damage:</div>
+            <section>
+                <div>Damage:</div>
                 <input type="text" name="damage" maxlength="4" value="<%=card.damage%>" />
             </section>
 
-            <section class="left-exp">
-                <div class="left-exp-float left-side-exp">Details:</div>
+            <section>
+                <div>Details:</div>
                 <textarea type="text" name="description" maxlength="100" class="description-input" value="<%=card.description%>"><%=card.description%></textarea>
             </section>
             
-            <section class="left-exp">
-                <div class="left-exp-float left-side-exp">Attack 2:</div>
+            <section>
+                <div>Attack 2:</div>
                 <input type="text" name="attack2" maxlength="20" value="<%=card.attack2%>" />
             </section>
 
-            <section class="left-exp">
-                <div class="left-exp-float left-side-exp">Type:</div>     
-                    <select class="attackTypeOption" name="attackType2a">
+            <section>
+                <div>Type:</div>     
+                    <select class="attack-option" name="attackType2a">
                         <option value="<%=card.attackType2a%>" select><%=card.attackType2a%></option>
                         <%-include('../partials/types/options')%>
                     </select>   
-                    <select class="attackTypeOption" name="attackType2b">
+                    <select class="attack-option" name="attackType2b">
                         <option value="<%=card.attackType2b%>" select><%=card.attackType2b%></option>
                         <%-include('../partials/types/options')%>
                     </select>              
-            </section>     
-            <section class="left-exp">
-                <div class="left-exp-float left-side-exp">Type:</div>     
-                    <select class="attackTypeOption" name="attackType2c">
+            </section>   
+
+            <section>
+                <div>Type:</div>     
+                    <select class="attack-option" name="attackType2c">
                         <option value="<%=card.attackType2c%>" select><%=card.attackType2c%></option>
                         <%-include('../partials/types/options')%>
                     </select>         
-                    <select class="attackTypeOption" name="attackType2d">
+                    <select class="attack-option" name="attackType2d">
                         <option value="<%=card.attackType2d%>" select><%=card.attackType2d%></option>
                         <%-include('../partials/types/options')%>
                     </select>      
             </section>
 
-            <section class="left-exp">
-                <div class="left-exp-float left-side-exp">Damage 2:</div>
+            <section>
+                <div>Damage 2:</div>
                 <input type="text" name="damage2" maxlength="4" value="<%=card.damage2%>" />
             </section>
 
-            <section class="left-exp">
-                <div class="left-exp-float left-side-exp">Details 2:</div>
+            <section>
+                <div>Details 2:</div>
                 <textarea type="text" name="description2" maxlength="100" class="description-input" value="<%=card.description2%>"><%=card.description2%></textarea>
             </section>
             
-            <section class="left-exp">
-                <div class="left-exp-float left-side-exp">Weakness:</div>
+            <section>
+                <div>Weakness:</div>
                 <input type="text" name="weakness" maxlength="12" value="<%=card.weakness%>" />
             </section>
             
-            <section class="left-exp">
-                <div class="left-exp-float left-side-exp">Resistance:</div>
+            <section>
+                <div>Resistance:</div>
                 <input type="text" name="resistance" maxlength="12" value="<%=card.resistance%>" />
             </section>
 
@@ -172,13 +155,12 @@
     </form>        
     </div>
 
-
     <div id="sample-card" class="grid-main">
-    <div id="feature-card">
+    <div>
         <%-include('../partials/card')%>
-           <button class="modal-button"><a href="#open-modal">Need Help?</a></button>
+           <button class="modal-button"><a href="#open-modal">?</a></button>
             <div id="open-modal" class="modal-window">
-                <div class='modal'>
+                <div class="modal">
                     <a href="#modal-close" title="Close" class="modal-close">close &times;</a>
                     <h1>For the best card follow these steps</h1>
                     <div>
@@ -194,11 +176,6 @@
     </div>
     </div>
 
-    <div id="" class="grid-right">
-    </div>
-
-    <div id="" class="grid-footer">  
-    </div>
 </div>
 <%-include('../partials/frames/footer')%>
 

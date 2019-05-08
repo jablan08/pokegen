@@ -1,70 +1,54 @@
 <%- include('../partials/frames/head')%>
-<div id="new-container" class="grid-n-container">
-
+<div class="grid-container">
 
     <div class="grid-header">
         <%- include('../partials/frames/header')%>
     </div>
 
+    <div class="grid-menu">
 
-    <div class="grid-menu left-margin">
-
-        <h1 class="pTitle new-card-title">Generate PokéGen Card!</h1>
+        <h1 class="p-title new-card-title">Generate PokéGen Card!</h1>
          <%if (!user.cards.length) {%>
         <h2 class="create-message"><%= newMessage %></h2> 
         <%}%>
 
     <form action="/cards" method="POST">
+        <div class="left input-box">
 
-        <div class="left">
-            <section class="left-exp">
-                <div class="left-exp-float left-side-exp">Name:</div>
+            <section>
+                <div >Name:</div>
                 <input type="text" name="name" maxlength="15" placeholder="add PokéGen name" />
             </section>
 
-            <section class="left-exp">
-                <div class="left-exp-float left-side-exp">Image:</div>
+            <section>
+                <div>Image:</div>
                 <input type="text" name="url" placeholder="add image url" />
             </section>
 
-            <section class="left-exp">
-                <div class="left-exp-float left-side-exp">HP:</div>
+            <section>
+                <div>HP:</div>
                 <input type="text" name="hp" maxlength="3" placeholder="add hit points" />
             </section>
 
-            <section class="left-exp">
-                <div class="left-exp-float left-side-exp">Element:</div>     
+            <section>
+                <div>Element:</div>     
                     <select name="type">
-                        <option value="">None</option>
-                        <option value="normal">Normal</option>
-                        <option value="dragon">Dragon</option>
-                        <option value="electric">Electric</option>
-                        <option value="fairy">Fairy</option>
-                        <option value="fighting">Fighting</option>
-                        <option value="fire">Fire</option>
-                        <option value="ghost">Ghost</option>
-                        <option value="grass">Grass</option>
-                        <option value="ground">Ground</option> 
-                        <option value="ice">Ice</option>                     
-                        <option value="steel">Steel</option>
-                        <option value="poison">Poison</option> 
-                        <option value="psychic">Psychic</option> 
-                        <option value="water">Water</option>
+                        <%-include('../partials/types/elements')%>
                     </select>             
             </section>
 
-            <section class="left-exp">
-                <div class="left-exp-float left-side-exp">Stats:</div>
+            <section>
+                <div>Stats:</div>
                 <input type="text" name="stats" maxlength="36" placeholder="add bar stats" />
             </section>
 
-            <section class="left-exp">
-                <div class="left-exp-float left-side-exp">Bottom:</div>
+            <section>
+                <div>Bottom:</div>
                 <textarea class="boxBottom" type="text" name="boxBottom" maxlength="80" placeholder="add to the bottom of the card"></textarea> 
             </section>
 
-            <section class="left-exp">
-                <div class="left-exp-float left-side-exp">Story:</div>
+            <section>
+                <div>Story:</div>
                 <textarea type="text" name="story" class="story-input" placeholder="What is your card's story? This will appear when someone views your card! If this is blank it will be a sad card."></textarea>                    
             </section>
                 <div class="create-button">
@@ -72,100 +56,96 @@
             </div>    
         </div>
 
-        <div class="right"> 
-            <section class="left-exp">
-                <div class="left-exp-float left-side-exp">Attack:</div>
+        <div class="right input-box"> 
+            <section>
+                <div>Attack:</div>
                 <input type="text" name="attack" maxlength="20" placeholder="add 1st attack" />
             </section>
             
-
-            <section class="left-exp">
-                <div class="left-exp-float left-side-exp">Type:</div>     
-                    <select class="attackTypeOption" name="attackType1a">
+            <section>
+                <div>Type:</div>     
+                    <select class="attack-option" name="attackType1a">
                         <%-include('../partials/types/options')%>
                     </select>   
-                    <select class="attackTypeOption" name="attackType1b">
+                    <select class="attack-option" name="attackType1b">
                         <%-include('../partials/types/options')%>
                     </select>              
             </section>
             
-
-            <section class="left-exp">
-                <div class="left-exp-float left-side-exp">Type:</div>     
-                    <select class="attackTypeOption" name="attackType1c">
+            <section>
+                <div>Type:</div>     
+                    <select class="attack-option" name="attackType1c">
                         <%-include('../partials/types/options')%>
                     </select>         
-                    <select class="attackTypeOption" name="attackType1d">
+                    <select class="attack-option" name="attackType1d">
                         <%-include('../partials/types/options')%>
                     </select>      
             </section>
 
-
-
-            <section class="left-exp">
-                <div class="left-exp-float left-side-exp">Damage:</div>
+            <section>
+                <div>Damage:</div>
                 <input type="text" name="damage" maxlength="4" placeholder="add 1st damage" />
             </section>
 
-            <section class="left-exp">
-                <div class="left-exp-float left-side-exp">Details:</div>
+            <section>
+                <div>Details:</div>
                 <textarea type="text" name="description" maxlength="100" class="description-input" placeholder="add 1st description%>"></textarea>
             </section>
             
-            <section class="left-exp">
-                <div class="left-exp-float left-side-exp">Attack 2:</div>
+            <section>
+                <div>Attack 2:</div>
                 <input type="text" name="attack2" maxlength="20" placeholder="add 2nd attack" />
             </section>
 
-            <section class="left-exp">
-                <div class="left-exp-float left-side-exp">Type:</div>     
-                    <select class="attackTypeOption" name="attackType2a">
+            <section>
+                <div>Type:</div>     
+                    <select class="attack-option" name="attackType2a">
                         <%-include('../partials/types/options')%>
                     </select>   
-                    <select class="attackTypeOption" name="attackType2b">
+                    <select class="attack-option" name="attackType2b">
                         <%-include('../partials/types/options')%>
                     </select>              
-            </section>   
-            <section class="left-exp">
-                <div class="left-exp-float left-side-exp">Type:</div>     
-                    <select class="attackTypeOption" name="attackType2c">
+            </section> 
+
+            <section>
+                <div>Type:</div>     
+                    <select class="attack-option" name="attackType2c">
                         <%-include('../partials/types/options')%>
                     </select>         
-                    <select class="attackTypeOption" name="attackType2d">
+                    <select class="attack-option" name="attackType2d">
                         <%-include('../partials/types/options')%>
                     </select>      
             </section>
 
-            <section class="left-exp">
-                <div class="left-exp-float left-side-exp">Damage 2:</div>
+            <section>
+                <div>Damage 2:</div>
                 <input type="text" name="damage2" maxlength="4" placeholder="add 2nd damage" />
             </section>
 
-            <section class="left-exp">
-                <div class="left-exp-float left-side-exp">Details 2:</div>
+            <section>
+                <div>Details 2:</div>
                 <textarea type="text" name="description2" maxlength="100" class="description-input" placeholder="add 2nd description%>"></textarea>
             </section>
             
-            <section class="left-exp">
-                <div class="left-exp-float left-side-exp">Weakness:</div>
+            <section>
+                <div>Weakness:</div>
                 <input type="text" name="weakness" maxlength="12" placeholder="add weakness" />
             </section>
             
-            <section class="left-exp">
-                <div class="left-exp-float left-side-exp">Resistance:</div>
+            <section>
+                <div>Resistance:</div>
                 <input type="text" name="resistance" maxlength="12" placeholder="add resistance" />
             </section>
         </div>
     </form>        
     </div>
 
-    
     <div id="sample-card" class="grid-main">
 
         <%-include('../partials/samplecard')%>
-           <button class="modal-button"><a href="#open-modal">Need Help?</a></button>
+           <button class="modal-button"><a href="#open-modal">?</a></button>
             <div id="open-modal" class="modal-window">
-                <div class='modal'>
+                <div class="modal">
                     <a href="#modal-close" title="Close" class="modal-close">close &times;</a>
                     <h1>For the best card follow these steps</h1>
                     <div>
@@ -178,17 +158,10 @@
                             <li>Please use the direct link for the image URL ending in .jpg or .png. Example: https://i.imgur.com/ZI94U71.jpg</li>
                         </ul>
                     </div>
+                </div>
+            </div>
     </div>
 
-    <div id="" class="grid-right">
-     
-  </div>
-</div>
-    </div>
-
-    <div id="" class="grid-footer">
-    
-    </div>
 </div>
 <%-include('../partials/frames/footer')%>
 
