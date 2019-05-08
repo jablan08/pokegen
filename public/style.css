@@ -13,69 +13,61 @@ body {
 
 h1{
     position: relative;
-    z-index: 99999999999999999999999;
+    z-index: 50000;
 }
 
-h3 {
-    position: absolute;
+.tag {
+    position: relative;
     font-size: 24px;
     font-family: 'ZCOOL KuaiLe', courier;    
     display: inline;
-    margin-block-start: 8px;
-    margin-block-end: 0;
-    margin-inline-start: 24px;
-    margin-inline-end: 8px;
     font-weight: bold;
-    z-index: 99999999999999999999999;
+    z-index: 50000;
 }
 
 h4 {
     position: sticky;
     bottom: 0;
-    font-size: 8px;
     font-family: Arial, Helvetica, sans-serif;
     text-align: center;
-    z-index: 50000000000000000000;
+    z-index: 50000;
 }
 
-h5 {    
-    font-size: 24px;
-    margin-block-start: 5px;
-    margin-block-end: 0;
-}
+p { margin-left: 10%; }
 
-p { margin-left: 36px; }
+.p-title { 
+    margin-top: 0;
+    font-family: 'Arimo Bold', sans-serif; }
 
-.pTitle { font-family: 'Arimo Bold', sans-serif; }
-
-.pTitle2 {
+.p-title2 {
     font-family: 'ZCOOL KuaiLe', courier;   
     font-size: 36px;
     text-align: center;   
     position: sticky;
     margin-top: 4%;
     bottom: 0;
-    z-index: 99999990009999999999999999;
 }
 /*---------------------- MAINFRAME ----------------------*/
 /*********************** FOOTER ***********************/
 footer {
     position: fixed;
     bottom: 0;
-    margin: 0 auto;
+    margin: 0px auto 0 auto;
     width: 100%;
-    z-index: 99999999999999999999999;
+    z-index: 90000;
 }
 
 .grass-footer {
     position: fixed;
-    z-index: 9000000000000;
-    height: 20%;
+    z-index: 90000;
+    height: 15%;
     width: 100%;
     bottom: 0;
 }
 
-.grass-footer2 { height: 50px; }
+.grass-footer2 { 
+    height: 50px; 
+}
 /*---------------------- FOOTER ----------------------*/
 /*********************** NAVIGATION ***********************/
 a {
@@ -85,10 +77,8 @@ a {
 
 nav {
     position: relative;
-    /* float: right; */
     width: 100%;
-    z-index: 99999999999999999999999;
-    margin: 0 15px 20px 0;
+    z-index: 90000;
 }
 
 button { 
@@ -97,16 +87,320 @@ button {
     border-radius: 5px;
 }
 
-button:hover { background: transparent; }
-
-.navBtn {
-    margin-left: 5px;
-    font-size: 20px;
-    border-radius: 10px;
-    float: right;
+button:hover { 
+    background: transparent; 
 }
 
-.a-text:hover { 
+.nav-btn > button {
+    margin-left: 5px;
+    margin-bottom: -4px;
+    font-size: 18px;
+    border-radius: 8px;
+    float: right;
+}
+/*---------------------- NAVIGATION ----------------------*/
+/*********************** CLICK CARD ***********************/
+.click-down:active {
+    transform: translateY(4px);
+    transition-delay: none; 
+    box-shadow: 0 4px 5px 0 #000;
+    color: #000;
+}
+/*---------------------- CLICK CARD ----------------------*/
+/*********************** ZOOM HOVER ***********************/
+.zoom, .zoomer { 
+    transition: all .2s ease-in-out; 
+}
+
+.zoom:hover {   
+    transform: scale(1.5) translateY(5%);
+    transition-delay: .5s;
+    z-index: 90000;
+}
+
+.zoomer:hover { 
+    transform: scale(.8);
+    transition-delay: none;
+    z-index: 90009 !important;
+}
+/*---------------------- ZOOM HOVER ----------------------*/
+
+
+/*********************** PARENT GRID ***********************/
+.grid-header { 
+    grid-area: header; 
+    padding: 10px 2% 0 2%
+}
+.grid-menu { 
+    grid-area: menu; 
+    padding: 10% 0 0 10%;
+}
+.grid-main { 
+    grid-area: main; 
+    padding-top: 10%;
+}
+.grid-footer {
+    grid-area: footer;
+    bottom: 0;
+    margin-top: 10%;
+    text-align: center;
+}
+
+.grid-main-container {
+    width: 100%;
+    display: grid;
+  grid-template-areas:
+    'header'
+    'main';
+     grid-gap: 0;
+}
+
+.grid-container {
+    width: 100%;
+    display: grid;
+  grid-template-areas:
+    'header header'
+    'menu main'
+    'footer footer';
+     grid-gap: 0;
+}
+@media screen and (max-width: 414px) {
+    .grid-header { 
+        grid-area: header; 
+        padding: 10px 2% 0 2%
+    }
+    .grid-menu { 
+        grid-area: menu; 
+        padding: 5%;
+    }
+    .grid-main { 
+        grid-area: main; 
+        margin: 0 auto;
+        padding-top: 5%;
+    }
+    .grid-footer {
+        grid-area: footer;
+        bottom: 0;
+    }
+    .grid-container {
+        width: 100%;
+        display: grid;
+    grid-template-areas:
+        'header'
+        'main'
+        'menu'
+        'footer';
+        grid-gap: 0;
+    }
+
+    .nav-btn > button {
+        transform: scale(.9)
+    }
+    h1 {
+        text-align: center
+    }
+    h2 {
+        margin-top: 0
+    }
+    h4 {
+        font-size: 6px;
+    }
+    p {
+        margin: 0 auto 40px auto;
+        text-align: justify;
+    }
+    .p-title { 
+        text-align: center;
+        font-family: 'Arimo Bold', sans-serif; 
+    }
+    .story {
+        text-align: center;
+        max-width: 400px;
+        margin: 0;
+        padding: 5%;
+    }
+    .story2 {
+        width: auto;
+        font-size: 16px;
+        margin: 0 auto;
+    }
+
+    #feature-frame {
+        transform: scale(.9);
+        margin: 0 -20px;
+    }
+    .zoom:hover {
+        transform: scale(1.2)
+    }
+
+    .left, .right {
+        width: 230px;
+        height: 100%;
+        margin-right: auto;
+        margin-left: auto;
+    }
+    .right {
+        padding-bottom: 40px;
+    }
+
+    .user-box {
+        margin: 2%;
+        text-align: justify;
+    }
+}
+
+@media screen and (min-width: 415px) {
+    h4 {
+        font-size: 8px;
+    }
+
+    .left, .right {
+        width: 230px;
+        height: 100%;
+        float: right;
+    }
+
+    .story {
+        max-width: 500px;
+    }
+    .story2 {
+        margin-left: 20%;
+        font-size: 16px;
+        text-align: left;
+    }
+
+    .user-box {
+        margin: 0 0 40px 10%;
+    }
+}
+/*---------------------- PARENT GRID ----------------------*/
+/*********************** FOOTER SCROLL MENU ***********************/
+#menu {
+    bottom: 0;
+    margin: -150px 0 0 0;
+    width: auto;
+    height: auto;
+    overflow-x: scroll;
+    overflow-y: hidden;
+}
+
+.inner-menu { 
+    width: 5000000000000000000000000px; 
+    display: inline-block;
+}
+
+.z:hover{
+    z-index: 90000;
+}
+
+.z {
+    position: relative;
+    z-index: 80000;
+}
+/*---------------------- FOOTER SCROLL MENU ----------------------*/
+
+
+/*********************** HOME PAGE ***********************/
+.home-vert-scroll {
+    display: block;
+    text-align: center;
+    position: absolute;
+    z-index: 0;
+    overflow: auto;
+    height: 65%;
+}
+
+.modal-button-box {
+    position: relative;
+    display: inline;
+}
+
+.box-spacer {
+    border: transparent;
+    width: 100px;
+    min-height: 200px;
+}
+/*---------------------- HOME PAGE ----------------------*/
+/*********************** AUTH PAGE ***********************/
+.auth-container { text-align: center; }
+/*---------------------- AUTH PAGE ----------------------*/
+/*********************** USER INFO ***********************/
+.edit-user{ text-align: center; }
+#update { margin-left: 65px; }
+/*---------------------- USER INFO ----------------------*/
+
+
+/*********************** CARDS INDEX PAGE ***********************/
+.vert-scroll {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    text-align: center;
+    margin: 0;
+    overflow: auto;
+    height: 100%;
+    min-width: 300px;
+}
+
+#sky {
+    position: relative;
+    max-height: 150px;
+}
+/*---------------------- CARDS INDEX PAGE ----------------------*/
+/*********************** CARD SHOW PAGE ***********************/
+.edit-delete-buttons { text-align: center; }
+.show-card-delete-button { display: inline-block; }
+.show-card-edit-button { display: inline; }
+.margin-auto{ width: 315px; }
+
+.story {
+    margin: 0 auto;
+    padding: 5% auto;
+    word-wrap: break-word; 
+}
+/*---------------------- CARD SHOW PAGE ----------------------*/
+/*********************** NEW CARD PAGE ***********************/
+.create-message {
+    display: block;
+    font-size: 15px;
+}
+
+#sample-card { 
+    padding: 10% 0 0 10%; 
+}
+/*---------------------- NEW CARD PAGE ----------------------*/
+/*********************** INPUT FORM ***********************/
+.input-box > section > div {
+    width: 80px;
+    margin: 1px 0;
+    padding: 4px 0 0 0;
+    position: relative;
+    float: left;
+}
+
+input, select, .description-input, .story-input, .boxBottom {
+    position: relative;
+    top: 0;   
+    border-radius: 3px;
+    border:  rgb(108, 148, 239) 4px solid;
+    margin-top: 1px;
+    text-align: left;
+    margin: 2px;
+    word-wrap: break-word;
+}
+
+input { width: 124px; }
+select { width: 134px; }
+
+.description-input, .story-input, .boxBottom { width: 122px; }
+.attack-option { width: 63px; }
+.description-input, .boxBottom { height: 33px; }
+.story-input { height: 105px; }
+/*---------------------- INPUT FORM ----------------------*/
+
+
+/*********************** USER INDEX ***********************/
+.user-font:hover { 
     text-decoration: none; 
     line-height: 20px;
     color: rgb(0, 0, 0, .6); 
@@ -123,668 +417,59 @@ button:hover { background: transparent; }
     position: relative;
     z-index: 500;
     margin: 10px;
-    float: left;
+    display: inline-block;
 }
-
-.user-font:hover { transform: scale(1.5); }
-/*---------------------- NAVIGATION ----------------------*/
-/*********************** CLICK CARD ***********************/
-.click-down:active {
-    transform: translateY(4px);
-    transition-delay: none; 
-    box-shadow: 0 4px 5px 0 #000;
-    color: #000;
-}
-
-.m-click-down:active {
-    transition-delay: none; 
-    box-shadow: 0 1px 2px 0 #000;
-    color: #000;
-}
-/*---------------------- CLICK CARD ----------------------*/
-/*********************** ZOOM HOVER ***********************/
-/* .zoom, .zoomer { transition: all .2s; } */
-.zoom:hover {   
-    transition: all .2s;
-    transition-delay: .5s;
-    transform: scale(1.5);
-    z-index: 900000000;
-}
-.zoomer:hover { 
-    transition: all .2s;
-    transition-delay: none; 
-    transform: scale(1.5);
-    z-index: 99999999999999999999999999999999999999999999999999999989;}
-/*---------------------- ZOOM HOVER ----------------------*/
-/*********************** PARENT GRID ***********************/
-.grid-header { grid-area: header; padding: 0 20px; }
-.grid-menu { grid-area: menu; }
-.grid-main { grid-area: main; }
-.grid-pad-menu { grid-area: menu; padding: 0 20px; text-align: justify }
-.grid-right { grid-area: right; }
-.grid-pad-right { grid-area: right; padding: 0 20px; text-align: center;}
-.grid-footer { grid-area: footer; }
-
-.grid-container {
-    width: 100%;
-    display: grid;
-  grid-template-areas:
-    'header header header header header header'
-    'menu menu main main right right'
-    'footer footer footer footer footer footer';
-     grid-gap: 0;
-}
-
-.grid-filler { background-size: cover; background-image: url('./images/decor/sky.png') }
-/*---------------------- PARENT GRID ----------------------*/
-/*********************** HOME PAGE ***********************/
-#home-users {
-    max-width: 300px;
-    padding: 0 20px 0 40px;
-}
-
-.home-vert-scroll {
-    display: block;
-    text-align: center;
-    position: absolute;
-    z-index: 0;
-    overflow: auto;
-    height: 65%;
-}
-
-.modal-button-box {
-    transform: scale(1.5);
-    position: relative;
-    text-align: center;
-    z-index: 9999999999999999999999999999999999999999999999999999999;
-}
-
-.box{
-    border: transparent;
-    width: 100px;
-    min-height: 300px;
-}
-/*---------------------- HOME PAGE ----------------------*/
-/*********************** CARDS INDEX PAGE ***********************/
-.grid-cards-container {
-  display: grid;
-  grid-template-areas:
-    'header'
-    'main';
-    /* 'footer'; */
-  grid-gap: 0;
-}
-
-.vert-scroll {
-    position: fixed;
-    bottom: 0;
-    left: 0;
-    text-align: center;
-    margin: 0;
-    overflow: auto;
-    height: 100%;
-    min-width: 300px;
-}
-
-#card-index {
-    font-size: 40px;
-    font-family: 'ZCOOL KuaiLe', courier; 
-}
-
-#sky {
-    position: relative;
-    max-height: 150px;
-}
-/*---------------------- CARDS INDEX PAGE ----------------------*/
-/*********************** CARD SHOW PAGE ***********************/
-/* to lift fave card window */
-#cards-users { margin-top: -40px; }
-.edit-delete-buttons { text-align: center; }
-.show-card-delete-button { display: inline-block; }
-.show-card-edit-button { display: inline; }
-.margin-auto{ width: 315px; }
-
-.story {
-    margin: 0 auto;
-    padding: 5px auto;
-    max-width: 500px;
-    word-wrap: break-word; 
-}
-
-.story2 {
-    margin-left: 20%;
-    font-size: 16px;
-    text-align: left;
-}
-/*---------------------- CARD SHOW PAGE ----------------------*/
-/*********************** NEW PAGE ***********************/
-.grid-n-container {
-    width: 100%;
-    display: grid;
-  grid-template-areas:
-    'header header header'
-    'menu main right'
-    'footer footer footer';
-    grid-gap: 0;
-}
-
-#new-container {
-    position: relative;
-    z-index: 5;
-}
-
-.create-message {
-    display: block;
-    font-size: 15px;
-}
-
-#sample-card { 
-    padding: 46px 0 0 60px; 
-}
-.new-card-title { 
-}
-.new-card-note { 
-    font-size: 12px; 
-}
-/*---------------------- NEW PAGE ----------------------*/
-/*********************** FOOTER SCROLL MENU ***********************/
-#menu {
-    margin-top: -120px;
-    background-color: transparent;
-    width: auto;
-    height: 230px;
-    padding: 55px 0;
-    overflow-x: scroll;
-}
-
-#inner-menu { width: 5000000000000000000000000px; }
-/*---------------------- FOOTER SCROLL MENU ----------------------*/
+/*---------------------- USER INDEX ----------------------*/
 /*********************** USER SHOW PAGE ***********************/
-.grid-user-container {
-    width: 100%;
-    display: grid;
-    grid-template-areas:
-      'header header header'
-      'menu main right';
-    grid-gap: 0;
-  }
-
   #frame-banner {
       height: 72px;
       width: 400px;
       position: absolute;
       bottom: 0;
       margin-bottom: -10px;
-      z-index: 3000000000000000000000000;
+      z-index: 90000;
       background-image: url('./images/decor/frame-banner.png');
       background-repeat: no-repeat;
   }
-  /*---------------------- USER SHOW PAGE ----------------------*/
+/*---------------------- USER SHOW PAGE ----------------------*/
 /*********************** USER SHOW SCROLL ***********************/
-.grid-user-i-container {
-    width: 100%;
-    display: grid;
-    grid-template-areas:
-      'header header'
-      'menu  right';
-    grid-gap: 0;
-  }
+.user-cards-container {
+    text-align: center;
+}
+
+.user-container {
+    overflow: auto;
+    height: 400px;
+    max-width: 440px
+}
+
+.mini-u:hover {
+    transform: scale(.32)
+}
 
 #feature-frame {
+    margin-top: -5%;
     position: relative;
-    z-index: 500;
+    z-index: 60000;
     height: 510px;
     width: 400px;
-    background-image: url("./images/decor/pixel-frame.png");
+    background-image: url('./images/decor/pixel-frame.png');
     color: transparent;
 }
 
 .user-vert-scroll {
     margin: 32px 0 0 32px;
     position: absolute;
-    z-index: 15;
+    z-index: 40000;
     overflow: auto;
     padding: 10px 10px 10px 10px;
     width: 316px;
     height: 426px;
 }
-
-#user-menu {  
-    position: relative;
-    margin-top: -200px;
-    background-color: transparent;
-    width: auto;
-    height: 230px;
-    padding: 55px 0;
-    overflow-x: scroll;
-}
 /*---------------------- USER SHOW SCROLL MENU ----------------------*/
-/*********************** USER INDEX ***********************/
-#user-box {
-    text-align: justify;
-    margin: 26px;
-    width: 100%;
-}
-
-.fit { position: static; }
-#userlist-box { min-width: 100px; }
-
-.name-vert-scroll {
-    display: block;
-    text-align: center;
-    position: absolute;
-    z-index: 15;
-    overflow: auto;
-}
-
-/*---------------------- USER INDEX ----------------------*/
-/*********************** INPUT FORM ***********************/
-.left-margin { margin-left: auto; }
-.left-exp { width: 260px; }
-
-.left-side-exp{
-    width: 80px;
-    margin: 1px 0;
-}
-
-.left, .right {
-    width: 230px;
-    height: 100%;
-    float: left;
-}
-
-.left-exp-float {
-    padding: 4px 0 0 0;
-    position: relative;
-    float: left;
-}
-
-input, select, .description-input, .story-input, .boxBottom {
-    position: relative;
-    top: 0;
-    width: 122px;
-    border-radius: 3px;
-    border:  rgb(108, 148, 239) 4px solid;
-    margin-top: 1px;
-    text-align: left;
-    margin: 2px;
-    word-wrap: break-word;
-}
-
-input { width: 124px; }
-select { width: 134px; }
-
-.description-input, .boxBottom { height: 33px; }
-.story-input { height: 105px; }
-.attackTypeOption { width: 63px; }
-/* not an option yet */
-/* .check-box {
-    border-radius: 3px;
-    border: lightblue 4px solid;
-} */
-/*---------------------- INPUT FORM ----------------------*/
-/*********************** UNIVERSAL CARD FEATURES ***********************/
-.card-body, .m-card-body {
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    text-align: left;
-    background-size: cover;
-    background-image: linear-gradient(to bottom right, blue,lightblue,blue); /*this is default bg*/
-    position: relative;
-    word-wrap: break-word; 
-}
-
-#name, #m-name {
-    float: left;
-    position: relative;
-    white-space: nowrap;
-}
-
-.attack, .m-attack {
-    width: auto;
-    float: left;
-    font-weight: bold;
-}
-
-.damage, .m-damage {
-    float: right;
-    width: auto;
-    margin-bottom: -2px;
-    text-align: right;
-}
-
-#weakness, #resistance, #m-weakness, #m-resistance {
-    position: relative;
-    top: 0;
-    text-align: center;
-}
-
-#bottom-box, #m-bottom-box {
-    font-style: italic;
-    text-align: center;
-}
-/*---------------------- UNIVERSAL CARD FEATURES ----------------------*/
-/*********************** CREATE CARD ***********************/
-
-.card-body {
-    display: inline-block;
-    vertical-align: top;
-    margin: 10px;
-    height: 400px;
-    width: 280px;
-    border: 8px solid gold;
-    border-radius: 10px;
-    z-index: 15;
-    box-shadow: 0 7px 10px 0 black;
-}
-
-#name {
-    width: 188px;
-    font-size: 25px;
-    margin: 2px 0 0 5px;
-}
-
-#hp-box {
-    float: right;
-    margin: 2px 30px 0 0;
-    font-size: 25px;
-    text-align: right;
-}
-
-.types {
-    width: 28px;
-    height: 28px;
-    margin-top: 2px;
-    right: 2px;
-}
-
-img {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-}
-
-#img-box-border{
-    background-image: linear-gradient(to bottom right, rgb(253, 190, 44), rgb(255, 255, 255), gold, rgb(153, 118, 35));
-    height: 160px;
-    width: 240px;
-    margin: 36px 20px;
-    box-shadow: 1px 5px 10px black;
-}
-
-#img-box {
-    position: absolute;
-    z-index: 50;
-    height: 154px;
-    width: 234px;
-    max-width: 234px;
-    margin: 3px;
-}
-
-#yellow-bar {
-    height: 11px;
-    width: 220px;
-    margin: -28px auto -20px auto;
-    background-image: linear-gradient(to  right,rgb(153, 118, 35), rgb(253, 190, 44), rgb(255, 255, 255), gold, rgb(253, 190, 44), rgb(153, 118, 35));
-    text-align: center;
-    font-size: 10px;
-    font-family: Arial, Helvetica, sans-serif;
-    font-style: italic;
-}
-
-.attack-box, .attack-box2 {
-    width: 270px;
-    font-size: 16px;
-    border-top: 1px solid black;
-}
-
-.attack-box { margin: 30px 5px 0 5px; }
-.attack-box2 { margin: 5px 5px 0 5px; }
-
-.create-button {
-    text-align: center;
-    margin-left: 60px;
-}
-
-.attack {
-    font-size: 16px;
-    margin: 3px 3px -3px 0;
-    max-width: 210px;
-}
-
-.attackTypeParent { transform: translateY(5px); }
-
-.attackType {
-    position: relative;
-    float: left;
-    max-width: 36px;
-    max-height: 36px;
-}
-
-.attackTypes {
-    position: relative;
-    height: 18px;
-    width: 18px;
-}
-
-.damage {
-    margin: 3px 5px 0 2px;
-    max-width: 46px;
-}
-.description {
-    line-height: 12px;
-    letter-spacing: -.03rem;
-    margin: 8px 4px 0 4px;
-    position: relative;
-    width: 270;
-    height: 42px;
-    font-size: 12px;
-    padding: 0 8px;
-}
-
-#weak-resist-box {
-    position: absolute;
-    bottom: 0;
-    width: 270px;
-    height: 58px; 
-    margin: 20px 5px 4px 5px;
-    border-top: 1px solid black;
-    font-size: 12px;
-}
-
-#weakness, #resistance {
-    line-height: 8px; 
-    top: 0;
-    width: 110px;
-}
-
-#weakness {
-    float: left;
-    margin: 2px 0 0 5px;
-}
-
-#resistance {
-    float: right;
-    margin: 2px 5px 0 0;
-}
-
-#bottom-box {
-    border: 2px gold solid;
-    margin: 32px auto 0 auto;
-    height: 22px;
-    width: 220px;
-    font-size: 10px;
-}
-/*---------------------- CREATE CARD ----------------------*/
-/*********************** MINI CARD ***********************/
-.m-card-body {
-    float: left;
-    margin: 6px;
-    height: 200px;
-    width: 140px;
-    border: 4px solid gold;
-    border-radius: 5px;
-    box-shadow: 0 3px 6px 0px black;
-}
 
 
-#m-name {
-    width: 94px;
-    font-size: 12px;
-    margin: 1px 0 0 2px;  
-}
-
-#m-hp-box {
-    float: right;
-    margin: 1px 15px 0 -10px;
-    font-size: 12px;
-    text-align: right;
-}
-
-#m-img {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-}
-
-.m-types {
-    width: 14px;
-    height: 14px;
-    margin-top: 1px;
-    right: 1px;
-}
-
-#m-img-box-border{
-    background-image: linear-gradient(to bottom right, rgb(253, 190, 44), rgb(255, 255, 255), gold, rgb(153, 118, 35));
-    height: 80px;
-    width: 120px;
-    margin: 18px 10px;
-    box-shadow: 1px 3px 5px black;
-}
-
-#m-img-box {
-    position: absolute;
-    height: 78px;
-    width: 118px;
-    max-width: 234px;
-    margin: 1px;
-}
-
-#m-yellow-bar {
-    height: 6px;
-    width: 100px;
-    margin: -14px auto -10px auto;
-    background-image: linear-gradient(to  right,rgb(153, 118, 35), rgb(253, 190, 44), rgb(255, 255, 255), gold, rgb(253, 190, 44), rgb(153, 118, 35));
-    text-align: center;
-    font-size: 5px;
-    font-family: Arial, Helvetica, sans-serif;
-    font-style: italic;
-}
-
-.m-attack-box, .m-attack-box2 {
-    width: 132px;
-    font-size: 8px;
-    border-top: 1px solid black;
-}
-
-.m-attack-box { margin: 15px 4px 0 4px; }
-.m-attack-box2 { margin: 0 4px 0 4px; }
-
-.m-attack {
-    letter-spacing: -.02rem;
-    margin: 1px 2px -5px 0px;
-    max-width: 100px;
-}
-
-.m-attackTypeParent { transform: translateY(2px); }
-
-.m-attackType {
-    position: relative;
-    float: left;
-    max-width: 18px;
-    max-height: 18px;
-}
-
-.m-attackTypes {
-    text-align: center;
-    position: relative;
-    height: 9px;
-    width: 9px;
-    float: left;
-}
-.m-damage {
-    margin: 1px 4px 0 1px;
-    max-width: 26px;
-}
-
-.m-description, .m-description2 {
-    line-height: 7px;
-    letter-spacing: -.04rem;
-    margin: 3px 0 0 0;
-    font-size: 6px;
-    position: relative;
-    padding: 0 4px;
-} 
-
-.m-description {
-    max-width: 132px;
-    height: 23px; 
-}
-
-.m-description2 {
-    width: 130px;
-    height: 20px; 
-}
-
-#m-weak-resist-box {
-    position: absolute;
-    bottom: 0;
-    height: 30px;
-    width: 132px;
-    margin: 10px 4px 2px 4px;
-    border-top: 1px solid black;
-    font-size: 6px;
-    line-height: 4px;
-}
-
-#m-resistance, #m-weakness { width: 55px; }
-
-#m-weakness{
-    float: left;
-    margin: 1px 0 0 4px;
-}
-
-#m-resistance {
-    float: right;
-    margin: 1px 4px 0 0;
-}
-
-#m-bottom-box {
-    border: 1px gold solid;
-    margin: 16px auto 0 auto;
-    height: 11px;
-    width: 110px;
-    font-size: 5px;
-}
-/*---------------------- MINI CARD ----------------------*/
-/*********************** AUTH PAGE ***********************/
-.grid-auth-container {
-    width: 100%;
-    display: grid;
-    grid-template-areas:
-      'header'
-      'main';
-    grid-gap: 0;
-  }
-
-.auth-container { text-align: center; }
-.auth { margin: 40px 0; }
-/*---------------------- LOGIN PAGE ----------------------*/
-/*********************** USER INFO ***********************/
-.edit-user{ text-align: center; }
-#update { margin-left: 65px; }
-/*---------------------- LOGIN PAGE ----------------------*/
 /*********************** MODAL CSS ***********************/
-
 .modal-window {
     position: fixed;
     background-color: rgba(200, 200, 200, 0.75);
@@ -792,7 +477,7 @@ img {
     right: 0;
     bottom: 0;
     left: 0;
-    z-index: 9999999999999999999999999999999999999999999999999999999999;
+    z-index: 99999;
     opacity: 0;
     pointer-events: none;
     -webkit-transition: all 0.1s;
@@ -805,7 +490,7 @@ img {
     pointer-events: auto;
 }
 
-.modal-window>div {
+.modal-window > div {
     width: 400px;
     position: relative;
     margin: 10% auto;
@@ -839,4 +524,3 @@ img {
     margin: 0 0 15px;
 }
 /*---------------------- MODAL CSS ----------------------*/
-

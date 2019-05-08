@@ -1,46 +1,22 @@
 <%- include('../partials/frames/head')%>
-
-<div id="users-container" class="grid-container">
+<div class="grid-main-container">
 
     <div class="grid-header">
         <%- include('../partials/frames/header')%>
     </div>
 
-    <div id="users-main" class="grid-menu">
-      
-      
-    </div>
-
-    <div id="feature-card" class="edit-user grid-main">
-
-
-
-<h1 class="pTitle">EDIT ACCOUNT INFORMATION</h1>
-
-
-
-<small><%= userTakenMessage %></small><br>
-
+    <div class="edit-user grid-main">
+        <h1 class="p-title">EDIT ACCOUNT INFORMATION</h1>
+        <small><%= userTakenMessage %></small><br />
 
       <form action="/users/<%=user._id%>?_method=PUT" method="POST">
-      Username:<input type="text" name="username" value="<%=user.username%>"><br>
-      Password: <input type="password" name="password" placeholder=""><br>
-      <button id="update" type="submit">update</button>
+        Username:<input type="text" name="username" value="<%=user.username%>"><br />
+        Password: <input type="password" name="password" placeholder=""><br />
+        <button id="update" type="submit">update</button>
       </form>
     </div>
 
-    <div id="users-users" class="grid-right">
-    </div>
-
-    <div class="grid-footer">
-    </div>
-
 </div>
-
-
-
-
-
 <%- include('../partials/frames/footer')%>
 
 

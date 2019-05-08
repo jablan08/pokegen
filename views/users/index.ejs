@@ -1,16 +1,14 @@
 <%- include('../partials/frames/head')%>
-
-<div id="users-container" class="grid-user-i-container">
+<div class="grid-container">
 
     <div class="grid-header">
         <%- include('../partials/frames/header')%>
     </div>
 
-
-    <div id="users-main" class="grid-pad-menu">
+    <div class="grid-menu">
+        <h1 class="p-title">PokéGen Community</h1>
         <div class="story">
-            <h1 class="pTitle">PokéGen Community</h1><br>
-            <h3 class="pTitle">The gang is all here! </h3><br/>
+            <h3 class="p-title">The gang is all here! </h3>
             <br/>
             <p>Check out the newest members top of the list, and the veteran trainers at the bottom. 
             See all the trainer's full collection at the bottom of their page, and check out their favorites display. 
@@ -18,27 +16,20 @@
             Get inspired to make your own and become a PokéGen master! 
             </p>
 
-                    <div id="user-box">
+            <section class="user-box">
+                <% for (let i = users.length-1; i >= 0; i--) {%>                  
+                        <a class="user-font" href="/users/<%=users[i]._id%>"><%= users[i].username%></a>             
+                <% } %>
+            </section>
 
-            <%- include('../partials/userlist')%>
-                    </div>
         </div>
-                
-
     </div>
 
-    <div class="grid-pad-right">
+    <div class="grid-main">
         <%if (users.length > 0){%>
         <%-include('../partials/randomCard')%>
         <%}%>
     </div>
 
-
-
 </div>
-
-<div class="grass-footer2 grass-footer">
-    <img src="../images/decor/grass2.png">
-</div>
-
 <%- include('../partials/frames/footer')%>
