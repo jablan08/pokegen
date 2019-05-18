@@ -9,7 +9,7 @@ PokéGen was created for the love of Pokémon, Pokémon cards, and the love of c
 
 ## Planning & Wireframes
 
-### When planning PokéGen the follwing [user stories](https://raw.githubusercontent.com/jablan08/pokegen/master/public/images/readMe/user_stories.png) were considered.
+### The follwing [user stories](https://raw.githubusercontent.com/jablan08/pokegen/master/public/images/readMe/user_stories.png) were considered when developing PokéGen.
 
 
 ### Wireframes
@@ -35,7 +35,7 @@ Each card is a div's stacked on top of each other in other to get the full desig
 
 
 ## Unsolved problems
-* On the user list, when hovering over the last user the names become stacked on top of each other.
+
 * As said before, page layout is a constant work in progress, but more of the positioning of all the content on each page.
 * Scalability.
 
